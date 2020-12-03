@@ -1,0 +1,26 @@
+.header__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.header__top {
+  .header-top__left {
+    display: none;
+  }
+
+  .header-top__right {
+    display: none;
+  }
+}
+
+.header__bottom {
+  .bottom__right {
+    display: none;
+  }
+
+  .bottom__left {
+    display: none;
+  }
+}

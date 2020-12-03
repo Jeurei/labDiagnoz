@@ -1,0 +1,31 @@
+@mixin titleh2($color) {
+  color: $color;
+  font-size: $title-h2-fs;
+  line-height: $title-h2-lh;
+}
+
+@mixin titleh3($color) {
+  color: $color;
+  font-size: $title-h3-fs;
+  line-height: $title-h3-lh;
+}
+
+@mixin titleh5($color) {
+  color: $color;
+  font-size: $title-h4-fs;
+  line-height: $title-h4-lh;
+}
+
+@mixin font($color, $default: true) {
+  color: $color;
+  font-weight: normal;
+  font-style: normal;
+
+  @if $default {
+    font-size: $body-fs;
+    line-height: $body-lh;
+  } @else {
+    font-size: $alt-fs;
+    line-height: $alt-lh;
+  }
+}
