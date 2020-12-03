@@ -16,6 +16,7 @@ const htmlmin = require("gulp-htmlmin");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
+const svgSprite = require("gulp-svg-sprite");
 
 gulp.task("css", function () {
   return gulp
@@ -28,6 +29,21 @@ gulp.task("css", function () {
     .pipe(rename("style.css"))
     .pipe(gulp.dest("markup/build/css"))
     .pipe(server.stream());
+});
+
+gulp.task("svgSprite", function () {
+  return gulp
+    .src("./markup/build/img/*.svg") // svg files for sprite
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: "../sprite.svg", //sprite file name
+          },
+        },
+      })
+    )
+    .pipe(gulp.dest("./markup/build/img"));
 });
 
 gulp.task("server", function () {
@@ -96,7 +112,7 @@ gulp.task("html", function () {
 
 gulp.task(
   "build",
-  gulp.series("clean", "copy", "css", "images", "webp", "html")
+  gulp.series("clean", "copy", "css", "images", "webp", "svgSprite", "html")
 );
 
 gulp.task("start", gulp.series("build", "server"));

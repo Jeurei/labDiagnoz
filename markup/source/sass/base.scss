@@ -30,6 +30,11 @@ img {
   height: auto;
 }
 
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
 @media (min-width: $tablet-width) {
   body {
     min-width: $tablet-width;
