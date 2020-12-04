@@ -7,3 +7,10 @@
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .section__inner {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}

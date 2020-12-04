@@ -6,8 +6,8 @@
     RGBA(43, 215, 255, 1)
   );
   color: $white;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .search__title {
@@ -28,6 +28,7 @@
   flex-direction: row;
   padding-bottom: 6px;
   padding-right: 24px;
+  width: 100%;
 }
 
 .search__container-top-text {
@@ -146,4 +147,24 @@
   padding-left: 3px;
   height: 14px;
   border-bottom: 0.5px dashed $white;
+}
+
+@media (min-width: $tablet-width) {
+  .search__title {
+    margin-right: auto;
+  }
+
+  .search__container-top-text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .search__input {
+    flex-grow: 2;
+  }
+
+  .search__control {
+    width: 70px;
+    height: 35px;
+  }
 }
