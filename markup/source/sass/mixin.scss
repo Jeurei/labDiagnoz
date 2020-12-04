@@ -29,3 +29,10 @@
     line-height: $alt-lh;
   }
 }
+
+@mixin pseudo($content, $width, $height) {
+  content: $content;
+  display: flex;
+  width: $width;
+  height: $height;
+}

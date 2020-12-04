@@ -33,6 +33,10 @@ img {
 svg {
   fill: currentColor;
   stroke: currentColor;
+
+  circle {
+    fill: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

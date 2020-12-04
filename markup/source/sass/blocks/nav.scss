@@ -1,0 +1,85 @@
+.nav-list {
+  display: none;
+}
+
+.nav__button {
+  padding-bottom: 7px;
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 17px;
+}
+
+@media (min-width: $desktop-width) {
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    padding-top: 3px;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    padding-right: 13px;
+
+    &:nth-child(even) {
+      padding-right: 50px;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 52px;
+    }
+
+    &:nth-child(2) {
+      padding-right: 43px;
+    }
+
+    &:nth-child(4) {
+      padding-right: 43px;
+    }
+
+    &:nth-child(5) {
+      padding-right: 36px;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: -1px;
+
+    &:not(:only-child)::after {
+      content: "";
+      width: 9px;
+      height: 9px;
+      background-color: transparent;
+      border: 1px solid $color-text;
+      border-left: 0;
+      border-top: 0;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 2px;
+      right: -19px;
+    }
+  }
+
+  .nav__button {
+    padding-top: 15px;
+    padding-bottom: 17px;
+    padding-left: 27px;
+    padding-right: 37px;
+    margin-left: 29px;
+  }
+}
