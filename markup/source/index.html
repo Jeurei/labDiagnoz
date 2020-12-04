@@ -7,247 +7,250 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <div style="display: none">
+      <include src="markup/build/img/sprite.svg"></include>
+    </div>
     <header class="header">
-      <div class="header__inner inner">
-        <div class="header__top header-top">
-          <div class="header-top__mobile">
-            <div class="header-top__mobile-top">
-              <select name="city" class="header-top__left-cities cities">
-                <option
-                  class="cities__option"
-                  value="Пермь"
-                  selected="selected"
-                >
-                  Пермь
-                </option>
-              </select>
-              <ul class="header-top__mobile-list">
-                <li class="header-top__mobile-list-item">
-                  <a
-                    class="header-top__mobile-list-link header-top__mobile-list-link--mail"
-                    href="mailto:#"
-                    aria-label="Написать нам письмо"
-                    >Иконка</a
+      <div class="header__top-container">
+        <div class="header__inner inner">
+          <div class="header__top header-top">
+            <div class="header-top__mobile">
+              <div class="header-top__mobile-top">
+                <select name="city" class="header-top__left-cities cities">
+                  <option
+                    class="cities__option"
+                    value="Пермь"
+                    selected="selected"
                   >
-                </li>
-                <li class="header-top__mobile-list-item">
-                  <a
-                    class="header-top__mobile-list-link header-top__mobile-list-link--tel"
-                    href="tel:#"
-                    aria-label="Позвонить нам"
-                    >Иконка</a
-                  >
-                </li>
-                <li class="header-top__mobile-list-item">
-                  <button
-                    class="header-top__mobile-list-button"
-                    type="button"
-                    aria-label="Развернуть строку поиска"
-                  >
-                    Иконка
-                  </button>
-                </li>
-                <li class="header-top__mobile-list-item">
-                  <a
-                    href="#"
-                    class="header-top__mobile-list-link header-top__mobile-list-link--car"
-                    aria-label="Ссылка на страницу с корзиной"
-                    >Иконка</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="header-top__mobile-fixed">
-              <img
-                src="#"
-                alt="Логотип компании Лабдиагностика"
-                class="header-top__mobile-top-fixed-img"
-                width="34"
-                height="34"
-              />
-              <select name="city" class="header-top__left-cities cities">
-                <option
-                  class="cities__option"
-                  value="Пермь"
-                  selected="selected"
-                >
-                  Пермь
-                </option>
-              </select>
-              <ul class="header-top__mobile-list">
-                <li class="header-top__mobile-list-item">
-                  <a
-                    class="header-top__mobile-list-link header-top__mobile-list-link--mail"
-                    href="mailto:#"
-                    aria-label="Написать нам письмо"
-                    >Иконка</a
-                  >
-                </li>
-                <li class="header-top__mobile-list-item">
-                  <a
-                    class="header-top__mobile-list-link header-top__mobile-list-link--tel"
-                    href="tel:#"
-                    aria-label="Позвонить нам"
-                    >Иконка</a
-                  >
-                </li>
-                <li class="header-top__mobile-list-item">
-                  <button
-                    class="header-top__mobile-list-button"
-                    type="button"
-                    aria-label="Развернуть строку поиска"
-                  >
-                    Иконка
-                  </button>
-                </li>
-                <li class="header-top__mobile-list-item">
-                  <a
-                    href="#"
-                    class="header-top__mobile-list-link header-top__mobile-list-link--car"
-                    aria-label="Ссылка на страницу с корзиной"
-                    >Иконка</a
-                  >
-                </li>
-              </ul>
-              <button
-                class="header-top__mobile-burger-button"
-                type="button"
-                aria-label="Равернуть меню"
-              >
-                Иконка
-              </button>
-            </div>
-          </div>
-          <div class="header-top__left">
-            <select name="city" class="header-top__left-cities cities">
-              <option class="cities__option" value="Пермь" selected="selected">
-                Пермь
-              </option>
-            </select>
-            <p class="header-top__left-tel">+7 (999) 999-99-99</p>
-          </div>
-          <div class="header-top__right">
-            <div class="header-top__right-search-container search">
-              <input
-                type="search"
-                class="search__input"
-                aria-label="Поле для поиска"
-              /><button
-                class="search__button"
-                type="button"
-                aria-label="Кнопка поиска"
-              >
-                Иконка
-              </button>
-            </div>
-            <a
-              href="#"
-              class="header-top__link"
-              aria-label="Перейти на страницу корзины"
-              >Иконка</a
-            >
-            <div class="header-top__right-car-container car-container">
-              <div class="car-container__inner">
-                <div class="car-container__modal car-modal">
-                  <div class="car-modal__top">
-                    <h4 class="car-modal__title">Корзина (4)</h4>
-                    <button
-                      class="car-modal__close-button cross-button cross-button--car-close"
-                      aria-label="Кнопка закрытия модального окна корзины"
+                    Пермь
+                  </option>
+                </select>
+                <ul class="header-top__mobile-list">
+                  <li class="header-top__mobile-list-item">
+                    <a
+                      class="header-top__mobile-list-link header-top__mobile-list-link--mail"
+                      href="mailto:#"
+                      aria-label="Написать нам письмо"
                     >
-                      Иконка
-                    </button>
-                  </div>
-                  <div class="car-modal__middle">
-                    <div class="car-modal__inner">
-                      <div class="car-modal__group">
-                        <h5 class="car-modal__group-title">Анализы:</h5>
-                        <ul class="car-modal__list">
-                          <li class="car-modal__list-item">
-                            <p class="car-modal__text">
-                              Тестостерон свободный (включает определение
-                              тестостерона общего и свободного, ГСПГ (SHBG),
-                              расчет индекса свободных андрогенов) тестостерона
-                              общего и свободного, ГСПГ (SHBG), расчет индекса
-                            </p>
-                            <span class="car-modal__price">1 100 ₽</span>
-                            <button
-                              class="car-modal__remove-item-button cross-button"
-                              type="button"
-                              aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                            >
-                              Иконка
-                            </button>
-                          </li>
-                          <li class="car-modal__list-item">
-                            <p class="car-modal__text">Тестостерон свободный</p>
-                            <span class="car-modal__price">1 100 ₽</span>
-                            <button
-                              class="car-modal__remove-item-button cross-button"
-                              type="button"
-                              aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                            >
-                              Иконка
-                            </button>
-                          </li>
-                          <li class="car-modal__list-item">
-                            <p class="car-modal__text">Тестостерон свободный</p>
-                            <span class="car-modal__price">1 100 ₽</span>
-                            <button
-                              class="car-modal__remove-item-button cross-button"
-                              type="button"
-                              aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                            >
-                              Иконка
-                            </button>
-                          </li>
-                          <li class="car-modal__list-item">
-                            <p class="car-modal__text">Тестостерон свободный</p>
-                            <span class="car-modal__price">1 100 ₽</span>
-                            <button
-                              class="car-modal__remove-item-button cross-button"
-                              type="button"
-                              aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                            >
-                              Иконка
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="car-modal__group">
-                        <h5 class="car-modal__group-title">
-                          Услуги по взятию биоматериала:
-                        </h5>
-                        <ul class="car-modal__list">
-                          <li class="car-modal__list-item">
-                            <p class="car-modal__text">Взятие крови</p>
-                            <span class="car-modal__price">60 ₽</span>
-                            <button
-                              class="car-modal__remove-item-button cross-button"
-                              type="button"
-                              aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                            >
-                              Иконка
-                            </button>
-                          </li>
-                        </ul>
+                      <svg
+                        class="header-top__mobile-list-icon"
+                        width="13"
+                        height="13"
+                        fill="currentColor"
+                      >
+                        <use xlink:href="#tel-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header-top__mobile-list-item">
+                    <a
+                      class="header-top__mobile-list-link header-top__mobile-list-link--tel"
+                      href="tel:#"
+                      aria-label="Позвонить нам"
+                    >
+                      <svg
+                        class="header-top__mobile-list-icon"
+                        width="13"
+                        height="13"
+                        fill="currentColor"
+                      >
+                        <use xlink:href="#tel-icon"></use></svg
+                    ></a>
+                  </li>
+                  <li class="header-top__mobile-list-item">
+                    <a
+                      class="header-top__mobile-list-link"
+                      href="#"
+                      aria-label="Развернуть строку поиска"
+                    >
+                      <svg
+                        class="header-top__mobile-list-icon"
+                        width="13"
+                        height="13"
+                      >
+                        <use
+                          xlink:href="#search-icon"
+                          stroke="currentColor"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header-top__mobile-list-item">
+                    <a
+                      href="#"
+                      class="header-top__mobile-list-link header-top__mobile-list-link--cart"
+                      aria-label="Ссылка на страницу с корзиной"
+                    >
+                      <svg
+                        class="header-top__mobile-list-icon"
+                        width="13"
+                        height="13"
+                        fill="currentColor"
+                      >
+                        <use xlink:href="#cart-icon"></use>
+                      </svg>
+                      <span class="header-top__mobile-list-link-cart-value"
+                        >1</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-top__left">
+              <div class="header-top__left-cities-container">
+                <select name="city" class="header-top__left-cities cities">
+                  <option
+                    class="cities__option"
+                    value="Пермь"
+                    selected="selected"
+                  >
+                    Пермь
+                  </option>
+                </select>
+              </div>
+              <p class="header-top__left-tel">+7 (999) 999-99-99</p>
+            </div>
+            <div class="header-top__right">
+              <div class="header-top__right-search-container">
+                <button
+                  class="header-top__right-search-button"
+                  type="button"
+                  aria-label="Кнопка поиска"
+                >
+                  <svg
+                    class="header-top__mobile-list-icon"
+                    width="19"
+                    height="19"
+                    stroke="currentColor"
+                  >
+                    <use xlink:href="#search-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <a
+                href="#"
+                class="header-top__link header-top__link--cart"
+                aria-label="Перейти на страницу корзины"
+                ><svg
+                  class="header-top__mobile-list-icon"
+                  width="21"
+                  height="19"
+                  fill="currentColor"
+                >
+                  <use xlink:href="#cart-icon"></use>
+                </svg>
+                <span class="header-top__mobile-list-link-cart-value">1</span>
+              </a>
+              <div class="header-top__right-cart-container cart-container">
+                <div class="cart-container__inner">
+                  <div class="cart-container__modal cart-modal">
+                    <div class="cart-modal__top">
+                      <h4 class="cart-modal__title">Корзина (4)</h4>
+                      <button
+                        class="cart-modal__close-button cross-button cross-button--cart-close"
+                        aria-label="Кнопка закрытия модального окна корзины"
+                      >
+                        Иконка
+                      </button>
+                    </div>
+                    <div class="cart-modal__middle">
+                      <div class="cart-modal__inner">
+                        <div class="cart-modal__group">
+                          <h5 class="cart-modal__group-title">Анализы:</h5>
+                          <ul class="cart-modal__list">
+                            <li class="cart-modal__list-item">
+                              <p class="cart-modal__text">
+                                Тестостерон свободный (включает определение
+                                тестостерона общего и свободного, ГСПГ (SHBG),
+                                расчет индекса свободных андрогенов)
+                                тестостерона общего и свободного, ГСПГ (SHBG),
+                                расчет индекса
+                              </p>
+                              <span class="cart-modal__price">1 100 ₽</span>
+                              <button
+                                class="cart-modal__remove-item-button cross-button"
+                                type="button"
+                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                              >
+                                Иконка
+                              </button>
+                            </li>
+                            <li class="cart-modal__list-item">
+                              <p class="cart-modal__text">
+                                Тестостерон свободный
+                              </p>
+                              <span class="cart-modal__price">1 100 ₽</span>
+                              <button
+                                class="cart-modal__remove-item-button cross-button"
+                                type="button"
+                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                              >
+                                Иконка
+                              </button>
+                            </li>
+                            <li class="cart-modal__list-item">
+                              <p class="cart-modal__text">
+                                Тестостерон свободный
+                              </p>
+                              <span class="cart-modal__price">1 100 ₽</span>
+                              <button
+                                class="cart-modal__remove-item-button cross-button"
+                                type="button"
+                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                              >
+                                Иконка
+                              </button>
+                            </li>
+                            <li class="cart-modal__list-item">
+                              <p class="cart-modal__text">
+                                Тестостерон свободный
+                              </p>
+                              <span class="cart-modal__price">1 100 ₽</span>
+                              <button
+                                class="cart-modal__remove-item-button cross-button"
+                                type="button"
+                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                              >
+                                Иконка
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="cart-modal__group">
+                          <h5 class="cart-modal__group-title">
+                            Услуги по взятию биоматериала:
+                          </h5>
+                          <ul class="cart-modal__list">
+                            <li class="cart-modal__list-item">
+                              <p class="cart-modal__text">Взятие крови</p>
+                              <span class="cart-modal__price">60 ₽</span>
+                              <button
+                                class="cart-modal__remove-item-button cross-button"
+                                type="button"
+                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                              >
+                                Иконка
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="car-modal__bottom offer">
-                    <div class="car-modal__inner car-modal__inner--offer">
-                      <div class="offer__price-container">
-                        <span class="offer__price-text">Итого:</span
-                        ><span class="offer__price">1 100 ₽</span>
+                    <div class="cart-modal__bottom offer">
+                      <div class="cart-modal__inner cart-modal__inner--offer">
+                        <div class="offer__price-container">
+                          <span class="offer__price-text">Итого:</span
+                          ><span class="offer__price">1 100 ₽</span>
+                        </div>
+                        <button
+                          class="offer__button button"
+                          type="button"
+                          aria-label="Кнопка оформить заказ"
+                        >
+                          Оформить заказ
+                        </button>
                       </div>
-                      <button
-                        class="offer__button button"
-                        type="button"
-                        aria-label="Кнопка оформить заказ"
-                      >
-                        Оформить заказ
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -255,115 +258,290 @@
             </div>
           </div>
         </div>
-        <div class="header__bottom header-bottom">
-          <div class="header-bottom__mobile">
+      </div>
+      <div class="header__bottom-container">
+        <div class="header__inner inner">
+          <div class="header__bottom header-bottom">
+            <div class="header-bottom__mobile">
+              <img
+                alt="Логотип компании Лабдиагностика"
+                class="header-bottom__mobile-top-img"
+                src="https://via.placeholder.com/180x34.png"
+                width="34"
+                height="180"
+              />
+              <div
+                class="header-bottom__mobile-burger-button-container"
+                aria-label="Равернуть меню"
+                tabindex="0"
+              >
+                <div
+                  class="header-bottom__mobile-burger-bar header-bottom__mobile-burger-bar--1"
+                ></div>
+                <div
+                  class="header-bottom__mobile-burger-bar header-bottom__mobile-burger-bar--2"
+                ></div>
+                <div
+                  class="header-bottom__mobile-burger-bar header-bottom__mobile-burger-bar--3"
+                ></div>
+              </div>
+            </div>
+            <div class="header-bottom__left">
+              <img
+                src="https://via.placeholder.com/230x34.png"
+                alt="Логотип компании Лабдиагностика"
+                class="header__header-logo"
+                width="230"
+                height="34"
+              />
+            </div>
+            <div class="header-bottom__right">
+              <div
+                class="header-bottom__mobile-burger-button-container"
+                aria-label="Равернуть меню"
+                tabindex="0"
+              >
+                <div
+                  class="header-bottom__mobile-burger-bar header-bottom__mobile-burger-bar--1"
+                ></div>
+                <div
+                  class="header-bottom__mobile-burger-bar header-bottom__mobile-burger-bar--2"
+                ></div>
+                <div
+                  class="header-bottom__mobile-burger-bar header-bottom__mobile-burger-bar--3"
+                ></div>
+              </div>
+              <nav class="header__nav nav">
+                <ul class="nav-list">
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link"
+                      aria-label="Ссылка на страницу услуг"
+                      >Услуги</a
+                    >
+                    <ul class="nav-sub-list"></ul>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link"
+                      aria-label="Ссылка на страницу медицинских центров"
+                      >Медицинские центры</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link"
+                      aria-label="Ссылка на страницу специалистов"
+                      >Специалисты</a
+                    >
+                    <ul class="nav-sub-list"></ul>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link"
+                      aria-label="Ссылка на страницу для корпоративных клиентов"
+                      >Корпоративным клиентам</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link"
+                      aria-label="Ссылка на страницу акций"
+                      >Акции</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link"
+                      aria-label="Ссылка на страницу с информацией о компании"
+                      >О компании</a
+                    >
+                    <ul class="nav-sub-list"></ul>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link"
+                      aria-label="Ссылка на страницу пресс-центра"
+                      >Пресс-центр</a
+                    >
+                    <ul class="nav-sub-list"></ul>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link"
+                      aria-label="Ссылка на страницу с вакансиями"
+                      >Вакансии</a
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="nav__button button"
+                  aria-label="Ссылка на страницу для записи к врачу, или попап если скрипт работае"
+                  aria-haspopup="true"
+                  >Записаться к врачу</a
+                >
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__top-fixed-container">
+        <div class="header__inner inner">
+          <div class="header__top-fixed header-top-fixed">
             <img
               src="#"
               alt="Логотип компании Лабдиагностика"
-              class="header-bottom__mobile-top-fixed-img"
+              class="header-top-fixed-img"
               width="34"
-              height="230"
+              height="34"
             />
-            <button
-              class="header-bottom__mobile-burger-button"
-              type="button"
+            <select name="city" class="header-top-fixed__left-cities cities">
+              <option class="cities__option" value="Пермь" selected="selected">
+                Пермь
+              </option>
+            </select>
+            <ul class="header-top-fixed__mobile-list">
+              <li class="header-top-fixed__mobile-list-item">
+                <a
+                  class="header-top-fixed__mobile-list-link header-top-fixed__mobile-list-link--mail"
+                  href="mailto:#"
+                  aria-label="Написать нам письмо"
+                  >Иконка</a
+                >
+              </li>
+              <li class="header-top-fixed__mobile-list-item">
+                <a
+                  class="header-top-fixed__mobile-list-link header-top-fixed__mobile-list-link--tel"
+                  href="tel:#"
+                  aria-label="Позвонить нам"
+                  >Иконка</a
+                >
+              </li>
+              <li class="header-top-fixed__mobile-list-item">
+                <button
+                  class="header-top-fixed__mobile-list-button"
+                  type="button"
+                  aria-label="Развернуть строку поиска"
+                >
+                  Иконка
+                </button>
+              </li>
+              <li class="header-top-fixed__mobile-list-item">
+                <a
+                  href="#"
+                  class="header-top-fixed__mobile-list-link header-top-fixed__mobile-list-link--cart"
+                  aria-label="Ссылка на страницу с корзиной"
+                  >Иконка</a
+                >
+              </li>
+            </ul>
+            <div
+              class="header-top-fixed__mobile-burger-button-container"
               aria-label="Равернуть меню"
+              tabindex="0"
             >
-              Иконка
-            </button>
-          </div>
-          <div class="bottom__left">
-            <img
-              src="https://via.placeholder.com/230x44"
-              alt="Логотип компании Лабдиагностика"
-              class="header__header-logo"
-            />
-          </div>
-          <div class="bottom__right">
-            <nav class="header__nav nav">
-              <ul class="nav-list">
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link"
-                    aria-label="Ссылка на страницу услуг"
-                    >Услуги</a
-                  >
-                  <ul class="nav-sub-list"></ul>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link"
-                    aria-label="Ссылка на страницу медицинских центров"
-                    >Медицинские центры</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link"
-                    aria-label="Ссылка на страницу специалистов"
-                    >Специалисты</a
-                  >
-                  <ul class="nav-sub-list"></ul>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link"
-                    aria-label="Ссылка на страницу для корпоративных клиентов"
-                    >Корпоративным клиентам</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link"
-                    aria-label="Ссылка на страницу акций"
-                    >Акции</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link"
-                    aria-label="Ссылка на страницу с информацией о компании"
-                    >О компании</a
-                  >
-                  <ul class="nav-sub-list"></ul>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link"
-                    aria-label="Ссылка на страницу пресс-центра"
-                    >Пресс-центр</a
-                  >
-                  <ul class="nav-sub-list"></ul>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link"
-                    aria-label="Ссылка на страницу с вакансиями"
-                    >Вакансии</a
-                  >
-                </li>
-              </ul>
-              <a
-                href="#"
-                class="nav__button button"
-                aria-label="Ссылка на страницу для записи к врачу, или попап если скрипт работае"
-                aria-haspopup="true"
-                >Записаться к врачу</a
-              >
-            </nav>
+              <div
+                class="header-top-fixed__mobile-burger-bar header-top-fixed__mobile-burger-bar--1"
+              ></div>
+              <div
+                class="header-top-fixed__mobile-burger-bar header-top-fixed__mobile-burger-bar--2"
+              ></div>
+              <div
+                class="header-top-fixed__mobile-burger-bar header-top-fixed__mobile-burger-bar--3"
+              ></div>
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <h1 class="main__title visually-hidden">
+        Сайт компании "Лабдиагностика"
+      </h1>
+      <section class="main__section main__section--search section search">
+        <h2 class="section__title visually-hidden">Поиск услуг</h2>
+        <div class="section__inner inner">
+          <div class="search__container">
+            <div class="search__container-top">
+              <h3 class="search__title">Простой и удобный поиск Анализов</h3>
+              <small class="search__container-top-text"
+                >По какому разделу искать?</small
+              >
+            </div>
+            <div class="search__container-input-group">
+              <input
+                type="text"
+                class="search__input"
+                placeholder="Введите ваш поисковый запрос…"
+                aria-label="Введите что хотите найти"
+                aria-describedby="search-descr"
+              />
+              <p class="visually-hidden" id="search-descr">
+                Введите ваш поисковый запрос…
+              </p>
+              <select name="" id="" class="search__categories">
+                <option class="search__category" selected>Все разделы</option>
+              </select>
+              <button class="search__button" type="button">
+                <svg
+                  class="search__icon"
+                  width="13"
+                  height="13"
+                  fill="currentColor"
+                >
+                  <use xlink:href="#search-icon"></use>
+                </svg>
+              </button>
+            </div>
+            <small class="search__hint"
+              >Например,
+              <a href="#" class="search__hint-dotted"
+                >биохимический анализ крови</a
+              ></small
+            >
+            <div class="search__controls">
+              <button
+                type="button"
+                class="search__control search__control--analyse"
+                aria-label="Нажмите чтобы перейти к записям на анализ"
+              >
+                Выбрать анализы
+              </button>
+              <button
+                type="button"
+                class="search__control search__control--center"
+                aria-label="Нажмите чтобы выбирать медицинские центры"
+              >
+                Выбрать медицинский центр
+              </button>
+              <button
+                type="button"
+                class="search__control search__control--doctor"
+                aria-label="Нажмите чтобы перейти к выбору специалиста"
+              >
+                Запись к врачу
+              </button>
+              <button
+                type="button"
+                class="search__control search__control--shedule"
+                aria-label="Нажмите чтобы узнать расписсания врачей"
+              >
+                Расписание приема врачей
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer"></footer>
   </body>
 </html>
