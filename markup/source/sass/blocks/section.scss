@@ -1,16 +1,16 @@
 .section__inner {
-  padding-left: 32.5px;
   padding-right: 32.5px;
+  padding-left: 32.5px;
 }
 
 .section__title {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 @media (min-width: $tablet-width) {
   .section__inner {
-    padding-left: 75px;
     padding-right: 75px;
+    padding-left: 75px;
   }
 }
