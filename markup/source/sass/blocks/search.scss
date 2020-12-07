@@ -8,6 +8,7 @@
     RGBA(43, 215, 255, 1)
   );
   color: $white;
+  font-weight: 500;
 }
 
 .search__title {
@@ -177,7 +178,7 @@
   .search {
     min-height: 594px;
     padding-top: 143px;
-    padding-bottom: 84px;
+    padding-bottom: 69px;
     background-image: url("../img/mainbg.png"),
       linear-gradient(
         to left,
@@ -317,7 +318,7 @@
     }
 
     &:hover {
-      box-shadow: 0px 0px 10px 5px rgba(34, 60, 80, 0.18);
+      box-shadow: $box-shadow;
       transform: scale(1.05);
     }
   }

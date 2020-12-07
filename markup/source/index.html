@@ -488,7 +488,11 @@
               <p class="visually-hidden" id="search-descr">
                 Введите ваш поисковый запрос…
               </p>
-              <select name="" id="" class="search__categories">
+              <select
+                name="categories"
+                id="categories"
+                class="search__categories"
+              >
                 <option class="search__category" selected>Все разделы</option>
               </select>
               <button class="search__button" type="button">
@@ -504,7 +508,7 @@
             </div>
             <small class="search__hint">
               <svg
-                class="search-hint__icon"
+                class="search__hint-icon"
                 width="13"
                 height="13"
                 fill="currentColor"
@@ -546,6 +550,131 @@
                 Расписание приема врачей
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="main__section main__section--actual-offers section actual-offers"
+      >
+        <div class="section__inner inner">
+          <h2 class="actual-offers__title">Актуальные предложения</h2>
+          <div class="actual-offers__container">
+            <div class="actual-offers__controls-slider">
+              <button
+                class="actual-offers__control actual-offers__control--left slider-button"
+                type="button"
+                aria-label="Кнопка переключения слайдера влево"
+              >
+                <svg
+                  class="actual-offers__control-button-icon"
+                  width="12.5"
+                  height="12.5"
+                  fill="currentColor"
+                >
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </button>
+              <button
+                class="actual-offers__control actual-offers__control--right slider-button active"
+                type="button"
+                aria-label="Кнопка переключения слайдера вправо"
+              >
+                <svg
+                  class="actual-offers__control-button-icon"
+                  width="12.5"
+                  height="12.5"
+                  fill="currentColor"
+                >
+                  <use xlink:href="#arrrow-right"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="actual-offers__list">
+              <li class="actual-offers__list-item actual-offer">
+                <a
+                  href="#"
+                  class="actual-offer__link actual-offer__link--covid"
+                  aria-label="Перейти на страницу с предложением"
+                >
+                  <svg
+                    class="actual-offers__icon"
+                    width="16.5"
+                    height="16.5"
+                    fill="currentColor"
+                  >
+                    <use xlink:href="#arrrow-right"></use>
+                  </svg>
+                </a>
+                <div class="actual-offer__container">
+                  <div class="actual-offer__list-item-top">
+                    <h3 class="actual-offer__title">Корона</h3>
+                    <p class="actual-offer__text">
+                      Тестирование на COVID-19 методом ПЦР (соскоб)
+                    </p>
+                  </div>
+                  <div class="actual-offer__list-item-bottom">
+                    <span class="actual-offer__price"> 2 330 ₽ </span>
+                    <p class="actual-offer__price-text">Стоимость комплекса</p>
+                  </div>
+                </div>
+              </li>
+              <li class="actual-offers__list-item actual-offer">
+                <a
+                  href="#"
+                  class="actual-offer__link actual-offer__link--covid"
+                  aria-label="Перейти на страницу с предложением"
+                >
+                  <svg
+                    class="actual-offers__icon"
+                    width="16.5"
+                    height="16.5"
+                    fill="currentColor"
+                  >
+                    <use xlink:href="#arrrow-right"></use>
+                  </svg>
+                </a>
+                <div class="actual-offer__container">
+                  <div class="actual-offer__list-item-top">
+                    <h3 class="actual-offer__title">Фгс</h3>
+                    <p class="actual-offer__text">
+                      Тестирование на антитела ig G и Антитела Ig M COVID-19
+                    </p>
+                  </div>
+                  <div class="actual-offer__list-item-bottom">
+                    <span class="actual-offer__price"> 3 598 ₽ </span>
+                    <p class="actual-offer__price-text">Стоимость комплекса</p>
+                  </div>
+                </div>
+              </li>
+              <li class="actual-offers__list-item actual-offer">
+                <a
+                  href="#"
+                  class="actual-offer__link actual-offer__link--covid"
+                  aria-label="Перейти на страницу с предложением"
+                >
+                  <svg
+                    class="actual-offers__icon"
+                    width="16.5"
+                    height="16.5"
+                    fill="currentColor"
+                  >
+                    <use xlink:href="#arrrow-right"></use>
+                  </svg>
+                </a>
+                <div class="actual-offer__container">
+                  <div class="actual-offer__list-item-top">
+                    <h3 class="actual-offer__title">Корона</h3>
+                    <p class="actual-offer__text">
+                      Тестирование на COVID-19 методом ПЦР (соскоб)
+                    </p>
+                  </div>
+                  <div class="actual-offer__list-item-bottom">
+                    <span class="actual-offer__price"> 2 330 ₽ </span>
+                    <p class="actual-offer__price-text">Стоимость комплекса</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
