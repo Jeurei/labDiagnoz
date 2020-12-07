@@ -12,3 +12,16 @@
   line-height: $button-lh;
   text-transform: uppercase;
 }
+
+.slider-button {
+  width: 26px;
+  height: 26px;
+  border: none;
+  appearance: none;
+  background-color: $inactive-color;
+  border-radius: 6px;
+
+  &:last-child {
+    margin-left: 3px;
+  }
+}

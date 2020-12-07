@@ -1,0 +1,211 @@
+.actual-offers__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.actual-offers__controls-slider {
+  display: none;
+}
+
+.actual-offers__list {
+  padding: 0;
+  list-style: none;
+}
+
+.actual-offers__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  box-shadow: 0 10px 16px -6px $color-text;
+}
+
+.actual-offer__container {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.actual-offer__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  order: 1;
+  background-color: $blue;
+  background-repeat: no-repeat;
+
+  &--covid {
+    background-image: url("../img/covid.svg");
+    background-position: 85% 2px;
+  }
+}
+
+.actual-offers__icon {
+  position: absolute;
+  bottom: 12px;
+  left: 90%;
+  color: $white;
+}
+
+.actual-offer__title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.actual-offer__text {
+  padding-bottom: 8.5px;
+  border-bottom: 1px dashed $border-color;
+}
+
+.actual-offer__list-item-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.actual-offer__price {
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.actual-offer__price-text {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .actual-offers__list {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .actual-offer__container {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: stretch;
+    padding-top: 13px;
+    padding-left: 16px;
+    justify-self: flex-start;
+  }
+
+  .actual-offer__title {
+    padding-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+
+  .actual-offer__text {
+    padding-right: 60%;
+    font-size: 12px;
+  }
+
+  .actual-offer__list-item-bottom {
+    align-items: center;
+    align-self: flex-start;
+    padding-top: 0;
+    padding-bottom: 10px;
+    margin-top: -3px;
+  }
+
+  .actual-offers__list-item {
+    min-width: 100%;
+    height: 160px;
+    flex-direction: row;
+    margin-right: 30px;
+  }
+
+  .actual-offer__link {
+    min-width: 60px;
+    max-width: 60px;
+    min-height: 100%;
+    order: 0;
+    background-position: 10px 2px;
+    &--covid {
+      background-image: url("../img/covid.svg");
+      background-position: 10px 50%;
+    }
+  }
+
+  .actual-offer__price {
+    margin-right: 26px;
+    font-size: 26px;
+    letter-spacing: 0.9px;
+  }
+
+  .actual-offer__price-text {
+    width: 50%;
+  }
+
+  .actual-offers__icon {
+    left: 35%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .actual-offers {
+    padding-top: 18px;
+  }
+
+  .actual-offers__controls-slider {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .actual-offers__control {
+    position: relative;
+  }
+
+  .actual-offers__control-button-icon {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    color: $white;
+  }
+
+  .actual-offers__title {
+    @include titleh2($color-text);
+    position: relative;
+    margin-bottom: 26px;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+    &::before {
+      @include titleAfter();
+      top: 30px;
+      left: 7px;
+    }
+  }
+
+  .actual-offers__list {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .actual-offers__list-item {
+    min-width: 375px;
+    margin: 0;
+    margin-right: 23px;
+    box-shadow: $box-shadow;
+  }
+
+  .actual-offer__container {
+    flex-grow: 0;
+  }
+
+  .actual-offer__text {
+    padding-right: 20%;
+  }
+}
