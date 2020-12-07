@@ -1,4 +1,6 @@
 .search {
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-image: linear-gradient(
     to left,
     RGBA(250, 0, 235, 1),
@@ -6,8 +8,6 @@
     RGBA(43, 215, 255, 1)
   );
   color: $white;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .search__title {
@@ -16,47 +16,48 @@
 
 .search__container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 15px;
 }
 
 .search__container-top {
   display: flex;
+  width: 100%;
   flex-direction: row;
+  padding-right: 0;
   padding-bottom: 6px;
-  padding-right: 24px;
 }
 
 .search__container-top-text {
-  line-height: 7.7px;
-  font-size: 9px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
+  font-size: 9px;
+  line-height: 7.7px;
 }
 
 .search__container-input-group {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
   width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
   padding-bottom: 5px;
 }
 
 .search__input {
-  appearance: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 9.3px;
   border: none;
+  appearance: none;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
   font-family: inherit;
   font-size: inherit;
-  padding-top: 10px;
-  padding-left: 9.3px;
-  padding-bottom: 10px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
 }
 
 .search__categories {
@@ -65,48 +66,48 @@
 }
 
 .search__button {
-  min-height: 100%;
   min-width: 32px;
+  min-height: 100%;
+  border: none;
   appearance: none;
   background-color: $blue;
-  color: #fff;
-  border: none;
-  border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  color: #fff;
 }
 
 .search__controls {
-  color: transparent;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: transparent;
   font-size: 0;
 }
 
 .search__control {
+  position: relative;
   width: 55px;
   height: 35px;
-  background-color: $white;
-  position: relative;
   border: none;
-  appearance: none;
   border-right: 1px solid $border-color;
+  appearance: none;
+  background-color: $white;
 
   &:last-child {
     border-right: none;
   }
 
   &::before {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    content: "";
+    display: block;
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    content: "";
   }
 
   &--analyse::before {
@@ -135,15 +136,189 @@
 }
 
 .search__hint {
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: flex-start;
   padding-bottom: 10px;
 }
 
+.search-hint__icon {
+  display: none;
+}
+
 .search__hint-dotted {
-  color: $white;
-  padding-left: 3px;
   height: 14px;
+  padding-left: 3px;
   border-bottom: 0.5px dashed $white;
+  color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .search__title {
+    margin-right: auto;
+  }
+
+  .search__container-top-text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .search__input {
+    flex-grow: 2;
+  }
+
+  .search__control {
+    width: 70px;
+    height: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .search {
+    min-height: 594px;
+    padding-top: 143px;
+    padding-bottom: 84px;
+    background-image: url("../img/mainbg.png"),
+      linear-gradient(
+        to left,
+        RGBA(250, 0, 235, 1),
+        RGBA(154, 102, 245, 1),
+        RGBA(43, 215, 255, 1)
+      );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/mainbg@2x.png");
+    }
+  }
+
+  .search__container-top {
+    padding-top: 4px;
+    padding-right: 132px;
+  }
+
+  .search__container-top-text {
+    align-items: center;
+    padding-top: 3px;
+    padding-right: 9px;
+    font-size: $body-fs;
+    letter-spacing: -0.3px;
+  }
+
+  .search__title {
+    @include titleh2($white);
+    position: relative;
+    margin-bottom: 8px;
+    letter-spacing: -0.1px;
+
+    &::after {
+      @include titleAfter();
+    }
+  }
+
+  .search__container-input-group {
+    min-height: 57.5px;
+    margin-bottom: 15px;
+  }
+
+  .search__input {
+    padding-top: 14px;
+    padding-left: 19.3px;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+  }
+
+  .search__categories {
+    position: relative;
+    min-width: 218px;
+    padding-left: 22px;
+    appearance: none;
+    background-image: url("../img/dropdown.svg");
+    background-position-x: 91%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    letter-spacing: -0.5px;
+  }
+
+  .search__button {
+    min-width: 73px;
+  }
+
+  .search__icon {
+    width: 26.34px;
+    height: 26.34px;
+  }
+
+  .search__hint {
+    position: relative;
+    padding-left: 17px;
+    font-size: $body-fs;
+  }
+
+  .search-hint__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+  }
+
+  .search__hint-dotted {
+    height: 18px;
+    padding-left: 1px;
+    letter-spacing: -0.28px;
+  }
+
+  .search__controls {
+    margin-top: 109px;
+  }
+
+  .search__control {
+    width: 293px;
+    height: 95px;
+    padding-top: 5px;
+    padding-left: 39px;
+    color: $color-text;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    transition: all 0.2s ease-in-out;
+
+    &:first-child {
+      padding-left: 33px;
+    }
+
+    &:nth-child(3) {
+      padding-left: 27px;
+    }
+
+    &:nth-child(4) {
+      padding-left: 34px;
+    }
+
+    &--analyse::before {
+      left: -67px;
+      background-size: 31px 33px;
+    }
+
+    &--center::before {
+      left: -107px;
+      background-size: 31px 32px;
+    }
+
+    &--doctor::before {
+      left: -67px;
+      background-size: 27px 34.5px;
+    }
+
+    &--shedule::before {
+      left: -104px;
+      background-size: 28px 28px;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba(34, 60, 80, 0.18);
+      transform: scale(1.05);
+    }
+  }
 }

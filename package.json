@@ -8,7 +8,8 @@
     "build": "webpack",
     "start": "webpack-dev-server --open",
     "gulp-start": "gulp start",
-    "gulp-build": "gulp build"
+    "gulp-build": "gulp build",
+    "lint-scss": "npx stylelint 'markup/source/sass/blocks/**/*.scss'"
   },
   "repository": {
     "type": "git",
@@ -41,9 +42,11 @@
     "posthtml-include": "^1.6.0",
     "prettier": "^2.2.1",
     "stylelint": "^13.8.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "4.1.0",
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.18.0"
   },
