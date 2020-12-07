@@ -1,6 +1,7 @@
 @mixin titleh2($color) {
   color: $color;
   font-size: $title-h2-fs;
+  font-weight: 500;
   line-height: $title-h2-lh;
 }
 
@@ -18,8 +19,8 @@
 
 @mixin font($color, $default: true) {
   color: $color;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
 
   @if $default {
     font-size: $body-fs;
@@ -31,8 +32,22 @@
 }
 
 @mixin pseudo($content, $width, $height) {
-  content: $content;
   display: flex;
   width: $width;
   height: $height;
+  content: $content;
+}
+
+@mixin titleAfter() {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 28px);
+  display: block;
+  width: 130px;
+  height: 14px;
+  content: "///////////";
+  font-size: 22px;
+  letter-spacing: 4.5px;
+  opacity: 0.3;
+  transform: skew(-16deg, 0deg);
 }

@@ -1,5 +1,6 @@
 .header {
   padding-top: 10px;
+  padding-bottom: 8px;
 }
 
 .header__inner {
@@ -280,8 +281,8 @@
 
 @media (min-width: $desktop-width) {
   .header__inner {
-    padding-right: 26px;
-    padding-left: 44px;
+    padding-right: 29px;
+    padding-left: 2px;
   }
 
   .header__top-container {

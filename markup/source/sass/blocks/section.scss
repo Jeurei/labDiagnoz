@@ -14,3 +14,11 @@
     padding-left: 75px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .section__inner {
+    position: relative;
+    padding-right: 361px;
+    padding-left: 351px;
+  }
+}
