@@ -119,6 +119,7 @@
 }
 
 .actual-offers__mobile-slider {
+  display: flex;
   width: 100%;
   height: 5px;
 }
@@ -126,7 +127,12 @@
 .actual-offers__mobile-slider-bar {
   height: 100%;
   flex-grow: 1;
+  margin-left: 5px;
   background-color: $inactive-color;
+
+  &:first-child {
+    margin-left: 0;
+  }
 
   &--active {
     background-image: linear-gradient(
@@ -215,7 +221,7 @@
 
 @media (min-width: $desktop-width) {
   .actual-offers {
-    padding-top: 18px;
+    padding-top: 49px;
   }
 
   .actual-offers__controls-slider {
@@ -239,7 +245,11 @@
     position: relative;
     margin-bottom: 26px;
     font-weight: 400;
-    letter-spacing: -0.7px;
+    letter-spacing: 0.4px;
+
+    &::after {
+      left: 8px;
+    }
   }
 
   .actual-offers__list {
@@ -248,22 +258,47 @@
     justify-content: flex-start;
   }
 
+  .actual-offer__text {
+    padding-right: 20%;
+    letter-spacing: -0.1px;
+  }
+
   .actual-offers__list-item {
     min-width: 375px;
     margin: 0;
     margin-right: 23px;
     box-shadow: $box-shadow;
+
+    &:nth-of-type(2) {
+      .actual-offer__text {
+        padding-right: 10%;
+      }
+    }
+  }
+
+  .actual-offer__link {
+    min-width: 61px;
+    max-width: 61px;
+
+    &--covid {
+      background-position: 10px 50%;
+      background-size: 40px 40px;
+    }
   }
 
   .actual-offer__container {
     flex-grow: 0;
   }
 
-  .actual-offer__text {
-    padding-right: 20%;
-  }
-
   .actual-offers__mobile-slider {
     display: none;
+  }
+
+  .actual-offer__list-item-bottom {
+    padding-top: 8px;
+  }
+
+  .actual-offer__price {
+    padding-left: 4px;
   }
 }

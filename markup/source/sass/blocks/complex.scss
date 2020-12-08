@@ -159,6 +159,7 @@
 }
 
 .complex__mobile-slider {
+  display: flex;
   width: 100%;
   height: 5px;
 }
@@ -200,11 +201,78 @@
 }
 
 @media (min-width: $desktop-width) {
+  .complexes {
+    padding-top: 50px;
+    padding-bottom: 15px;
+  }
+
   .complex {
     margin-right: 30px;
   }
 
+  .complex__list {
+    padding-top: 3px;
+    padding-left: 34px;
+    margin-bottom: 14px;
+  }
+
+  .complexes__title {
+    @include titleh2($color-text);
+    margin-bottom: 55px;
+    letter-spacing: -0.2px;
+  }
+
   .complex__mobile-slider {
     display: none;
+  }
+
+  .complex__title {
+    padding-top: 3px;
+    padding-left: 24px;
+    margin-bottom: -4px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .complex__text {
+    padding-top: 6px;
+    padding-left: 25px;
+    font-size: 12px;
+  }
+
+  .complex__text-container {
+    margin-bottom: 22px;
+  }
+
+  .complex__list-item {
+    font-size: 11px;
+  }
+
+  .complex__list-item::before {
+    top: 2px;
+    left: -16px;
+  }
+
+  .complex__expand-button {
+    padding-left: 20px;
+    letter-spacing: -0.6px;
+  }
+
+  .complex__expand-icon {
+    right: -18px;
+  }
+
+  .complex__bottom-container-top {
+    padding-top: 6px;
+    padding-bottom: 0;
+    padding-left: 22px;
+  }
+
+  .complex__bottom-container-bottom {
+    padding-left: 23px;
+  }
+
+  .complex__price--old {
+    padding-right: 23px;
   }
 }

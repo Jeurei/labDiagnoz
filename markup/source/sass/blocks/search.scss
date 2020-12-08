@@ -236,7 +236,7 @@
 @media (min-width: $desktop-width) {
   .search {
     min-height: 594px;
-    padding-top: 143px;
+    padding-top: 149px;
     padding-bottom: 69px;
     background-image: url("../img/mainbg.png"),
       linear-gradient(
@@ -280,11 +280,12 @@
 
   .search__container-input-group {
     min-height: 57.5px;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
   }
 
   .search__input {
-    padding-top: 14px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     padding-left: 19.3px;
     font-size: 14px;
     letter-spacing: -0.3px;
@@ -306,13 +307,18 @@
     min-width: 73px;
   }
 
+  .search__icon {
+    width: 26px;
+    height: 26px;
+  }
+
   .search__hint {
     position: relative;
     padding-left: 17px;
     font-size: $body-fs;
   }
 
-  .search-hint__icon {
+  .search__hint-icon {
     position: absolute;
     top: 0;
     left: 0;
