@@ -16,6 +16,7 @@ body {
   font-family: $main-font;
   font-size: $body-fs;
   line-height: $body-lh;
+  overflow-x: hidden;
   -ms-scroll-limit-x-max: 0;
   @include font($color-text);
 }

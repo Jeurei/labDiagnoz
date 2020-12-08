@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лабдиагностика</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/picturefill.min.js"></script>
+    <script src="./js/svg4everybody.min.js"></script>
   </head>
   <body>
     <div style="display: none">
@@ -14,89 +16,6 @@
       <div class="header__top-container">
         <div class="header__inner inner">
           <div class="header__top header-top">
-            <div class="header-top__mobile">
-              <div class="header-top__mobile-top">
-                <select name="city" class="header-top__left-cities cities">
-                  <option
-                    class="cities__option"
-                    value="Пермь"
-                    selected="selected"
-                  >
-                    Пермь
-                  </option>
-                </select>
-                <ul class="header-top__mobile-list">
-                  <li class="header-top__mobile-list-item">
-                    <a
-                      class="header-top__mobile-list-link header-top__mobile-list-link--mail"
-                      href="mailto:#"
-                      aria-label="Написать нам письмо"
-                    >
-                      <svg
-                        class="header-top__mobile-list-icon"
-                        width="13"
-                        height="13"
-                        fill="currentColor"
-                      >
-                        <use xlink:href="#tel-icon"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="header-top__mobile-list-item">
-                    <a
-                      class="header-top__mobile-list-link header-top__mobile-list-link--tel"
-                      href="tel:#"
-                      aria-label="Позвонить нам"
-                    >
-                      <svg
-                        class="header-top__mobile-list-icon"
-                        width="13"
-                        height="13"
-                        fill="currentColor"
-                      >
-                        <use xlink:href="#tel-icon"></use></svg
-                    ></a>
-                  </li>
-                  <li class="header-top__mobile-list-item">
-                    <a
-                      class="header-top__mobile-list-link"
-                      href="#"
-                      aria-label="Развернуть строку поиска"
-                    >
-                      <svg
-                        class="header-top__mobile-list-icon"
-                        width="13"
-                        height="13"
-                      >
-                        <use
-                          xlink:href="#search-icon"
-                          stroke="currentColor"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="header-top__mobile-list-item">
-                    <a
-                      href="#"
-                      class="header-top__mobile-list-link header-top__mobile-list-link--cart"
-                      aria-label="Ссылка на страницу с корзиной"
-                    >
-                      <svg
-                        class="header-top__mobile-list-icon"
-                        width="13"
-                        height="13"
-                        fill="currentColor"
-                      >
-                        <use xlink:href="#cart-icon"></use>
-                      </svg>
-                      <span class="header-top__mobile-list-link-cart-value"
-                        >1</span
-                      >
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
             <div class="header-top__left">
               <div class="header-top__left-cities-container">
                 <select name="city" class="header-top__left-cities cities">
@@ -140,7 +59,9 @@
                 >
                   <use xlink:href="#cart-icon"></use>
                 </svg>
-                <span class="header-top__mobile-list-link-cart-value">1</span>
+                <span class="header-top__mobile-list-link-cart-value cart-value"
+                  >1</span
+                >
               </a>
               <div class="header-top__right-cart-container cart-container">
                 <div class="cart-container__inner">
@@ -263,13 +184,22 @@
         <div class="header__inner inner">
           <div class="header__bottom header-bottom">
             <div class="header-bottom__mobile">
-              <img
-                alt="Логотип компании Лабдиагностика"
-                class="header-bottom__mobile-top-img"
-                src="https://via.placeholder.com/180x34.png"
-                width="34"
-                height="180"
-              />
+              <picture class="header-bottom__mobile-top-img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/mobile-logo.webp    1x,
+                    ./img/mobile-logo@2x.webp 2x
+                  "
+                />
+                <img
+                  src="./img/mobile-logo.png"
+                  srcset="./img/mobile-logo@2x.png 2x"
+                  width="222"
+                  height="33"
+                  alt="Логотип компании Лабдиагностика"
+                />
+              </picture>
               <div
                 class="header-bottom__mobile-burger-button-container"
                 aria-label="Равернуть меню"
@@ -287,13 +217,19 @@
               </div>
             </div>
             <div class="header-bottom__left">
-              <img
-                src="https://via.placeholder.com/230x34.png"
-                alt="Логотип компании Лабдиагностика"
-                class="header__header-logo"
-                width="230"
-                height="34"
-              />
+              <picture class="header-bottom__mobile-top-img">
+                <source
+                  type="image/webp"
+                  srcset="./img/logo.webp 1x, ./img/logo@2x.webp 2x"
+                />
+                <img
+                  src="./img/logo.png"
+                  srcset="./img/logo@2x.png 2x"
+                  width="230"
+                  height="34"
+                  alt="Логотип компании Лабдиагностика"
+                />
+              </picture>
             </div>
             <div class="header-bottom__right">
               <div
@@ -398,7 +334,7 @@
         <div class="header__inner inner">
           <div class="header__top-fixed header-top-fixed">
             <img
-              src="#"
+              src="https://via.placeholder.com/34x34.png"
               alt="Логотип компании Лабдиагностика"
               class="header-top-fixed-img"
               width="34"
@@ -415,33 +351,66 @@
                   class="header-top-fixed__mobile-list-link header-top-fixed__mobile-list-link--mail"
                   href="mailto:#"
                   aria-label="Написать нам письмо"
-                  >Иконка</a
                 >
+                  <svg
+                    class="header-top-fixed__mobile-list-icon"
+                    width="13"
+                    height="13"
+                    fill="currentColor"
+                  >
+                    <use xlink:href="#tel-icon"></use>
+                  </svg>
+                </a>
               </li>
               <li class="header-top-fixed__mobile-list-item">
                 <a
                   class="header-top-fixed__mobile-list-link header-top-fixed__mobile-list-link--tel"
                   href="tel:#"
                   aria-label="Позвонить нам"
-                  >Иконка</a
                 >
+                  <svg
+                    class="header-top-fixed__mobile-list-icon"
+                    width="13"
+                    height="13"
+                    fill="currentColor"
+                  >
+                    <use xlink:href="#tel-icon"></use></svg
+                ></a>
               </li>
               <li class="header-top-fixed__mobile-list-item">
-                <button
-                  class="header-top-fixed__mobile-list-button"
-                  type="button"
+                <a
+                  class="header-top-fixed__mobile-list-link header-top-fixed__mobile-list-link--search"
+                  href="#"
                   aria-label="Развернуть строку поиска"
                 >
-                  Иконка
-                </button>
+                  <svg
+                    class="header-top-fixed__mobile-list-icon"
+                    width="13"
+                    height="13"
+                  >
+                    <use xlink:href="#search-icon" stroke="currentColor"></use>
+                  </svg>
+                </a>
               </li>
               <li class="header-top-fixed__mobile-list-item">
                 <a
                   href="#"
                   class="header-top-fixed__mobile-list-link header-top-fixed__mobile-list-link--cart"
                   aria-label="Ссылка на страницу с корзиной"
-                  >Иконка</a
                 >
+                  <svg
+                    class="header-top-fixed__mobile-list-icon"
+                    width="13"
+                    height="13"
+                    fill="currentColor"
+                  >
+                    <use xlink:href="#cart-icon"></use>
+                  </svg>
+                  <span
+                    class="header-top-fixed__mobile-list-link-cart-value cart-value"
+                    >1</span
+                  >
+                </a>
               </li>
             </ul>
             <div
@@ -675,8 +644,321 @@
                 </div>
               </li>
             </ul>
+            <div
+              class="actual-offers__mobile-slider actual-offers__mobile-slider"
+            >
+              <div
+                class="actual-offers__mobile-slider-bar actual-offers__mobile-slider-bar--active"
+              ></div>
+            </div>
           </div>
         </div>
+      </section>
+      <section class="main__section main__section--complexes section complexes">
+        <section class="section__inner inner">
+          <h2 class="section__title complexes__title">
+            Подберите свой комплекс
+          </h2>
+          <div class="complexes__container">
+            <ul class="complexes__list">
+              <li class="complexes__item complex">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/left-radius.webp    1x,
+                      ./img/left-radius@2x.webp 2x
+                    "
+                  />
+                  <img
+                    src="./img/left-radius.png"
+                    srcset="./img/left-radius@2x.png 2x"
+                    width="100%"
+                    height="193"
+                    alt="Фотография сетки"
+                    class="complex__img"
+                  />
+                </picture>
+                <h3 class="complex__title">Обследование Печени, Скрининг</h3>
+                <div class="complex__text-container">
+                  <p class="complex__text">Пояснение</p>
+                  <ul class="complex__list">
+                    <li class="complex__list-item">
+                      16а-гидроксиэстрон (16а-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      4-гидроксиэстрон (4-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      16а-гидроксиэстрон (16а-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      4-гидроксиэстрон (4-OHE1)
+                    </li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="complex__expand-button"
+                    aria-label="нажмите что развернуть все анализы"
+                    >Показать все анализы
+                    <svg
+                      class="complex__expand-icon"
+                      width="10"
+                      height="16"
+                      stroke="currentColor"
+                    >
+                      <use xlink:href="#expand-icon"></use></svg
+                  ></a>
+                </div>
+                <div class="complex__bottom-container">
+                  <div class="complex__bottom-container-top">
+                    <p class="complex__price-text">Цена комплекса</p>
+                    <div class="complex__price-container">
+                      <span class="complex__price complex__price--old"
+                        >15 597 ₽</span
+                      >
+                      <span class="complex__price">2 330 ₽</span>
+                    </div>
+                  </div>
+                  <div class="complex__bottom-container-bottom">
+                    <p class="complex__bottom-container-bottom-text">
+                      Включает 6 анализов
+                    </p>
+                    <svg
+                      class="complex__icon"
+                      width="26.5"
+                      height="26.5"
+                      fill="currentColor"
+                    >
+                      <use xlink:href="#arrrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li class="complexes__item complex">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="./img/complex.webp 1x, ./img/complex@2x.webp 2x"
+                  />
+                  <img
+                    src="./img/complex.png"
+                    srcset="./img/complex@2x.png 2x"
+                    width="100%"
+                    height="193"
+                    alt="Фотография сетки"
+                    class="complex__img"
+                  />
+                </picture>
+                <h3 class="complex__title">Обследование Печени, Скрининг</h3>
+                <div class="complex__text-container">
+                  <p class="complex__text">Пояснение</p>
+                  <ul class="complex__list">
+                    <li class="complex__list-item">
+                      16а-гидроксиэстрон (16а-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      4-гидроксиэстрон (4-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      16а-гидроксиэстрон (16а-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      4-гидроксиэстрон (4-OHE1)
+                    </li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="complex__expand-button"
+                    aria-label="нажмите что развернуть все анализы"
+                    >Показать все анализы
+                    <svg
+                      class="complex__expand-icon"
+                      width="10"
+                      height="16"
+                      stroke="currentColor"
+                    >
+                      <use xlink:href="#expand-icon"></use></svg
+                  ></a>
+                </div>
+                <div class="complex__bottom-container">
+                  <div class="complex__bottom-container-top">
+                    <p class="complex__price-text">Цена комплекса</p>
+                    <div class="complex__price-container">
+                      <span class="complex__price complex__price--old"
+                        >15 597 ₽</span
+                      >
+                      <span class="complex__price">2 330 ₽</span>
+                    </div>
+                  </div>
+                  <div class="complex__bottom-container-bottom">
+                    <p class="complex__bottom-container-bottom-text">
+                      Включает 6 анализов
+                    </p>
+                    <svg
+                      class="complex__icon"
+                      width="26.5"
+                      height="26.5"
+                      fill="currentColor"
+                    >
+                      <use xlink:href="#arrrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li class="complexes__item complex">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="./img/complex.webp 1x, ./img/complex@2x.webp 2x"
+                  />
+                  <img
+                    src="./img/complex.png"
+                    srcset="./img/complex@2x.png 2x"
+                    width="100%"
+                    height="193"
+                    alt="Фотография сетки"
+                    class="complex__img"
+                  />
+                </picture>
+                <h3 class="complex__title">Обследование Печени, Скрининг</h3>
+                <div class="complex__text-container">
+                  <p class="complex__text">Пояснение</p>
+                  <ul class="complex__list">
+                    <li class="complex__list-item">
+                      16а-гидроксиэстрон (16а-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      4-гидроксиэстрон (4-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      16а-гидроксиэстрон (16а-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      4-гидроксиэстрон (4-OHE1)
+                    </li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="complex__expand-button"
+                    aria-label="нажмите что развернуть все анализы"
+                    >Показать все анализы
+                    <svg
+                      class="complex__expand-icon"
+                      width="10"
+                      height="16"
+                      stroke="currentColor"
+                    >
+                      <use xlink:href="#expand-icon"></use></svg
+                  ></a>
+                </div>
+                <div class="complex__bottom-container">
+                  <div class="complex__bottom-container-top">
+                    <p class="complex__price-text">Цена комплекса</p>
+                    <div class="complex__price-container">
+                      <span class="complex__price complex__price--old"
+                        >15 597 ₽</span
+                      >
+                      <span class="complex__price">2 330 ₽</span>
+                    </div>
+                  </div>
+                  <div class="complex__bottom-container-bottom">
+                    <p class="complex__bottom-container-bottom-text">
+                      Включает 6 анализов
+                    </p>
+                    <svg
+                      class="complex__icon"
+                      width="26.5"
+                      height="26.5"
+                      fill="currentColor"
+                    >
+                      <use xlink:href="#arrrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li class="complexes__item complex">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/right-radius.webp    1x,
+                      ./img/right-radius@2x.webp 2x
+                    "
+                  />
+                  <img
+                    src="./img/right-radius.png"
+                    srcset="./img/right-radius@2x.png 2x"
+                    height="193"
+                    alt="Фотография сетки"
+                    class="complex__img"
+                  />
+                </picture>
+                <h3 class="complex__title">Обследование Печени, Скрининг</h3>
+                <div class="complex__text-container">
+                  <p class="complex__text">Пояснение</p>
+                  <ul class="complex__list">
+                    <li class="complex__list-item">
+                      16а-гидроксиэстрон (16а-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      4-гидроксиэстрон (4-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      16а-гидроксиэстрон (16а-OHE1)
+                    </li>
+                    <li class="complex__list-item">
+                      4-гидроксиэстрон (4-OHE1)
+                    </li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="complex__expand-button"
+                    aria-label="нажмите что развернуть все анализы"
+                    >Показать все анализы
+                    <svg
+                      class="complex__expand-icon"
+                      width="10"
+                      height="16"
+                      stroke="currentColor"
+                    >
+                      <use xlink:href="#expand-icon"></use></svg
+                  ></a>
+                </div>
+                <div class="complex__bottom-container">
+                  <div class="complex__bottom-container-top">
+                    <p class="complex__price-text">Цена комплекса</p>
+                    <div class="complex__price-container">
+                      <span class="complex__price complex__price--old"
+                        >15 597 ₽</span
+                      >
+                      <span class="complex__price">2 330 ₽</span>
+                    </div>
+                  </div>
+                  <div class="complex__bottom-container-bottom">
+                    <p class="complex__bottom-container-bottom-text">
+                      Включает 6 анализов
+                    </p>
+                    <svg
+                      class="complex__icon"
+                      width="26.5"
+                      height="26.5"
+                      fill="currentColor"
+                    >
+                      <use xlink:href="#arrrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div
+              class="complex__mobile-slider"
+            >
+              <div
+                class="complex__mobile-slider-bar complex__mobile-slider-bar--active"
+              ></div>
+          </div>
+        </section>
       </section>
     </main>
     <footer class="footer"></footer>
