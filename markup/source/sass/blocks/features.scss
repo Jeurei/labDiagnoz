@@ -1,0 +1,129 @@
+.features {
+  background-image: url("../img/mobile-features-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  padding-top: 37px;
+  padding-bottom: 1px;
+
+  @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+    background-image: url("../img/mobile-features-bg@2x.png");
+  }
+
+  .section__title {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 50px;
+
+    &:after {
+      top: 29px;
+      left: 18px;
+    }
+  }
+}
+
+.features__logo {
+  position: absolute;
+  top: 0;
+}
+
+.features__list {
+  list-style: none;
+  padding: 0;
+}
+
+.features__list-item {
+  padding-bottom: 5px;
+  padding-right: 30px;
+  padding-left: 54px;
+  background-repeat: no-repeat;
+  background-size: 24.6px 23.5px;
+  background-position: 16px -3px;
+
+  &--percents {
+    background-image: url("../img/discounts.svg");
+  }
+
+  &--firing {
+    background-image: url("../img/firing.svg");
+  }
+
+  &--expirience {
+    padding-bottom: 10px;
+    background-image: url("../img/plant.svg");
+  }
+
+  &--comfort {
+    background-image: url("../img/headphones.svg");
+  }
+
+  &--money {
+    background-image: url("../img/money.svg");
+  }
+
+  &--group {
+    background-image: url("../img/group.svg");
+  }
+
+  &--dna {
+    background-image: url("../img/dna.svg");
+  }
+
+  &--family {
+    background-image: url("../img/family.svg");
+  }
+}
+
+.features__list-item:nth-of-type(n + 5) {
+  display: none;
+}
+
+.features__list-item-text {
+  letter-spacing: 0.5px;
+}
+
+.features__list-item-title {
+  font-size: 11px;
+  font-weight: 400;
+  margin-bottom: -2px;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    background-position: center;
+
+    background-image: url("../img/features-bg.png");
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/features-bg@2x.png");
+    }
+
+    .section__title {
+      &:after {
+        top: 44px;
+      }
+    }
+  }
+
+  .features__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .features__list-item {
+    width: 50%;
+    background-position: 16px 7px;
+  }
+
+  .features__list-item:nth-of-type(n + 5) {
+    display: block;
+  }
+
+  .features__logo-img {
+    width: 260px;
+    height: 38px;
+    position: absolute;
+    top: -9px;
+  }
+}
