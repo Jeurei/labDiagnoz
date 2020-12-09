@@ -211,6 +211,14 @@
 @media (min-width: $tablet-width) {
   .search__title {
     margin-right: auto;
+
+    &::after {
+      @include titleAfter();
+    }
+  }
+
+  .search__title-br {
+    display: none;
   }
 
   .search__container-top-text {

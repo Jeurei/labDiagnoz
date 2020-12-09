@@ -19,7 +19,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0;
-  box-shadow: $box-shadow;
   list-style: none;
   overflow-x: hidden;
 }
@@ -27,6 +26,7 @@
 .complex {
   width: 100%;
   flex-shrink: 0;
+  box-shadow: $box-shadow;
 }
 
 .complex__text-container {
@@ -188,6 +188,13 @@
   }
 }
 
+@media (min-width: $big-mobile-width) {
+  .complex {
+    width: 50%;
+    margin-right: 10px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .complexes__list {
     box-shadow: none;
@@ -196,6 +203,7 @@
   .complex {
     max-width: 270px;
     margin-right: 50px;
+    margin-left: 50px;
     box-shadow: $box-shadow;
   }
 }
@@ -208,6 +216,7 @@
 
   .complex {
     margin-right: 30px;
+    margin-left: 0;
   }
 
   .complex__list {

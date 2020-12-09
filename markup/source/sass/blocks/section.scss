@@ -1,6 +1,6 @@
 .section__inner {
-  padding-right: 8.5px;
-  padding-left: 6.5px;
+  min-width: $mobile-width;
+  margin: 0 auto;
 }
 
 .section__title {
@@ -10,15 +10,14 @@
 
 @media (min-width: $tablet-width) {
   .section__inner {
-    padding-right: 75px;
-    padding-left: 75px;
+    width: $tablet-width;
   }
 }
 
 @media (min-width: $desktop-width) {
   .section__inner {
     position: relative;
-    padding-right: 361px;
-    padding-left: 351px;
+    width: $desktop-width;
+    padding: 0;
   }
 }
