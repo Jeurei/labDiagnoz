@@ -36,6 +36,7 @@
                   class="header-top__right-search-button"
                   type="button"
                   aria-label="Кнопка поиска"
+                  name="search-button"
                 >
                   <svg
                     class="header-top__mobile-list-icon"
@@ -71,6 +72,7 @@
                       <button
                         class="cart-modal__close-button cross-button cross-button--cart-close"
                         aria-label="Кнопка закрытия модального окна корзины"
+                        name="close-button"
                       >
                         Иконка
                       </button>
@@ -93,6 +95,7 @@
                                 class="cart-modal__remove-item-button cross-button"
                                 type="button"
                                 aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                                name="remove-button"
                               >
                                 Иконка
                               </button>
@@ -106,6 +109,7 @@
                                 class="cart-modal__remove-item-button cross-button"
                                 type="button"
                                 aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                                name="remove-button"
                               >
                                 Иконка
                               </button>
@@ -119,6 +123,7 @@
                                 class="cart-modal__remove-item-button cross-button"
                                 type="button"
                                 aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                                name="remove-button"
                               >
                                 Иконка
                               </button>
@@ -132,6 +137,7 @@
                                 class="cart-modal__remove-item-button cross-button"
                                 type="button"
                                 aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                                name="remove-button"
                               >
                                 Иконка
                               </button>
@@ -150,6 +156,7 @@
                                 class="cart-modal__remove-item-button cross-button"
                                 type="button"
                                 aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                                name="remove-button"
                               >
                                 Иконка
                               </button>
@@ -168,6 +175,7 @@
                           class="offer__button button"
                           type="button"
                           aria-label="Кнопка оформить заказ"
+                          name="order-button"
                         >
                           Оформить заказ
                         </button>
@@ -467,7 +475,7 @@
               >
                 <option class="search__category" selected>Все разделы</option>
               </select>
-              <button class="search__button" type="button">
+              <button class="search__button" type="button" name="search-button">
                 <svg
                   class="search__icon"
                   width="13"
@@ -497,6 +505,7 @@
                 type="button"
                 class="search__control search__control--analyse"
                 aria-label="Нажмите чтобы перейти к записям на анализ"
+                name="analyse-button"
               >
                 Выбрать анализы
               </button>
@@ -504,6 +513,7 @@
                 type="button"
                 class="search__control search__control--center"
                 aria-label="Нажмите чтобы выбирать медицинские центры"
+                name="center-button"
               >
                 Выбрать медицинский центр
               </button>
@@ -511,6 +521,7 @@
                 type="button"
                 class="search__control search__control--doctor"
                 aria-label="Нажмите чтобы перейти к выбору специалиста"
+                name="doctor-button"
               >
                 Запись к врачу
               </button>
@@ -518,6 +529,7 @@
                 type="button"
                 class="search__control search__control--shedule"
                 aria-label="Нажмите чтобы узнать расписсания врачей"
+                name="shedule-button"
               >
                 Расписание приема врачей
               </button>
@@ -536,6 +548,7 @@
                 class="actual-offers__control actual-offers__control--left slider-button"
                 type="button"
                 aria-label="Кнопка переключения слайдера влево"
+                name="slider-button-left"
               >
                 <svg
                   class="actual-offers__control-button-icon"
@@ -550,6 +563,7 @@
                 class="actual-offers__control actual-offers__control--right slider-button active"
                 type="button"
                 aria-label="Кнопка переключения слайдера вправо"
+                name="slider-button-right"
               >
                 <svg
                   class="actual-offers__control-button-icon"
@@ -1008,6 +1022,186 @@
               </a>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="main__section main__section--articles section articles">
+        <h2 class="section__title visually-hidden">Полезные статьи</h2>
+        <div class="section__inner">
+          <div class="articles__top">
+            <ul class="articles__sort">
+              <li class="articles__sort-item articles__sort-item--active">
+                <button
+                  class="articles__sort-button articles__sort-button--active"
+                  type="button"
+                  aria-label="Переключить сортировку на все"
+                  name="sort-button-all"
+                >
+                  Все
+                </button>
+              </li>
+              <li class="articles__sort-item">
+                <button
+                  class="articles__sort-button"
+                  type="button"
+                  aria-label="Переключить сортировку на новости"
+                  name="sort-button-news"
+                >
+                  Новости
+                </button>
+              </li>
+              <li class="articles__sort-item">
+                <button
+                  class="articles__sort-button"
+                  type="button"
+                  aria-label="Переключить сортировку на блог"
+                  name="sort-button-blog"
+                >
+                  Блог
+                </button>
+              </li>
+              <li class="articles__sort-item">
+                <button
+                  class="articles__sort-button"
+                  type="button"
+                  aria-label="Переключить сортировку на полезные статьи"
+                  name="sort-button-articles"
+                >
+                  Полезные статьи
+                </button>
+              </li>
+            </ul>
+            <a href="#" class="articles__link-button" aria-label="В пресс центр"
+              >В пресс центр<svg
+                class="articles__link-icon"
+                width="8.8"
+                height="8.8"
+                stroke="currentColor"
+              >
+                <use xlink:href="#grow-arrow"></use></svg
+            ></a>
+          </div>
+          <div class="articles__bottom">
+            <article class="articles__article article">
+              <div class="article__text">
+                <time class="article__time" datetime="22/09/2020"
+                  >22 сентября 2020 г.</time
+                >
+                <h3 class="article__title">Как сдать анализ на ТВ-СПОТ?</h3>
+              </div>
+              <picture
+                class="article__img-container article__img-container--new"
+              >
+                <source
+                  type="image/webp"
+                  srcset="./img/article.webp 1x, ./img/article@2x.webp 2x"
+                />
+                <img
+                  src="./img/article.png"
+                  srcset="./img/article@2x.png 2x"
+                  width="301"
+                  height="250"
+                  alt="Изображение статьи"
+                  class="article__img"
+                />
+              </picture>
+            </article>
+            <article class="articles__article article">
+              <div class="article__text">
+                <time class="article__time" datetime="22/09/2020"
+                  >22 сентября 2020 г.</time
+                >
+                <h3 class="article__title">Как сдать анализ на ТВ-СПОТ?</h3>
+              </div>
+              <picture
+                class="article__img-container article__img-container--new"
+              >
+                <source
+                  type="image/webp"
+                  srcset="./img/article.webp 1x, ./img/article@2x.webp 2x"
+                />
+                <img
+                  src="./img/article.png"
+                  srcset="./img/article@2x.png 2x"
+                  width="301"
+                  height="250"
+                  alt="Изображение статьи"
+                  class="article__img"
+                />
+              </picture>
+            </article>
+            <article class="articles__article article">
+              <div class="article__text">
+                <time class="article__time" datetime="22/09/2020"
+                  >22 сентября 2020 г.</time
+                >
+                <h3 class="article__title">Как сдать анализ на ТВ-СПОТ?</h3>
+              </div>
+              <picture
+                class="article__img-container article__img-container--new"
+              >
+                <source
+                  type="image/webp"
+                  srcset="./img/article.webp 1x, ./img/article@2x.webp 2x"
+                />
+                <img
+                  src="./img/article.png"
+                  srcset="./img/article@2x.png 2x"
+                  width="301"
+                  height="250"
+                  alt="Изображение статьи"
+                  class="article__img"
+                />
+              </picture>
+            </article>
+            <article class="articles__article article">
+              <div class="article__text">
+                <time class="article__time" datetime="22/09/2020"
+                  >22 сентября 2020 г.</time
+                >
+                <h3 class="article__title">Как сдать анализ на ТВ-СПОТ?</h3>
+              </div>
+              <picture
+                class="article__img-container article__img-container--new"
+              >
+                <source
+                  type="image/webp"
+                  srcset="./img/article.webp 1x, ./img/article@2x.webp 2x"
+                />
+                <img
+                  src="./img/article.png"
+                  srcset="./img/article@2x.png 2x"
+                  width="301"
+                  height="250"
+                  alt="Изображение статьи"
+                  class="article__img"
+                />
+              </picture>
+            </article>
+            <article class="articles__article article">
+              <div class="article__text">
+                <time class="article__time" datetime="22/09/2020"
+                  >22 сентября 2020 г.</time
+                >
+                <h3 class="article__title">Как сдать анализ на ТВ-СПОТ?</h3>
+              </div>
+              <picture
+                class="article__img-container article__img-container--new"
+              >
+                <source
+                  type="image/webp"
+                  srcset="./img/article.webp 1x, ./img/article@2x.webp 2x"
+                />
+                <img
+                  src="./img/article.png"
+                  srcset="./img/article@2x.png 2x"
+                  width="301"
+                  height="250"
+                  alt="Изображение статьи"
+                  class="article__img"
+                />
+              </picture>
+            </article>
+          </div>
         </div>
       </section>
     </main>
