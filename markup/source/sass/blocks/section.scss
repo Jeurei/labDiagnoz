@@ -5,7 +5,17 @@
 
 .section__title {
   padding: 0;
+  position: relative;
   margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+
+  &::after {
+    @include titleAfter();
+    top: 32px;
+    left: 4px;
+    position: absolute;
+  }
 }
 
 @media (min-width: $tablet-width) {
