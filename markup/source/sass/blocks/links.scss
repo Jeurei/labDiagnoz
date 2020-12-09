@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 0;
   padding-top: 29px;
+  margin-bottom: 10px;
   list-style: none;
 }
 
@@ -23,6 +24,7 @@
   &--covid {
     padding-top: 15px;
     padding-bottom: 35px;
+    margin-bottom: 0;
     background-image: url("../img/covid-big.svg");
     background-position: 0 59%;
   }
