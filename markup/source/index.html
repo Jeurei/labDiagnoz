@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лабдиагностика</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preload" href="./fonts/GraphikLCG-Regular.woff2" as="font" />
     <script src="./js/picturefill.min.js"></script>
     <script src="./js/svg4everybody.min.js"></script>
   </head>
@@ -196,13 +197,15 @@
                 <source
                   type="image/webp"
                   srcset="
-                    ./img/mobile-logo.webp    1x,
-                    ./img/mobile-logo@2x.webp 2x
+                    ./img/mobile-logo.webp    320w,
+                    ./img/mobile-logo@2x.webp 720w
                   "
+                  sizes="(min-width: 320px) 222px, (min-width: 720px) 230px"
                 />
                 <img
                   src="./img/mobile-logo.png"
-                  srcset="./img/mobile-logo@2x.png 2x"
+                  srcset="./img/mobile-logo@2x.png 720w"
+                  sizes="(min-width: 320px) 222px, (min-width: 720px) 230px"
                   width="222"
                   height="33"
                   alt="Логотип компании Лабдиагностика"
@@ -228,11 +231,13 @@
               <picture class="header-bottom__mobile-top-img">
                 <source
                   type="image/webp"
-                  srcset="./img/logo.webp 1x, ./img/logo@2x.webp 2x"
+                  srcset="./img/logo.webp 320w, ./img/logo@2x.webp 720w"
+                  sizes="(min-width: 320px) 222px, (min-width: 720px) 230px"
                 />
                 <img
                   src="./img/logo.png"
-                  srcset="./img/logo@2x.png 2x"
+                  srcset="./img/logo@2x.png 720w"
+                  sizes="(min-width: 320px) 222px, (min-width: 720px) 230px"
                   width="230"
                   height="34"
                   alt="Логотип компании Лабдиагностика"
@@ -683,13 +688,15 @@
                   <source
                     type="image/webp"
                     srcset="
-                      ./img/left-radius.webp    1x,
-                      ./img/left-radius@2x.webp 2x
+                      ./img/left-radius.webp    320w,
+                      ./img/left-radius@2x.webp 720w
                     "
+                    sizes="(min-width: 320px) 306px, (min-width: 720px) 270px"
                   />
                   <img
                     src="./img/left-radius.png"
-                    srcset="./img/left-radius@2x.png 2x"
+                    srcset="./img/left-radius@2x.png 720w"
+                    sizes="(min-width: 320px) 306px, (min-width: 720px) 270px"
                     height="193"
                     alt="Фотография сетки"
                     class="complex__img"
@@ -755,11 +762,13 @@
                 <picture>
                   <source
                     type="image/webp"
-                    srcset="./img/complex.webp 1x, ./img/complex@2x.webp 2x"
+                    srcset="./img/complex.webp 320w, ./img/complex@2x.webp 720w"
+                    sizes="(min-width: 320px) 306px, (min-width: 720px) 270px"
                   />
                   <img
                     src="./img/complex.png"
-                    srcset="./img/complex@2x.png 2x"
+                    srcset="./img/complex@2x.png 720w"
+                    sizes="(min-width: 320px) 306px, (min-width: 720px) 270px"
                     height="193"
                     alt="Фотография сетки"
                     class="complex__img"
@@ -825,11 +834,13 @@
                 <picture>
                   <source
                     type="image/webp"
-                    srcset="./img/complex.webp 1x, ./img/complex@2x.webp 2x"
+                    srcset="./img/complex.webp 320w, ./img/complex@2x.webp 720w"
+                    sizes="(min-width: 320px) 306px, (min-width: 720px) 270px"
                   />
                   <img
                     src="./img/complex.png"
-                    srcset="./img/complex@2x.png 2x"
+                    srcset="./img/complex@2x.png 720w"
+                    sizes="(min-width: 320px) 306px, (min-width: 720px) 270px"
                     height="193"
                     alt="Фотография сетки"
                     class="complex__img"
@@ -896,13 +907,15 @@
                   <source
                     type="image/webp"
                     srcset="
-                      ./img/right-radius.webp    1x,
-                      ./img/right-radius@2x.webp 2x
+                      ./img/right-radius.webp    320w,
+                      ./img/right-radius@2x.webp 720w
                     "
+                    sizes="(min-width: 320px) 306px, (min-width: 720px) 270px"
                   />
                   <img
                     src="./img/right-radius.png"
-                    srcset="./img/right-radius@2x.png 2x"
+                    srcset="./img/right-radius@2x.png 720w"
+                    sizes="(min-width: 320px) 306px, (min-width: 720px) 270px"
                     height="193"
                     alt="Фотография сетки"
                     class="complex__img"
@@ -1094,11 +1107,125 @@
                 >
                   <source
                     type="image/webp"
-                    srcset="./img/article.webp 1x, ./img/article@2x.webp 2x"
+                    srcset="./img/article.webp 320w, ./img/article@2x.webp 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
                   />
                   <img
                     src="./img/article.png"
-                    srcset="./img/article@2x.png 2x"
+                    srcset="./img/article@2x.png 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
+                    width="301"
+                    height="250"
+                    alt="Изображение статьи"
+                    class="article__img"
+                  />
+                </picture>
+              </article>
+            </a>
+            <a href="#" class="articles__link">
+              <article class="articles__article article">
+                <div class="article__text">
+                  <time class="article__time" datetime="2020-09-22"
+                    >22 сентября 2020 г.</time
+                  >
+                  <h3 class="article__title">Как сдать анализ на ТВ-СПОТ?</h3>
+                </div>
+                <picture
+                  class="article__img-container article__img-container--new"
+                >
+                  <source
+                    type="image/webp"
+                    srcset="./img/article.webp 320w, ./img/article@2x.webp 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
+                  />
+                  <img
+                    src="./img/article.png"
+                    srcset="./img/article@2x.png 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
+                    width="301"
+                    height="250"
+                    alt="Изображение статьи"
+                    class="article__img"
+                  />
+                </picture>
+              </article>
+            </a>
+            <a href="#" class="articles__link">
+              <article class="articles__article article">
+                <div class="article__text">
+                  <time class="article__time" datetime="2020-09-22"
+                    >22 сентября 2020 г.</time
+                  >
+                  <h3 class="article__title">Как сдать анализ на ТВ-СПОТ?</h3>
+                </div>
+                <picture
+                  class="article__img-container article__img-container--new"
+                >
+                  <source
+                    type="image/webp"
+                    srcset="./img/article.webp 320w, ./img/article@2x.webp 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
+                  />
+                  <img
+                    src="./img/article.png"
+                    srcset="./img/article@2x.png 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
+                    width="301"
+                    height="250"
+                    alt="Изображение статьи"
+                    class="article__img"
+                  />
+                </picture>
+              </article>
+            </a>
+            <a href="#" class="articles__link">
+              <article class="articles__article article">
+                <div class="article__text">
+                  <time class="article__time" datetime="2020-09-22"
+                    >22 сентября 2020 г.</time
+                  >
+                  <h3 class="article__title">Как сдать анализ на ТВ-СПОТ?</h3>
+                </div>
+                <picture
+                  class="article__img-container article__img-container--new"
+                >
+                  <source
+                    type="image/webp"
+                    srcset="./img/article.webp 320w, ./img/article@2x.webp 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
+                  />
+                  <img
+                    src="./img/article.png"
+                    srcset="./img/article@2x.png 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
+                    width="301"
+                    height="250"
+                    alt="Изображение статьи"
+                    class="article__img"
+                  />
+                </picture>
+              </article>
+            </a>
+            <a href="#" class="articles__link">
+              <article class="articles__article article">
+                <div class="article__text">
+                  <time class="article__time" datetime="2020-09-22"
+                    >22 сентября 2020 г.</time
+                  >
+                  <h3 class="article__title">Как сдать анализ на ТВ-СПОТ?</h3>
+                </div>
+                <picture
+                  class="article__img-container article__img-container--new"
+                >
+                  <source
+                    type="image/webp"
+                    srcset="./img/article.webp 320w, ./img/article@2x.webp 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
+                  />
+                  <img
+                    src="./img/article.png"
+                    srcset="./img/article@2x.png 720w"
+                    sizes="(min-width: 320px) 301px, (min-width: 720px) 270px"
                     width="301"
                     height="250"
                     alt="Изображение статьи"
@@ -1148,18 +1275,82 @@
             </div>
             <ul class="shares__list">
               <li class="shares__list-item">
-                <article
-                  class="shares__article share share--robot share--limited"
+                <a
+                  href="#"
+                  class="shares__link"
+                  aria-label="Перейти на страницу акции"
                 >
-                  <div class="share__top">
-                    <h3 class="share__title">Загаловок акции</h3>
-                    <p class="share__text">Описание акции</p>
-                  </div>
-                  <div class="share__bottom">
-                    <p class="share__bottom-text">
-                      Срок действия акции:
-                      <time datetime="2020-05-21">21.05.2020</time> -
-                      <time datetime="2384-12-13">23.34.2384</time>
+                  <article
+                    class="shares__article share share--robot share--limited"
+                  >
+                    <div class="share__top">
+                      <h3 class="share__title">Загаловок акции</h3>
+                      <p class="share__text">Описание акции</p>
+                    </div>
+                    <div class="share__bottom">
+                      <p class="share__bottom-text">
+                        Срок действия акции:
+                        <time datetime="2020-05-21">21.05.2020</time> -
+                        <time datetime="2384-12-13">23.34.2384</time>
+                        <svg
+                          class="share__icon"
+                          width="13.5"
+                          height="13.5"
+                          fill="currentColor"
+                        >
+                          <use xlink:href="#arrrow-right"></use>
+                        </svg>
+                      </p>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="shares__list-item">
+                <a
+                  href="#"
+                  class="shares__link"
+                  aria-label="Перейти на страницу акции"
+                >
+                  <article class="shares__article share share--doctor">
+                    <div class="share__top">
+                      <h3 class="share__title">Загаловок акции</h3>
+                      <p class="share__text">Описание акции</p>
+                    </div>
+                    <div class="share__bottom">
+                      <p class="share__bottom-text">
+                        Срок действия акции:
+                        <time datetime="2020-05-21">21.05.2020</time> -
+                        <time datetime="2384-12-14">23.14.2384</time>
+                        <svg
+                          class="share__icon"
+                          width="13.5"
+                          height="13.5"
+                          fill="currentColor"
+                        >
+                          <use xlink:href="#arrrow-right"></use>
+                        </svg>
+                      </p>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="shares__list-item">
+                <a
+                  href="#"
+                  class="shares__link"
+                  aria-label="Перейти на страницу акции"
+                >
+                  <article class="shares__article share share--covid">
+                    <div class="share__top">
+                      <h3 class="share__title">Загаловок акции</h3>
+                      <p class="share__text">Описание акции</p>
+                    </div>
+                    <div class="share__bottom">
+                      <p class="share__bottom-text">
+                        Срок действия акции:
+                        <time datetime="2020-05-11">21.05.2020</time> -
+                        <time datetime="2384-12-14">23.14.2384</time>
+                      </p>
                       <svg
                         class="share__icon"
                         width="13.5"
@@ -1168,55 +1359,9 @@
                       >
                         <use xlink:href="#arrrow-right"></use>
                       </svg>
-                    </p>
-                  </div>
-                </article>
-              </li>
-              <li class="shares__list-item">
-                <article class="shares__article share share--doctor">
-                  <div class="share__top">
-                    <h3 class="share__title">Загаловок акции</h3>
-                    <p class="share__text">Описание акции</p>
-                  </div>
-                  <div class="share__bottom">
-                    <p class="share__bottom-text">
-                      Срок действия акции:
-                      <time datetime="2020-05-21">21.05.2020</time> -
-                      <time datetime="2384-12-14">23.14.2384</time>
-                      <svg
-                        class="share__icon"
-                        width="13.5"
-                        height="13.5"
-                        fill="currentColor"
-                      >
-                        <use xlink:href="#arrrow-right"></use>
-                      </svg>
-                    </p>
-                  </div>
-                </article>
-              </li>
-              <li class="shares__list-item">
-                <article class="shares__article share share--covid">
-                  <div class="share__top">
-                    <h3 class="share__title">Загаловок акции</h3>
-                    <p class="share__text">Описание акции</p>
-                  </div>
-                  <div class="share__bottom">
-                    <p class="share__bottom-text">
-                      Срок действия акции:
-                      <time datetime="2020-05-11">21.05.2020</time> -
-                      <time datetime="2384-12-14">23.14.2384</time>
-                    </p>
-                    <svg
-                      class="share__icon"
-                      width="13.5"
-                      height="13.5"
-                      fill="currentColor"
-                    >
-                      <use xlink:href="#arrrow-right"></use>
-                    </svg>
-                  </div>
-                </article>
+                    </div>
+                  </article>
+                </a>
               </li>
             </ul>
             <div class="shares__mobile-slider shares__mobile-slider">
@@ -1233,17 +1378,18 @@
             Почему именно
             <picture>
               <source
+                media="(min-width: 720px)"
                 type="image/webp"
                 srcset="
-                  ./img/features-logo.webp    1x,
-                  ./img/features-logo@2x.webp 2x
+                  ./img/features-big-logo.webp    320w,
+                  ./img/features-big-logo@2x.webp 720w
                 "
+                sizes="(min-width: 320px) 133px, (min-width: 720px) 260px"
               />
               <img
                 src="./img/features-logo.png"
-                srcset="./img/features-logo@2x.png 2x"
-                width="133"
-                height="19"
+                srcset="./img/features-logo@2x.png 720w"
+                sizes="(min-width: 320px) 133px, (min-width: 720px) 260px"
                 alt="Лабдиагностика"
                 class="features__logo-img"
               />
@@ -1319,6 +1465,154 @@
         </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <section
+        class="footer__section footer__section--form section form-section"
+      >
+        <h2 class="section__title">Задайте свой вопрос</h2>
+        <div class="section__inner">
+          <form action="post" class="form-section__form form">
+            <div class="form__input-group">
+              <label for="name" class="form__label visually-hidden"
+                >Введите имя</label
+              >
+              <input
+                type="text"
+                class="form__input"
+                id="name"
+                name="name"
+                placeholder="Ваше имя*"
+                aria-describedby="name__field"
+              />
+              <p class="visually-hidden" id="name__field">Введите своё имя</p>
+              <label for="tel" class="form__label visually-hidden" name="tel"
+                >Введите свой телефон</label
+              >
+              <input
+                type="tel"
+                class="form__input"
+                id="tel"
+                placeholder="Ваш телефон*"
+                aria-describedby="tel__field"
+              />
+              <p class="visually-hidden" id="tel__field">
+                Введите свой телефон
+              </p>
+              <label for="email" class="form__label visually-hidden"
+                >Введите свой email</label
+              >
+              <input
+                type="text"
+                class="form__input"
+                id="email"
+                name="email"
+                placeholder="Ваш email*"
+                aria-describedby="email__field"
+              />
+              <p class="visually-hidden" id="email__field">
+                Введите свой email
+              </p>
+            </div>
+            <div class="form__input-group">
+              <textarea
+                id="text"
+                cols="30"
+                rows="10"
+                class="form__input form__input--textarea"
+                placeholder="Введите своё сообщение"
+                aria-label="Поле дляя ввода вашего вопроса"
+              ></textarea>
+            </div>
+            <div class="form__input-group form__input-group--checkbox">
+              <label for="agreement" class="form__label form__label--checkbox">
+                <input
+                  type="checkbox"
+                  class="form__input form__input--checkbox"
+                  id="agreement"
+                  name="agreement"
+                  checked
+                  aria-label="Нажимая на кнопку отправить вы соглашаетесь с нашей политикой конфиденциальности"
+                />
+                <span class="form__input-checkbox-span"></span>
+              </label>
+              <small class="form__agreement-hint"
+                >Нажимая на кнопку отправить вы соглашаетесь с нашей политикой
+                конфиденциальности</small
+              >
+            </div>
+            <button class="form__button button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+      <section class="footer__section footer__section--map section map">
+        <div class="map__left">
+          <picture class="map__logo">
+            <source
+              type="image/webp"
+              srcset="./img/logo.webp 320w, ./img/logo@2x.webp 720w"
+              sizes="(min-width: 320px) 248px, (min-width: 720px) 230px"
+            />
+            <img
+              src="./img/logo.png"
+              srcset="./img/logo@2x.png 720w"
+              sizes="(min-width: 320px) 248px, (min-width: 720px) 230px"
+              width="248"
+              height="36"
+              alt="Логотип компании Лабдиагностика"
+            />
+          </picture>
+          <div class="map__left-container">
+            <h2 class="section__title">Рядом с вами</h2>
+            <div class="map__geo geo">
+              <div class="geo__selection">
+                <svg
+                  class="geo__icon"
+                  width="6"
+                  height="8.4"
+                  fill="currentColor"
+                >
+                  <use xlink:href="#map-mark-icon"></use>
+                </svg>
+                <select name="geo__city" id="geo__city" class="geo__select">
+                  <option value="Пермь" class="geo__city" selected="selected">
+                    Пермь
+                  </option>
+                </select>
+              </div>
+              <div class="geo__results">
+                <h3 class="geo__results-title">
+                  Найдено <span class="geo__results-value">1</span> отделение
+                </h3>
+                <ul class="geo__results-list">
+                  <li class="geo__result result">
+                    <a
+                      href="#"
+                      class="result__link"
+                      aria-label="Показать на карте"
+                    >
+                      <svg
+                        class="geo__result-icon"
+                        width="6"
+                        height="8.4"
+                        fill="currentColor"
+                      >
+                        <use xlink:href="#map-mark-icon"></use>
+                      </svg>
+                      <p class="result__text">г. Пермь, ул. Хабаровская, 56</p>
+                      <p class="result__options">
+                        Возможна оплата картой, есть вход с коляской
+                      </p></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map__right"></div>
+      </section>
+    </footer>
   </body>
+  <script src="./js/ymaps.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=0250c9d0-b4a1-4297-98fc-01643af1fcbd&lang=ru_RU&onload=initMap"></script>
 </html>

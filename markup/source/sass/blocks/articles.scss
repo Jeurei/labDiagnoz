@@ -6,8 +6,32 @@
   margin-bottom: 26px;
 }
 
+.article {
+  display: flex;
+  max-width: 301px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-bottom: 28px;
+  box-shadow: $box-shadow;
+}
+
 .articles__link {
   display: block;
+
+  &:nth-child(2) {
+    .article {
+      margin-bottom: 25px;
+    }
+  }
+
+  &:nth-child(n + 3) {
+    display: none;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .articles__sort {
@@ -23,6 +47,10 @@
 .articles__sort-item {
   padding-right: 2px;
   border-right: 1px solid #707070;
+
+  &:first-child {
+    padding-left: 3px;
+  }
 
   &:last-child {
     border-right: none;
@@ -75,23 +103,9 @@
   align-items: center;
 }
 
-.article {
-  display: flex;
-  max-width: 301px;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  margin-bottom: 28px;
-  box-shadow: $box-shadow;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .article__text {
   width: 100%;
-  padding-left: 22px;
+  padding-left: 17px;
   margin-bottom: 20px;
 }
 
@@ -158,6 +172,10 @@
     font-size: 13px;
   }
 
+  .articles__link:nth-child(n + 3) {
+    display: flex;
+  }
+
   .articles__link-button {
     min-width: 133px;
     font-size: 13px;
@@ -176,6 +194,7 @@
 
   .article {
     margin-right: auto;
+    margin-right: 18px;
     margin-bottom: 28px;
 
     &:nth-child(even) {
@@ -185,6 +204,29 @@
 }
 
 @media (min-width: $desktop-width) {
+  .articles {
+    padding-top: 61px;
+    padding-bottom: 65px;
+  }
+
+  .articles__top {
+    padding-right: 44px;
+    padding-left: 0;
+    margin-bottom: 26px;
+  }
+
+  .articles__sort-item {
+    margin-right: 11px;
+
+    &:nth-child(even) {
+      margin-right: 14px;
+    }
+  }
+
+  .articles__sort-item--active .articles__sort-button {
+    padding: 5px 15px 10px 9px;
+  }
+
   .articles__bottom {
     padding: 0;
   }
@@ -192,6 +234,7 @@
   .article {
     max-width: 270px;
     margin-right: 30px;
+    margin-bottom: 25px;
 
     &:nth-child(even) {
       margin-right: 30px;
@@ -199,6 +242,39 @@
 
     &:nth-child(4n) {
       margin-right: 0;
+    }
+  }
+
+  .article__text {
+    padding-top: 15px;
+  }
+
+  .article__time {
+    padding-left: 9px;
+    word-spacing: 0px;
+  }
+
+  .article__title {
+    padding-top: 4px;
+    padding-left: 3px;
+    font-size: 14px;
+  }
+
+  .article__img {
+    width: 270px;
+  }
+
+  .article__img-container--new {
+    &::after {
+      width: 53px;
+      height: 33px;
+      font-size: 10px;
+    }
+
+    &::before {
+      right: 33px;
+      width: 34px;
+      height: 33px;
     }
   }
 }

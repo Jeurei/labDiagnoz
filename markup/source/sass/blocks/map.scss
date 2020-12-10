@@ -1,0 +1,45 @@
+.map {
+  padding-top: 47px;
+}
+
+.map__logo {
+  padding-left: 12px;
+}
+
+.map__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .section__title {
+    padding-left: 12px;
+    margin-bottom: 19px;
+  }
+}
+
+.map__left-container {
+  width: 100%;
+  padding-top: 12px;
+
+  .section__title {
+    font-size: 11px;
+    letter-spacing: 0.9px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    &::after {
+      top: 0;
+      left: 109px;
+      content: "/////////";
+      font-size: 12px;
+    }
+  }
+}
+
+.map__right {
+  min-width: 320px;
+  max-width: 320px;
+  min-height: 433px;
+  max-height: 433px;
+}

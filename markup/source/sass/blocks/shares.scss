@@ -1,14 +1,13 @@
 .shares {
-  padding-top: 24px;
   overflow: hidden;
-  padding-bottom: 18px;
+  padding-bottom: 21px;
 }
 
 .shares__title {
-  font-weight: 400;
   position: relative;
+  padding-left: 8px;
   margin-bottom: 52px;
-  padding-left: 0;
+  font-weight: 400;
 
   &:after {
     left: 5px;
@@ -20,61 +19,62 @@
 }
 
 .shares__container {
-  padding-right: 9px;
-  padding-left: 10px;
   display: flex;
   flex-direction: column;
+  padding-right: 9px;
+  padding-left: 4px;
 }
 
 .shares__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  padding-right: 9px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  overflow-x: hidden;
-  margin: 0 auto;
   min-width: 301px;
   max-width: 301px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+  padding-right: 9px;
+  margin: 0;
+  margin: 0 auto;
   margin-bottom: 5px;
+  list-style: none;
+  overflow-x: hidden;
 }
 
 .shares__list-item {
-  flex-shrink: 0;
   min-width: 301px;
   max-width: 301px;
+  flex-shrink: 0;
   margin-right: 50px;
 }
 
 .share__top {
-  background-repeat: no-repeat;
   min-height: 154px;
-  padding-top: 15px;
-  padding-left: 12px;
+  padding-top: 17px;
+  padding-left: 15px;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .share__bottom {
+  position: relative;
   background-color: $icons-color;
   color: $white;
   font-size: 7px;
-  position: relative;
 }
 
 .share__bottom-text {
-  margin: 0;
   padding-top: 4px;
   padding-left: 15px;
+  margin: 0;
 }
 
 .share {
-  min-width: 100%;
-  min-height: 174px;
   position: relative;
   display: flex;
+  min-width: 100%;
+  min-height: 174px;
   flex-direction: column;
+  background-position: center;
 
   &--robot {
     .share__top {
@@ -110,22 +110,22 @@
     &::after {
       @include pseudo("ОСТАЛОСЬ 4 ДНЯ", 75px, 27px);
       position: absolute;
-      right: 0;
       top: 13px;
-      letter-spacing: 0.6px;
+      right: 0;
       padding-top: 6px;
       background-color: $blue;
       color: $white;
-      text-transform: uppercase;
       font-size: 6px;
       font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
     }
 
     &::before {
       @include pseudo("", 27px, 27px);
       position: absolute;
-      right: 60px;
       top: 13px;
+      right: 60px;
       background-color: $blue;
       border-bottom-left-radius: 50%;
       border-top-left-radius: 50%;
@@ -145,8 +145,9 @@
 
 .shares__mobile-slider {
   display: flex;
-  width: 100%;
+  width: 301px;
   height: 5px;
+  align-self: center;
 }
 
 .shares__mobile-slider-bar {
@@ -179,10 +180,10 @@
 }
 
 .share__icon {
-  color: $white;
   position: absolute;
-  right: 20px;
-  top: 4px;
+  top: 6px;
+  right: 16px;
+  color: $white;
 }
 
 @media (min-width: 620px) {
@@ -197,21 +198,56 @@
   }
 
   .shares__list-item {
-    max-width: 50%;
     min-width: 50%;
+    max-width: 50%;
     margin-right: 10px;
+  }
+
+  .share {
+    &--robot {
+      background-image: url("../img/banner-main@2x.png");
+      background-position: 0 -30px;
+    }
+
+    &--doctor {
+      background-image: url("../img/banner-main2@2x.png");
+    }
+
+    &--covid {
+      background-image: url("../img/banner-covid@2x.png");
+    }
+  }
+
+  .shares__mobile-slider {
+    width: 100%;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .shares {
+    padding-bottom: 59px;
+  }
+
   .shares__title {
-    margin-bottom: 15px;
+    padding-left: 3px;
+    margin-bottom: 11px;
+
+    @include titleh2($color-text);
+
+    &:after {
+      left: 10px;
+    }
   }
 
   .shares__controls-slider {
     display: flex;
     justify-content: flex-end;
+    padding-right: 28px;
     margin-bottom: 10px;
+  }
+
+  .shares__control:last-child {
+    margin-left: 6px;
   }
 
   .shares__control-button-icon {
@@ -219,11 +255,70 @@
   }
 
   .shares__list-item {
-    max-width: 33.3%;
-    min-width: 33.3%;
+    min-width: 370px;
+    max-width: 370px;
+    margin-right: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .share {
+    &::after,
+    ::before {
+      height: 33px;
+    }
+
+    &::after {
+      top: 16px;
+      right: 0;
+      width: 92px;
+      padding-top: 9px;
+      font-size: 8px;
+      white-space: nowrap;
+    }
+
+    &::before {
+      top: 16px;
+      right: 72px;
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  .share__top {
+    padding-bottom: 84px;
   }
 
   .shares__mobile-slider {
     display: none;
+  }
+
+  .shares__list {
+    padding-left: 3px;
+  }
+
+  .share__title {
+    padding-left: 6px;
+    margin-bottom: 15px;
+    font-size: $title-h3-fs;
+    line-height: $title-h3-lh;
+  }
+
+  .share__text {
+    padding-left: 5px;
+    font-size: $alt-fs;
+    line-height: $alt-lh;
+  }
+
+  .share__bottom-text {
+    padding-left: 20px;
+    font-size: 9px;
+  }
+
+  .share__icon {
+    top: 4px;
+    right: 23px;
   }
 }

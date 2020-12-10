@@ -256,9 +256,17 @@
 }
 
 @media (min-width: $desktop-width) {
+  .header {
+    padding-bottom: 13px;
+  }
+
   .header__inner {
     padding-right: 29px;
     padding-left: 2px;
+  }
+
+  .header-bottom__mobile-top-img {
+    margin-right: 20px;
   }
 
   .header__top-container {
@@ -300,9 +308,12 @@
 
   .header__bottom-container {
     padding-top: 22px;
+    padding-right: 23px;
   }
 
   .header-bottom__left {
-    display: none;
+    display: flex;
+    padding-top: 9px;
+    padding-left: 18px;
   }
 }

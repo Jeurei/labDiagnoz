@@ -51,3 +51,23 @@
   opacity: 0.3;
   transform: skew(-16deg, 0deg);
 }
+
+@mixin default-transition(
+  $values: all,
+  $speed: 300ms,
+  $transition: cubic-bezier(0.2, 0.79, 0.44, 1)
+) {
+  //cubic-bezier(0.23, 1, 0.32, 1)) {
+  $string: 0;
+
+  @each $value in $values {
+    $i: index($values, $value);
+
+    @if ($i == 1) {
+      $string: $value + " " + $speed + " " + $transition;
+    } @else {
+      $string: $string + ", " + $value + " " + $speed + " " + $transition;
+    }
+  }
+  transition: $string;
+}

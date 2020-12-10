@@ -1,10 +1,16 @@
 .features {
-  background-image: url("../img/mobile-features-bg.png");
+  padding-top: 35px;
+  padding-bottom: 8px;
+  background-image: linear-gradient(
+      to left,
+      RGBA(250, 0, 235, 1),
+      RGBA(154, 102, 245, 1),
+      RGBA(43, 215, 255, 1)
+    ),
+    url("../img/mobile-features-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;
-  padding-top: 37px;
-  padding-bottom: 1px;
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
     background-image: url("../img/mobile-features-bg@2x.png");
@@ -12,33 +18,36 @@
 
   .section__title {
     position: relative;
-    padding-left: 16px;
+    padding-left: 6px;
     margin-bottom: 50px;
 
     &:after {
-      top: 29px;
-      left: 18px;
+      top: 32px;
+      left: 13px;
     }
   }
 }
 
-.features__logo {
+.features__logo-img {
   position: absolute;
-  top: 0;
+  top: 2px;
+  right: 20px;
+  width: 129px;
+  height: 19px;
 }
 
 .features__list {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
 .features__list-item {
+  padding-right: 28px;
   padding-bottom: 5px;
-  padding-right: 30px;
-  padding-left: 54px;
+  padding-left: 47px;
+  background-position: 9px 0px;
   background-repeat: no-repeat;
   background-size: 24.6px 23.5px;
-  background-position: 16px -3px;
 
   &--percents {
     background-image: url("../img/discounts.svg");
@@ -83,24 +92,28 @@
 }
 
 .features__list-item-title {
+  margin-bottom: -2px;
   font-size: 11px;
   font-weight: 400;
-  margin-bottom: -2px;
 }
 
 @media (min-width: $tablet-width) {
   .features {
-    background-position: center;
-
+    padding-top: 68px;
+    padding-bottom: 39px;
     background-image: url("../img/features-bg.png");
+    background-position: center;
 
     @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
       background-image: url("../img/features-bg@2x.png");
     }
 
     .section__title {
-      &:after {
-        top: 44px;
+      width: 432px;
+      @include titleh2($white);
+      padding-left: 4px;
+      &::after {
+        top: 33px;
       }
     }
   }
@@ -113,7 +126,15 @@
 
   .features__list-item {
     width: 50%;
-    background-position: 16px 7px;
+    padding-left: 76px;
+    margin-bottom: 37px;
+    background-position: 4px 19px;
+    background-size: 30px 30px;
+
+    &:nth-child(even) {
+      padding-left: 102px;
+      background-position: 30px 18px;
+    }
   }
 
   .features__list-item:nth-of-type(n + 5) {
@@ -121,9 +142,19 @@
   }
 
   .features__logo-img {
+    position: absolute;
+    top: 6px;
+    right: -60px;
     width: 260px;
     height: 38px;
-    position: absolute;
-    top: -9px;
+  }
+
+  .features__list-item-title {
+    @include titleh3($white);
+  }
+
+  .features__list-item-text {
+    font-size: $alt-fs;
+    line-height: $alt-lh;
   }
 }

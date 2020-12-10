@@ -1,6 +1,12 @@
 .search {
-  padding-top: 30px;
-  background-image: url("../img/mobile-bg.png");
+  padding-top: 29px;
+  background-image: linear-gradient(
+      to left,
+      RGBA(250, 0, 235, 1),
+      RGBA(154, 102, 245, 1),
+      RGBA(43, 215, 255, 1)
+    ),
+    url("../img/mobile-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;
@@ -13,6 +19,7 @@
 
 .search__title {
   position: relative;
+  padding-left: 3px;
   margin: 0;
   margin-bottom: 64px;
   color: $white;
@@ -59,7 +66,9 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  padding-right: 10px;
   padding-bottom: 13px;
+  padding-left: 4px;
 }
 
 .search__input {
@@ -244,7 +253,7 @@
 @media (min-width: $desktop-width) {
   .search {
     min-height: 594px;
-    padding-top: 149px;
+    padding-top: 140px;
     padding-bottom: 69px;
     background-image: url("../img/mainbg.png"),
       linear-gradient(
@@ -262,6 +271,10 @@
     }
   }
 
+  .search__container {
+    padding-right: 28px;
+  }
+
   .search__container-top {
     padding-top: 4px;
     padding-right: 132px;
@@ -269,8 +282,8 @@
 
   .search__container-top-text {
     align-items: center;
-    padding-top: 3px;
-    padding-right: 9px;
+    padding-top: 5px;
+    padding-right: 15px;
     font-size: $body-fs;
     letter-spacing: -0.3px;
   }
@@ -278,7 +291,7 @@
   .search__title {
     @include titleh2($white);
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     letter-spacing: -0.1px;
 
     &::after {
@@ -292,7 +305,7 @@
   }
 
   .search__input {
-    padding-top: 18px;
+    padding-top: 19px;
     padding-bottom: 18px;
     padding-left: 19.3px;
     font-size: 14px;
@@ -322,8 +335,9 @@
 
   .search__hint {
     position: relative;
-    padding-left: 17px;
+    padding-left: 22px;
     font-size: $body-fs;
+    letter-spacing: 1px;
   }
 
   .search__hint-icon {

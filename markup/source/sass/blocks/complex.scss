@@ -1,5 +1,11 @@
+.complexes__container {
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
 .complexes__title {
   position: relative;
+  padding-left: 5px;
   margin: 0;
   margin-bottom: 62px;
   font-size: 22px;
@@ -30,12 +36,13 @@
 }
 
 .complex__text-container {
+  padding-right: 12px;
   margin-bottom: 33px;
 }
 
 .complex__title {
-  padding-top: 6px;
-  padding-left: 26px;
+  padding-top: 7px;
+  padding-left: 28px;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.1px;
@@ -45,7 +52,7 @@
 
 .complex__text {
   padding-top: 4px;
-  padding-left: 28px;
+  padding-left: 29px;
   color: $blue;
   font-size: 13px;
 }
@@ -53,7 +60,7 @@
 .complex__list {
   padding: 0;
   padding-top: 5px;
-  padding-left: 42px;
+  padding-left: 43px;
   margin-bottom: 26px;
   list-style: none;
 }
@@ -78,7 +85,7 @@
 
 .complex__expand-button {
   position: relative;
-  padding-left: 26px;
+  padding-left: 28px;
   color: $blue;
   font-size: $alt-fs;
   font-weight: 600;
@@ -215,7 +222,7 @@
 @media (min-width: $desktop-width) {
   .complexes {
     padding-top: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 27px;
   }
 
   .complex {
@@ -224,8 +231,8 @@
   }
 
   .complex__list {
-    padding-top: 3px;
-    padding-left: 34px;
+    padding-top: 5px;
+    padding-left: 42px;
     margin-bottom: 14px;
   }
 
@@ -259,6 +266,7 @@
 
   .complex__list-item {
     font-size: 11px;
+    word-spacing: 8px;
   }
 
   .complex__list-item::before {
@@ -267,7 +275,7 @@
   }
 
   .complex__expand-button {
-    padding-left: 20px;
+    padding-left: 24px;
     letter-spacing: -0.6px;
   }
 
@@ -278,14 +286,14 @@
   .complex__bottom-container-top {
     padding-top: 6px;
     padding-bottom: 0;
-    padding-left: 22px;
+    padding-left: 27px;
   }
 
   .complex__bottom-container-bottom {
-    padding-left: 23px;
+    padding-left: 27px;
   }
 
   .complex__price--old {
-    padding-right: 23px;
+    padding-right: 10px;
   }
 }
