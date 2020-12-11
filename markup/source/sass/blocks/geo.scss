@@ -8,7 +8,8 @@
 
 .geo__icon {
   position: absolute;
-  left: 14px;
+  top: 30px;
+  left: 10px;
   color: $color-text;
 }
 
@@ -30,6 +31,12 @@
   min-height: 100%;
 }
 
+.geo__result-icon {
+  position: absolute;
+  top: 12px;
+  left: 3px;
+}
+
 .geo__selection {
   position: relative;
   display: flex;
@@ -40,10 +47,14 @@
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
 
+  .section__inner {
+    position: relative;
+  }
+
   &::after {
     position: absolute;
-    top: 31px;
-    left: 292px;
+    top: 29px;
+    right: 20px;
     width: 9px;
     height: 9px;
     border: 1px solid $color-text;
@@ -74,7 +85,24 @@
 
 .geo__results {
   padding-top: 11px;
-  padding-left: 12px;
+  padding-bottom: 18px;
+
+  & > .section__inner {
+    padding-left: 12px;
+  }
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+
+    .geo__result-icon {
+      color: $white;
+    }
+
+    .result__link {
+      color: $white;
+    }
+  }
 }
 
 .geo__results-title {
@@ -99,12 +127,6 @@
   padding-left: 22px;
   margin: 0;
   margin-bottom: 5px;
-}
-
-.geo__result-icon {
-  position: absolute;
-  top: 12px;
-  left: 3px;
 }
 
 .result__text {

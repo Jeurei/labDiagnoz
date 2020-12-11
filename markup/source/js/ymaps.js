@@ -1,9 +1,15 @@
 const initMap = (ymaps) => {
   const coordinates = [58.04935, 56.086989];
-  const myMap = new ymaps.Map(document.querySelector(".map__right"), {
-    center: coordinates,
-    zoom: 17,
-  });
+  const myMap = new ymaps.Map(
+    document.querySelector(".map__right"),
+    {
+      center: coordinates,
+      zoom: 17,
+    },
+    {
+      suppressMapOpenBlock: true,
+    }
+  );
 
   myMap.controls.remove("trafficControl");
   myMap.setType("yandex#map");
@@ -24,4 +30,18 @@ const initMap = (ymaps) => {
   //   }
   // );
   // myMap.geoObjects.add(myPlacemark);
+};
+
+window.onload = () => {
+  const script = document.createElement("script");
+
+  script.onload = () => {
+    ymaps.ready((ymaps) => initMap(ymaps));
+  };
+
+  script.id = "ymaps";
+  script.src =
+    "https://api-maps.yandex.ru/2.1/?apikey=0250c9d0-b4a1-4297-98fc-01643af1fcbd&lang=ru_RU";
+
+  document.body.appendChild(script);
 };

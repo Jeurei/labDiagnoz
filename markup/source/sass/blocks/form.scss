@@ -38,8 +38,22 @@
 .form__input-group--checkbox {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
+  margin-bottom: 27px;
+}
+
+.form__input-chekbox-title {
+  display: none;
+}
+
+.form__input-checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 36px;
 }
 
 .form__input {
@@ -103,13 +117,63 @@
 
 .form__agreement-hint {
   padding-right: 1px;
-  margin-bottom: 27px;
   font-size: 10px;
   line-height: 13px;
 }
 
 .form__button {
+  width: 100%;
   padding-top: 14px;
   padding-bottom: 18px;
   border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .form-section {
+    padding-top: 41px;
+  }
+
+  .form {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .form__input--textarea {
+    padding-top: 21px;
+    padding-bottom: 18px;
+  }
+
+  .form__input-group--checkbox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form__input {
+    padding-top: 17px;
+    padding-left: 16px;
+    margin-bottom: 27px;
+    word-spacing: 4px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-section {
+    .section__title {
+      display: none;
+    }
+  }
+
+  .form__input-chekbox-title {
+    display: flex;
+  }
+
+  .form {
+    flex-direction: row;
+    margin-left: -6px;
+  }
+
+  .form__input-group {
+    width: 370px;
+    margin-right: 30px;
+  }
 }
