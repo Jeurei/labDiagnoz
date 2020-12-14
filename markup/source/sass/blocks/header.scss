@@ -67,6 +67,10 @@
   margin-right: auto;
   background-color: transparent;
   font-family: inherit;
+
+  &:hover + .header-top__left-icon {
+    color: $blue;
+  }
 }
 
 .header-top-fixed__mobile-list-link--cart,
@@ -170,14 +174,9 @@
 
   .header-top__left-cities-container {
     position: relative;
+    display: flex;
+    align-items: center;
     padding-left: 11px;
-
-    &::before {
-      @include pseudo(url("../img/map-mark-icon.svg"), 6.6px, 9px);
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
   }
 
   .header-top__left-tel {
@@ -186,12 +185,16 @@
     margin: 0;
     margin-left: 15px;
     letter-spacing: -0.5px;
+  }
 
-    &::before {
-      @include pseudo(url("../img/tel-icon.svg"), 9px, 10px);
-      position: absolute;
-      top: 0;
-      left: 0;
+  .header-top__left-icon {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    order: -1;
+
+    &--cities {
+      left: -5px;
     }
   }
 
@@ -253,15 +256,34 @@
     width: 13px;
     height: 13px;
   }
+
+  .header-top__list-icon {
+    &--search:hover {
+      color: $blue;
+    }
+
+    &--search:active {
+      color: #2f668e;
+    }
+
+    &--cart:hover {
+      color: $green;
+    }
+
+    &--cart:active {
+      color: #2f668e;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .header {
+    padding-top: 16px;
     padding-bottom: 13px;
   }
 
   .header__inner {
-    padding-right: 29px;
+    padding-right: 28px;
     padding-left: 2px;
   }
 
@@ -271,10 +293,14 @@
 
   .header__top-container {
     padding-bottom: 6.2px;
+
+    .header__inner {
+      padding-right: 6px;
+    }
   }
 
   .header-top__left {
-    padding-left: 23px;
+    padding-left: 47px;
   }
 
   .header-top__left-cities-container {
@@ -285,8 +311,8 @@
   }
 
   .header-top__left-tel {
-    padding-left: 16px;
     margin-left: 27px;
+    letter-spacing: 0;
   }
 
   .header-bottom__mobile-burger-button-container {
@@ -295,7 +321,7 @@
 
   .header-top__right {
     margin-top: -1px;
-    margin-right: 8px;
+    margin-right: 31px;
   }
 
   .header-top__link--cart {
@@ -308,12 +334,11 @@
 
   .header__bottom-container {
     padding-top: 22px;
-    padding-right: 23px;
   }
 
   .header-bottom__left {
     display: flex;
     padding-top: 9px;
-    padding-left: 18px;
+    padding-left: 43px;
   }
 }

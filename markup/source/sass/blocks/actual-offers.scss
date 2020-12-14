@@ -1,6 +1,5 @@
 .actual-offers {
   padding-top: 32px;
-  padding-bottom: 41px;
 }
 
 .actual-offers__container {
@@ -22,7 +21,7 @@
   &::after {
     @include titleAfter();
     top: 30px;
-    left: 2px;
+    left: 8px;
   }
 }
 
@@ -35,7 +34,8 @@
   max-width: 100%;
   flex-direction: row;
   padding: 0;
-  box-shadow: $box-shadow;
+  padding-bottom: 41px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   list-style: none;
   overflow-x: hidden;
 }
@@ -166,7 +166,7 @@
 
   .actual-offer {
     margin-bottom: 30px;
-    box-shadow: -5px 0px 13px -2px $color-text;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
 
   .actual-offer__container {
@@ -199,11 +199,22 @@
     margin-top: -3px;
   }
 
+  .actual-offers__icon {
+    left: 35%;
+    transition: transform;
+  }
+
   .actual-offers__list-item {
     min-width: 100%;
     height: 160px;
     flex-direction: row;
     margin-right: 30px;
+
+    &:hover {
+      .actual-offers__icon {
+        animation: moveArrow 0.5s alternate infinite ease-in-out;
+      }
+    }
   }
 
   .actual-offer__price {
@@ -215,10 +226,6 @@
   .actual-offer__price-text {
     width: 50%;
   }
-
-  .actual-offers__icon {
-    left: 35%;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -227,13 +234,13 @@
   }
 
   .actual-offers__container {
-    padding-right: 34px;
+    padding-right: 0;
   }
 
   .actual-offers__controls-slider {
     display: block;
     align-self: flex-end;
-    padding-right: 3px;
+    padding-right: 12px;
   }
 
   .actual-offers__control {
@@ -278,7 +285,7 @@
     min-width: 375px;
     margin: 0;
     margin-right: 23px;
-    box-shadow: $box-shadow;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
     &:nth-of-type(2) {
       .actual-offer__text {

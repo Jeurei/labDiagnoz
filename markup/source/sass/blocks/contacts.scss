@@ -12,8 +12,8 @@
 
 .contact__icon {
   position: absolute;
-  top: 18px;
-  left: -33px;
+  top: 13px;
+  left: -30px;
   color: $white;
 }
 
@@ -37,7 +37,7 @@
     @include pseudo("", 29px, 28px);
     position: absolute;
     top: 8px;
-    left: -42px;
+    left: -40px;
     background-color: $icons-color;
     border-radius: 50%;
   }
@@ -69,6 +69,75 @@
     &::after {
       top: 18px;
       @include pseudo(url("../img/map-mark-icon.svg"), 6.2px, 8.8px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    padding-top: 15px;
+
+    .section__inner {
+      padding-left: 32px;
+    }
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 0;
+  }
+
+  .contact {
+    padding-top: 6px;
+
+    &:first-child {
+      margin-right: 24px;
+    }
+
+    &::before {
+      top: 14px;
+      left: -52px;
+      width: 44px;
+      height: 44px;
+    }
+
+    &--tel {
+      .contact__text {
+        padding-left: 3px;
+        letter-spacing: 0.6px;
+      }
+
+      &::after {
+        top: 31px;
+        width: 15px;
+        height: 16px;
+        transform: scale(1.5);
+      }
+    }
+    &--email {
+      .contact__text {
+        letter-spacing: 0.6px;
+      }
+
+      &::after {
+        top: 23px;
+        left: -34px;
+        transform: scale(1.7);
+      }
+    }
+
+    &--adress {
+      .contact__text {
+        letter-spacing: 0.6px;
+      }
+
+      &::after {
+        top: 28px;
+        left: -34px;
+        transform: scale(1.5);
+      }
     }
   }
 }

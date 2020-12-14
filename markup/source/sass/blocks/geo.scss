@@ -77,7 +77,7 @@
       color: $white;
     }
 
-    .geo__selection::after {
+    &::after {
       border-color: $white;
     }
   }
@@ -136,4 +136,50 @@
 .result__options {
   margin: 0;
   margin-top: -3px;
+}
+
+@media (min-width: $desktop-width) {
+  .geo__results {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .geo__select {
+    min-height: 67px;
+    padding-left: 21px;
+    margin-top: -5px;
+  }
+
+  .geo__selection {
+    min-height: 67px;
+
+    &::after {
+      top: 27px;
+      right: 23px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .geo__icon {
+    top: 26px;
+    left: 46px;
+  }
+
+  .geo__results > .section__inner {
+    padding-left: 33px;
+  }
+
+  .geo__results-title {
+    padding-left: 14px;
+  }
+
+  .geo__results-list {
+    padding-top: 0;
+  }
+
+  .geo__result-icon {
+    top: 11px;
+    left: 13px;
+  }
 }

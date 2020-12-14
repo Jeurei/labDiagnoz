@@ -52,6 +52,7 @@
 }
 
 .tab__content-title {
+  margin-bottom: 8px;
   font-weight: 300;
 }
 
@@ -75,12 +76,95 @@
   }
 }
 
-.tab-analyse__list {
+.tab__list {
   padding: 0;
   letter-spacing: 0;
   list-style: none;
 }
 
-.tab-analyse__list-item {
+.tab__list-item {
   margin-bottom: 11px;
+}
+
+@media (min-width: $desktop-width) {
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 38px;
+
+    .section__inner {
+      padding: 0;
+      margin: 0;
+
+      &:first-of-type {
+        display: flex;
+        width: 716px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        order: 1;
+        padding-left: 4px;
+      }
+
+      &:last-of-type {
+        width: 444px;
+        padding-top: 17px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .tab {
+    display: flex;
+    width: 33.33%;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4px;
+    padding-left: 11px;
+    background-color: transparent;
+
+    &:first-of-type {
+      margin-right: 40px;
+    }
+
+    &:last-of-type {
+      padding-left: 20px;
+    }
+  }
+
+  .tab__title {
+    align-items: flex-start;
+    padding-left: 0;
+    background-color: transparent;
+    font-size: $title-h4-fs;
+    line-height: $title-h4-lh;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .tab__content {
+    max-height: 100%;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .tab__checkbox {
+    &:checked + .tab__title {
+      background-image: none;
+      color: $color-text;
+    }
+
+    &:checked ~ .tab__content {
+      max-height: 100%;
+      transition: none;
+    }
+  }
+  .tab__content-title {
+    margin-top: 11px;
+    letter-spacing: -1.3px;
+  }
 }
