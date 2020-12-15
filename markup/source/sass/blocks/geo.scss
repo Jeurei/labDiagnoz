@@ -51,18 +51,8 @@
     position: relative;
   }
 
-  &::after {
-    position: absolute;
-    top: 29px;
-    right: 20px;
-    width: 9px;
-    height: 9px;
-    border: 1px solid $color-text;
-    border-top: 0;
-    border-left: 0;
-    background-color: transparent;
-    content: "";
-    transform: rotate(45deg);
+  .select__content {
+    top: 73px;
   }
 
   &:hover,
@@ -74,11 +64,17 @@
     }
 
     .geo__select {
+      background-color: transparent;
       color: $white;
     }
 
-    &::after {
-      border-color: $white;
+    .select__content {
+      color: $color-text;
+    }
+
+    .select__title::after,
+    .select__title::before {
+      background-color: $white;
     }
   }
 }
@@ -121,23 +117,6 @@
   list-style: none;
 }
 
-.result {
-  position: relative;
-  padding-top: 7px;
-  padding-left: 22px;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-.result__text {
-  margin: 0;
-}
-
-.result__options {
-  margin: 0;
-  margin-top: -3px;
-}
-
 @media (min-width: $desktop-width) {
   .geo__results {
     display: flex;
@@ -148,6 +127,10 @@
     min-height: 67px;
     padding-left: 21px;
     margin-top: -5px;
+
+    .select__content {
+      top: 69px;
+    }
   }
 
   .geo__selection {

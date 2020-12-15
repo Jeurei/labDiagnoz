@@ -1,13 +1,13 @@
 .features {
   padding-top: 35px;
   padding-bottom: 8px;
-  background-image: linear-gradient(
+  background-image: url("../img/mobile-features-bg.png"),
+    linear-gradient(
       to left,
       RGBA(250, 0, 235, 1),
       RGBA(154, 102, 245, 1),
       RGBA(43, 215, 255, 1)
-    ),
-    url("../img/mobile-features-bg.png");
+    );
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;

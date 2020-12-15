@@ -10,69 +10,6 @@
   list-style: none;
 }
 
-.contact__icon {
-  position: absolute;
-  top: 13px;
-  left: -30px;
-  color: $white;
-}
-
-.contact__text-small {
-  margin-bottom: 2px;
-  font-size: 10px;
-  line-height: 14px;
-}
-
-.contact__text {
-  margin-top: 0;
-  font-size: 19px;
-  line-height: 26px;
-}
-
-.contact {
-  position: relative;
-  margin-bottom: 28px;
-
-  &::before {
-    @include pseudo("", 29px, 28px);
-    position: absolute;
-    top: 8px;
-    left: -40px;
-    background-color: $icons-color;
-    border-radius: 50%;
-  }
-
-  &::after {
-    position: absolute;
-    top: 15px;
-    left: -32px;
-  }
-
-  &--email {
-    &:after {
-      @include pseudo(url("../img/mail.svg"), 8.3px, 6.3px);
-    }
-
-    .contact__text {
-      letter-spacing: -0.5px;
-    }
-  }
-
-  &--tel::after {
-    @include pseudo(url("../img/tel-icon.svg"), 9.3px, 10px);
-  }
-
-  &--adress {
-    &::before {
-      top: 10px;
-    }
-    &::after {
-      top: 18px;
-      @include pseudo(url("../img/map-mark-icon.svg"), 6.2px, 8.8px);
-    }
-  }
-}
-
 @media (min-width: $desktop-width) {
   .contacts {
     padding-top: 15px;
@@ -87,57 +24,5 @@
     flex-direction: row;
     justify-content: space-between;
     padding-right: 0;
-  }
-
-  .contact {
-    padding-top: 6px;
-
-    &:first-child {
-      margin-right: 24px;
-    }
-
-    &::before {
-      top: 14px;
-      left: -52px;
-      width: 44px;
-      height: 44px;
-    }
-
-    &--tel {
-      .contact__text {
-        padding-left: 3px;
-        letter-spacing: 0.6px;
-      }
-
-      &::after {
-        top: 31px;
-        width: 15px;
-        height: 16px;
-        transform: scale(1.5);
-      }
-    }
-    &--email {
-      .contact__text {
-        letter-spacing: 0.6px;
-      }
-
-      &::after {
-        top: 23px;
-        left: -34px;
-        transform: scale(1.7);
-      }
-    }
-
-    &--adress {
-      .contact__text {
-        letter-spacing: 0.6px;
-      }
-
-      &::after {
-        top: 28px;
-        left: -34px;
-        transform: scale(1.5);
-      }
-    }
   }
 }

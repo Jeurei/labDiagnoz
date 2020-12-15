@@ -1,4 +1,4 @@
-.nav-list {
+.nav__list {
   display: none;
 }
 
@@ -11,7 +11,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .nav-list {
+  .nav__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -20,7 +20,7 @@
     list-style: none;
   }
 
-  .nav-item {
+  .nav__item {
     padding-right: 13px;
 
     &:nth-child(even) {
@@ -52,7 +52,7 @@
     }
   }
 
-  .nav-link {
+  .nav__link {
     position: relative;
     display: block;
     width: 100%;

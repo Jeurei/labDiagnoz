@@ -1,35 +1,3 @@
-.complexes__container {
-  padding-right: 12px;
-  padding-left: 3px;
-}
-
-.complexes__title {
-  position: relative;
-  padding-left: 5px;
-  margin: 0;
-  margin-bottom: 62px;
-  font-size: 22px;
-  font-weight: 500;
-
-  &::after {
-    @include titleAfter();
-    top: 35px;
-    left: 10px;
-    font-size: 21px;
-  }
-}
-
-.complexes__list {
-  display: flex;
-  max-width: 100%;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0;
-  list-style: none;
-  overflow-x: hidden;
-}
-
 .complex {
   position: relative;
   width: 100%;
@@ -215,8 +183,7 @@
     margin-bottom: auto;
   }
 
-  .expand__button {
-    @extend .expand__button;
+  .complex__expand-button {
     padding-bottom: 20px;
     padding-left: 20px;
     color: $white;
@@ -227,8 +194,11 @@
     background-color: $white;
   }
 
-  .complex__full-bottom {
-    @extend .complex__bottom-container-bottom;
+  .complex__list-item-link {
+    color: $white;
+  }
+
+  .complex__bottom-container-bottom {
     display: flex;
     flex-direction: row;
     font-size: 12px;
@@ -236,15 +206,18 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+}
 
-  .complex__full-icon {
-    @extend .complex__icon;
+.complex--expanded {
+  .complex__full {
+    display: flex;
   }
+}
 
-  .complex--expanded {
-    .complex__full {
-      display: flex;
-    }
+.complex:hover {
+  .complex__icon,
+  .complex__full-icon {
+    animation: moveArrow 0.5s alternate infinite ease-in-out;
   }
 }
 
@@ -261,10 +234,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .complexes__list {
-    box-shadow: none;
-  }
-
   .complex {
     max-width: 270px;
     margin-right: 50px;
@@ -278,26 +247,9 @@
 }
 
 @media (min-width: $desktop-width) {
-  .complexes {
-    padding-top: 50px;
-    padding-bottom: 27px;
-  }
-
   .complex {
     margin-right: 30px;
     margin-left: 0;
-  }
-
-  .complex__list {
-    padding-top: 5px;
-    padding-left: 42px;
-    margin-bottom: 14px;
-  }
-
-  .complexes__title {
-    @include titleh2($color-text);
-    margin-bottom: 55px;
-    letter-spacing: -0.2px;
   }
 
   .complex__mobile-slider {
