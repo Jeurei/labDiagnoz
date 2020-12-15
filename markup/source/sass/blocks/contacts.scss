@@ -10,65 +10,19 @@
   list-style: none;
 }
 
-.contact__icon {
-  position: absolute;
-  top: 18px;
-  left: -33px;
-  color: $white;
-}
+@media (min-width: $desktop-width) {
+  .contacts {
+    padding-top: 15px;
 
-.contact__text-small {
-  margin-bottom: 2px;
-  font-size: 10px;
-  line-height: 14px;
-}
-
-.contact__text {
-  margin-top: 0;
-  font-size: 19px;
-  line-height: 26px;
-}
-
-.contact {
-  position: relative;
-  margin-bottom: 28px;
-
-  &::before {
-    @include pseudo("", 29px, 28px);
-    position: absolute;
-    top: 8px;
-    left: -42px;
-    background-color: $icons-color;
-    border-radius: 50%;
-  }
-
-  &::after {
-    position: absolute;
-    top: 15px;
-    left: -32px;
-  }
-
-  &--email {
-    &:after {
-      @include pseudo(url("../img/mail.svg"), 8.3px, 6.3px);
-    }
-
-    .contact__text {
-      letter-spacing: -0.5px;
+    .section__inner {
+      padding-left: 32px;
     }
   }
 
-  &--tel::after {
-    @include pseudo(url("../img/tel-icon.svg"), 9.3px, 10px);
-  }
-
-  &--adress {
-    &::before {
-      top: 10px;
-    }
-    &::after {
-      top: 18px;
-      @include pseudo(url("../img/map-mark-icon.svg"), 6.2px, 8.8px);
-    }
+  .contacts__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 0;
   }
 }
