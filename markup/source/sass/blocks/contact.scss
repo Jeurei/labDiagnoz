@@ -32,14 +32,15 @@
 
   &::after {
     position: absolute;
-    top: 15px;
-    left: -32px;
+    top: 17px;
+    left: -30px;
     background-repeat: no-repeat;
     background-size: 100%;
   }
 
   &--email {
     &:after {
+      top: 20px;
       @include pseudo("", 8.3px, 6.3px);
       background-image: url("../img/mail.svg");
     }
@@ -59,7 +60,8 @@
       top: 10px;
     }
     &::after {
-      top: 18px;
+      top: 20px;
+      left: -28px;
       @include pseudo("", 6.2px, 8.8px);
       background-image: url("../img/map-mark-icon.svg");
     }

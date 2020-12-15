@@ -13,7 +13,13 @@
   color: $white;
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    background-image: url("../img/mobile-features-bg@2x.png");
+    background-image: url("../img/mobile-features-bg@2x.png"),
+      linear-gradient(
+        to left,
+        RGBA(250, 0, 235, 1),
+        RGBA(154, 102, 245, 1),
+        RGBA(43, 215, 255, 1)
+      );
   }
 
   .section__title {

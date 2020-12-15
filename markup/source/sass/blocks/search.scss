@@ -1,12 +1,12 @@
 .search {
   padding-top: 29px;
-  background-image: linear-gradient(
+  background-image: url("../img/mobile-bg.png"),
+    linear-gradient(
       to left,
       RGBA(250, 0, 235, 1),
       RGBA(154, 102, 245, 1),
       RGBA(43, 215, 255, 1)
-    ),
-    url("../img/mobile-bg.png");
+    );
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;
@@ -17,7 +17,13 @@
   }
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    background-image: url("../img/mobile-bg@2x.png");
+    background-image: url("../img/mobile-bg@2x.png"),
+      linear-gradient(
+        to left,
+        RGBA(250, 0, 235, 1),
+        RGBA(154, 102, 245, 1),
+        RGBA(43, 215, 255, 1)
+      );
   }
 }
 
@@ -217,6 +223,10 @@
     min-height: 41px;
     background-color: #fff;
     color: $color-text;
+
+    .select {
+      min-height: 100%;
+    }
 
     .select__content {
       top: 41px;

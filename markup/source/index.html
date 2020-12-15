@@ -19,7 +19,10 @@
           <div class="header__top header-top">
             <div class="header-top__left">
               <div class="header-top__left-cities-container">
-                <div class="header-top__left-cities cities" data-state="active">
+                <div
+                  class="header-top__left-cities cities"
+                  data-state="default"
+                >
                   <a href="#" class="cities__link">
                     <span class="cities__city">Пермь</span>
                   </a>
@@ -363,21 +366,8 @@
               width="34"
               height="34"
             />
-            <div
-              class="header-top__left-cities cities select"
-              data-state="active"
-            >
-              <div class="select__title" data-default="perm">Пермь</div>
-              <div class="select__content">
-                <input
-                  id="perm"
-                  class="select__input"
-                  type="radio"
-                  name="city"
-                  checked
-                />
-                <label for="perm" class="select__label">Пермь</label>
-              </div>
+            <div class="header-top__left-cities cities">
+              <div class="cities__modal"></div>
             </div>
             <ul class="header-top-fixed__mobile-list">
               <li class="header-top-fixed__mobile-list-item">
@@ -507,6 +497,14 @@
                     checked
                   />
                   <label for="1" class="select__label">Option 0</label>
+                  <input
+                    id="1"
+                    class="select__input"
+                    type="radio"
+                    name="category"
+                    checked
+                  />
+                  <label for="category" class="select__label">Option 0</label>
                 </div>
               </div>
               <button
@@ -1180,14 +1178,8 @@
               href="#"
               class="articles__link-button button"
               aria-label="В пресс центр"
-              >В пресс центр<svg
-                class="articles__link-icon"
-                width="8.8"
-                height="8.8"
-                stroke="currentColor"
-              >
-                <use xlink:href="#grow-arrow"></use></svg
-            ></a>
+              >В пресс-центр</a
+            >
           </div>
           <div class="articles__bottom">
             <a href="#" class="articles__link">
@@ -1681,9 +1673,7 @@
                   </svg>
                   <form>
                     <div class="geo__select select" data-state="active">
-                      <div class="select__title" data-default="Perm">
-                        Пермь
-                      </div>
+                      <div class="select__title" data-default="Perm">Пермь</div>
                       <div class="select__content">
                         <input
                           id="form__perm"
@@ -1692,7 +1682,19 @@
                           name="form__city"
                           checked
                         />
-                        <label for="form__perm" class="select__label">Пермь</label>
+                        <label for="form__perm" class="select__label"
+                          >Пермь</label
+                        >
+                        <input
+                          id="form__perm"
+                          class="select__input"
+                          type="radio"
+                          name="form__city"
+                          checked
+                        />
+                        <label for="form__perm" class="select__label"
+                          >Пермь</label
+                        >
                       </div>
                     </div>
                   </form>

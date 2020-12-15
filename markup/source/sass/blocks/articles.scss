@@ -85,8 +85,13 @@
   justify-content: center;
   padding-right: 10px;
   background-color: $green;
+  background-image: url("../img/grow-arrow.svg");
+  background-position: 95% 10px;
+  background-repeat: no-repeat;
+  background-size: 8.8px 8.8px;
   border-radius: 4px;
   color: $white;
+  font-family: inherit;
   font-size: 9px;
   font-weight: 400;
   text-transform: none;
@@ -126,7 +131,7 @@
   }
 
   .articles__link-button {
-    min-width: 133px;
+    max-width: 133px;
     font-size: 13px;
   }
 

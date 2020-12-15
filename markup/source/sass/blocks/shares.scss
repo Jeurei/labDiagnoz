@@ -21,6 +21,7 @@
 .shares__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-right: 9px;
   padding-left: 4px;
 }
@@ -108,6 +109,10 @@
 @media (min-width: $desktop-width) {
   .shares {
     padding-bottom: 59px;
+  }
+
+  .shares__container {
+    align-items: flex-end;
   }
 
   .shares__title {
