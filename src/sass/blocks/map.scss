@@ -20,7 +20,7 @@
 
 .map__left-container {
   width: 100%;
-  padding-top: 12px;
+  padding-top: 15px;
 
   & > .section__inner {
     max-width: 320px;
@@ -44,12 +44,9 @@
 .map__right {
   min-width: 100vw;
   min-height: 380px;
-
   background-image: url("../img/map-bg.png");
-
-  @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    background-image: url("../img/map-@2xbg.png");
-  }
+  background-position: 0;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: $tablet-width) {
@@ -76,5 +73,49 @@
   .map__right {
     width: 60%;
     min-height: 552px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    padding-top: 0;
+  }
+
+  .map__left-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 47px;
+
+    .section__inner {
+      padding-left: 34px;
+    }
+  }
+
+  .map__left {
+    min-width: 649px;
+    padding-top: 77px;
+
+    .section__title {
+      margin-bottom: 14px;
+
+      &::after {
+        left: 119px;
+        font-size: 11px;
+        letter-spacing: 2px;
+      }
+    }
+
+    .section__inner {
+      align-self: flex-end;
+      margin: 0;
+    }
+  }
+
+  .map__logo {
+    padding-left: 46px;
+  }
+
+  .map__logo-img {
+    width: 230px;
   }
 }

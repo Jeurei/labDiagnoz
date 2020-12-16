@@ -1,5 +1,10 @@
 import React from 'react';
+import Header from './components/header/header';
 
-const App = () => <div>Here comes JSX !!!!</div>;
+const App = () => (
+  <>
+    <Header />
+  </>
+);
 
 export default App;

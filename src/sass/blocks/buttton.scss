@@ -11,6 +11,14 @@
   letter-spacing: 0.55px;
   line-height: $button-lh;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #65a929;
+  }
+
+  &:active {
+    background-color: #6db131;
+  }
 }
 
 .slider-button {
@@ -20,6 +28,10 @@
   appearance: none;
   background-color: $inactive-color;
   border-radius: 6px;
+
+  &:hover {
+    background-color: $blue;
+  }
 
   &:last-child {
     margin-left: 3px;
