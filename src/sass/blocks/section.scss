@@ -1,0 +1,33 @@
+.section__inner {
+  min-width: $mobile-width;
+  margin: 0 auto;
+}
+
+.section__title {
+  padding: 0;
+  position: relative;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+
+  &::after {
+    @include titleAfter();
+    top: 32px;
+    left: 4px;
+    position: absolute;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .section__inner {
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .section__inner {
+    position: relative;
+    width: $desktop-width;
+    padding: 0;
+  }
+}

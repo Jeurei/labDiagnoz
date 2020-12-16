@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: [`${__dirname}/src/app.js`, `${__dirname}/src/sass/style.scss`],
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'public'),
@@ -19,6 +19,17 @@ module.exports = {
             presets: ['@babel/preset-react', '@babel/preset-env'],
           },
         },
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { outputPath: 'css/', name: '[name].min.css' },
+          },
+          'sass-loader',
+        ],
       },
     ],
   },

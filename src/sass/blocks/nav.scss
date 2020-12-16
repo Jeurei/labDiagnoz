@@ -1,0 +1,85 @@
+.nav-list {
+  display: none;
+}
+
+.nav__button {
+  padding-top: 7px;
+  padding-right: 10px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  margin-left: 17px;
+}
+
+@media (min-width: $desktop-width) {
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    padding-top: 3px;
+    list-style: none;
+  }
+
+  .nav-item {
+    padding-right: 13px;
+
+    &:nth-child(even) {
+      padding-right: 50px;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 52px;
+    }
+
+    &:nth-child(2) {
+      padding-right: 43px;
+    }
+
+    &:nth-child(4) {
+      padding-right: 43px;
+    }
+
+    &:nth-child(5) {
+      padding-right: 36px;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    letter-spacing: -1px;
+
+    &:not(:only-child)::after {
+      position: absolute;
+      top: 2px;
+      right: -19px;
+      width: 9px;
+      height: 9px;
+      border: 1px solid $color-text;
+      border-top: 0;
+      border-left: 0;
+      background-color: transparent;
+      content: "";
+      transform: rotate(45deg);
+    }
+  }
+
+  .nav__button {
+    padding-top: 15px;
+    padding-right: 37px;
+    padding-bottom: 17px;
+    padding-left: 27px;
+    margin-left: 29px;
+  }
+}

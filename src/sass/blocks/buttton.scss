@@ -1,0 +1,27 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $green;
+  border-radius: 6px;
+  color: $white;
+  font-size: $button-fs;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.55px;
+  line-height: $button-lh;
+  text-transform: uppercase;
+}
+
+.slider-button {
+  width: 26px;
+  height: 26px;
+  border: none;
+  appearance: none;
+  background-color: $inactive-color;
+  border-radius: 6px;
+
+  &:last-child {
+    margin-left: 3px;
+  }
+}
