@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: $color-text;
+  outline-color: $color-text;
   text-decoration: none;
 }
 
@@ -31,13 +31,9 @@ img {
   height: auto;
 }
 
-svg {
-  fill: currentColor;
-  stroke: currentColor;
-
-  circle {
-    fill: none;
-  }
+button {
+  cursor: pointer;
+  outline-color: $color-text;
 }
 
 @media (min-width: $tablet-width) {
