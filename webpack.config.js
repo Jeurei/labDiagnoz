@@ -36,15 +36,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  [
-                    'postcss-preset-env',
-                    {
-                      // Options
-                    },
-                  ],
-                  autoprefixer(),
-                ],
+                plugins: [['postcss-preset-env', {}], autoprefixer()],
               },
             },
           },
@@ -67,8 +59,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     watchContentBase: true,
     port: 3000,
-    open: true,
-    watchContentBase: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

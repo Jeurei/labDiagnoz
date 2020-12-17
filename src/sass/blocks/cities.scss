@@ -4,6 +4,7 @@
   border: none;
   margin-right: auto;
   background-color: transparent;
+  cursor: pointer;
   font-family: inherit;
 
   &::after {
@@ -25,6 +26,47 @@
       color: $blue;
     }
   }
+}
+
+.cities__modal {
+  position: absolute;
+  top: 13px;
+  left: -38px;
+  display: flex;
+  width: 372px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-right: 57px;
+  padding-bottom: 40px;
+  padding-left: 39px;
+}
+
+.cities__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.cities__list-item {
+  width: 50%;
+}
+
+.cities__title {
+  margin-bottom: 0;
+  font-size: $title-h4-fs;
+  font-weight: 400;
+  line-height: $title-h4-lh;
+}
+
+.cities__button {
+  padding: 0;
+  border: none;
+  appearance: none;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 22px;
 }
 
 @media (min-width: $desktop-width) {
