@@ -1,16 +1,20 @@
 import getMock from '../mock/mock';
 import * as Actions from '../constants/action-types';
 
-const initialState = {
-  ...getMock(),
-};
+const initialState = getMock();
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case Actions.ADD_ITEM_TO_CART:
-      return { ...state, cart: state.cart.concat(action.payload) };
+    case Actions.SET_CURRENT_CITY:
+      return { ...state, cities: { ...state.cities, currentCity: action.playload } };
     case Actions.REMOVE_ITEM_FROM_CART:
-      break;
+      return {
+        ...state,
+        cart: {
+          ...[...Object.values(state.cart)].slice(0, action.playload),
+          ...[...Object.values(state.cart)].slice(action.playload + 1),
+        },
+      };
     default:
       break;
   }

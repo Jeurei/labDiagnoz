@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import CitiesModal from './cities-modal';
 import TelIcon from '../../icons/tel-icon.svg';
 import MarkMapIcon from '../../icons/map-mark-icon.svg';
+import mapStateToPropsGenerator from '../../store/mapStateToProps';
+import mapDispatchToProps from '../../store/mapDispatchToProps';
+import components from '../../constants/components';
 
-const HeaderTopLeft = ({ citiesData }) => {
+const HeaderTopLeft = ({ cities, setCity }) => {
   const [citiesModalState, setCitiesModalState] = useState(false);
-  const [currentCity, setCurrentCity] = useState(citiesData.currentCity);
 
   const onCitiesClickHandler = () => {
     setCitiesModalState(!citiesModalState);
@@ -18,7 +21,7 @@ const HeaderTopLeft = ({ citiesData }) => {
 
   useEffect(() => {
     setCitiesModalState(false);
-  }, [currentCity]);
+  }, [cities.currentCity]);
 
   return (
     <div className="header-top__left">
@@ -33,13 +36,13 @@ const HeaderTopLeft = ({ citiesData }) => {
             }}
             arial-label="Открыть попап для выбора города"
           >
-            <span className="cities__city">{currentCity}</span>
+            <span className="cities__city">{cities.currentCity}</span>
           </a>
           {citiesModalState ? (
             <CitiesModal
-              citiesData={citiesData.list}
+              citiesData={cities.list}
               closeHandler={onClickClosePopupHandler}
-              setCurrentCity={setCurrentCity}
+              setCurrentCity={setCity}
               modalState={citiesModalState}
             />
           ) : (
@@ -63,10 +66,14 @@ const HeaderTopLeft = ({ citiesData }) => {
 };
 
 HeaderTopLeft.propTypes = {
-  citiesData: PropTypes.shape({
+  cities: PropTypes.shape({
     currentCity: PropTypes.string.isRequired,
     list: PropTypes.objectOf(PropTypes.string).isRequired,
   }).isRequired,
+  setCity: PropTypes.func.isRequired,
 };
 
-export default HeaderTopLeft;
+export default connect(
+  mapStateToPropsGenerator(components.CITIES),
+  mapDispatchToProps(components.CITIES),
+)(HeaderTopLeft);

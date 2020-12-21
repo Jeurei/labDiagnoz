@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import mapStateToPropsGenerator from '../../store/mapStateToProps';
+import mapDispatchToProps from '../../store/mapDispatchToProps';
+import components from '../../constants/components';
 import SearchButton from '../utils/searchButton';
 import CartIcon from '../../icons/cart-icon.svg';
 import Cart from './cart';
 
-const HeaderTopRight = ({ cartData }) => {
+const HeaderTopRight = ({ cartData, removeItem }) => {
   const [cartModal, setCartModal] = useState(false);
 
   const onCloseClickHandler = () => {
     setCartModal(false);
+  };
+
+  const onItemDeleteClickHandler = (id) => {
+    removeItem(id);
   };
 
   return (
@@ -34,7 +42,15 @@ const HeaderTopRight = ({ cartData }) => {
         <span className="header-top__mobile-list-link-cart-value">
           {Object.keys(cartData).length}
         </span>
-        {cartModal ? <Cart cartData={cartData} closeHandler={onCloseClickHandler} /> : ''}
+        {cartModal ? (
+          <Cart
+            removeItem={onItemDeleteClickHandler}
+            cartData={cartData}
+            closeHandler={onCloseClickHandler}
+          />
+        ) : (
+          ''
+        )}
       </a>
     </div>
   );
@@ -42,6 +58,10 @@ const HeaderTopRight = ({ cartData }) => {
 
 HeaderTopRight.propTypes = {
   cartData: PropTypes.objectOf(PropTypes.object).isRequired,
+  removeItem: PropTypes.func.isRequired,
 };
 
-export default HeaderTopRight;
+export default connect(
+  mapStateToPropsGenerator(components.CART),
+  mapDispatchToProps(components.CART),
+)(HeaderTopRight);

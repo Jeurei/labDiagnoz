@@ -4,10 +4,10 @@ import { css } from '@emotion/react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { showing } from '../utils/animation';
 import { randomId } from '../utils/common';
-import CartModaGroup from './cart-modal-group';
+import CartModalGroup from './cart-modal-group';
 import CrossButton from '../utils/crossButton';
 
-const Cart = ({ cartData, closeHandler }) => {
+const Cart = ({ cartData, closeHandler, removeItem }) => {
   const typesMap = [...new Set(Object.values(cartData).map((el) => el.type))].map((el) => ({
     [el]: Object.values(cartData)
       .map((elem) => {
@@ -54,7 +54,7 @@ const Cart = ({ cartData, closeHandler }) => {
                 )}
               >
                 {typesMap.map((el) => (
-                  <CartModaGroup groupData={el} key={randomId()} />
+                  <CartModalGroup action={removeItem} groupData={el} key={randomId()} />
                 ))}
               </Scrollbars>
             </div>
@@ -88,6 +88,7 @@ const Cart = ({ cartData, closeHandler }) => {
 Cart.propTypes = {
   cartData: PropTypes.objectOf(PropTypes.object).isRequired,
   closeHandler: PropTypes.func.isRequired,
+  removeItem: PropTypes.func.isRequired,
 };
 
 export default Cart;

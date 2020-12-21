@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import Header from './containers/header';
+import React from 'react';
+import Header from './components/header/header';
 
-const App = () => {
-  const [cartData, setCartData] = useState({ ...data.cart });
-  const [citiesData, setCititesData] = useState({ ...data.cities });
-
-  return (
-    <>
-      <Header cartData={cartData} citiesData={citiesData} />
-    </>
-  );
-};
+const App = () => (
+  <>
+    <Header />
+  </>
+);
 
 export default App;
