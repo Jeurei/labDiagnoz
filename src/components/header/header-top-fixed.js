@@ -88,3 +88,5 @@ const HeaderTopFixed = () => {
     </div>
   </div>;
 };
+
+export default HeaderTopFixed;

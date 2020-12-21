@@ -123,3 +123,5 @@ const HeaderBottom = () => (
     </div>
   </div>
 );
+
+export default HeaderBottom;

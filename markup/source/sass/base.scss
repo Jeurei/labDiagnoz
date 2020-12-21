@@ -22,8 +22,14 @@ body {
 }
 
 a {
+  color: $color-text;
   outline-color: $color-text;
   text-decoration: none;
+
+  &:hover,
+  :active {
+    color: $color-text;
+  }
 }
 
 img {

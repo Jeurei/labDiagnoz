@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
+import { css } from '@emotion/react';
+import { Scrollbars } from 'react-custom-scrollbars';
+import { showing } from '../utils/animation';
+import { randomId } from '../utils/common';
 import CartModaGroup from './cart-modal-group';
 import CrossButton from '../utils/crossButton';
 
@@ -16,8 +19,15 @@ const Cart = ({ cartData, closeHandler }) => {
       .filter(Boolean),
   }));
 
+  const total = Object.values(cartData).reduce((t, { price }) => t + price, 0);
+
   return (
-    <div className="header-top__right-cart-container cart-container">
+    <div
+      className="header-top__right-cart-container cart-container"
+      css={css`
+        animation: ${showing} 1s ease-in-out;
+      `}
+    >
       <div className="cart-container__inner">
         <div className="cart-container__modal cart-modal">
           <div className="cart-modal__top">
@@ -34,17 +44,33 @@ const Cart = ({ cartData, closeHandler }) => {
           </div>
           <div className="cart-modal__middle">
             <div className="cart-modal__inner">
-              {typesMap.map((el) => <CartModaGroup groupData={el} key={nanoid()} />)}
+              <Scrollbars
+                style={{ width: 449, height: 400 }}
+                renderTrackVertical={(props) => (
+                  <div {...props} className="cart-modal__scroll-track-vertical" />
+                )}
+                renderThumbVertical={(props) => (
+                  <div {...props} className="cart-modal__scroll-thumb-vertical" />
+                )}
+              >
+                {typesMap.map((el) => (
+                  <CartModaGroup groupData={el} key={randomId()} />
+                ))}
+              </Scrollbars>
             </div>
           </div>
           <div className="cart-modal__bottom offer">
             <div className="cart-modal__inner cart-modal__inner--offer">
-              <div className="offer__price-container">
-                <span className="offer__price-text">Итого:</span>
-                <span className="offer__price">1 100 ₽</span>
+              <div className="cart-modal__offer-price-container">
+                <span className="cart-modal__offer-price-text">Итого:</span>
+                <span className="cart-modal__offer-price">
+                  {total}
+                  {' '}
+                  ₽
+                </span>
               </div>
               <button
-                className="offer__button button"
+                className="cart-modal__offer-button button"
                 type="button"
                 aria-label="Кнопка оформить заказ"
                 name="order-button"
@@ -59,7 +85,7 @@ const Cart = ({ cartData, closeHandler }) => {
   );
 };
 
-Cart.propType = {
+Cart.propTypes = {
   cartData: PropTypes.objectOf(PropTypes.object).isRequired,
   closeHandler: PropTypes.func.isRequired,
 };

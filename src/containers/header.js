@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeaderTop from './header-top';
+import HeaderTop from '../components/header/header-top';
 
 const Header = ({ cartData, citiesData }) => (
   <header className="header">

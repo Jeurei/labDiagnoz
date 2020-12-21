@@ -37,3 +37,39 @@
     margin-left: 3px;
   }
 }
+
+.cross-button {
+  position: absolute;
+  top: 15px;
+  right: 17.5px;
+  width: 18.5px;
+  height: 19px;
+  border: none;
+  appearance: none;
+  background-color: transparent;
+  color: transparent;
+
+  &:after {
+    @include pseudo("", 2px, 19px);
+    position: absolute;
+    top: 0;
+    left: 9;
+    background-color: $color-text;
+    transform: rotate(45deg);
+  }
+  &:before {
+    @include pseudo("", 2px, 19px);
+    position: absolute;
+    top: 0;
+    left: 9;
+    background-color: $color-text;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      background-color: #fc5a8d;
+    }
+  }
+}

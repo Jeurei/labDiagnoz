@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  padding-top: 10px;
 }
 
 .header__top-fixed-container {
@@ -24,12 +25,14 @@
 
 .header-top__link--cart {
   position: relative;
+  color: $color-text;
 }
 
 @media (min-width: $tablet-width) {
   .header-top {
     display: flex;
     flex-direction: row;
+    padding-top: 16px;
   }
 
   .header-top__mobile {
@@ -71,16 +74,12 @@
   }
 
   .header-top__right {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
   }
-
-  .header-top__right-cart-container {
-    display: none;
-  }
-
   .header-top__right-search-button {
     border: none;
     appearance: none;

@@ -1,14 +1,15 @@
-.search {
+.search-modal {
   padding-top: 29px;
-  background-image: url("../img/mobile-bg.png"),
+  background-image: url("../../img/search-modal.png"),
     linear-gradient(
       to left,
       RGBA(250, 0, 235, 1),
       RGBA(154, 102, 245, 1),
       RGBA(43, 215, 255, 1)
     );
+  background-position: 30% 70%, 0 0;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 50%, cover;
   color: $white;
   font-weight: 500;
 
@@ -17,7 +18,7 @@
   }
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    background-image: url("../img/mobile-bg@2x.png"),
+    background-image: url("../../img/search-modal@2x.png"),
       linear-gradient(
         to left,
         RGBA(250, 0, 235, 1),
@@ -27,7 +28,7 @@
   }
 }
 
-.search__title {
+.search-modal__title {
   position: relative;
   padding-left: 3px;
   margin: 0;
@@ -44,7 +45,7 @@
   }
 }
 
-.search__container {
+.search-modal__container {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -53,7 +54,7 @@
   padding-bottom: 11px;
 }
 
-.search__container-top {
+.search-modal__container-top {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -62,7 +63,7 @@
   padding-bottom: 6px;
 }
 
-.search__container-top-text {
+.search-modal__container-top-text {
   display: none;
   align-items: flex-end;
   justify-content: flex-start;
@@ -70,7 +71,7 @@
   line-height: 7.7px;
 }
 
-.search__container-input-group {
+.search-modal__container-input-group {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -81,7 +82,7 @@
   padding-left: 4px;
 }
 
-.search__input {
+.search-modal__input {
   flex-grow: 1;
   padding-top: 16px;
   padding-bottom: 13px;
@@ -94,13 +95,13 @@
   font-size: 10px;
 }
 
-.search__categories {
+.search-modal__categories {
   display: none;
   border: none;
   border-left: 1px solid $border-color;
 }
 
-.search__button {
+.search-modal__button {
   min-width: 78px;
   min-height: 100%;
   border: none;
@@ -111,12 +112,12 @@
   color: #fff;
 }
 
-.search__icon {
+.search-modal__icon {
   width: 20px;
   height: 20px;
 }
 
-.search__controls {
+.search-modal__controls {
   display: none;
   flex-direction: row;
   align-items: center;
@@ -125,57 +126,7 @@
   font-size: 0;
 }
 
-.search__control {
-  position: relative;
-  width: 55px;
-  height: 35px;
-  border: none;
-  border-right: 1px solid $border-color;
-  appearance: none;
-  background-color: $white;
-
-  &:last-child {
-    border-right: none;
-  }
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    content: "";
-  }
-
-  &--analyse::before {
-    background-image: url("../img/analyse.svg");
-    background-size: 25px 25px;
-  }
-
-  &--center::before {
-    background-image: url("../img/center.svg");
-    background-size: 25px 25px;
-  }
-
-  &--doctor::before {
-    background-image: url("../img/doctor.svg");
-    background-size: 25px 25px;
-  }
-
-  &--shedule::before {
-    background-image: url("../img/shedule.svg");
-    background-size: 25px 25px;
-  }
-
-  &:active {
-    transform: scale(1);
-  }
-}
-
-.search__hint {
+.search-modal__hint {
   position: relative;
   display: flex;
   width: 100%;
@@ -186,21 +137,47 @@
   font-weight: 400;
 }
 
-.search__hint-icon {
+.search-modal__hint-icon {
   position: absolute;
   top: 4px;
   left: 5px;
 }
 
-.search__hint-dotted {
+.search-modal__hint-dotted {
   height: 23px;
   padding-left: 3px;
   border-bottom: 0.5px dashed $white;
   color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+.search-modal__search-examples {
+  display: flex;
+  align-self: flex-start;
+  padding: 0;
+  font-display: row;
+  list-style: none;
+}
+
+.search-modal__search-examples-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 71px;
+}
+
+.search-modal__example {
+  margin-bottom: 17px;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .search__title {
+  .search-modal__title {
     margin-right: auto;
 
     &::after {
@@ -208,17 +185,17 @@
     }
   }
 
-  .search__title-br {
+  .search-modal__title-br {
     display: none;
   }
 
-  .search__container-top-text {
+  .search-modal__container-top-text {
     display: flex;
     font-size: 11px;
     line-height: 16px;
   }
 
-  .search__categories {
+  .search-modal__categories {
     display: block;
     min-height: 41px;
     background-color: #fff;
@@ -233,48 +210,29 @@
     }
   }
 
-  .search__input {
+  .search-modal__input {
     flex-grow: 2;
-  }
-
-  .search__control {
-    width: 70px;
-    height: 35px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .search {
+  .search-modal {
     min-height: 594px;
     padding-top: 140px;
     padding-bottom: 69px;
-    background-image: url("../img/mainbg.png"),
-      linear-gradient(
-        to left,
-        RGBA(250, 0, 235, 1),
-        RGBA(154, 102, 245, 1),
-        RGBA(43, 215, 255, 1)
-      );
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
-    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-      background-image: url("../img/mainbg@2x.png");
-    }
   }
 
-  .search__container {
+  .search-modal__container {
     padding-right: 2px;
     padding-left: 24px;
   }
 
-  .search__container-top {
+  .search-modal__container-top {
     padding-top: 4px;
     padding-right: 110px;
   }
 
-  .search__container-top-text {
+  .search-modal__container-top-text {
     align-items: center;
     padding-top: 5px;
     padding-right: 15px;
@@ -282,7 +240,7 @@
     letter-spacing: -0.3px;
   }
 
-  .search__title {
+  .search-modal__title {
     @include titleh2($white);
     position: relative;
     margin-bottom: 10px;
@@ -293,13 +251,13 @@
     }
   }
 
-  .search__container-input-group {
+  .search-modal__container-input-group {
     min-height: 57.5px;
     padding-left: 0;
     margin-bottom: 7px;
   }
 
-  .search__input {
+  .search-modal__input {
     padding-top: 19px;
     padding-bottom: 18px;
     padding-left: 19.3px;
@@ -307,7 +265,7 @@
     letter-spacing: -0.3px;
   }
 
-  .search__categories {
+  .search-modal__categories {
     position: relative;
     min-width: 218px;
     min-height: 53.8px;
@@ -322,115 +280,46 @@
     }
   }
 
-  .search__button {
+  .search-modal__button {
     min-width: 73px;
   }
 
-  .search__icon {
+  .search-modal__icon {
     width: 26px;
     height: 26px;
   }
 
-  .search__hint {
+  .search-modal__hint {
     position: relative;
     padding-left: 22px;
     font-size: $body-fs;
     letter-spacing: 1px;
   }
 
-  .search__hint-icon {
+  .search-modal__hint-icon {
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
   }
 
-  .search__hint-dotted {
+  .search-modal__hint-dotted {
     height: 18px;
     padding-left: 1px;
     letter-spacing: -0.28px;
   }
 
-  .search__controls {
+  .search-modal__search-examples {
     display: flex;
-    margin-top: 109px;
+    align-self: flex-start;
+    padding: 0;
+    font-display: row;
+    list-style: none;
   }
 
-  .search__control {
-    position: relative;
-    overflow: hidden;
-    width: 293px;
-    height: 95px;
-    padding-top: 5px;
-    padding-left: 39px;
-    color: $color-text;
-    font-size: 14px;
-    letter-spacing: -0.3px;
-    transition: all 0.2s ease-in-out;
-
-    &:first-child {
-      padding-left: 33px;
-    }
-
-    &:nth-child(3) {
-      padding-left: 27px;
-    }
-
-    &:nth-child(4) {
-      padding-left: 34px;
-    }
-
-    &--analyse::before {
-      left: -67px;
-      background-size: 31px 33px;
-    }
-
-    &--center::before {
-      left: -107px;
-      background-size: 31px 32px;
-    }
-
-    &--doctor::before {
-      left: -67px;
-      background-size: 27px 34.5px;
-    }
-
-    &--shedule::before {
-      left: -104px;
-      background-size: 28px 28px;
-    }
-
-    &::after {
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      display: block;
-      width: 25%;
-      height: 100%;
-      background: -webkit-linear-gradient(
-        left,
-        rgba(255, 255, 255, 0) 0,
-        rgba(43, 215, 255, 0.6) 100%
-      );
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0,
-        rgba(43, 215, 255, 0.5) 100%
-      );
-      content: "";
-      opacity: 0;
-      -webkit-transform: skewX(-25deg);
-      transform: skewX(-25deg);
-      transition: all;
-    }
-
-    &:hover {
-      box-shadow: $box-shadow;
-      transform: scale(1.05);
-
-      &::after {
-        animation: shine 0.6s forwards ease-in-out;
-      }
-    }
+  .search-modal__search-examples-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 71px;
   }
 }

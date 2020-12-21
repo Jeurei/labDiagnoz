@@ -14,6 +14,149 @@
       <include src="markup/build/img/sprite.svg"></include>
     </div>
     <header class="header">
+      <section class="header__modal-search seciton search-modal">
+        <div class="section__inner">
+          <div class="search-modal__container">
+            <div class="search-modal__container-top">
+              <h2 class="search-modal__title">
+                Простой и удобный поиск <br class="search__title-br" />
+                Анализов
+              </h2>
+              <small class="search-modal__container-top-text"
+                >По какому разделу искать?</small
+              >
+            </div>
+            <div class="search-modal__container-input-group">
+              <input
+                type="text"
+                class="search-modal__input"
+                placeholder="Введите ваш поисковый запрос…"
+                aria-label="Введите что хотите найти"
+                aria-describedby="search-descr"
+              />
+              <p class="visually-hidden" id="search-descr">
+                Введите ваш поисковый запрос…
+              </p>
+              <div class="search-modal__categories select" data-state="active">
+                <div class="select__title" data-default="Option 0">
+                  Option 0
+                </div>
+                <div class="select__content">
+                  <input
+                    id="1"
+                    class="select__input"
+                    type="radio"
+                    name="category"
+                    checked
+                  />
+                  <label for="1" class="select__label">Option 0</label>
+                  <input
+                    id="1"
+                    class="select__input"
+                    type="radio"
+                    name="category"
+                    checked
+                  />
+                  <label for="category" class="select__label">Option 0</label>
+                </div>
+              </div>
+              <button
+                class="search-modal__button"
+                type="button"
+                name="search-button"
+                aria-label="Кнопка поиска"
+              >
+                <svg
+                  class="search-modal__icon"
+                  width="13"
+                  height="13"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <use xlink:href="#search-icon"></use>
+                </svg>
+              </button>
+            </div>
+            <small class="search-modal__hint">
+              <svg
+                class="search-modal__hint-icon"
+                width="13"
+                height="13"
+                fill="none"
+                stroke="currentColor"
+              >
+                <use xlink:href="#search-icon"></use>
+              </svg>
+              Например,
+              <a href="#" class="search-modal__hint-dotted"
+                >биохимический анализ крови</a
+              ></small
+            >
+            <ul class="search-modal__search-examples">
+              <li class="search-modal__search-examples-item">
+                <a
+                  href="some"
+                  class="search-modal__example"
+                  aria-label="Найти анализ"
+                  >Справка в ФНС</a
+                >
+                <a
+                  href="some"
+                  class="search-modal__example"
+                  aria-label="Найти анализ"
+                  >Быстрая ссылка</a
+                >
+                <a
+                  href="some"
+                  class="search-modal__example"
+                  aria-label="Найти анализ"
+                  >Вакансии</a
+                >
+              </li>
+              <li class="search-modal__search-examples-item">
+                <a
+                  href="some"
+                  class="search-modal__example"
+                  aria-label="Найти анализ"
+                  >Справка в ФНС</a
+                >
+                <a
+                  href="some"
+                  class="search-modal__example"
+                  aria-label="Найти анализ"
+                  >Быстрая ссылка</a
+                >
+                <a
+                  href="some"
+                  class="search-modal__example"
+                  aria-label="Найти анализ"
+                  >Вакансии</a
+                >
+              </li>
+              <li class="search-modal__search-examples-item">
+                <a
+                  href="some"
+                  class="search-modal__example"
+                  aria-label="Найти анализ"
+                  >Справка в ФНС</a
+                >
+                <a
+                  href="some"
+                  class="search-modal__example"
+                  aria-label="Найти анализ"
+                  >Быстрая ссылка</a
+                >
+                <a
+                  href="some"
+                  class="search-modal__example"
+                  aria-label="Найти анализ"
+                  >Вакансии</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <div class="header__top-container">
         <div class="header__inner">
           <div class="header__top header-top">
@@ -82,123 +225,110 @@
                 </svg>
                 <span class="header-top__mobile-list-link-cart-value">1</span>
               </a>
-              <div class="header-top__right-cart-container cart-container">
-                <div class="cart-container__inner">
-                  <div class="cart-container__modal cart-modal">
-                    <div class="cart-modal__top">
-                      <h4 class="cart-modal__title">Корзина (4)</h4>
-                      <button
-                        class="cart-modal__close-button cross-button cross-button--cart-close"
-                        aria-label="Кнопка закрытия модального окна корзины"
-                        name="close-button"
-                      >
-                        Иконка
-                      </button>
+              <div class="header-top__right-cart-modal cart-modal">
+                <div class="cart-modal__top">
+                  <h4 class="cart-modal__title">Корзина (4)</h4>
+                  <button
+                    class="cart-modal__close-button cross-button--cart-close cross-button"
+                    aria-label="Кнопка закрытия модального окна корзины"
+                    name="close-button"
+                  ></button>
+                </div>
+                <div class="cart-modal__middle">
+                  <div class="cart-modal__inner">
+                    <div class="cart-modal__group">
+                      <h5 class="cart-modal__group-title">Анализы:</h5>
+                      <ul class="cart-modal__list">
+                        <li class="cart-modal__list-item">
+                          <p class="cart-modal__text">
+                            Тестостерон свободный (включает определение
+                            тестостерона общего и свободного, ГСПГ (SHBG),
+                            расчет индекса свободных андрогенов) тестостерона
+                            общего и свободного
+                          </p>
+                          <span class="cart-modal__price">1 100 ₽</span>
+                          <button
+                            class="cart-modal__remove-item-button cross-button"
+                            type="button"
+                            aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                            name="remove-button"
+                          >
+                            Иконка
+                          </button>
+                        </li>
+                        <li class="cart-modal__list-item">
+                          <p class="cart-modal__text">Тестостерон свободный</p>
+                          <span class="cart-modal__price">1 100 ₽</span>
+                          <button
+                            class="cart-modal__remove-item-button cross-button"
+                            type="button"
+                            aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                            name="remove-button"
+                          >
+                            Иконка
+                          </button>
+                        </li>
+                        <li class="cart-modal__list-item">
+                          <p class="cart-modal__text">Тестостерон свободный</p>
+                          <span class="cart-modal__price">1 100 ₽</span>
+                          <button
+                            class="cart-modal__remove-item-button cross-button"
+                            type="button"
+                            aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                            name="remove-button"
+                          >
+                            Иконка
+                          </button>
+                        </li>
+                        <li class="cart-modal__list-item">
+                          <p class="cart-modal__text">Тестостерон свободный</p>
+                          <span class="cart-modal__price">1 100 ₽</span>
+                          <button
+                            class="cart-modal__remove-item-button cross-button"
+                            type="button"
+                            aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                            name="remove-button"
+                          >
+                            Иконка
+                          </button>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="cart-modal__middle">
-                      <div class="cart-modal__inner">
-                        <div class="cart-modal__group">
-                          <h5 class="cart-modal__group-title">Анализы:</h5>
-                          <ul class="cart-modal__list">
-                            <li class="cart-modal__list-item">
-                              <p class="cart-modal__text">
-                                Тестостерон свободный (включает определение
-                                тестостерона общего и свободного, ГСПГ (SHBG),
-                                расчет индекса свободных андрогенов)
-                                тестостерона общего и свободного, ГСПГ (SHBG),
-                                расчет индекса
-                              </p>
-                              <span class="cart-modal__price">1 100 ₽</span>
-                              <button
-                                class="cart-modal__remove-item-button cross-button"
-                                type="button"
-                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                                name="remove-button"
-                              >
-                                Иконка
-                              </button>
-                            </li>
-                            <li class="cart-modal__list-item">
-                              <p class="cart-modal__text">
-                                Тестостерон свободный
-                              </p>
-                              <span class="cart-modal__price">1 100 ₽</span>
-                              <button
-                                class="cart-modal__remove-item-button cross-button"
-                                type="button"
-                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                                name="remove-button"
-                              >
-                                Иконка
-                              </button>
-                            </li>
-                            <li class="cart-modal__list-item">
-                              <p class="cart-modal__text">
-                                Тестостерон свободный
-                              </p>
-                              <span class="cart-modal__price">1 100 ₽</span>
-                              <button
-                                class="cart-modal__remove-item-button cross-button"
-                                type="button"
-                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                                name="remove-button"
-                              >
-                                Иконка
-                              </button>
-                            </li>
-                            <li class="cart-modal__list-item">
-                              <p class="cart-modal__text">
-                                Тестостерон свободный
-                              </p>
-                              <span class="cart-modal__price">1 100 ₽</span>
-                              <button
-                                class="cart-modal__remove-item-button cross-button"
-                                type="button"
-                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                                name="remove-button"
-                              >
-                                Иконка
-                              </button>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="cart-modal__group">
-                          <h5 class="cart-modal__group-title">
-                            Услуги по взятию биоматериала:
-                          </h5>
-                          <ul class="cart-modal__list">
-                            <li class="cart-modal__list-item">
-                              <p class="cart-modal__text">Взятие крови</p>
-                              <span class="cart-modal__price">60 ₽</span>
-                              <button
-                                class="cart-modal__remove-item-button cross-button"
-                                type="button"
-                                aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
-                                name="remove-button"
-                              >
-                                Иконка
-                              </button>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                    <div class="cart-modal__group">
+                      <h5 class="cart-modal__group-title">
+                        Услуги по взятию биоматериала:
+                      </h5>
+                      <ul class="cart-modal__list">
+                        <li class="cart-modal__list-item">
+                          <p class="cart-modal__text">Взятие крови</p>
+                          <span class="cart-modal__price">60 ₽</span>
+                          <button
+                            class="cart-modal__remove-item-button cross-button"
+                            type="button"
+                            aria-label="Кнопка удаления элемент #Элемент нейм# из корзины"
+                            name="remove-button"
+                          >
+                            Иконка
+                          </button>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="cart-modal__bottom offer">
-                      <div class="cart-modal__inner cart-modal__inner--offer">
-                        <div class="offer__price-container">
-                          <span class="offer__price-text">Итого:</span
-                          ><span class="offer__price">1 100 ₽</span>
-                        </div>
-                        <button
-                          class="offer__button button"
-                          type="button"
-                          aria-label="Кнопка оформить заказ"
-                          name="order-button"
-                        >
-                          Оформить заказ
-                        </button>
-                      </div>
+                  </div>
+                </div>
+                <div class="cart-modal__bottom offer">
+                  <div class="cart-modal__inner cart-modal__inner--offer">
+                    <div class="offer__price-container">
+                      <span class="offer__price-text">Итого:</span
+                      ><span class="offer__price">1 100 ₽</span>
                     </div>
+                    <button
+                      class="offer__button button"
+                      type="button"
+                      aria-label="Кнопка оформить заказ"
+                      name="order-button"
+                    >
+                      Оформить заказ
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1201,7 +1331,8 @@
                   <img
                     src="./img/article.png"
                     srcset="./img/article@2x.png 720w"
-                    sizes="(min-width: 720px) 270px, 301px"eslin
+                    sizes="(min-width: 720px) 270px, 301px"
+                    eslin
                     width="301"
                     height="250"
                     alt="Изображение статьи"
@@ -1557,7 +1688,7 @@
         <div class="section__inner">
           <h2 class="section__title">Задайте свой вопрос</h2>
           <form action="post" class="form-section__form form">
-            <div class="form__input-group">
+            <fieldset class="form__input-group">
               <label for="name" class="form__label visually-hidden"
                 >Введите имя</label
               >
@@ -1597,8 +1728,8 @@
               <p class="visually-hidden" id="email__field">
                 Введите свой email
               </p>
-            </div>
-            <div class="form__input-group">
+            </fieldset>
+            <fieldset class="form__input-group">
               <textarea
                 id="text"
                 cols="30"
@@ -1607,8 +1738,8 @@
                 placeholder="Введите своё сообщение"
                 aria-label="Поле дляя ввода вашего вопроса"
               ></textarea>
-            </div>
-            <div class="form__input-group form__input-group--checkbox">
+            </fieldset>
+            <fieldset class="form__input-group form__input-group--checkbox">
               <h3 class="form__input-chekbox-title">Задайте свой вопрос</h3>
               <div class="form__input-checkbox-container">
                 <label
@@ -1633,7 +1764,7 @@
               <button class="form__button button" type="submit">
                 Отправить
               </button>
-            </div>
+            </fieldset>
           </form>
         </div>
       </section>
