@@ -56,7 +56,7 @@
 .search__container-top {
   display: flex;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   padding-top: 2px;
   padding-right: 0;
   padding-bottom: 6px;
@@ -76,7 +76,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
-  padding-right: 10px;
+  padding-right: 5px;
   padding-bottom: 13px;
   padding-left: 4px;
 }
@@ -197,6 +197,7 @@
   padding-left: 3px;
   border-bottom: 0.5px dashed $white;
   color: $white;
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {
@@ -271,7 +272,7 @@
 
   .search__container-top {
     padding-top: 4px;
-    padding-right: 110px;
+    padding-right: 0;
   }
 
   .search__container-top-text {

@@ -1,7 +1,7 @@
 @media (min-width: $tablet-width) {
   .cart-modal {
     position: absolute;
-    z-index: 11;
+    z-index: 20;
     top: 24px;
     left: -370px;
     display: flex;
@@ -11,6 +11,7 @@
 
     background-color: #fff;
     box-shadow: 1px 1px 22px 0 RGBA(74, 74, 74, 0.2);
+    cursor: default;
   }
 
   .cart-modal__top {
@@ -38,6 +39,8 @@
   .cart-modal__group {
     padding-left: 29px;
 
+    border-bottom: 1px dashed $color-text;
+
     &:first-of-type {
       border-top: 1px dashed $color-text;
     }
@@ -45,8 +48,6 @@
     &:last-child {
       border-bottom: none;
     }
-
-    border-bottom: 1px dashed $color-text;
   }
 
   .cart-modal__group-title {
@@ -56,6 +57,8 @@
   }
 
   .cart-modal__list {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     padding-left: 28px;
     counter-reset: counter;

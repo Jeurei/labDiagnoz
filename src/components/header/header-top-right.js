@@ -8,7 +8,7 @@ import SearchButton from '../utils/searchButton';
 import CartIcon from '../../icons/cart-icon.svg';
 import Cart from './cart';
 
-const HeaderTopRight = ({ cartData, removeItem }) => {
+const HeaderTopRight = ({ cartData, removeItem, openSearch }) => {
   const [cartModal, setCartModal] = useState(false);
 
   const onCloseClickHandler = () => {
@@ -22,7 +22,11 @@ const HeaderTopRight = ({ cartData, removeItem }) => {
   return (
     <div className="header-top__right">
       <div className="header-top__right-search-container">
-        <SearchButton buttonClass="header-top__right-search-button" label="Открыть строку поиска" />
+        <SearchButton
+          buttonClass="header-top__right-search-button"
+          label="Открыть строку поиска"
+          action={openSearch}
+        />
       </div>
       <a
         href="some"
@@ -30,7 +34,6 @@ const HeaderTopRight = ({ cartData, removeItem }) => {
         aria-label="Перейти на страницу корзины"
         onClick={(evt) => {
           evt.preventDefault();
-          setCartModal(!cartModal);
         }}
       >
         <CartIcon
@@ -38,18 +41,20 @@ const HeaderTopRight = ({ cartData, removeItem }) => {
           width="21"
           height="19"
           fill="currentColor"
+          onClick={(evt) => {
+            evt.preventDefault();
+            setCartModal(!cartModal);
+          }}
         />
         <span className="header-top__mobile-list-link-cart-value">
           {Object.keys(cartData).length}
         </span>
-        {cartModal ? (
+        {cartModal && (
           <Cart
             removeItem={onItemDeleteClickHandler}
             cartData={cartData}
             closeHandler={onCloseClickHandler}
           />
-        ) : (
-          ''
         )}
       </a>
     </div>
@@ -59,6 +64,7 @@ const HeaderTopRight = ({ cartData, removeItem }) => {
 HeaderTopRight.propTypes = {
   cartData: PropTypes.objectOf(PropTypes.object).isRequired,
   removeItem: PropTypes.func.isRequired,
+  openSearch: PropTypes.func.isRequired,
 };
 
 export default connect(

@@ -38,15 +38,13 @@ const HeaderTopLeft = ({ cities, setCity }) => {
           >
             <span className="cities__city">{cities.currentCity}</span>
           </a>
-          {citiesModalState ? (
+          {citiesModalState && (
             <CitiesModal
               citiesData={cities.list}
               closeHandler={onClickClosePopupHandler}
               setCurrentCity={setCity}
               modalState={citiesModalState}
             />
-          ) : (
-            ''
           )}
         </div>
         <MarkMapIcon

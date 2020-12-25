@@ -25,6 +25,22 @@ module.exports = {
         },
       },
       {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|gif)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      },
+      {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [
@@ -64,7 +80,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/teamplate.html',
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['./images', './fonts'],
+    }),
     new CopyPlugin({
       patterns: [
         { from: `${__dirname}/markup/build/img`, to: 'img' },

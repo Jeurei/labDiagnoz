@@ -101,12 +101,17 @@
     "autoprefixer": "10.1.0",
     "babel-plugin-emotion": "^11.0.0",
     "lorem-ipsum": "2.0.3",
+    "mmenu-js": "^8.5.20",
     "nanoid": "^3.1.20",
     "prop-types": "15.7.2",
     "react": "17.0.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "17.0.1",
+    "react-motion-drawer": "^3.1.0",
     "react-redux": "^7.2.2",
-    "redux": "^4.0.5"
+    "react-slick": "^0.27.13",
+    "react-typed": "^1.2.0",
+    "redux": "^4.0.5",
+    "swiper": "^6.4.5"
   }
 }

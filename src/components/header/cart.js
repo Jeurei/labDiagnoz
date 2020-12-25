@@ -19,6 +19,10 @@ const Cart = ({ cartData, closeHandler, removeItem }) => {
       .filter(Boolean),
   }));
 
+  const onCloseClickHandler = () => {
+    closeHandler();
+  };
+
   const total = Object.values(cartData).reduce((t, { price }) => t + price, 0);
 
   return (
@@ -39,7 +43,7 @@ const Cart = ({ cartData, closeHandler, removeItem }) => {
             <CrossButton
               buttonClass="cities__modal-close"
               label="Закрыть модальное окно корзины"
-              action={closeHandler}
+              action={onCloseClickHandler}
             />
           </div>
           <div className="cart-modal__middle">
@@ -71,9 +75,8 @@ const Cart = ({ cartData, closeHandler, removeItem }) => {
               </div>
               <button
                 className="cart-modal__offer-button button"
+                aria-label="Ссылка на страницу с оформлением заказа"
                 type="button"
-                aria-label="Кнопка оформить заказ"
-                name="order-button"
               >
                 Оформить заказ
               </button>

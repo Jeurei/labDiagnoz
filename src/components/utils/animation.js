@@ -8,6 +8,24 @@ export const showing = keyframes`
 }
 100% {
   opacity:1;
-  transform: translateY(0);
+  transform: translateY(-24px);
+}
+`;
+
+export const searchShowing = keyframes`
+0% {
+  min-height:0;
+}
+100% {
+  min-height: 594px;
+}
+`;
+
+export const headerFixedShowing = keyframes`
+0% {
+  min-height:0;
+}
+100% {
+  min-height: 64px;
 }
 `;

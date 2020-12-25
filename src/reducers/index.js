@@ -11,8 +11,15 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         cart: {
-          ...[...Object.values(state.cart)].slice(0, action.playload),
-          ...[...Object.values(state.cart)].slice(action.playload + 1),
+          ...[
+            ...Object.values(state.cart).slice(
+              0,
+              Object.values(state.cart).findIndex((el) => el.id === action.playload),
+            ),
+            ...Object.values(state.cart).slice(
+              Object.values(state.cart).findIndex((el) => el.id === action.playload) + 1,
+            ),
+          ],
         },
       };
     default:

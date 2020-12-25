@@ -22,8 +22,18 @@
   margin-right: auto;
 }
 
+.header-bottom__burger-button-container {
+  border: none;
+  margin-left: 10px;
+  appearance: none;
+  background-color: transparent;
+}
+
 .header-bottom__mobile-burger-button-container {
   display: inline-block;
+  border: none;
+  appearance: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
