@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import mapStateToPropsGenerator from '../../store/mapStateToProps';
 import mapDispatchToProps from '../../store/mapDispatchToProps';
 import components from '../../constants/components';
-import SearchButton from '../utils/searchButton';
+import SearchButton from '../common/searchButton';
 import CartIcon from '../../icons/cart-icon.svg';
 import Cart from './cart';
 

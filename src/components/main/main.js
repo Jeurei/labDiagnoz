@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './search';
 import ActualOffers from './actual-offers';
 import Complexes from './complexes';
+import Features from './features';
 
 const Main = () => (
   <main className="main">
@@ -9,6 +10,7 @@ const Main = () => (
     <Search />
     <ActualOffers />
     <Complexes />
+    <Features />
   </main>
 );
 

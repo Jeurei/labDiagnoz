@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ENTER_KEY_CODE } from '../../constants/keys';
-import Picture from '../utils/picture';
+import Picture from '../common/picture';
 import ExpandIcon from '../../icons/expand-icon.svg';
 
 const ComplexFront = ({ action }) => (

@@ -2,47 +2,82 @@ import React, { useState, useEffect } from 'react';
 import HeaderTop from './header-top';
 import HeaderBottom from './header-bottom';
 import SearchModal from './search-modal';
-import HeaderTopFixed from './header-top-fixed';
-import HeaderFixedContainer from '../../containers/header-fixed-container';
+// import HeaderTopFixed from './header-top-fixed';
+// import HeaderFixedContainer from '../../containers/header-fixed-container';
 
 const Header = () => {
   const HEADER_MIN_HEIGHT = 140;
+  const animationDuration = 2;
+  const headerAnimationDuration = 0.2;
   const [isSearchModalOpen, setSearhModalOpen] = useState(false);
-  const [isFixedHeaderShown, setFixedHeaderState] = useState(false);
+  const [isBottomHeaderShown, setBottomHeaderHidden] = useState(false);
+  const [isHidden, setHidden] = useState(false);
+  const [isDeleting, setDeleting] = useState(false);
+  let delta = 0;
 
-  const searchButtonClickHandler = () => {
-    setSearhModalOpen(!isSearchModalOpen);
+  const deleteElement = () => {
+    setDeleting(true);
+
+    setTimeout(() => {
+      setSearhModalOpen(false);
+      setDeleting(false);
+    }, animationDuration * 1000 - 200);
   };
 
-  const hideFixedHeader = () => {
-    if (window.scrollY < HEADER_MIN_HEIGHT) {
-      setFixedHeaderState(false);
+  const onWheelEventHandler = (evt) => {
+    const MAX_DELTA = 300;
+    delta += evt.deltaY;
+
+    if (delta >= MAX_DELTA) {
+      delta = 0;
+      window.removeEventListener('scroll', onWheelEventHandler);
+      deleteElement();
     }
   };
 
-  const showFixedHeader = () => {
-    if (window.scrollY >= HEADER_MIN_HEIGHT) {
-      setFixedHeaderState(true);
+  const searchButtonClickHandler = () => {
+    setSearhModalOpen(true);
+
+    window.addEventListener('wheel', onWheelEventHandler);
+  };
+
+  const switchHeaderBottom = (bool) => {
+    setHidden(bool);
+
+    setTimeout(() => {
+      setBottomHeaderHidden(bool);
+    }, headerAnimationDuration * 1000);
+  };
+
+  const hideBottomHeader = () => {
+    if (window.scrollY < HEADER_MIN_HEIGHT) {
+      switchHeaderBottom(false);
+    }
+  };
+
+  const showBottomHeader = () => {
+    if (window.scrollY > HEADER_MIN_HEIGHT) {
+      switchHeaderBottom(true);
     }
   };
 
   const switchWindowListeners = () => {
-    if (!isFixedHeaderShown) {
-      window.removeEventListener('scroll', hideFixedHeader);
-      window.addEventListener('scroll', showFixedHeader);
+    if (!isBottomHeaderShown) {
+      window.removeEventListener('scroll', hideBottomHeader);
+      window.addEventListener('scroll', showBottomHeader);
     } else {
-      window.addEventListener('scroll', hideFixedHeader);
-      window.removeEventListener('scroll', showFixedHeader);
+      window.addEventListener('scroll', hideBottomHeader);
+      window.removeEventListener('scroll', showBottomHeader);
     }
   };
 
   const removeListener = () => {
-    window.removeEventListener('scroll', hideFixedHeader);
+    window.removeEventListener('scroll', hideBottomHeader);
   };
 
   useEffect(() => {
     switchWindowListeners();
-  }, [isFixedHeaderShown]);
+  }, [isBottomHeaderShown]);
 
   useEffect(() => {
     switchWindowListeners();
@@ -53,14 +88,21 @@ const Header = () => {
 
   return (
     <header className="header">
-      {isSearchModalOpen && <SearchModal />}
-      <HeaderTop openSearch={searchButtonClickHandler} />
-      <HeaderBottom />
-      {isFixedHeaderShown && (
+      {isSearchModalOpen && (
+        <SearchModal isDeleting={isDeleting} animationDuration={animationDuration} />
+      )}
+      <HeaderTop openSearch={isSearchModalOpen ? deleteElement : searchButtonClickHandler} />
+      <HeaderBottom
+        isHidden={isHidden}
+        animationDuration={headerAnimationDuration}
+        clickHandler={switchHeaderBottom}
+        headerBottomState={isBottomHeaderShown}
+      />
+      {/* {isBottomHeaderShown && (
         <HeaderFixedContainer>
           <HeaderTopFixed openSearch={searchButtonClickHandler} />
         </HeaderFixedContainer>
-      )}
+      )} */}
     </header>
   );
 };

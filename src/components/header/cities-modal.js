@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 import { showing } from '../utils/animation';
 import { randomId } from '../utils/common';
 import CitiesModalItem from './cities-modal-item';
-import CrossButton from '../utils/crossButton';
+import CrossButton from '../common/crossButton';
 
 const CitiesModal = ({ citiesData, closeHandler, setCurrentCity }) => (
   <div

@@ -54,8 +54,11 @@
   resize: none;
 }
 
-.form__label--checkbox {
+.form__label {
   position: relative;
+}
+
+.form__label--checkbox {
   margin-right: 12px;
 
   .form__input-checkbox-span {

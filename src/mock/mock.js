@@ -220,6 +220,29 @@ const createSharesArray = () => {
   }));
 };
 
+const createFeaturesArray = () => {
+  const MAX_QUANTITY_OF_FEATURES = 10;
+  const lorem = new LoremIpsum({
+    sentencesPerParagraph: {
+      max: 8,
+      min: 4,
+    },
+    wordsPerSentence: {
+      max: 8,
+      min: 4,
+    },
+  });
+
+  return new Array(MAX_QUANTITY_OF_FEATURES).fill().map(() => ({
+    title: loremIpsum({
+      count: 1,
+      units: 'word',
+    }),
+    text: lorem.generateSentences(getRandomInteger(2, 4)),
+    icon: 'firing.svg',
+  }));
+};
+
 const getMock = () => ({
   cart: createCartObject(),
   cities: {
@@ -233,6 +256,14 @@ const getMock = () => ({
   links: createLinksArray(),
   articles: createArticlesArray(),
   shares: createSharesArray(),
+  userForm: {
+    name: '',
+    tel: '',
+    email: '',
+    question: '',
+    agreement: '',
+  },
+  features: createFeaturesArray(),
 });
 
 export default getMock;

@@ -12,7 +12,6 @@ const SearchModalContainerTop = ({ hints }) => (
     <Hints hints={hints} />
   </div>
 );
-
 SearchModalContainerTop.propTypes = {
   hints: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

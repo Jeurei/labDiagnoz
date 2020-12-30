@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Burger = ({ action }) => (
+const Burger = ({ action, className }) => (
   <button
-    className="header-bottom__burger-button-container"
+    className={`header-bottom__burger-button-container ${className}`}
     aria-label="Равернуть меню"
     type="button"
     onClick={() => action()}
@@ -14,6 +14,13 @@ const Burger = ({ action }) => (
   </button>
 );
 
+Burger.defaultProps {
+  className: '',
+}
+
 Burger.propTypes = {
   action: PropTypes.func.isRequired,
+  className: PropTypes.string,
 };
+
+export default Burger;

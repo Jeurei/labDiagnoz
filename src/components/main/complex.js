@@ -1,5 +1,4 @@
 import React, { useCallback, useRef } from 'react';
-import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ComplexFront from './complex-front';
 import ComplexBack from './complex-back';
