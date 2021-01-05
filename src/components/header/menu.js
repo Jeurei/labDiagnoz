@@ -4,7 +4,7 @@ import Drawer from 'react-motion-drawer';
 import { connect } from 'react-redux';
 import mapStateToPropsGenerator from '../../store/mapStateToProps';
 import components from '../../constants/components';
-import CrossButton from '../utils/crossButton';
+import CrossButton from '../common/crossButton';
 import NavItem from './nav-item';
 import { randomId } from '../utils/common';
 
@@ -16,6 +16,7 @@ const Menu = ({ menu }) => {
   };
 
   const onChangeHandler = (bool) => {
+    document.body.style = `overflow: ${menuState ? 'scroll' : 'hidden'}`;
     setMenuState(bool);
   };
 

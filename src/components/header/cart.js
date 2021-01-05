@@ -5,7 +5,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import { showing } from '../utils/animation';
 import { randomId } from '../utils/common';
 import CartModalGroup from './cart-modal-group';
-import CrossButton from '../utils/crossButton';
+import CrossButton from '../common/crossButton';
 
 const Cart = ({ cartData, closeHandler, removeItem }) => {
   const typesMap = [...new Set(Object.values(cartData).map((el) => el.type))].map((el) => ({

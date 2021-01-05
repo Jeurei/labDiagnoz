@@ -8,6 +8,7 @@ export const Components = {
   SHARES: 'SHARES',
   LINKS: 'LINKS',
   COMPLEXES: 'COMPLEXES',
+  FEATURES: 'FEATURES',
 };
 
 export default Components;

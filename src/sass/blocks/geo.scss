@@ -24,6 +24,12 @@
   color: $color-text;
   font-size: 10px;
   outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $color-text;
+  }
 }
 
 .geo__city {
@@ -134,7 +140,7 @@
   }
 
   .geo__selection {
-    min-height: 67px;
+    min-height: 72px;
 
     &::after {
       top: 27px;

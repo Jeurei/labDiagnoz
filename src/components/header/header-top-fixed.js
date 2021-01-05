@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Picture from '../utils/picture';
+import Picture from '../common/picture';
 import HeaderInner from '../../containers/header-inner';
 import CitiesModal from './cities-modal';
 import TelIcon from '../../icons/tel-icon.svg';
@@ -9,7 +9,7 @@ import MarkMapIcon from '../../icons/map-mark-icon.svg';
 import mapStateToPropsGenerator from '../../store/mapStateToProps';
 import mapDispatchToProps from '../../store/mapDispatchToProps';
 import components from '../../constants/components';
-import SearchButton from '../utils/searchButton';
+import SearchButton from '../common/searchButton';
 import CartIcon from '../../icons/cart-icon.svg';
 import Cart from './cart';
 

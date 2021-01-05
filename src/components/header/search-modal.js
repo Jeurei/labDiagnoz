@@ -1,22 +1,53 @@
-import React from 'react';
-import { css } from '@emotion/react';
+import React, { useRef } from 'react';
+import { css, keyframes } from '@emotion/react';
+import PropTypes from 'prop-types';
 import { searchShowing } from '../utils/animation';
 import SectionInner from '../../containers/section-inner';
 import SearchModalContainerTop from './search-modal-top';
 
-const SearchModal = () => (
-  <section
-    className="header__modal-search seciton search-modal"
-    css={css`
-      animation: ${searchShowing} 2s ease-in-out;
-    `}
-  >
-    <SectionInner>
-      <div className="search-modal__container">
-        <SearchModalContainerTop />
-      </div>
-    </SectionInner>
-  </section>
-);
+const SearchModal = ({ isDeleting, animationDuration }) => {
+  const modalRef = useRef();
+  const deletingKeyFrames = () => keyframes`
+      0% {
+        min-height: 594px;
+        max-height: ${modalRef.current.offsetHeight}px;
+      }
+
+      50%{
+        opacity: 0;
+      }
+
+      100% {
+        min-height: 0;
+        max-height: 0;
+      `;
+
+  return (
+    <section
+      className="header__modal-search seciton search-modal"
+      css={
+        isDeleting
+          ? css`
+              animation: ${deletingKeyFrames()} ${animationDuration}s ease-in-out;
+            `
+          : css`
+              animation: ${searchShowing} ${animationDuration}s ease-in-out;
+            `
+      }
+      ref={modalRef}
+    >
+      <SectionInner>
+        <div className="search-modal__container">
+          <SearchModalContainerTop />
+        </div>
+      </SectionInner>
+    </section>
+  );
+};
+
+SearchModal.propTypes = {
+  isDeleting: PropTypes.bool.isRequired,
+  animationDuration: PropTypes.number.isRequired,
+};
 
 export default SearchModal;

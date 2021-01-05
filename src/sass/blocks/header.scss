@@ -1,6 +1,9 @@
 .header {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
   padding-top: 0;
-  padding-bottom: 8px;
+  background: white;
 }
 
 .header__inner {
@@ -28,9 +31,10 @@
 }
 
 .header__bottom-container {
+  position: relative;
+  z-index: 550;
   padding-top: 15px;
   padding-bottom: 10px;
-  border-bottom: 1px dashed $border-color;
 }
 
 .header__fixed-container {
@@ -44,14 +48,37 @@
   background-color: #fff;
 }
 
+.header__expand-button {
+  position: absolute;
+  z-index: 500;
+  bottom: -25px;
+  left: 50%;
+  display: flex;
+  width: 40px;
+  height: 25px;
+  border: 1px solid RGBA(112, 112, 112, 0.3);
+  appearance: none;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.header__expand-button-icon {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  color: $color-text;
+  transform: scale(2);
+}
+
 @media (min-width: $tablet-width) {
   .header__inner {
     padding-right: 22px;
     padding-left: 22px;
   }
 
-  .header__bottom-container {
-    border-top: 1px solid $border-color;
+  .header__top-container {
+    border-bottom: 1px solid $border-color;
   }
 
   .header__nav {
@@ -62,10 +89,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .header {
-    padding-bottom: 13px;
-  }
-
   .header__inner {
     padding-right: 28px;
     padding-left: 2px;
@@ -85,5 +108,6 @@
 
   .header__bottom-container {
     padding-top: 22px;
+    padding-bottom: 22px;
   }
 }

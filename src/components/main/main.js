@@ -5,6 +5,7 @@ import Complexes from './complexes';
 import Links from './links';
 import Articles from './articles';
 import Shares from './shares';
+import Features from './features';
 
 const Main = () => (
   <main className="main">
@@ -17,6 +18,7 @@ const Main = () => (
     <Links />
     <Articles />
     <Shares />
+    <Features />
   </main>
 );
 

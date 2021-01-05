@@ -56,6 +56,12 @@ const mapStateToPropsGenerator = (component) => {
       });
     }
 
+    case components.FEATURES: {
+      return (state) => ({
+        features: state.features,
+      });
+    }
+
     default:
       return undefined;
   }

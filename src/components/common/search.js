@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import Typed from 'react-typed';
 import { ENTER_KEY_CODE } from '../../constants/keys';
 import SearchIcon from '../../icons/search-icon.svg';
-import Select from '../utils/select';
+import Select from './select';
 
 const Search = () => {
   const searchRef = useRef();
