@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Picture = ({
-  src, width = '', height = '', alt, containerClass = '', imgClass = '',
+  src,
+  width = '',
+  height = '',
+  alt,
+  containerClass = '',
+  imgClass = '',
 }) => (
   <picture className={containerClass}>
     <source type="image/webp" srcSet={`${src}.webp 1x, ${src}@2x.webp 2x`} />

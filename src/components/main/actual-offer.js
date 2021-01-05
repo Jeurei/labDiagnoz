@@ -26,13 +26,7 @@ const ActualOffer = ({ data }) => (
         <p className="actual-offer__text">{data.text}</p>
       </div>
       <div className="actual-offer__list-item-bottom">
-        <span className="actual-offer__price">
-          {' '}
-          {data.price}
-          {' '}
-          ₽
-          {' '}
-        </span>
+        <span className="actual-offer__price"> {data.price} ₽ </span>
         <p className="actual-offer__price-text">Стоимость комплекса</p>
       </div>
     </a>

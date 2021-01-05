@@ -25,7 +25,8 @@
 }
 
 .article__time {
-  font-size: 9px;
+  color: $blue;
+  font-size: 11px;
   word-spacing: 3px;
 }
 
@@ -45,7 +46,7 @@
 
   &--new {
     &::after {
-      @include pseudo("Новинка", 62px, 37px);
+      @include pseudo('Новинка', 62px, 37px);
       position: absolute;
       z-index: 2;
       right: 0;
@@ -57,7 +58,7 @@
     }
 
     &::before {
-      @include pseudo("", 42px, 37px);
+      @include pseudo('', 42px, 37px);
       position: absolute;
       z-index: 2;
       right: 39px;
@@ -100,7 +101,6 @@
   }
 
   .article__time {
-    padding-left: 9px;
     word-spacing: 0px;
   }
 

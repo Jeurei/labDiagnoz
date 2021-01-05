@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import ComplexFront from './complex-front';
 import ComplexBack from './complex-back';
 
-const Complex = () => {
+const Complex = ({ data }) => {
   const swiperRef = useRef(null);
 
   const prevSlide = useCallback(() => {
@@ -17,18 +17,31 @@ const Complex = () => {
 
   return (
     <li className="complexes__item complex">
-      <Swiper ref={swiperRef} slidesPerView={1} loop noSwiping noSwipingClass="swiper-container">
+      <Swiper
+        ref={swiperRef}
+        slidesPerView={1}
+        noSwiping
+        width={270}
+        noSwipingClass="swiper-container"
+      >
         <SwiperSlide>
-          <ComplexFront action={nextSlide} />
+          <ComplexFront action={nextSlide} data={data} />
         </SwiperSlide>
         <SwiperSlide>
-          <ComplexBack action={prevSlide} />
+          <ComplexBack action={prevSlide} data={data} />
         </SwiperSlide>
       </Swiper>
     </li>
   );
 };
 
-Complex.propTypes = {};
+Complex.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    list: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.number.isRequired,
+    oldPrice: PropTypes.number.isRequired,
+  }).isRequired,
+};
 
 export default Complex;

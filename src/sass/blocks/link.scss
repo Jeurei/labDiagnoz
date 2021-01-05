@@ -7,24 +7,21 @@
   background-color: $blue;
   background-position: 0 center;
   background-repeat: no-repeat;
+}
 
-  &--about-us {
-    background-image: url("../img/about-us.svg");
-  }
-
-  &--covid {
-    padding-top: 15px;
-    padding-bottom: 35px;
-    margin-bottom: 0;
-    background-image: url("../img/covid-big.svg");
-    background-position: 0 59%;
-  }
+.link__big-icon {
+  position: absolute;
+  left: 0;
 }
 
 .link__link {
   width: 100%;
   height: 100%;
   color: $white;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .link__title {
@@ -67,31 +64,6 @@
     padding-top: 15px;
     padding-right: 43px;
     padding-left: 87px;
-
-    &--about-us {
-      margin-right: auto;
-      background-image: url("../img/about-us-big.svg");
-      background-position: -1px 23px;
-
-      .link__icon {
-        right: 44px;
-        bottom: 6px;
-      }
-    }
-
-    &--covid {
-      padding-top: 18px;
-      padding-right: 30px;
-      padding-left: 112px;
-      margin-left: -42px;
-      background-image: url("../img/covid-big-desk.svg");
-      background-position: 19px 23px;
-
-      .link__icon {
-        right: 42px;
-        bottom: 14px;
-      }
-    }
   }
 
   .link__title {

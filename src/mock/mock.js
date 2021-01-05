@@ -19,7 +19,10 @@ const createCartObject = () => {
   const quantityOfobjects = getRandomInteger(1, MAX_QUANTITY_OF_OBJECTS);
   return {
     ...new Array(quantityOfobjects).fill().map(() => ({
-      type: ProductTypesMap[getRandomInteger(Object.keys(ProductTypesMap).length) - 1],
+      type:
+        ProductTypesMap[
+          getRandomInteger(Object.keys(ProductTypesMap).length) - 1
+        ],
 
       price: getRandomInteger(0, MAX_PRICE_OF_OBJECTS),
 
@@ -34,10 +37,12 @@ const createCitiesObject = () => {
   const MAX_QUANTITY_OF_CITIES = 18;
 
   return {
-    ...new Array(MAX_QUANTITY_OF_CITIES).fill().map(() => loremIpsum({
-      count: 1,
-      units: 'word',
-    })),
+    ...new Array(MAX_QUANTITY_OF_CITIES).fill().map(() =>
+      loremIpsum({
+        count: 1,
+        units: 'word',
+      }),
+    ),
   };
 };
 
@@ -60,17 +65,18 @@ const createHintsArray = () => {
 const createMenuArray = () => {
   const MAX_QUANTITY_OF_MENU_ITEMS = 5;
 
-  const getRandomChildren = () => new Array(MAX_QUANTITY_OF_MENU_ITEMS).fill().map(() => ({
-    text: loremIpsum({
-      count: 1,
-      units: 'word',
-    }),
+  const getRandomChildren = () =>
+    new Array(MAX_QUANTITY_OF_MENU_ITEMS).fill().map(() => ({
+      text: loremIpsum({
+        count: 1,
+        units: 'word',
+      }),
 
-    link: loremIpsum({
-      count: 1,
-      units: 'word',
-    }),
-  }));
+      link: loremIpsum({
+        count: 1,
+        units: 'word',
+      }),
+    }));
 
   return new Array(MAX_QUANTITY_OF_MENU_ITEMS).fill().map(() => ({
     text: loremIpsum({

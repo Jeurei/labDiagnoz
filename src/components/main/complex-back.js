@@ -1,39 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ENTER_KEY_CODE } from '../../constants/keys';
+import ComplexList from './complex-list';
+import ArrowLeft from '../../icons/arrow-left.svg';
 
-const ComplexBack = ({ action }) => (
+const ComplexBack = ({ action, data }) => (
   <div className="complex__full">
     <h3 className="complex__full-title">Анализы комплекса:</h3>
-    <ul className="complex__list">
-      <li className="complex__list-item">
-        <a href="some" className="complex__list-item-link">
-          16а-гидроксиэстрон (16а-OHE1)
-        </a>
-      </li>
-      <li className="complex__list-item">
-        <a href="some" className="complex__list-item-link">
-          4-гидроксиэстрон (4-OHE1)
-        </a>
-      </li>
-      <li className="complex__list-item">
-        <a href="some" className="complex__list-item-link">
-          16а-гидроксиэстрон (16а-OHE1)
-        </a>
-      </li>
-      <li className="complex__list-item">
-        <a href="some" className="complex__list-item-link">
-          4-гидроксиэстрон (4-OHE1)
-        </a>
-      </li>
-    </ul>
+    <ComplexList data={data.list} />
     <a href="some" className="complex__expand-button">
       Все анализы
       <span className="complex__expand-button-value">(23)</span>
     </a>
     <div className="complex__bottom-container-bottom">
       <a
-        className=".complex__bottom-container-bottom-text"
+        className="complex__bottom-container-bottom-text"
         onClick={(evt) => {
           evt.preventDefault();
           action();
@@ -49,15 +30,24 @@ const ComplexBack = ({ action }) => (
       >
         скрыть анализы
       </a>
-      <svg className="complex__icon" width="26.5" height="26.5" fill="currentColor">
-        <use xlinkHref="somearrrow-right" />
-      </svg>
+      <ArrowLeft
+        className="complex__icon"
+        width="26.5"
+        height="26.5"
+        fill="currentColor"
+      />
     </div>
   </div>
 );
 
 ComplexBack.propTypes = {
   action: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    list: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.number.isRequired,
+    oldPrice: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default ComplexBack;

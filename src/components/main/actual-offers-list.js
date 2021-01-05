@@ -7,7 +7,7 @@ import mapStateToPropsGenerator from '../../store/mapStateToProps';
 import components from '../../constants/components';
 import { randomId } from '../utils/common';
 import ActualOffer from './actual-offer';
-import ActualOffersControls from './actual-offers-controls';
+import SliderControls from '../utils/slider-controls';
 
 const ActualOffersList = ({ offers }) => {
   const swiperRef = useRef(null);
@@ -23,7 +23,11 @@ const ActualOffersList = ({ offers }) => {
 
   return (
     <>
-      <ActualOffersControls prevSlide={prevSlide} nextSlide={nextSlide} />
+      <SliderControls
+        prevSlide={prevSlide}
+        nextSlide={nextSlide}
+        className="actual-offers__control"
+      />
       <ul className="actual-offers__list navigation">
         <Swiper
           ref={swiperRef}
@@ -54,4 +58,7 @@ ActualOffersList.propTypes = {
   ).isRequired,
 };
 
-export default connect(mapStateToPropsGenerator(components.OFFERS), null)(ActualOffersList);
+export default connect(
+  mapStateToPropsGenerator(components.OFFERS),
+  null,
+)(ActualOffersList);
