@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "webpack-dev-server --open",
+    "deploy": "npm run build && gh-pages -d public",
     "svgr": "svgr -d src/Icons/ assets/",
     "gulp-start": "gulp start",
     "gulp-build": "gulp build",
@@ -21,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/Jeurei/ladDiagnoz/issues"
   },
-  "homepage": "https://github.com/Jeurei/promoil#readme",
+  "homepage": "https://jeurei.github.io/ladDiagnoz/",
   "devDependencies": {
     "@babel/cli": "7.12.10",
     "@babel/core": "7.12.10",

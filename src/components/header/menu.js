@@ -16,9 +16,9 @@ const Menu = ({ menu }) => {
   };
 
   const onChangeHandler = (bool) => {
-    document.body.scroll = 'no';
-    document.body.style.overflow = 'hidden';
-    document.height = window.innerHeight;
+    console.log('🚀 ~ file: menu.js ~ line 19 ~ onChangeHandler ~ bool', bool);
+    document.body.scroll = bool ? 'no' : 'yes';
+    document.body.style.overflow = bool ? 'hidden' : 'scroll';
     setMenuState(bool);
   };
 
