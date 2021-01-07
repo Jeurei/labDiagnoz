@@ -1,0 +1,11 @@
+.main {
+  padding-top: 62px;
+}
+
+.main__title {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  padding-top: 138px;
+}

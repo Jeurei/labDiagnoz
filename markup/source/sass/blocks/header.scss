@@ -1,5 +1,5 @@
 .header {
-  padding-top: 10px;
+  padding-top: 0;
   padding-bottom: 8px;
 }
 
@@ -52,7 +52,6 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    padding-top: 16px;
     padding-bottom: 13px;
   }
 

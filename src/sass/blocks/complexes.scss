@@ -1,0 +1,68 @@
+.complexes {
+  .swiper-container {
+    padding-bottom: 40px;
+  }
+}
+
+.complexes__container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+.complexes__control-icon {
+  color: $white;
+}
+
+.complexes__title {
+  position: relative;
+  padding-left: 5px;
+  margin: 0;
+  margin-bottom: 62px;
+  font-size: 22px;
+  font-weight: 500;
+
+  &::after {
+    @include titleAfter();
+    top: 35px;
+    left: 10px;
+    font-size: 21px;
+  }
+}
+
+.complexes__list {
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0;
+  list-style: none;
+  overflow-x: hidden;
+}
+
+@media (min-width: $tablet-width) {
+  .complexes__list {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .complexes {
+    padding-top: 50px;
+    padding-bottom: 27px;
+  }
+
+  .complex__list {
+    padding-top: 5px;
+    padding-left: 42px;
+    margin-bottom: 14px;
+  }
+
+  .complexes__title {
+    @include titleh2($color-text);
+    margin-bottom: 55px;
+    letter-spacing: -0.2px;
+  }
+}
