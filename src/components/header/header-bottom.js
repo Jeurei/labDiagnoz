@@ -7,7 +7,6 @@ import DropDown from '../../icons/dropdown.svg';
 
 // import Burger from '../common/burger';
 
-
 const HeaderExpandButton = (isHidden, action) => (
   <button
     className={`header__expand-button ${isHidden ? 'visually-hidden' : ''}`}
@@ -26,7 +25,10 @@ const HeaderExpandButton = (isHidden, action) => (
 );
 
 const HeaderBottom = ({
-  isHidden, animationDuration, clickHandler, headerBottomState,
+  isHidden,
+  animationDuration,
+  clickHandler,
+  headerBottomState,
 }) => {
   const showingAnimation = keyframes`
   0% {
@@ -85,10 +87,12 @@ const HeaderBottom = ({
       css={
         isHidden
           ? css`
-              animation: ${hidingAnimation} ${animationDuration}s forwards ease-in-out;
+              animation: ${hidingAnimation} ${animationDuration}s forwards
+                ease-in-out;
             `
           : css`
-              animation: ${showingAnimation} ${animationDuration}s forwards ease-in-out;
+              animation: ${showingAnimation} ${animationDuration}s forwards
+                ease-in-out;
             `
       }
     >
@@ -97,17 +101,19 @@ const HeaderBottom = ({
         css={
           isHidden
             ? css`
-                animation: ${opacityAnimationHidden} ${animationDuration}s forwards ease-in-out;
+                animation: ${opacityAnimationHidden} ${animationDuration}s
+                  forwards ease-in-out;
               `
             : css`
-                animation: ${opacityAnimation} ${animationDuration}s forwards ease-in-out;
+                animation: ${opacityAnimation} ${animationDuration}s forwards
+                  ease-in-out;
               `
         }
       >
         <div className="header__bottom header-bottom">
           <div className="header-bottom__mobile">
             <Picture
-              className="header-bottom__mobile-top-img"
+              containerClass="header-bottom__mobile-top-img"
               src="./img/mobile-logo"
               width="222"
               height="33"

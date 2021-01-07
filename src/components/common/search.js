@@ -19,9 +19,7 @@ const Search = () => {
   return (
     <>
       <h2 className="search__title">
-        Простой и удобный поиск
-        {' '}
-        <br className="search__title-br" />
+        Простой и удобный поиск <br className="search__title-br" />
         <Typed
           strings={['Анализов^5000', 'Услуг^5000', 'Врачей^5000']}
           typeSpeed={50}
@@ -31,7 +29,9 @@ const Search = () => {
           <span />
         </Typed>
       </h2>
-      <small className="search__container-top-text">По какому разделу искать?</small>
+      <small className="search__container-top-text">
+        По какому разделу искать?
+      </small>
       <div className="search__container-input-group">
         <input
           type="text"

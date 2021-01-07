@@ -7,7 +7,7 @@ const Tab = () => (
       type="checkbox"
       id="tab-analyse"
       name="tab-group"
-      checked=""
+      onChange={() => console.log('hi')}
     />
     <label htmlFor="tab-analyse" className="tab__title">
       Анализы

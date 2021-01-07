@@ -7,8 +7,8 @@ const Search = () => (
   <section className="main__section main__section--search section search">
     <h2 className="section__title visually-hidden">Поиск услуг</h2>
     <SectionInner>
-      <SearchContainerTop />
       <SearchBottom />
+      <SearchContainerTop />
     </SectionInner>
   </section>
 );

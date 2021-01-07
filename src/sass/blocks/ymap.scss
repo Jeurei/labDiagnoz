@@ -1,4 +1,14 @@
+@keyframes sheduleShowing {
+  100% {
+    max-height: 94px;
+    margin-bottom: 13px;
+    opacity: 1;
+  }
+}
+
 .ymaps-2-1-78-balloon__close + .ymaps-2-1-78-balloon__content {
+  overflow: hidden;
+  max-height: 301px;
   padding-left: 0;
   margin-right: 0 !important;
 }
@@ -69,7 +79,7 @@
   position: relative;
 
   &:after {
-    @include pseudo("", 9px, 9px);
+    @include pseudo('', 9px, 9px);
     position: absolute;
     top: 0;
     right: -22px;
@@ -107,8 +117,17 @@
 
 .shedule {
   display: flex;
+  overflow: hidden;
+  max-height: 0;
   padding: 0;
+  margin: 0;
   list-style: none;
+  opacity: 0;
+  transition: all;
+
+  &--shown {
+    animation: sheduleShowing 0.5s forwards ease-in-out;
+  }
 }
 
 .shedule__item {

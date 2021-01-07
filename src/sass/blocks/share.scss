@@ -1,7 +1,14 @@
+.shares-control__controls-slider {
+  margin-bottom: 10px;
+}
+
 .share__top {
   min-height: 154px;
+  flex-grow: 1;
   padding-top: 17px;
   padding-left: 15px;
+  background-image: url('../img/banner-main@2x.png');
+  background-position: 100% 0;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -23,43 +30,16 @@
   position: relative;
   display: flex;
   min-width: 100%;
-  min-height: 174px;
+  min-height: 100%;
   flex-direction: column;
   background-position: center;
-
-  &--robot {
-    .share__top {
-      background-image: url("../img/banner-main.png");
-
-      @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-        background-image: url("../img/banner-main@2x.png");
-      }
-    }
-  }
-
-  &--doctor {
-    .share__top {
-      background-image: url("../img/banner-main2.png");
-
-      @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-        background-image: url("../img/banner-main2@2x.png");
-      }
-    }
-  }
-
-  &--covid {
-    .share__top {
-      background-image: url("../img/banner-covid.png");
-
-      @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-        background-image: url("../img/banner-covid@2x.png");
-      }
-    }
-  }
+  background-position: -60px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &--limited {
     &::after {
-      @include pseudo("ОСТАЛОСЬ 4 ДНЯ", 75px, 27px);
+      @include pseudo('ОСТАЛОСЬ 4 ДНЯ', 75px, 20px);
       position: absolute;
       top: 13px;
       right: 0;
@@ -73,7 +53,7 @@
     }
 
     &::before {
-      @include pseudo("", 27px, 27px);
+      @include pseudo('', 27px, 27px);
       position: absolute;
       top: 13px;
       right: 60px;
@@ -96,8 +76,8 @@
 
 .share__icon {
   position: absolute;
-  top: 6px;
-  right: 16px;
+  top: 2px;
+  right: 13px;
   color: $white;
 }
 
@@ -107,28 +87,11 @@
   }
 }
 
-@media (min-width: 620px) {
-  .share {
-    &--robot {
-      background-image: url("../img/banner-main@2x.png");
-      background-position: 0 -30px;
-    }
-
-    &--doctor {
-      background-image: url("../img/banner-main2@2x.png");
-    }
-
-    &--covid {
-      background-image: url("../img/banner-covid@2x.png");
-    }
-  }
-}
-
 @media (min-width: $desktop-width) {
   .share {
     &::after,
     ::before {
-      height: 33px;
+      height: 24px;
     }
 
     &::after {
@@ -136,6 +99,8 @@
       right: 0;
       width: 92px;
       padding-top: 9px;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
       font-size: 8px;
       white-space: nowrap;
     }
@@ -168,10 +133,5 @@
   .share__bottom-text {
     padding-left: 20px;
     font-size: 9px;
-  }
-
-  .share__icon {
-    top: 4px;
-    right: 23px;
   }
 }

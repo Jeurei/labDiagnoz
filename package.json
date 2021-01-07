@@ -25,9 +25,10 @@
   "devDependencies": {
     "@babel/cli": "7.12.10",
     "@babel/core": "7.12.10",
-    "@babel/preset-env": "7.12.11",
+    "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "7.12.10",
     "@svgr/webpack": "5.5.0",
+    "are-you-es5": "^2.1.1",
     "babel-loader": "8.2.2",
     "browser-sync": "^2.26.13",
     "clean-webpack-plugin": "3.0.0",
@@ -85,17 +86,18 @@
     "production": [
       ">0.2%",
       "not dead",
-      "ie >= 10",
+      "ie 11",
       "not op_mini all"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version",
-      "ie >= 10"
+      "ie 11"
     ]
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@emotion/babel-preset-css-prop": "^11.0.0",
     "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
@@ -108,11 +110,13 @@
     "nanoid": "^3.1.20",
     "prop-types": "15.7.2",
     "react": "17.0.1",
+    "react-app-polyfill": "^2.0.0",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "17.0.1",
     "react-input-mask": "^2.0.4",
     "react-motion-drawer": "^3.1.0",
     "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
     "react-slick": "^0.27.13",
     "react-typed": "^1.2.0",
     "react-yandex-maps": "^4.6.0",

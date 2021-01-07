@@ -16,7 +16,9 @@ const Menu = ({ menu }) => {
   };
 
   const onChangeHandler = (bool) => {
-    document.body.style = `overflow: ${menuState ? 'scroll' : 'hidden'}`;
+    document.body.scroll = 'no';
+    document.body.style.overflow = 'hidden';
+    document.height = window.innerHeight;
     setMenuState(bool);
   };
 
@@ -39,7 +41,11 @@ const Menu = ({ menu }) => {
         overlayClassName="nav__overlay"
         onChange={onChangeHandler}
       >
-        <CrossButton buttonClass="nav__close-buttom" label="Закрыть меню" action={closeHandler} />
+        <CrossButton
+          buttonClass="nav__close-buttom"
+          label="Закрыть меню"
+          action={closeHandler}
+        />
         <ul className="nav__list">
           {menu.map((el) => (
             <NavItem data={el} key={randomId()} />
@@ -55,8 +61,10 @@ Menu.propTypes = {
     PropTypes.shape({
       text: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
-      children: PropTypes.oneOfType([PropTypes.bool, PropTypes.arrayOf(PropTypes.object)])
-        .isRequired,
+      children: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.arrayOf(PropTypes.object),
+      ]).isRequired,
     }).isRequired,
   ).isRequired,
 };

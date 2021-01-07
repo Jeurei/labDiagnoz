@@ -20,7 +20,7 @@ const ComplexFront = ({ action, data }) => {
           src="./img/left-radius"
           height="193"
           alt="Изображение комплекса"
-          className="complex__img"
+          imgClass="complex__img"
         />
       </a>
       <a href="some" className="complex__link">

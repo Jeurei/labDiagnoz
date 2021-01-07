@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { Map, Placemark } from 'react-yandex-maps';
-import { createElement } from '../utils/render';
-
-const createSheduleNode = (template) => createElement(template);
 
 const Ymap = () => {
   const mapData = {
@@ -17,22 +14,27 @@ const Ymap = () => {
 
   const mapRef = useRef();
 
+  const onTimeClickHandler = (evt) => {
+    if (
+      evt.target.classList.contains('baloon__shedule-working-time') ||
+      evt.target.classList.contains('baloon__shedule-time')
+    ) {
+      mapRef.current
+        .querySelector('.shedule')
+        .classList.toggle('shedule--shown');
+    }
+  };
   useEffect(() => {
-    mapRef.current.addEventListener('click', (evt) => {
-      const template = `<ul class="shedule">
-        <li class="shedule__item">
-          <p class="shedule__day">ПН</p>
-          <time class="shdeule__time">07:00</time>
-          <time class="shdeule__time">19:00</time>
-        </li>
-      </ul>`;
-      evt.target.parentNode.parentNode.append(createSheduleNode(template));
-    });
+    mapRef.current.addEventListener('click', onTimeClickHandler);
   }, []);
 
   return (
     <div ref={mapRef}>
-      <Map className="map__right" defaultState={mapData} options={{ suppressMapOpenBlock: true }}>
+      <Map
+        className="map__right"
+        defaultState={mapData}
+        options={{ suppressMapOpenBlock: true }}
+      >
         <Placemark
           geometry={mapData.center}
           modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
@@ -74,6 +76,13 @@ const Ymap = () => {
                           </svg>
                         </p>
                         <p class="baloon__shedule-state">Открыто</p>
+                        <ul class="shedule">
+                          <li class="shedule__item">
+                            <p class="shedule__day">ПН</p>
+                            <time class="shdeule__time">07:00</time>
+                            <time class="shdeule__time">19:00</time>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                     </div>

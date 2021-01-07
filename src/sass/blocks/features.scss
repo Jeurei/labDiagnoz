@@ -1,7 +1,7 @@
 .features {
   padding-top: 35px;
   padding-bottom: 8px;
-  background-image: url("../img/mobile-features-bg.png"),
+  background-image: url('../img/mobile-features-bg.png'),
     linear-gradient(
       to left,
       RGBA(250, 0, 235, 1),
@@ -13,7 +13,7 @@
   color: $white;
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    background-image: url("../img/mobile-features-bg@2x.png"),
+    background-image: url('../img/mobile-features-bg@2x.png'),
       linear-gradient(
         to left,
         RGBA(250, 0, 235, 1),
@@ -56,36 +56,36 @@
   background-size: 24.6px 23.5px;
 
   &--percents {
-    background-image: url("../img/discounts.svg");
+    background-image: url('../img/discounts.svg');
   }
 
   &--firing {
-    background-image: url("../img/firing.svg");
+    background-image: url('../img/firing.svg');
   }
 
   &--expirience {
     padding-bottom: 10px;
-    background-image: url("../img/plant.svg");
+    background-image: url('../img/plant.svg');
   }
 
   &--comfort {
-    background-image: url("../img/headphones.svg");
+    background-image: url('../img/headphones.svg');
   }
 
   &--money {
-    background-image: url("../img/money.svg");
+    background-image: url('../img/money.svg');
   }
 
   &--group {
-    background-image: url("../img/group.svg");
+    background-image: url('../img/group.svg');
   }
 
   &--dna {
-    background-image: url("../img/dna.svg");
+    background-image: url('../img/dna.svg');
   }
 
   &--family {
-    background-image: url("../img/family.svg");
+    background-image: url('../img/family.svg');
   }
 }
 
@@ -107,11 +107,11 @@
   .features {
     padding-top: 68px;
     padding-bottom: 39px;
-    background-image: url("../img/features-bg.png");
+    background-image: url('../img/features-bg.png');
     background-position: center;
 
     @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-      background-image: url("../img/features-bg@2x.png");
+      background-image: url('../img/features-bg@2x.png');
     }
 
     .section__title {

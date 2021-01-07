@@ -69,10 +69,10 @@ const FormFirstField = ({ action }) => {
 
   useEffect(() => {
     if (
-      formValidation.isNameValid
-      && formValidation.isEmailValid
-      && formValidation.isTelValid
-      && isRequiredAreNotEmpty()
+      formValidation.isNameValid &&
+      formValidation.isEmailValid &&
+      formValidation.isTelValid &&
+      isRequiredAreNotEmpty()
     ) {
       action(true, inputsField);
     } else {

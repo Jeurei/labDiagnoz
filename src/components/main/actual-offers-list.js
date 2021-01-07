@@ -1,17 +1,14 @@
 import React, { useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import SwiperCore, { Pagination, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { connect } from 'react-redux';
 import mapStateToPropsGenerator from '../../store/mapStateToProps';
 import components from '../../constants/components';
-import { randomId } from '../utils/common';
 import ActualOffer from './actual-offer';
-import SliderControls from '../utils/slider-controls';
+import SliderControls from '../common/slider-controls';
+import Slider from './slider';
 
 const ActualOffersList = ({ offers }) => {
   const swiperRef = useRef(null);
-  SwiperCore.use([Pagination, A11y]);
 
   const prevSlide = useCallback(() => {
     swiperRef.current?.swiper.slidePrev();
@@ -29,20 +26,31 @@ const ActualOffersList = ({ offers }) => {
         className="actual-offers__control"
       />
       <ul className="actual-offers__list navigation">
-        <Swiper
-          ref={swiperRef}
-          pagination={{ clickable: true }}
-          spaceBetween={50}
-          slidesPerView={3}
-          slidesPerGroup={3}
-          loop
-        >
-          {offers.map((el) => (
-            <SwiperSlide key={randomId()}>
-              <ActualOffer data={el} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <Slider
+          data={offers}
+          component={<ActualOffer />}
+          swiperRef={swiperRef}
+          sliderObject={{
+            spaceBetween: 40,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            loop: true,
+            breakpoints: {
+              320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+              },
+              720: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+              },
+              1210: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+              },
+            },
+          }}
+        />
       </ul>
     </>
   );

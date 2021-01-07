@@ -7,13 +7,17 @@
 }
 
 .header-bottom {
+  display: flex;
   width: 100%;
+  align-items: flex-start;
 }
+
 .header-bottom__mobile {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  margin-right: auto;
 }
 
 .header-bottom__mobile-top-img {

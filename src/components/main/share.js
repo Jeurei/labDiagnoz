@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ArrowRight from '../../icons/arrrow-right.svg';
 
 const Share = ({ data }) => {
@@ -19,18 +20,24 @@ const Share = ({ data }) => {
               Срок действия акции:
               <time dateTime="2020-05-21">21.05.2020</time> -
               <time dateTime="2384-12-13">23.34.2384</time>
-              <ArrowRight
-                className="share__icon"
-                width="13.5"
-                height="13.5"
-                fill="currentColor"
-              />
+              <ArrowRight className="share__icon" fill="currentColor" />
             </p>
           </div>
         </article>
       </a>
     </li>
   );
+};
+
+Share.defaultProps = {
+  data: {},
+};
+
+Share.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    text: PropTypes.string,
+  }),
 };
 
 export default Share;

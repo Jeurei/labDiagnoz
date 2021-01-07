@@ -1,6 +1,6 @@
 .search {
   padding-top: 29px;
-  background-image: url("../img/mobile-bg.png"),
+  background-image: url('../img/mobile-bg.png'),
     linear-gradient(
       to left,
       RGBA(250, 0, 235, 1),
@@ -17,7 +17,7 @@
   }
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    background-image: url("../img/mobile-bg@2x.png"),
+    background-image: url('../img/mobile-bg@2x.png'),
       linear-gradient(
         to left,
         RGBA(250, 0, 235, 1),
@@ -103,6 +103,7 @@
 .search__button {
   min-width: 78px;
   min-height: 100%;
+  padding-top: 7px;
   border: none;
   appearance: none;
   background-color: $blue;
@@ -147,26 +148,26 @@
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    content: "";
+    content: '';
   }
 
   &--analyse::before {
-    background-image: url("../img/analyse.svg");
+    background-image: url('../img/analyse.svg');
     background-size: 25px 25px;
   }
 
   &--center::before {
-    background-image: url("../img/center.svg");
+    background-image: url('../img/center.svg');
     background-size: 25px 25px;
   }
 
   &--doctor::before {
-    background-image: url("../img/doctor.svg");
+    background-image: url('../img/doctor.svg');
     background-size: 25px 25px;
   }
 
   &--shedule::before {
-    background-image: url("../img/shedule.svg");
+    background-image: url('../img/shedule.svg');
     background-size: 25px 25px;
   }
 
@@ -249,7 +250,7 @@
     min-height: 594px;
     padding-top: 140px;
     padding-bottom: 69px;
-    background-image: url("../img/mainbg.png"),
+    background-image: url('../img/mainbg.png'),
       linear-gradient(
         to left,
         RGBA(250, 0, 235, 1),
@@ -261,7 +262,7 @@
     background-size: 100% 100%;
 
     @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-      background-image: url("../img/mainbg@2x.png");
+      background-image: url('../img/mainbg@2x.png');
     }
   }
 
@@ -418,7 +419,7 @@
         rgba(255, 255, 255, 0) 0,
         rgba(43, 215, 255, 0.5) 100%
       );
-      content: "";
+      content: '';
       opacity: 0;
       -webkit-transform: skewX(-25deg);
       transform: skewX(-25deg);

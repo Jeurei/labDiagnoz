@@ -28,13 +28,15 @@ const FormInput = ({
     <>
       <label htmlFor={id} className="form__label">
         {text}
-        {!formValidation && !isFocused && <FormInvalidInput text={errorMessage} />}
+        {!formValidation && !isFocused && (
+          <FormInvalidInput text={errorMessage} />
+        )}
       </label>
       <input
         css={
-          !formValidation
-          && !isFocused
-          && css`
+          !formValidation &&
+          !isFocused &&
+          css`
             border-color: red;
           `
         }
@@ -48,6 +50,7 @@ const FormInput = ({
         onFocus={() => setIsFocused(true)}
         onChange={(evt) => {
           setInputState(evt.currentTarget.value);
+          onLoseFocusHandler();
         }}
         onBlur={() => onLoseFocusHandler()}
       />
@@ -66,7 +69,8 @@ FormInput.propTypes = {
   placeholder: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  descriptionId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  descriptionId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    .isRequired,
   action: PropTypes.func.isRequired,
   formValidation: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,

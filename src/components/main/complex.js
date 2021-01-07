@@ -1,5 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import PropTypes from 'prop-types';
 import ComplexFront from './complex-front';
 import ComplexBack from './complex-back';
 
@@ -20,8 +21,12 @@ const Complex = ({ data }) => {
         ref={swiperRef}
         slidesPerView={1}
         noSwiping
-        width={270}
         noSwipingClass="swiper-container"
+        breakpoints={{
+          1210: {
+            width: 270,
+          },
+        }}
       >
         <SwiperSlide>
           <ComplexFront action={nextSlide} data={data} />
@@ -34,13 +39,17 @@ const Complex = ({ data }) => {
   );
 };
 
+Complex.defaultProps = {
+  data: {},
+};
+
 Complex.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string,
-    list: PropTypes.arrayOf(PropTypes.string).isRequired,
-    price: PropTypes.number.isRequired,
-    oldPrice: PropTypes.number.isRequired,
-  }).isRequired,
+    list: PropTypes.arrayOf(PropTypes.string),
+    price: PropTypes.number,
+    oldPrice: PropTypes.number,
+  }),
 };
 
 export default Complex;

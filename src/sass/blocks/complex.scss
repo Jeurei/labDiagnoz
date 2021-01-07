@@ -11,7 +11,8 @@
 
   .swiper-slide {
     display: flex;
-    width: 270px;
+    width: 100%;
+    max-width: 100%;
     flex-direction: column;
   }
 }
@@ -91,6 +92,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+  margin-top: 10px;
   color: $white;
 }
 
@@ -245,17 +247,14 @@
   letter-spacing: 0.9px;
 }
 
-@media (min-width: $big-mobile-width) {
-  .complex {
-    width: 50%;
-    margin-right: 10px;
-  }
-}
-
 @media (min-width: $tablet-width) {
   .complex {
     width: 100%;
     box-shadow: $box-shadow;
+
+    .swiper-slide {
+      width: 100%;
+    }
   }
 
   .complex__mobile-slider {

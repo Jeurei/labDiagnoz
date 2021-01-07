@@ -46,7 +46,7 @@
   min-height: 126px;
   flex-direction: row;
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .actual-offers__icon {
@@ -90,6 +90,10 @@
       RGBA(43, 215, 255, 1)
     );
   }
+}
+
+.actual-offers__control {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -136,6 +140,7 @@
 
   .actual-offers__control {
     position: relative;
+    display: flex;
   }
 
   .actual-offers__control-button-icon {
