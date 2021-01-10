@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Hint = ({ hint }) => (
-  <a href={hint.link} className="search-modal__example" aria-label={`Найти ${hint.text}`}>
+  <a
+    href={hint.link}
+    className="search-modal__example"
+    aria-label={`Найти ${hint.text}`}
+  >
     {hint.text}
   </a>
 );

@@ -38,20 +38,27 @@ const MapLeft = () => (
         <div className="geo__results">
           <SectionInner>
             <h3 className="geo__results-title">
-              Найдено
-              {' '}
-              <span className="geo__results-value">1</span>
-              {' '}
-              отделение
+              Найдено <span className="geo__results-value">1</span> отделение
             </h3>
             <ul className="geo__results-list">
               <li className="geo__result result">
-                <a href="./" className="result__link" aria-label="Показать на карте">
-                  <svg className="geo__result-icon" width="6" height="8.4" fill="currentColor">
+                <a
+                  href="./"
+                  className="result__link"
+                  aria-label="Показать на карте"
+                >
+                  <svg
+                    className="geo__result-icon"
+                    width="6"
+                    height="8.4"
+                    fill="currentColor"
+                  >
                     <use xlinkHref="./map-mark-icon" />
                   </svg>
                   <p className="result__text">г. Пермь, ул. Хабаровская, 56</p>
-                  <p className="result__options">Возможна оплата картой, есть вход с коляской</p>
+                  <p className="result__options">
+                    Возможна оплата картой, есть вход с коляской
+                  </p>
                 </a>
               </li>
             </ul>

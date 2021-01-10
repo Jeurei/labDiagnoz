@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import Drawer from 'react-motion-drawer';
-import { connect } from 'react-redux';
-import mapStateToPropsGenerator from '../../store/mapStateToProps';
-import components from '../../constants/components';
 import CrossButton from '../common/crossButton';
 import NavItem from './nav-item';
 import { randomId } from '../utils/common';
+import Routes from '../../routes';
 
-const Menu = ({ menu }) => {
+const Menu = () => {
   const [menuState, setMenuState] = useState(false);
 
   const closeHandler = () => {
@@ -16,7 +13,6 @@ const Menu = ({ menu }) => {
   };
 
   const onChangeHandler = (bool) => {
-    console.log('🚀 ~ file: menu.js ~ line 19 ~ onChangeHandler ~ bool', bool);
     document.body.scroll = bool ? 'no' : 'yes';
     document.body.style.overflow = bool ? 'hidden' : 'scroll';
     setMenuState(bool);
@@ -47,7 +43,7 @@ const Menu = ({ menu }) => {
           action={closeHandler}
         />
         <ul className="nav__list">
-          {menu.map((el) => (
+          {Object.values(Routes).map((el) => (
             <NavItem data={el} key={randomId()} />
           ))}
         </ul>
@@ -56,17 +52,4 @@ const Menu = ({ menu }) => {
   );
 };
 
-Menu.propTypes = {
-  menu: PropTypes.arrayOf(
-    PropTypes.shape({
-      text: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-      children: PropTypes.oneOfType([
-        PropTypes.bool,
-        PropTypes.arrayOf(PropTypes.object),
-      ]).isRequired,
-    }).isRequired,
-  ).isRequired,
-};
-
-export default connect(mapStateToPropsGenerator(components.MENU), null)(Menu);
+export default Menu;

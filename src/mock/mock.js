@@ -63,34 +63,10 @@ const createHintsArray = () => {
 };
 
 const createMenuArray = () => {
-  const MAX_QUANTITY_OF_MENU_ITEMS = 5;
-
-  const getRandomChildren = () =>
-    new Array(MAX_QUANTITY_OF_MENU_ITEMS).fill().map(() => ({
-      text: loremIpsum({
-        count: 1,
-        units: 'word',
-      }),
-
-      link: loremIpsum({
-        count: 1,
-        units: 'word',
-      }),
-    }));
-
-  return new Array(MAX_QUANTITY_OF_MENU_ITEMS).fill().map(() => ({
-    text: loremIpsum({
-      count: 1,
-      units: 'word',
-    }),
-
-    link: loremIpsum({
-      count: 1,
-      units: 'word',
-    }),
-
-    children: Boolean(getRandomInteger(0, 1)) && getRandomChildren(),
-  }));
+  return [
+    { text: 'Главная', link: '/', children: false },
+    { text: 'Специалисты', link: '/specialists', children: false },
+  ];
 };
 
 const createOffersArray = () => {

@@ -22,7 +22,11 @@ const usePrevious = (value) => {
 };
 
 const HeaderTopFixed = ({
-  cities, setCity, removeItem, cartData, openSearch,
+  cities,
+  setCity,
+  removeItem,
+  cartData,
+  openSearch,
 }) => {
   const MOBILE_WIDTH = 320;
   const screenWidth = window.screen.height;
@@ -61,13 +65,20 @@ const HeaderTopFixed = ({
           <Picture
             containerClass="header-top-fixed__img-container"
             imgClass="header-top-fixed__img"
-            src={screenWidth >= MOBILE_WIDTH ? './img/mobile-logo' : './img/fixed-logo'}
+            src={
+              screenWidth >= MOBILE_WIDTH
+                ? './img/mobile-logo'
+                : './img/fixed-logo'
+            }
             width="230"
             height="34"
             alt="Логотип компании Лабдиагностика"
           />
           <div className="header-top__left-cities-container">
-            <div className="header-top__left-cities cities cities--fixed" data-state="default">
+            <div
+              className="header-top__left-cities cities cities--fixed"
+              data-state="default"
+            >
               <a
                 href="some"
                 className="cities__link"
@@ -173,7 +184,11 @@ const HeaderTopFixed = ({
               href="some"
               aria-label="Развернуть строку поиска"
             >
-              <svg className="header-top-fixed__mobile-list-icon" width="13" height="13">
+              <svg
+                className="header-top-fixed__mobile-list-icon"
+                width="13"
+                height="13"
+              >
                 <use xlinkHref="somesearch-icon" stroke="currentColor" />
               </svg>
             </a>

@@ -10,18 +10,25 @@ const FormThirdField = ({ action, isFirstFieldValid, fieldsInputs }) => (
     <div className="form__input-checkbox-container">
       <FormIosCheckbox action={action} />
       <small className="form__agreement-hint">
-        Нажимая на кнопку отправить вы соглашаетесь с нашей политикой конфиденциальности
+        Нажимая на кнопку отправить вы соглашаетесь с нашей политикой
+        конфиденциальности
       </small>
     </div>
     <button
       className={`form__button ${
-        isFirstFieldValid && fieldsInputs.name && fieldsInputs.tel && fieldsInputs.agree
+        isFirstFieldValid &&
+        fieldsInputs.name &&
+        fieldsInputs.tel &&
+        fieldsInputs.agree
           ? 'button'
           : 'button-inactive'
       }`}
       type="submit"
       css={
-        isFirstFieldValid && fieldsInputs.name && fieldsInputs.tel && fieldsInputs.agree
+        isFirstFieldValid &&
+        fieldsInputs.name &&
+        fieldsInputs.tel &&
+        fieldsInputs.agree
           ? css`
               background-color: #65bc29;
             `
@@ -29,7 +36,12 @@ const FormThirdField = ({ action, isFirstFieldValid, fieldsInputs }) => (
               background-color: #dedede;
             `
       }
-      disabled={isFirstFieldValid && fieldsInputs.name && fieldsInputs.tel && fieldsInputs.agree}
+      disabled={
+        isFirstFieldValid &&
+        fieldsInputs.name &&
+        fieldsInputs.tel &&
+        fieldsInputs.agree
+      }
       onClick={(evt) => {
         evt.preventDefault();
         action();

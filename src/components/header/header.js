@@ -89,9 +89,16 @@ const Header = () => {
   return (
     <header className="header">
       {isSearchModalOpen && (
-        <SearchModal isDeleting={isDeleting} animationDuration={animationDuration} />
+        <SearchModal
+          isDeleting={isDeleting}
+          animationDuration={animationDuration}
+        />
       )}
-      <HeaderTop openSearch={isSearchModalOpen ? deleteElement : searchButtonClickHandler} />
+      <HeaderTop
+        openSearch={
+          isSearchModalOpen ? deleteElement : searchButtonClickHandler
+        }
+      />
       <HeaderBottom
         isHidden={isHidden}
         animationDuration={headerAnimationDuration}

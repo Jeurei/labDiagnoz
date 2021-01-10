@@ -6,13 +6,13 @@ const FormInvalidInput = ({ text }) => (
   <div
     className="form__invalid-input"
     css={css`
-      color: rgba(255, 0, 0, 0.6);
       position: absolute;
-      width: 100%;
-      font-size: 10px;
-      padding-left: 10px;
       bottom: -73px;
       left: -9px;
+      width: 100%;
+      padding-left: 10px;
+      color: rgba(255, 0, 0, 0.6);
+      font-size: 10px;
       text-align: left;
     `}
   >

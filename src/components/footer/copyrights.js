@@ -10,11 +10,14 @@ const Copyrights = () => (
       <div className="copyright__bottom copyright-bottom">
         <SectionInner>
           <p className="copyright-bottom__text">
-            ООО «Лабдиагност и К». Лицензия No ЛО-59-01-005417 от 17 июля 2020 г.
+            ООО «Лабдиагност и К». Лицензия No ЛО-59-01-005417 от 17 июля 2020
+            г.
           </p>
           <Socials />
           <div className="copyright__creators-team creators-team">
-            <p className="creators-team__text">Разработка и продвижение сайтов</p>
+            <p className="creators-team__text">
+              Разработка и продвижение сайтов
+            </p>
             <a
               href="https://praweb.ru/"
               className="creators-team__link"

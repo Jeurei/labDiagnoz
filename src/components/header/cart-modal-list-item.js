@@ -34,18 +34,14 @@ const CartModalListItem = ({ itemData, action }) => {
       data-id={itemData.id}
       ref={liRef}
       css={
-        isDeleting
-        && css`
+        isDeleting &&
+        css`
           animation: ${deletingKeyFrames()} 1s ease-in-out;
         `
       }
     >
       <p className="cart-modal__text">{itemData.descr}</p>
-      <span className="cart-modal__price">
-        {itemData.price}
-        {' '}
-        ₽
-      </span>
+      <span className="cart-modal__price">{itemData.price} ₽</span>
       <CrossButton
         buttonClass="cities__modal-close"
         label="Удалить предмет из корзины"

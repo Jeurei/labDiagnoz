@@ -2,7 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const TextareaInput = ({
-  id, cols, rows, inputClass, placeholder, label, action, value,
+  id,
+  cols,
+  rows,
+  inputClass,
+  placeholder,
+  label,
+  action,
+  value,
 }) => (
   <textarea
     id={id}

@@ -8,7 +8,9 @@ import CartModalGroup from './cart-modal-group';
 import CrossButton from '../common/crossButton';
 
 const Cart = ({ cartData, closeHandler, removeItem }) => {
-  const typesMap = [...new Set(Object.values(cartData).map((el) => el.type))].map((el) => ({
+  const typesMap = [
+    ...new Set(Object.values(cartData).map((el) => el.type)),
+  ].map((el) => ({
     [el]: Object.values(cartData)
       .map((elem) => {
         if (elem.type === el) {
@@ -36,9 +38,7 @@ const Cart = ({ cartData, closeHandler, removeItem }) => {
         <div className="cart-container__modal cart-modal">
           <div className="cart-modal__top">
             <h4 className="cart-modal__title">
-              Корзина (
-              {Object.keys(cartData).length}
-              )
+              Корзина ({Object.keys(cartData).length})
             </h4>
             <CrossButton
               buttonClass="cities__modal-close"
@@ -51,14 +51,24 @@ const Cart = ({ cartData, closeHandler, removeItem }) => {
               <Scrollbars
                 style={{ width: 449, height: 400 }}
                 renderTrackVertical={(props) => (
-                  <div {...props} className="cart-modal__scroll-track-vertical" />
+                  <div
+                    {...props}
+                    className="cart-modal__scroll-track-vertical"
+                  />
                 )}
                 renderThumbVertical={(props) => (
-                  <div {...props} className="cart-modal__scroll-thumb-vertical" />
+                  <div
+                    {...props}
+                    className="cart-modal__scroll-thumb-vertical"
+                  />
                 )}
               >
                 {typesMap.map((el) => (
-                  <CartModalGroup action={removeItem} groupData={el} key={randomId()} />
+                  <CartModalGroup
+                    action={removeItem}
+                    groupData={el}
+                    key={randomId()}
+                  />
                 ))}
               </Scrollbars>
             </div>
@@ -67,11 +77,7 @@ const Cart = ({ cartData, closeHandler, removeItem }) => {
             <div className="cart-modal__inner cart-modal__inner--offer">
               <div className="cart-modal__offer-price-container">
                 <span className="cart-modal__offer-price-text">Итого:</span>
-                <span className="cart-modal__offer-price">
-                  {total}
-                  {' '}
-                  ₽
-                </span>
+                <span className="cart-modal__offer-price">{total} ₽</span>
               </div>
               <button
                 className="cart-modal__offer-button button"

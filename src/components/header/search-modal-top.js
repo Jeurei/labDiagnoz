@@ -16,4 +16,7 @@ SearchModalContainerTop.propTypes = {
   hints: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default connect(mapStateToPropsGenerator(components.HINTS), null)(SearchModalContainerTop);
+export default connect(
+  mapStateToPropsGenerator(components.HINTS),
+  null,
+)(SearchModalContainerTop);

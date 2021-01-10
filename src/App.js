@@ -1,13 +1,20 @@
 import React from 'react';
+import { Switch } from 'react-router-dom';
 import { YMaps } from 'react-yandex-maps';
+import RoutesWithSubRoutes from './components/common/routeWithSubRoutes';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
-import Main from './components/main/main';
+import { randomId } from './components/utils/common';
+import Routes from './routes';
 
 const App = () => (
   <YMaps>
     <Header />
-    <Main />
+    <Switch>
+      {Routes.map((el) => {
+        return <RoutesWithSubRoutes exact key={randomId()} {...el} />;
+      })}
+    </Switch>
     <Footer />
   </YMaps>
 );

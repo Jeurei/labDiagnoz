@@ -248,7 +248,6 @@
 @media (min-width: $desktop-width) {
   .search {
     min-height: 594px;
-    padding-top: 140px;
     padding-bottom: 69px;
     background-image: url('../img/mainbg.png'),
       linear-gradient(
@@ -269,6 +268,7 @@
   .search__container {
     padding-right: 2px;
     padding-left: 24px;
+    margin-bottom: 50px;
   }
 
   .search__container-top {

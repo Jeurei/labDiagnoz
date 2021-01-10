@@ -22,9 +22,8 @@ const FooterBottom = () => (
         <div className="footer-nav__top copyright-top">
           <p className="copyright-top__text">
             Сеть многопрофильных медицинских центров
-            <br className="copyright-top__text-br" />
-            и заборных пунктов в Перми и городах Пермского
-            края.
+            <br className="copyright-top__text-br" />и заборных пунктов в Перми
+            и городах Пермского края.
           </p>
           <Picture
             containerClass="copyright-top__logo"
@@ -33,7 +32,9 @@ const FooterBottom = () => (
             height="36"
             alt="Логотипы компаний с которыми мы сотрудничаем"
           />
-          <small className="copyright-top__small">© Лабдиагност и К. Все права защищены.</small>
+          <small className="copyright-top__small">
+            © Лабдиагност и К. Все права защищены.
+          </small>
         </div>
       </SectionInner>
     </section>

@@ -62,8 +62,8 @@ const SubMenu = ({ data, zIndex, subMenuTitle }) => {
           onChange={onChangeHandler}
           zIndex={zIndex + 1}
           css={
-            shouldBeDeleted
-            && css`
+            shouldBeDeleted &&
+            css`
               animation: ${closingAnimation} ${ANIMATION_DURATION}s ease-in-out;
             `
           }
@@ -72,11 +72,19 @@ const SubMenu = ({ data, zIndex, subMenuTitle }) => {
           <ul className="nav__list">
             {data.map((el) => (
               <li className="nav__item" key={randomId()}>
-                <a href={el.link} className="nav__link" aria-label="Ссылка на страницу услуг">
+                <a
+                  href={el.link}
+                  className="nav__link"
+                  aria-label="Ссылка на страницу услуг"
+                >
                   {el.text}
                 </a>
                 {el.children && (
-                  <SubMenu zIndex={zIndex} subMenuTitle={data.text} data={el.children} />
+                  <SubMenu
+                    zIndex={zIndex}
+                    subMenuTitle={data.text}
+                    data={el.children}
+                  />
                 )}
               </li>
             ))}
@@ -97,7 +105,10 @@ SubMenu.propTypes = {
     PropTypes.shape({
       text: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
-      children: PropTypes.oneOfType([PropTypes.bool, PropTypes.arrayOf(PropTypes.object)]),
+      children: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.arrayOf(PropTypes.object),
+      ]),
     }).isRequired,
   ).isRequired,
   zIndex: PropTypes.number,

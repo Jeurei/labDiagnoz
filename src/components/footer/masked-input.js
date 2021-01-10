@@ -33,7 +33,9 @@ const MaskedFormInput = ({
     <>
       <label htmlFor={id} className="form__label">
         {text}
-        {!formValidation && !isFocused && <FormInvalidInput text={errorMessage} />}
+        {!formValidation && !isFocused && (
+          <FormInvalidInput text={errorMessage} />
+        )}
       </label>
       <InputMask
         type={type}
@@ -48,9 +50,9 @@ const MaskedFormInput = ({
         onChange={(evt) => setInputState(evt.currentTarget.value)}
         onBlur={() => onLoseFocusHandler()}
         css={
-          !formValidation
-          && !isFocused
-          && css`
+          !formValidation &&
+          !isFocused &&
+          css`
             border-color: red;
           `
         }
@@ -70,7 +72,8 @@ MaskedFormInput.propTypes = {
   placeholder: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  descriptionId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  descriptionId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    .isRequired,
   action: PropTypes.func.isRequired,
   formValidation: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
