@@ -1,10 +1,10 @@
 import React, { useRef, useCallback } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import mapStateToPropsGenerator from '../../../store//mapStateToProps';
-import components from '../../../constants//components';
+import mapStateToPropsGenerator from '../../../store/mapStateToProps';
+import components from '../../../constants/components';
 import Share from './share';
-import SliderControls from '../../common/slider-controls';
+import SliderControls from '../../../components/common/slider-controls';
 import Slider from './slider';
 
 const SharesList = ({ shares }) => {

@@ -35,7 +35,7 @@
     &::after {
       top: 0;
       left: 109px;
-      content: "/////////";
+      content: '/////////';
       font-size: 12px;
     }
   }
@@ -44,7 +44,7 @@
 .map__right {
   min-width: 100vw;
   min-height: 380px;
-  background-image: url("../img/map-bg.png");
+  background-image: url('../img/map-bg.png');
   background-position: 0;
   background-repeat: no-repeat;
 }

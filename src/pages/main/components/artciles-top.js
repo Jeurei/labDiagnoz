@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { filterTypesMap } from '../../../constants//filter';
+import { filterTypesMap } from '../../../constants/filter';
 
 const ArticlesTop = ({ action, currentFilter }) => {
   const ACTIVE_CLASS = 'articles__sort-item--active';

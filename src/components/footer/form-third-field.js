@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import FormFieldset from './form-fieldset';
-import FormIosCheckbox from './form-ios-checkbox';
+import FormIosCheckbox from '../common/form-ios-checkbox';
 
 const FormThirdField = ({ action, isFirstFieldValid, fieldsInputs }) => (
   <FormFieldset>

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css, keyframes } from '@emotion/react';
+import { Link } from 'react-router-dom';
 import Menu from './menu';
 import Picture from '../common/picture';
 import DropDown from '../../icons/dropdown.svg';
@@ -112,23 +113,26 @@ const HeaderBottom = ({
       >
         <div className="header__bottom header-bottom">
           <div className="header-bottom__mobile">
-            <Picture
-              containerClass="header-bottom__mobile-top-img"
-              src="./img/mobile-logo"
-              width="222"
-              height="33"
-              alt="Логотип компании Лабдиагностика"
-            />
-            {/* <Burger className="header-bottom__mobile-burger" /> */}
+            <Link to="labDiagnoz/">
+              <Picture
+                containerClass="header-bottom__mobile-top-img"
+                src="./img/mobile-logo"
+                width="222"
+                height="33"
+                alt="Логотип компании Лабдиагностика"
+              />
+            </Link>
           </div>
           <div className="header-bottom__left">
-            <Picture
-              containerClass="header-bottom__mobile-top-img"
-              src="./img/logo"
-              width="230"
-              height="34"
-              alt="Логотип компании Лабдиагностика"
-            />
+            <Link to="labDiagnoz/">
+              <Picture
+                containerClass="header-bottom__mobile-top-img"
+                src="./img/logo"
+                width="230"
+                height="34"
+                alt="Логотип компании Лабдиагностика"
+              />
+            </Link>
           </div>
           <div className="header-bottom__right">
             <a

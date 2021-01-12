@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ENTER_KEY_CODE } from '../../../constants//keys';
-import Picture from '../../common/picture';
+import { ENTER_KEY_CODE } from '../../../constants/keys';
+import Picture from '../../../components/common/picture';
 import ExpandIcon from '../../../icons/expand-icon.svg';
 import ArrowRight from '../../../icons/arrrow-right.svg';
 import ComplexList from './complex-list';
@@ -36,11 +36,11 @@ const ComplexFront = ({ action, data }) => {
         aria-label="нажмите что развернуть все анализы"
         onClick={(evt) => {
           evt.preventDefault();
-          action();
+          action(true);
         }}
         onKeyDown={(evt) => {
           evt.preventDefault();
-          if (evt.key === ENTER_KEY_CODE) action();
+          if (evt.key === ENTER_KEY_CODE) action(true);
         }}
         role="button"
         tabIndex="0"

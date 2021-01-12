@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
-import Picture from '../../common/picture';
+import Picture from '../../../components/common/picture';
 
 const formatDate = (date) => {
   return format(date, 'd MMMM yyyy', { locale: ru });

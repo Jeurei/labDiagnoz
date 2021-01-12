@@ -7,16 +7,18 @@ import Header from './components/header/header';
 import { randomId } from './components/utils/common';
 import Routes from './routes';
 
-const App = () => (
-  <YMaps>
-    <Header />
-    <Switch>
-      {Routes.map((el) => {
-        return <RoutesWithSubRoutes exact key={randomId()} {...el} />;
-      })}
-    </Switch>
-    <Footer />
-  </YMaps>
-);
+const App = () => {
+  return (
+    <YMaps>
+      <Header />
+      <Switch>
+        {Routes.map((el) => {
+          return <RoutesWithSubRoutes exact key={randomId()} {...el} />;
+        })}
+      </Switch>
+      <Footer />
+    </YMaps>
+  );
+};
 
 export default App;

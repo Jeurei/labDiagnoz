@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useState } from 'react/cjs/react.development';
 import FormFieldset from './form-fieldset';
-import FormInput from './form-input';
-import MaskedFormInput from './masked-input';
+import FormInput from '../common/form-input';
+import MaskedFormInput from '../common/masked-input';
 import { errorMessagesMap } from '../../constants/form';
 
 const FormFirstField = ({ action }) => {

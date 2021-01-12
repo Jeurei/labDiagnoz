@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchIcon from '../../../icons/search-icon.svg';
-import Select from '../../common/select';
+import Select from '../../../components/common/select';
 
 const FilterTop = () => {
   return (

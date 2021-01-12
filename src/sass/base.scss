@@ -42,6 +42,10 @@ button {
   outline-color: $color-text;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 @media (min-width: $tablet-width) {
   body {
     min-width: $tablet-width;

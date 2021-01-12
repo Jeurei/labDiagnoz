@@ -1,4 +1,7 @@
 const routesConstants = {
+  ROOT: {
+    route: 'labDiagnoz/',
+  },
   MAIN: {
     route: '/',
     name: 'Главная',

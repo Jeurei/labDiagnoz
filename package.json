@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/Jeurei/ladDiagnoz/issues"
   },
-  "homepage": "https://jeurei.github.io/ladDiagnoz/",
+  "homepage": "https://jeurei.github.io/labDiagnoz/",
   "devDependencies": {
     "@babel/cli": "7.12.10",
     "@babel/core": "7.12.10",
@@ -62,6 +62,10 @@
     "gulp-svgmin": "3.0.0",
     "gulp-webp": "4.0.1",
     "html-webpack-plugin": "4.5.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^8.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "node-sass": "5.0.0",
     "postcss": "8.1.10",
     "postcss-loader": "4.1.0",

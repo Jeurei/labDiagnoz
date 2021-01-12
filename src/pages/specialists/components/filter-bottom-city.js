@@ -1,5 +1,5 @@
 import React from 'react';
-import Select from '../../common/select';
+import Select from '../../../components/common/select';
 
 const FilterBottomCity = () => {
   return (

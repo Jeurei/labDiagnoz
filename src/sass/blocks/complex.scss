@@ -1,24 +1,18 @@
 .complex {
   position: relative;
+  display: flex;
+  overflow: hidden;
   width: 100%;
   height: 100%;
+  flex-direction: row;
   flex-shrink: 0;
+  flex-wrap: nowrap;
   box-shadow: $box-shadow;
-
-  .swiper-container {
-    height: 100%;
-  }
-
-  .swiper-slide {
-    display: flex;
-    width: 100%;
-    max-width: 100%;
-    flex-direction: column;
-  }
 }
 
 .complex__front {
   display: flex;
+  min-width: 100%;
   height: 100%;
   flex-direction: column;
 }
@@ -186,7 +180,7 @@
 
 .complex__full {
   display: flex;
-  width: 100%;
+  min-width: 100%;
   height: 100%;
   flex-direction: column;
   background-color: $blue;
@@ -194,13 +188,14 @@
   background-position: calc(100% - 22px) calc(100% - 53px);
   background-repeat: no-repeat;
   color: $white;
+  transform: translateX(100%);
 
   .complex__list {
     margin-bottom: auto;
   }
 
   .complex__expand-button {
-    padding-left: 20px;
+    padding-left: 30px;
     color: $white;
     text-decoration: underline;
   }
@@ -218,6 +213,7 @@
     flex-direction: row;
     padding-top: 12px;
     padding-bottom: 12px;
+    margin-top: 10px;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 1px;

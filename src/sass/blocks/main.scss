@@ -1,5 +1,5 @@
 .main {
-  padding-top: 62px;
+  padding-top: 0;
 }
 
 .main__title {
@@ -15,6 +15,12 @@
     top: calc(100% + -15px);
     left: 4px;
     color: rgba($blue, 0.6);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main {
+    padding-top: 62px;
   }
 }
 

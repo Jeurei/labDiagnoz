@@ -4,13 +4,15 @@ import '@babel/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import store from './store/store';
-import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './containers/scroll-to-top';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename="labDiagnoz/">
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </Provider>,

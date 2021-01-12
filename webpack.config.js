@@ -9,8 +9,8 @@ module.exports = {
   mode: 'development',
   entry: [`${__dirname}/src/index.js`, `${__dirname}/src/sass/style.scss`],
   output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, 'public'),
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'public'),
   },
   module: {
     rules: [
@@ -72,12 +72,18 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.resolve(__dirname, 'public'),
     watchContentBase: true,
     port: 3000,
+    historyApiFallback: {
+      index: 'index.html',
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: 'LabDiagnostika',
+      hash: true,
+      filename: 'index.html',
       template: './src/teamplate.html',
     }),
     new CleanWebpackPlugin({

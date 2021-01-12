@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from '../../common/search';
+import Search from '../../../components/common/search';
 
 const SearchContainerTop = () => (
   <div className="search__container-top">

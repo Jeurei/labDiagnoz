@@ -105,11 +105,6 @@ const Header = () => {
         clickHandler={switchHeaderBottom}
         headerBottomState={isBottomHeaderShown}
       />
-      {/* {isBottomHeaderShown && (
-        <HeaderFixedContainer>
-          <HeaderTopFixed openSearch={searchButtonClickHandler} />
-        </HeaderFixedContainer>
-      )} */}
     </header>
   );
 };

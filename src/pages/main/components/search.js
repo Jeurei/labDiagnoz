@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionInner from '../../../containers//section-inner';
+import SectionInner from '../../../containers/section-inner';
 import SearchBottom from './search-bottom';
 import SearchContainerTop from './search-container-top';
 

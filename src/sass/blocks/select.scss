@@ -20,7 +20,7 @@
     height: 2px;
 
     background-color: $color-text;
-    content: "";
+    content: '';
 
     transform: translate(-3px, -50%) rotate(45deg);
 
@@ -32,11 +32,6 @@
 
   &:hover {
     border-color: $color-text;
-
-    &::before,
-    &::after {
-      background-color: $white;
-    }
   }
 }
 
@@ -94,7 +89,7 @@
   margin: 0 auto;
   transition: background-color 0.2s ease-in-out;
 
-  &[data-state="active"] {
+  &[data-state='active'] {
     .select__title {
       &::before {
         transform: translate(-3px, -50%) rotate(-45deg);
@@ -122,6 +117,13 @@
 
     .select__content {
       color: $color-text;
+    }
+
+    .select__title {
+      &::before,
+      &::after {
+        background-color: $white;
+      }
     }
   }
 }

@@ -1,40 +1,25 @@
-import React, { useCallback, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import ComplexFront from './complex-front';
 import ComplexBack from './complex-back';
 
 const Complex = ({ data }) => {
-  const swiperRef = useRef(null);
+  const [isFullOpened, setFullOpened] = useState(false);
+  const liRef = useRef();
 
-  const prevSlide = useCallback(() => {
-    swiperRef.current?.swiper.slidePrev();
-  }, [swiperRef]);
-
-  const nextSlide = useCallback(() => {
-    swiperRef.current?.swiper.slideNext();
-  }, [swiperRef]);
+  const changeState = (bool) => {
+    setFullOpened(bool);
+  };
 
   return (
-    <li className="complexes__item complex">
-      <Swiper
-        ref={swiperRef}
-        slidesPerView={1}
-        noSwiping
-        noSwipingClass="swiper-container"
-        breakpoints={{
-          1210: {
-            width: 270,
-          },
-        }}
-      >
-        <SwiperSlide>
-          <ComplexFront action={nextSlide} data={data} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ComplexBack action={prevSlide} data={data} />
-        </SwiperSlide>
-      </Swiper>
+    <li className="complexes__item complex" ref={liRef}>
+      <ComplexFront action={changeState} data={data} />
+      <ComplexBack
+        action={changeState}
+        data={data}
+        state={isFullOpened}
+        liRef={liRef}
+      />
     </li>
   );
 };
