@@ -33,30 +33,65 @@ const Form = ({ closeHandler }) => {
       center: '',
       doctorsName: '',
     },
+
     secondField: {
       date: '',
     },
+
     thirdField: {
-      name: '',
-      tel: '',
-      email: '',
+      clientName: '',
+      clientTel: '',
+      clientEmail: '',
       payType: '',
-      agreement: false,
+      isAgreed: false,
     },
   });
-  const [formCompleted, setFormCompletion] = useState(false);
 
+  const [formCompleted, setFormCompletion] = useState(false);
+  const [isFormValid, setFormValid] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
+
+  const setInputs = (bool, obj) => {
+    console.log('🚀 ~ file: form.js ~ line 55 ~ setInputs ~ bool', bool);
+    setFormValid(bool);
+    setFormState({ ...formState, ...obj });
+  };
 
   const stepsArr = [
     <FormFirstStep />,
     <FormSecondStep />,
-    <FormThirdStep action={() => console.log(true)} />,
+    <FormThirdStep action={setInputs} />,
   ];
 
   const onSubmitHandler = (evt) => {
     evt.preventDefault();
     setFormCompletion(true);
+  };
+
+  const nextStep = () => {
+    setCurrentStep((prev) => prev + 1);
+  };
+
+  const prevStep = () => {
+    setCurrentStep((prev) => prev - 1);
+  };
+
+  const submitForm = (evt) => {
+    evt.preventDefault();
+  };
+
+  const onButtonClickHandler = (evt, next = true) => {
+    evt.preventDefault();
+
+    if (currentStep === 2 && next) {
+      submitForm(evt);
+    }
+
+    if (next) {
+      nextStep();
+    } else {
+      prevStep();
+    }
   };
 
   return (
@@ -86,15 +121,16 @@ const Form = ({ closeHandler }) => {
                 className="specialist-form__control-button button"
                 aria-label="Перейти на предыдущий шаг"
                 disabled={!currentStep}
-                onClick={() => setCurrentStep((prev) => prev - 1)}
+                onClick={(evt) => onButtonClickHandler(evt, false)}
               >
                 Предыдущий шаг
               </button>
               <button
-                type={currentStep === 2 ? 'submit' : 'button'}
+                type="button"
                 className="specialist-form__control-button button"
-                aria-label="Перейти на следующий шаг"
-                onClick={() => setCurrentStep((prev) => prev + 1)}
+                aria-label={currentStep === 2 ? 'Записаться' : 'Следующий шаг'}
+                disabled={currentStep === 2 && !isFormValid}
+                onClick={(evt) => onButtonClickHandler(evt, true)}
               >
                 {currentStep === 2 ? 'Записаться' : 'Следующий шаг'}
               </button>

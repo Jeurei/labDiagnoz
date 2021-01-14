@@ -8,7 +8,7 @@ const FormThirdField = ({ action, isFirstFieldValid, fieldsInputs }) => (
   <FormFieldset>
     <h3 className="form__input-chekbox-title">Задайте свой вопрос</h3>
     <div className="form__input-checkbox-container">
-      <FormIosCheckbox action={action} />
+      <FormIosCheckbox action={action} id="agreement" name="agreement" />
       <small className="form__agreement-hint">
         Нажимая на кнопку отправить вы соглашаетесь с нашей политикой
         конфиденциальности

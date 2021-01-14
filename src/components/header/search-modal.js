@@ -18,6 +18,7 @@ const SearchModal = ({ isDeleting, animationDuration }) => {
       }
 
       100% {
+        opacity: 0;
         min-height: 0;
         max-height: 0;
       `;
@@ -28,11 +29,12 @@ const SearchModal = ({ isDeleting, animationDuration }) => {
       css={
         isDeleting
           ? css`
-              animation: ${deletingKeyFrames()} ${animationDuration}s
+              animation: ${deletingKeyFrames()} ${animationDuration - 0.5}s
                 ease-in-out;
             `
           : css`
-              animation: ${searchShowing} ${animationDuration}s ease-in-out;
+              animation: ${searchShowing} ${animationDuration - 0.5}s
+                ease-in-out;
             `
       }
       ref={modalRef}

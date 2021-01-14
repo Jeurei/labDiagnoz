@@ -1,7 +1,12 @@
+import { format } from 'date-fns';
 import { loremIpsum, LoremIpsum } from 'lorem-ipsum';
 import { randomId } from '../components/utils/common';
 import { getRandomInteger, randomDate } from '../utils/common';
 import { ProductTypesMap } from '../utils/dataMaps';
+
+const daysInMonth = (month, year) => {
+  return new Date(year, month, 0).getDate();
+};
 
 const createCartObject = () => {
   const MAX_QUANTITY_OF_OBJECTS = 10;
@@ -225,6 +230,35 @@ const createFeaturesArray = () => {
   }));
 };
 
+const createSpecialistsArray = () =>
+  new Array(getRandomInteger(1, 10)).fill().map(() => ({
+    name: loremIpsum({
+      count: 3,
+      units: 'word',
+    }),
+    job: new Array(getRandomInteger(1, 5))
+      .fill()
+      .map(() => loremIpsum({ count: 1, units: 'word' })),
+    ages: getRandomInteger(0, 2),
+    price: getRandomInteger(0, 10000),
+    adresses: new Array(getRandomInteger(1, 3))
+      .fill()
+      .map(() => loremIpsum({ count: 1, units: 'word' })),
+    time: {
+      2021: {
+        ...new Array(12).fill().map((el, id) => ({
+          ...new Array(daysInMonth(id + 1, 2021)).fill().map(() => ({
+            ...new Array(getRandomInteger(0, 11))
+              .fill()
+              .map(() =>
+                format(randomDate(new Date(2012, 0, 1), new Date()), 'hh'),
+              ),
+          })),
+        })),
+      },
+    },
+  }));
+
 const getMock = () => ({
   cart: createCartObject(),
   cities: {
@@ -238,14 +272,8 @@ const getMock = () => ({
   links: createLinksArray(),
   articles: createArticlesArray(),
   shares: createSharesArray(),
-  userForm: {
-    name: '',
-    tel: '',
-    email: '',
-    question: '',
-    agreement: '',
-  },
   features: createFeaturesArray(),
+  specialists: createSpecialistsArray(),
 });
 
 export default getMock;

@@ -21,7 +21,7 @@ const Header = () => {
     setTimeout(() => {
       setSearhModalOpen(false);
       setDeleting(false);
-    }, animationDuration * 1000 - 200);
+    }, animationDuration * 1000 - 550);
   };
 
   const onWheelEventHandler = (evt) => {

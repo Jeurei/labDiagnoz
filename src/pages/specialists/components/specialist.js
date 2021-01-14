@@ -1,20 +1,27 @@
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
+import PropTypes from 'prop-types';
 import Picture from '../../../components/common/picture';
 import Form from './form';
 import SpecialistWorkTime from './specialist-work-time';
 
-const specialistInfo = (action) => {
+const specialistInfo = (action, data) => {
+  const agesMap = {
+    0: 'Дети 0-18 лет',
+    1: 'Взрослые',
+    2: 'Дети 0-18 лет, взрослые',
+  };
   return (
     <div className="specialist__info">
-      <h3 className="specialist__name">Мельникова Наталья Игоревна</h3>
+      <h3 className="specialist__name">{data.name}</h3>
       <ul className="specialist__info-list">
-        <li className="specialist__info-item">Должность: Дерматовенеролог</li>
+        <li className="specialist__info-item">Должность: {data.job[0]}</li>
         <li className="specialist__info-item">
-          Ведёт приём: Дети 0-18 лет, взрослые
+          Ведёт приём: {agesMap[data.ages]}
         </li>
         <li className="specialist__info-item">
-          Первичный прием: <span className="specialist__price">1 499 ₽</span>
+          Первичный прием:{' '}
+          <span className="specialist__price">{data.price} ₽</span>
         </li>
         <li
           className="specialist__info-item specialist__info-item--link"
@@ -37,7 +44,7 @@ const specialistInfo = (action) => {
   );
 };
 
-const Specialist = () => {
+const Specialist = ({ data }) => {
   const [specialistPopup, setSpecialistPopup] = useState(false);
 
   const closeHandler = () => {
@@ -52,11 +59,22 @@ const Specialist = () => {
         src="../img/doctor"
         alt="Изображение специалиста"
       />
-      {specialistInfo(setSpecialistPopup)}
-      <SpecialistWorkTime />
+      {specialistInfo(setSpecialistPopup, data)}
+      <SpecialistWorkTime data={data.time} />
       {specialistPopup && <Form closeHandler={closeHandler} />}
     </div>
   );
+};
+
+Specialist.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string,
+    job: PropTypes.arrayOf(PropTypes.string),
+    ages: PropTypes.number,
+    price: PropTypes.number,
+    adresses: PropTypes.arrayOf(PropTypes.string),
+    time: PropTypes.objectOf(PropTypes.object),
+  }).isRequired,
 };
 
 export default Specialist;

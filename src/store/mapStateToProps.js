@@ -62,6 +62,12 @@ const mapStateToPropsGenerator = (component) => {
       });
     }
 
+    case components.SPECIALISTS: {
+      return (state) => ({
+        specialists: state.specialists,
+      });
+    }
+
     default:
       return undefined;
   }

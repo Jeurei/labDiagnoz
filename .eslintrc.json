@@ -3,7 +3,12 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -24,6 +29,7 @@
         }
       }
     ],
-    "react/default-props-match-prop-types": 0
+    "react/default-props-match-prop-types": 0,
+    "import/no-named-as-default": 0
   }
 }

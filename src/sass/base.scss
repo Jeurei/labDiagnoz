@@ -30,6 +30,14 @@ a {
   :active {
     color: $color-text;
   }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-text;
+  }
 }
 
 img {
@@ -40,6 +48,24 @@ img {
 button {
   cursor: pointer;
   outline-color: $color-text;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-text;
+  }
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-text;
+  }
 }
 
 #root {
