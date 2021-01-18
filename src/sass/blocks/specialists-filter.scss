@@ -21,7 +21,6 @@
   height: auto;
   flex-grow: 1;
   order: 2;
-  padding: 11px 62px 12px 49px;
   margin-top: 5px;
   background-image: linear-gradient(
     -135deg,
@@ -32,6 +31,11 @@
   color: $white;
 
   .select__title {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    padding-left: 49px;
+
     &::before,
     &::after {
       background-color: $white;
@@ -43,6 +47,7 @@
   }
 
   .select__label {
+    padding-left: 49px;
     &:hover {
       background-image: linear-gradient(
         -135deg,

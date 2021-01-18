@@ -14,6 +14,12 @@ const mapStateToPropsGenerator = (component) => {
       });
     }
 
+    case components.SEARCH: {
+      return (state) => ({
+        selectData: state.searchCategories,
+      });
+    }
+
     case components.HINTS: {
       return (state) => ({
         hints: state.hints,
@@ -65,6 +71,24 @@ const mapStateToPropsGenerator = (component) => {
     case components.SPECIALISTS: {
       return (state) => ({
         specialists: state.specialists,
+      });
+    }
+
+    case components.MAP: {
+      return (state) => ({
+        selectData: state.mapCities,
+      });
+    }
+
+    case components.SPECIALISTS_FILTER: {
+      return (state) => ({
+        filter: state.specialistsFilter,
+      });
+    }
+
+    case components.DISCOUNTS: {
+      return (state) => ({
+        discounts: state.discounts,
       });
     }
 

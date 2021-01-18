@@ -107,6 +107,12 @@
     .select__label + .select__input + .select__label {
       max-height: 40px;
       border-top-width: 1px;
+      background-color: $white;
+      color: $color-text;
+
+      &:hover {
+        color: $white;
+      }
     }
   }
 
