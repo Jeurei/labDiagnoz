@@ -1,9 +1,27 @@
 .main {
-  padding-top: 62px;
+  padding-top: 0;
 }
 
 .main__title {
+  position: relative;
   margin: 0;
+  margin-bottom: 59px;
+  font-size: $title-h2-fs;
+  font-weight: 400;
+  line-height: $title-h2-lh;
+
+  &::after {
+    @include titleAfter();
+    top: calc(100% + -15px);
+    left: 4px;
+    color: rgba($blue, 0.6);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main {
+    padding-top: 62px;
+  }
 }
 
 @media (min-width: $tablet-width) {

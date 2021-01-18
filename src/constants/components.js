@@ -9,6 +9,11 @@ export const Components = {
   LINKS: 'LINKS',
   COMPLEXES: 'COMPLEXES',
   FEATURES: 'FEATURES',
+  MAP: 'MAP',
+  SPECIALISTS: 'SPECIALISTS',
+  SEARCH: 'SEARCH',
+  SPECIALISTS_FILTER: 'SPECIALISTS_FILTER',
+  DISCOUNTS: 'DISCOUNTS',
 };
 
 export default Components;

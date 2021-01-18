@@ -1,0 +1,269 @@
+.filter__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-bottom: 30px;
+
+  .search__input {
+    border: 1px solid $blue;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  .search__button {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+
+.filter__select {
+  width: 100%;
+  height: auto;
+  flex-grow: 1;
+  order: 2;
+  margin-top: 5px;
+  background-image: linear-gradient(
+    -135deg,
+    #ff00eb 0,
+    #9a66f5 50%,
+    #2bd7ff 100%
+  );
+  color: $white;
+
+  .select__title {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    padding-left: 49px;
+
+    &::before,
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  .select__content {
+    top: 55px;
+  }
+
+  .select__label {
+    padding-left: 49px;
+    &:hover {
+      background-image: linear-gradient(
+        -135deg,
+        #ff00eb 0,
+        #9a66f5 50%,
+        #2bd7ff 100%
+      );
+    }
+  }
+}
+
+.filter__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  .select {
+    min-height: 60px;
+    border: 1px solid $blue;
+    margin: 0;
+    margin-right: 30px;
+    border-radius: 5px;
+  }
+
+  .select__input:checked + label {
+    background-color: #fff;
+  }
+}
+
+.filter__bottom-group-title {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 27px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.filter__bottom-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  .select {
+    width: 100%;
+  }
+
+  &--adress {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &--ages {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .select__content {
+    top: 59px;
+  }
+}
+
+.filter__checkbox-group {
+  margin-right: 44px;
+}
+
+.filter__input--checkbox {
+  display: none;
+}
+
+.filter__input--checkbox + .filter__label {
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    @include pseudo('', 31px, 31px);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    border: 1px solid $blue;
+    border-radius: 5px;
+  }
+
+  &:hover::before {
+    border-color: $green;
+  }
+}
+
+.filter__input--checkbox:checked + .filter__label {
+  &::before {
+    border-color: $green;
+    background-color: $green;
+  }
+
+  &:after {
+    position: absolute;
+    top: -4px;
+    left: 12px;
+    border: solid $white;
+    border-width: 0 3px 3px 0;
+    border-radius: 2px;
+    content: '';
+    transform: rotate(45deg);
+    @include pseudo('', 10px, 15px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter__top {
+    flex-direction: row;
+    align-items: stretch;
+    margin-bottom: 30px;
+  }
+
+  .filter__select {
+    width: 245px;
+    order: 0;
+    margin-top: 0;
+    margin-right: 10px;
+  }
+
+  .filter__bottom {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .filter__bottom-group {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+
+    &--adress {
+      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    &--ages {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  .filter__checkbox-group {
+    margin-right: 44px;
+  }
+
+  .filter__input--checkbox {
+    display: none;
+  }
+
+  .filter__input--checkbox + .filter__label {
+    position: relative;
+    padding-left: 40px;
+
+    &::before {
+      @include pseudo('', 31px, 31px);
+      position: absolute;
+      top: -10px;
+      left: 0;
+      border: 1px solid $blue;
+      border-radius: 5px;
+    }
+
+    &:hover::before {
+      border-color: $green;
+    }
+  }
+
+  .filter__input--checkbox:checked + .filter__label {
+    &::before {
+      border-color: $green;
+      background-color: $green;
+    }
+
+    &:after {
+      position: absolute;
+      top: -4px;
+      left: 12px;
+      border: solid $white;
+      border-width: 0 3px 3px 0;
+      border-radius: 2px;
+      content: '';
+      transform: rotate(45deg);
+      @include pseudo('', 10px, 15px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__select {
+    flex-grow: 0;
+  }
+
+  .filter__bottom {
+    align-items: stretch;
+  }
+
+  .filter__bottom-group {
+    &--city {
+      width: 245px;
+    }
+
+    &--adress {
+      width: 420px;
+      margin-right: 27px;
+      margin-left: 30px;
+    }
+
+    &--ages {
+      width: auto;
+      justify-content: flex-start;
+    }
+  }
+}
