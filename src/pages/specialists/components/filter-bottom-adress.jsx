@@ -1,20 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Select from '../../../components/common/select';
-import { getFlatArr } from '../../utils/filter';
+import { filterDublicatesObjects, getFlatArr } from '../../utils/filter';
 
-const FilterBottomAdress = ({ selectData }) => {
-  console.log(
-    '🚀 ~ file: filter-bottom-adress.jsx ~ line 7 ~ FilterBottomAdress ~ selectData',
-    selectData,
-  );
-  const data = getFlatArr(
-    selectData.map((city) =>
-      city.centers.map((center) => ({
-        name: 'center',
-        value: `${city.city}-${center.adress}`,
-        text: center.center,
-      })),
+const FilterBottomAdress = ({ selectData, action }) => {
+  const onSelectChangeHandler = ({ value }) => {
+    action({ adress: value });
+  };
+
+  const data = filterDublicatesObjects(
+    getFlatArr(
+      selectData.map((city) =>
+        city.center.map((center) => ({
+          value: `${city.city}-${center.adress}`,
+          label: `${city.city}, ${center.adress}, ${center.name}`,
+        })),
+      ),
+    ).filter(
+      (v, i, a) =>
+        a.findIndex((t) => JSON.stringify(t) === JSON.stringify(v)) === i,
     ),
   );
 
@@ -23,7 +27,8 @@ const FilterBottomAdress = ({ selectData }) => {
       <Select
         selectClass="filter__bottom-adress-select"
         data={data}
-        defaultOption="Выберете адрес (все)"
+        placeholder="Выберете адрес (все)"
+        action={onSelectChangeHandler}
       />
     </div>
   );
@@ -31,6 +36,7 @@ const FilterBottomAdress = ({ selectData }) => {
 
 FilterBottomAdress.propTypes = {
   selectData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  action: PropTypes.func.isRequired,
 };
 
 export default FilterBottomAdress;

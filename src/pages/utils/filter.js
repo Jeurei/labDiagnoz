@@ -18,3 +18,10 @@ export const getFlatArr = (arr, depth = 1) => {
 
   return result;
 };
+
+export const filterDublicatesObjects = (arr) => {
+  return arr.filter(
+    (v, i, a) =>
+      a.findIndex((t) => JSON.stringify(t) === JSON.stringify(v)) === i,
+  );
+};

@@ -48,7 +48,11 @@ const Search = ({ selectData }) => {
         <p className="visually-hidden" id="search-descr">
           Введите ваш поисковый запрос…
         </p>
-        <Select selectClass="search__categories" data={selectData} />
+        <Select
+          selectClass="search__categories"
+          data={selectData}
+          placeholder="Все разделы"
+        />
         <button
           className="search__button"
           type="button"

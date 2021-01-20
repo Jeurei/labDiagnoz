@@ -29,13 +29,17 @@ const MapLeft = ({ selectData }) => (
           <SectionInner>
             <MapMark
               className="geo__icon"
-              width="6"
+              width="8"
               height="8.4"
               fill="currentColor"
               stroke="currentColor"
             />
-            <form>
-              <Select selectClass="geo__select" data={selectData} />
+            <form className="geo__form">
+              <Select
+                selectClass="geo__select"
+                data={selectData}
+                placeholder="Выберите город"
+              />
             </form>
           </SectionInner>
         </div>
