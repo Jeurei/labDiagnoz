@@ -1,140 +1,82 @@
-.select__title {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  padding: 8px 16px;
-
-  border-radius: 5px;
-
-  cursor: pointer;
-
-  &::before,
-  &::after {
-    position: absolute;
-    top: 50%;
-    right: 16px;
-
-    display: block;
-    width: 10px;
-    height: 2px;
-
-    background-color: $color-text;
-    content: "";
-
-    transform: translate(-3px, -50%) rotate(45deg);
-
-    transition: all 0.3s ease-out;
-  }
-  &::after {
-    transform: translate(3px, -50%) rotate(-45deg);
-  }
-
-  &:hover {
-    border-color: $color-text;
-
-    &::before,
-    &::after {
-      background-color: $white;
-    }
-  }
-}
-
-.select__content {
-  position: absolute;
-  z-index: 8;
-  top: 69px;
-  left: 0;
-
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-
-  border: 1px solid #c7ccd1;
-  border-top: none;
-
-  background-color: #fff;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-  opacity: 0;
-
-  transition: all 0.3s ease-out;
-}
-
-.select__label {
-  display: flex;
-
-  overflow: hidden;
-  width: 100%;
-  height: 40px;
-  max-height: 0;
-  align-items: center;
-  padding: 0 16px;
-
-  cursor: pointer;
-
-  transition: all 0.2s ease-out;
-
-  &:hover {
-    background-color: $blue !important;
-
-    color: #ffffff;
-  }
-
-  & + input + & {
-    border-top: 0 solid #c7ccd160;
-  }
-}
-
 .select {
   position: relative;
   width: 230px;
   height: 40px;
   margin: 0 auto;
+  cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 
-  &[data-state="active"] {
-    .select__title {
-      &::before {
-        transform: translate(-3px, -50%) rotate(-45deg);
-      }
-
-      &::after {
-        transform: translate(3px, -50%) rotate(45deg);
-      }
-    }
-
-    .select__content {
-      opacity: 1;
-    }
-
-    .select__label + .select__input + .select__label {
-      max-height: 40px;
-      border-top-width: 1px;
-    }
+  * {
+    cursor: pointer !important;
   }
+}
+
+.select__single-value,
+.select__placeholder,
+.select__indicator {
+  color: $color-text;
+}
+
+.select__control {
+  height: 100%;
+  background-color: $white !important;
+  border-radius: 0 !important;
 
   &:hover,
   &:focus {
-    background-color: $blue;
+    background-color: $blue !important;
     color: $white;
 
-    .select__content {
+    .select__single-value {
+      color: $white;
+    }
+
+    .select__placeholder {
+      color: $white;
+    }
+
+    .select__indicator {
+      color: $white;
+    }
+  }
+
+  &--is-focused {
+    box-shadow: none;
+
+    .select__input {
       color: $color-text;
+    }
+
+    &:hover {
+      .select__input {
+        color: $white;
+      }
     }
   }
 }
 
-.select__input {
+.select__indicator-separator {
   display: none;
+}
 
-  &:checked + label {
-    background-color: #dedede;
-  }
+.select__menu {
+  margin-top: 0 !important;
+  border-radius: 0 !important;
+}
 
-  &:disabled + label {
-    opacity: 0.6;
-    pointer-events: none;
+.select__menu-list {
+  padding: 0 !important;
+  margin-top: 0;
+}
+
+.select__option {
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+
+  &--is-focused {
+    background-color: $blue !important;
+    color: $white !important;
   }
 }

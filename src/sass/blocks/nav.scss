@@ -94,13 +94,7 @@
 .nav__menu-container {
   overflow: hidden !important;
   padding-top: 30px;
-  background-image: linear-gradient(
-    -135deg,
-    #ff00eb 0,
-    #9a66f5 50%,
-    #2bd7ff 100%
-  );
-
+  background-image: $liner-gradient;
   .cross-button {
     right: 0;
 

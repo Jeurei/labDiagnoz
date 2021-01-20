@@ -1,7 +1,90 @@
+import { format } from 'date-fns';
 import { loremIpsum, LoremIpsum } from 'lorem-ipsum';
 import { randomId } from '../components/utils/common';
 import { getRandomInteger, randomDate } from '../utils/common';
 import { ProductTypesMap } from '../utils/dataMaps';
+
+const daysInMonth = (month, year) => {
+  return new Date(year, month, 0).getDate();
+};
+
+const categoriesArray = [
+  'Терапевт',
+  'Проктолог',
+  'Гинеколог',
+  'Венеролог',
+  'Дантис',
+  'Хирург',
+  'Дерматолог',
+  'Онколог',
+  'Окулист',
+];
+
+const citiesArray = [
+  {
+    city: 'Пермь',
+    center: [
+      {
+        name: 'Медицинский центр "Здоровая букашка"',
+        adress: 'Петропавловская 115',
+      },
+      {
+        name: 'Медицинский центр "Здоровая булдыга"',
+        adress: 'Чкалова 9д',
+      },
+    ],
+  },
+  {
+    city: 'Верещагино',
+    center: [
+      {
+        name: 'Медицинский центр "Здоровая букашка"',
+        adress: 'Петропавловская 115',
+      },
+      {
+        name: 'Медицинский центр "Здоровая булдыга"',
+        adress: 'Чкалова 9д',
+      },
+    ],
+  },
+  {
+    city: 'Кунгур',
+    center: [
+      {
+        name: 'Медицинский центр "Здоровая букашка"',
+        adress: 'Петропавловская 115',
+      },
+      {
+        name: 'Медицинский центр "Здоровая булдыга"',
+        adress: 'Чкалова 9д',
+      },
+    ],
+  },
+  {
+    city: 'Соликамск',
+    center: [
+      {
+        name: 'Медицинский центр "Здоровая букашка"',
+        adress: 'Петропавловская 115',
+      },
+      {
+        name: 'Медицинский центр "Здоровая булдыга"',
+        adress: 'Чкалова 9д',
+      },
+    ],
+  },
+];
+
+const createSelectData = () => {
+  const name = loremIpsum({
+    count: 1,
+    units: 'word',
+  });
+  return {
+    value: name,
+    label: name,
+  };
+};
 
 const createCartObject = () => {
   const MAX_QUANTITY_OF_OBJECTS = 10;
@@ -16,6 +99,7 @@ const createCartObject = () => {
       min: 4,
     },
   });
+
   const quantityOfobjects = getRandomInteger(1, MAX_QUANTITY_OF_OBJECTS);
   return {
     ...new Array(quantityOfobjects).fill().map(() => ({
@@ -37,13 +121,22 @@ const createCitiesObject = () => {
   const MAX_QUANTITY_OF_CITIES = 18;
 
   return {
-    ...new Array(MAX_QUANTITY_OF_CITIES).fill().map(() =>
-      loremIpsum({
-        count: 1,
-        units: 'word',
-      }),
-    ),
+    ...new Array(MAX_QUANTITY_OF_CITIES).fill().map(() => createSelectData()),
   };
+};
+
+const createMapCitiesObject = () => {
+  const MAX_QUANTITY_OF_CITIES = 18;
+
+  return new Array(MAX_QUANTITY_OF_CITIES).fill().map(() => createSelectData());
+};
+
+const createSearchCategories = () => {
+  const MAX_QUANTITY_CATEGORIES = 6;
+
+  return new Array(getRandomInteger(1, MAX_QUANTITY_CATEGORIES))
+    .fill()
+    .map(() => createSelectData());
 };
 
 const createHintsArray = () => {
@@ -63,34 +156,10 @@ const createHintsArray = () => {
 };
 
 const createMenuArray = () => {
-  const MAX_QUANTITY_OF_MENU_ITEMS = 5;
-
-  const getRandomChildren = () =>
-    new Array(MAX_QUANTITY_OF_MENU_ITEMS).fill().map(() => ({
-      text: loremIpsum({
-        count: 1,
-        units: 'word',
-      }),
-
-      link: loremIpsum({
-        count: 1,
-        units: 'word',
-      }),
-    }));
-
-  return new Array(MAX_QUANTITY_OF_MENU_ITEMS).fill().map(() => ({
-    text: loremIpsum({
-      count: 1,
-      units: 'word',
-    }),
-
-    link: loremIpsum({
-      count: 1,
-      units: 'word',
-    }),
-
-    children: Boolean(getRandomInteger(0, 1)) && getRandomChildren(),
-  }));
+  return [
+    { text: 'Главная', link: '/', children: false },
+    { text: 'Специалисты', link: '/specialists', children: false },
+  ];
 };
 
 const createOffersArray = () => {
@@ -249,12 +318,69 @@ const createFeaturesArray = () => {
   }));
 };
 
+const createSpecialistsArray = () => {
+  return new Array(getRandomInteger(1, 10)).fill().map(() => ({
+    name: loremIpsum({
+      count: 3,
+      units: 'word',
+    }),
+    job: new Array(getRandomInteger(1, 5))
+      .fill()
+      .map(
+        () => categoriesArray[getRandomInteger(0, categoriesArray.length - 1)],
+      ),
+    ages: getRandomInteger(1, 3),
+    price: getRandomInteger(0, 10000),
+    adresses: new Array(getRandomInteger(1, 3))
+      .fill()
+      .map(() => citiesArray[getRandomInteger(1, citiesArray.length - 1)]),
+    time: {
+      2021: {
+        ...new Array(12).fill().map((mounth, id) => ({
+          ...new Array(daysInMonth(id + 1, 2021)).fill().map(() => ({
+            ...new Array(getRandomInteger(0, 11))
+              .fill()
+              .map(() =>
+                format(randomDate(new Date(2012, 0, 1), new Date()), 'hh'),
+              ),
+          })),
+        })),
+      },
+    },
+  }));
+};
+
+const createSpecialistFilter = () => {
+  return {
+    specialistsCategrories: categoriesArray,
+    centers: citiesArray.map((city) => ({
+      city: city.city,
+      centers: city.center.map((center) => ({
+        adress: center.adress,
+        center: `${city.city}, ${center.adress}, ${center.name}`,
+      })),
+    })),
+  };
+};
+
+const createDiscountsData = () =>
+  new Array(3).fill().map(() => ({
+    title: loremIpsum({
+      count: 1,
+      units: 'word',
+    }),
+    img: 'discount.png',
+    img2x: 'discount@2x.png',
+  }));
+
 const getMock = () => ({
   cart: createCartObject(),
   cities: {
     list: createCitiesObject(),
     currentCity: 'Пермь',
   },
+  mapCities: createMapCitiesObject(),
+  searchCategories: createSearchCategories(),
   hints: createHintsArray(),
   menu: createMenuArray(),
   offers: createOffersArray(),
@@ -262,14 +388,10 @@ const getMock = () => ({
   links: createLinksArray(),
   articles: createArticlesArray(),
   shares: createSharesArray(),
-  userForm: {
-    name: '',
-    tel: '',
-    email: '',
-    question: '',
-    agreement: '',
-  },
   features: createFeaturesArray(),
+  specialists: createSpecialistsArray(),
+  specialistsFilter: createSpecialistFilter(),
+  discounts: createDiscountsData(),
 });
 
 export default getMock;

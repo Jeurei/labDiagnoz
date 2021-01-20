@@ -14,10 +14,12 @@
 
   &:hover {
     background-color: #65a929;
+    color: $white;
   }
 
   &:active {
     background-color: #6db131;
+    color: $white;
   }
 }
 

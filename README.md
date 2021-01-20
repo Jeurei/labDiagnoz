@@ -1,2 +1,2 @@
 # ladDiagnoz
-https://jeurei.github.io/ladDiagnoz/
+https://jeurei.github.io/labDiagnoz/
