@@ -74,15 +74,12 @@
 
 .specialist__adress {
   width: 100%;
-  padding-top: 19px;
-  padding-bottom: 34px;
-  padding-left: 23px;
   border: 1px solid $blue;
   margin-bottom: 5px;
   border-radius: 3px;
 
-  .select__content {
-    top: 54px;
+  .select__menu {
+    z-index: 100;
   }
 }
 

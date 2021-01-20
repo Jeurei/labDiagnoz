@@ -85,6 +85,7 @@ const plugins = () => {
   const base = [
     new Htmlwebpackplugin({
       template: './teamplate.html',
+      title: 'Лабдиагностика',
       minify: {
         collapseWhitespace: isProd,
       },

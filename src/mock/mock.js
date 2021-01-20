@@ -81,9 +81,8 @@ const createSelectData = () => {
     units: 'word',
   });
   return {
-    name,
-    text: name,
     value: name,
+    label: name,
   };
 };
 
@@ -330,15 +329,11 @@ const createSpecialistsArray = () => {
       .map(
         () => categoriesArray[getRandomInteger(0, categoriesArray.length - 1)],
       ),
-    ages: getRandomInteger(0, 2),
+    ages: getRandomInteger(1, 3),
     price: getRandomInteger(0, 10000),
     adresses: new Array(getRandomInteger(1, 3))
       .fill()
-      .map(() =>
-        new Array(getRandomInteger(1, 3))
-          .fill()
-          .map(() => citiesArray[getRandomInteger(1, citiesArray.length - 1)]),
-      ),
+      .map(() => citiesArray[getRandomInteger(1, citiesArray.length - 1)]),
     time: {
       2021: {
         ...new Array(12).fill().map((mounth, id) => ({

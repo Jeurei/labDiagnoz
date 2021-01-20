@@ -1,6 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
-const FilterBottomAges = () => {
+const FilterBottomAges = ({ action }) => {
+  const [firstInputState, setFirstInputState] = useState(false);
+  const [secondInputState, setSecondInputState] = useState(false);
+
+  useEffect(() => {
+    if (firstInputState && secondInputState) {
+      action({ ages: 3 });
+    } else if (secondInputState) {
+      action({ ages: 1 });
+    } else if (firstInputState) {
+      action({ ages: 2 });
+    } else {
+      action({ ages: 0 });
+    }
+  }, [firstInputState, secondInputState]);
+
   return (
     <div className="filter__bottom-group filter__bottom-group--ages">
       <h3 className="filter__bottom-group-title">Возраст пациента</h3>
@@ -12,6 +28,10 @@ const FilterBottomAges = () => {
           value="18"
           aria-label="Возраст больше 18"
           className="filter__input filter__input--checkbox"
+          selected={firstInputState}
+          onChange={() => {
+            setFirstInputState(!firstInputState);
+          }}
         />
         <label className="filter__label" htmlFor="age-18">
           Взрослый 18+
@@ -25,6 +45,10 @@ const FilterBottomAges = () => {
           value="0"
           aria-label="Возраст меньше 18"
           className="filter__input filter__input--checkbox"
+          selected={secondInputState}
+          onChange={() => {
+            setSecondInputState(!secondInputState);
+          }}
         />
         <label className="filter__label" htmlFor="age">
           Детский
@@ -32,6 +56,10 @@ const FilterBottomAges = () => {
       </div>
     </div>
   );
+};
+
+FilterBottomAges.propTypes = {
+  action: PropTypes.func.isRequired,
 };
 
 export default FilterBottomAges;

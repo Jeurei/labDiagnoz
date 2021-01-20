@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import SectionInner from '../../containers/section-inner';
 import mapStateToPropsGenerator from '../../store/mapStateToProps';
 import Components from '../../constants/components';
+import { randomId } from '../utils/common';
 
 const discount = (data) => {
   const Container = styled.div`
@@ -32,7 +33,7 @@ const discount = (data) => {
   `;
 
   return (
-    <Container>
+    <Container key={randomId()}>
       <h3
         css={css`
           font-size: 22px;

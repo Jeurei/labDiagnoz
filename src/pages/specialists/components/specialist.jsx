@@ -2,14 +2,14 @@ import React from 'react';
 import { useState } from 'react/cjs/react.development';
 import PropTypes from 'prop-types';
 import Picture from '../../../components/common/picture';
-import Form from './form';
+import Form from '../../../components/common/form';
 import SpecialistWorkTime from './specialist-work-time';
 
 const specialistInfo = (action, data) => {
   const agesMap = {
-    0: 'Дети 0-18 лет',
-    1: 'Взрослые',
-    2: 'Дети 0-18 лет, взрослые',
+    1: 'Дети 0-18 лет',
+    2: 'Взрослые',
+    3: 'Дети 0-18 лет, взрослые',
   };
   return (
     <div className="specialist__info">
@@ -74,7 +74,17 @@ Specialist.propTypes = {
     job: PropTypes.arrayOf(PropTypes.string),
     ages: PropTypes.number,
     price: PropTypes.number,
-    adresses: PropTypes.arrayOf(PropTypes.object),
+    adresses: PropTypes.arrayOf(
+      PropTypes.shape({
+        city: PropTypes.string,
+        center: PropTypes.arrayOf(
+          PropTypes.shape({
+            name: PropTypes.string,
+            adress: PropTypes.string,
+          }),
+        ),
+      }),
+    ),
     time: PropTypes.objectOf(PropTypes.object),
   }).isRequired,
 };

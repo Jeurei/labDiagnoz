@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Select from '../../../components/common/select';
 import SpecialistShedule from './specialist-shedule';
-import { getFlatArr } from '../../utils/filter';
+import { filterDublicatesObjects, getFlatArr } from '../../utils/filter';
 
 const SpecialistWorkTime = ({ time, adresses }) => {
-  const data = getFlatArr(
-    getFlatArr(adresses).map((city) =>
-      city.center.map((center) => ({
-        name: 'center',
-        value: `${city.city}-${center.adress}`,
-        text: `${city.city}, ${center.adress}, ${center.name}`,
-      })),
+  const data = filterDublicatesObjects(
+    getFlatArr(
+      adresses.map((city) =>
+        city.center.map((center) => ({
+          value: `${city.city}-${center.adress}`,
+          label: `${city.city}, ${center.adress}, ${center.name}`,
+        })),
+      ),
     ),
   );
 
@@ -20,7 +21,7 @@ const SpecialistWorkTime = ({ time, adresses }) => {
       <Select
         selectClass="specialist__adress"
         data={data}
-        defaultOption="Выберите адрес"
+        placeholder="Выберите адрес"
       />
       <SpecialistShedule time={time} />
     </div>
@@ -29,7 +30,17 @@ const SpecialistWorkTime = ({ time, adresses }) => {
 
 SpecialistWorkTime.propTypes = {
   time: PropTypes.objectOf(PropTypes.object).isRequired,
-  adresses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  adresses: PropTypes.arrayOf(
+    PropTypes.shape({
+      city: PropTypes.string,
+      center: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string,
+          adress: PropTypes.string,
+        }),
+      ),
+    }),
+  ).isRequired,
 };
 
 export default SpecialistWorkTime;
