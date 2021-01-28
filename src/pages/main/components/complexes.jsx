@@ -1,10 +1,10 @@
 import React, { useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import mapStateToPropsGenerator from '../../../store/mapStateToProps';
-import components from '../../../constants/components';
+import mapStateToPropsGenerator from 'store/mapStateToProps';
+import components from 'constants/components';
+import SliderControls from 'common/slider-controls';
 import Complex from './complex';
-import SliderControls from '../../../components/common/slider-controls';
 import Slider from './slider';
 
 const Complexes = ({ complexes }) => {

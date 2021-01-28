@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"],
+      "sass/*": ["src/sass/*"],
+      "constants/*": ["src/constants/*"],
+      "common/*": ["src/components/common/*"],
+      "reducers/*": ["src/reducers/*"],
+      "store/*": ["src/store/*"],
+      "containers/*": ["src/containers/*"],
+      "icons/*": ["src/icons/*"],
+      "assets/*": ["src/assets/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

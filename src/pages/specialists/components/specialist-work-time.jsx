@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Select from '../../../components/common/select';
+import Select from 'common/select';
 import SpecialistShedule from './specialist-shedule';
 import { filterDublicatesObjects, getFlatArr } from '../../utils/filter';
 

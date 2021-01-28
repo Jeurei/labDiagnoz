@@ -1,7 +1,7 @@
 import React from 'react';
-import SectionInner from '../../containers/section-inner';
-import Picture from '../common/picture';
-import Tab from '../common/tab';
+import SectionInner from 'containers/section-inner';
+import Picture from 'common/picture';
+import Tab from 'common/tab';
 
 const FooterBottom = () => (
   <section className="footer__bottom">
@@ -14,7 +14,7 @@ const FooterBottom = () => (
       <SectionInner>
         <Picture
           containerClass="footer-nav__logo"
-          src="./img/logo"
+          src="img/logo"
           width="230"
           height="36"
           alt="Логотип компании Лабдиагностика"
@@ -27,7 +27,7 @@ const FooterBottom = () => (
           </p>
           <Picture
             containerClass="copyright-top__logo"
-            src="./img/site-logos"
+            src="img/site-logos"
             width="191"
             height="36"
             alt="Логотипы компаний с которыми мы сотрудничаем"

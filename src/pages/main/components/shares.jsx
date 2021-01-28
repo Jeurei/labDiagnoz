@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionInner from '../../../containers/section-inner';
+import SectionInner from 'containers/section-inner';
 import SharesList from './shares-list';
 
 const Shares = () => {

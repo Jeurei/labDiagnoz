@@ -1,7 +1,7 @@
 import React from 'react';
-import Picture from '../common/picture';
+import Picture from 'common/picture';
+import SectionInner from 'containers/section-inner';
 import Socials from './socials';
-import SectionInner from '../../containers/section-inner';
 
 const Copyrights = () => (
   <section className="footer__section footer__section--copyright section copyrights">
@@ -26,7 +26,7 @@ const Copyrights = () => (
             >
               <Picture
                 containerClass="creators-team__logo"
-                src="./img/praweb"
+                src="img/praweb"
                 width="53"
                 height="24"
                 alt="Логотип компании,которая разрабоатала этот сайт"

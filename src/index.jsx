@@ -6,17 +6,15 @@ import './sass/style.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+import store from 'store/store';
 import App from './App';
-import store from './store/store';
-import ScrollToTop from './containers/scroll-to-top';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename="labDiagnoz/">
-      <ScrollToTop />
+    <HashRouter basename="/">
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById('root'),
 );

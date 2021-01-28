@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useState } from 'react/cjs/react.development';
+import { errorMessagesMap } from 'constants/form';
+import FormInput from 'common/form-input';
+import MaskedFormInput from 'common/masked-input';
 import FormFieldset from './form-fieldset';
-import FormInput from '../common/form-input';
-import MaskedFormInput from '../common/masked-input';
-import { errorMessagesMap } from '../../constants/form';
 
 const FormFirstField = ({ action }) => {
   const [inputsField, setInputsField] = useState({

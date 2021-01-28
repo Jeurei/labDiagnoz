@@ -1,6 +1,5 @@
-import React from 'react';
-import { useState } from 'react/cjs/react.development';
-import SectionInner from '../../containers/section-inner';
+import React, { useState } from 'react';
+import SectionInner from 'containers/section-inner';
 import FormFieldset from './form-fieldset';
 import FormFirstField from './form-first-field';
 import FormThirdField from './form-third-field';

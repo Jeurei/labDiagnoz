@@ -1,4 +1,4 @@
-import routesConstants from '../../constants/routes';
+import routesConstants from 'constants/routes';
 import Main from './index';
 
 export default {

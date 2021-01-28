@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as ArrowRightIcon } from '../../../icons/arrrow-right.svg';
+import { ReactComponent as ArrowRightIcon } from 'icons/arrrow-right.svg';
 
 const ActualOffer = ({ data }) => {
   return (

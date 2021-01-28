@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as ArrowRightIcon } from '../../icons/arrrow-right.svg';
-import { ReactComponent as ArrowLeftIcon } from '../../icons/arrow-left.svg';
+import { ReactComponent as ArrowRightIcon } from 'icons/arrrow-right.svg';
+import { ReactComponent as ArrowLeftIcon } from 'icons/arrow-left.svg';
 
 const SliderControls = ({ prevSlide, nextSlide, className }) => (
   <div className={`${className}__controls-slider controls-slider-container`}>

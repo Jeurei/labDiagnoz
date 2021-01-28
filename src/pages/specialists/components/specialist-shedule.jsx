@@ -1,7 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { getDate, getMonth, getYear } from 'date-fns';
 import PropTypes from 'prop-types';
-import { useEffect } from 'react/cjs/react.development';
 import SpecialistSheduleMounth from './specialist-shedule-mounth';
 import SpecialistSheduleDays from './specialist-shedule-days';
 import { getMounthName } from '../../utils/specialist-shedule';

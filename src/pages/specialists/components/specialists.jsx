@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import MainContainer from '../../../containers/main-container';
-import SectionInner from '../../../containers/section-inner';
 // eslint-disable-next-line import/no-cycle
-import BreadCrumbs from '../../../components/common/breadCrumbs';
+import Components from 'constants/components';
+import mapStateToPropsGenerator from 'store/mapStateToProps';
 import Filter from './filter';
 import SpecialistsCatalog from './specialists-catalog';
-import Discounts from '../../../components/common/discounts';
-import mapStateToPropsGenerator from '../../../store/mapStateToProps';
-import Components from '../../../constants/components';
 import { getFlatArr } from '../../utils/filter';
 
 const filterArrayByCategory = (arr, category) => {
@@ -87,17 +83,11 @@ const Specialists = ({ specialists }) => {
   }, [currentFilter]);
 
   return (
-    <MainContainer>
-      <section className="main__specialists main__section--specialists section specialists">
-        <SectionInner>
-          <BreadCrumbs className="specialists" />
-          <h1 className="main__title">Специалисты</h1>
-          <Filter filter={filter} action={onChangeFiltersFieldsHanlder} />
-          <SpecialistsCatalog specialists={specialistsArr} />
-        </SectionInner>
-      </section>
-      <Discounts />
-    </MainContainer>
+    <>
+      <h1 className="main__title">Специалисты</h1>
+      <Filter filter={filter} action={onChangeFiltersFieldsHanlder} />
+      <SpecialistsCatalog specialists={specialistsArr} />
+    </>
   );
 };
 

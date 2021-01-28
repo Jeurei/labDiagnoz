@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import SectionInner from '../../../containers/section-inner';
-import mapStateToPropsGenerator from '../../../store/mapStateToProps';
-import components from '../../../constants/components';
+import SectionInner from 'containers/section-inner';
+import mapStateToPropsGenerator from 'store/mapStateToProps';
+import components from 'constants/components';
+import { filterTypesMap } from 'constants/filter';
 import ArticlesTop from './artciles-top';
 import ArticlesBottom from './articles-bottom';
-import { filterTypesMap } from '../../../constants/filter';
 import { getFiltredArticles } from '../../utils/filter';
 
 const Articles = ({ articles }) => {

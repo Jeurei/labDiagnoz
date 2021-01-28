@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { Scrollbars } from 'react-custom-scrollbars';
+import CrossButton from 'common/crossButton';
 import { showing } from '../utils/animation';
 import { randomId } from '../utils/common';
 import CartModalGroup from './cart-modal-group';
-import CrossButton from '../common/crossButton';
 
 const Cart = ({ cartData, closeHandler, removeItem }) => {
   const typesMap = [

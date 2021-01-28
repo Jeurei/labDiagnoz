@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionInner from '../../../containers/section-inner';
+import SectionInner from 'containers/section-inner';
 import ActualOffersList from './actual-offers-list';
 
 const ActualOffers = () => (

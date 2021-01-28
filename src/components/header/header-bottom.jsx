@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css, keyframes } from '@emotion/react';
 import { Link } from 'react-router-dom';
+import Picture from 'common/picture';
+import { ReactComponent as DropDown } from 'icons/dropdown.svg';
 import Menu from './menu';
-import Picture from '../common/picture';
-import { ReactComponent as DropDown } from '../../icons/dropdown.svg';
 
-// import Burger from '../common/burger';
+// import Burger from 'common/burger';
 
 const HeaderExpandButton = (isHidden, action) => (
   <button
@@ -113,10 +113,10 @@ const HeaderBottom = ({
       >
         <div className="header__bottom header-bottom">
           <div className="header-bottom__mobile">
-            <Link to="labDiagnoz/">
+            <Link to="/">
               <Picture
                 containerClass="header-bottom__mobile-top-img"
-                src="./img/mobile-logo"
+                src="img/mobile-logo"
                 width="222"
                 height="33"
                 alt="Логотип компании Лабдиагностика"
@@ -124,10 +124,10 @@ const HeaderBottom = ({
             </Link>
           </div>
           <div className="header-bottom__left">
-            <Link to="labDiagnoz/">
+            <Link to="/">
               <Picture
                 containerClass="header-bottom__mobile-top-img"
-                src="./img/logo"
+                src="img/logo"
                 width="230"
                 height="34"
                 alt="Логотип компании Лабдиагностика"

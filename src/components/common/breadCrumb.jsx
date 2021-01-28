@@ -12,7 +12,7 @@ const BreadCrumb = ({ data, isActive }) => {
     >
       <Link className="breadcrumb__link" to={`${data.path}`}>
         {(data.path === '/' && (
-          <Picture src="../img/breadCrumbLogo" alt="На главную" />
+          <Picture src="img/breadCrumbLogo" alt="На главную" />
         )) ||
           data.name}
       </Link>

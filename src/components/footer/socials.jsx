@@ -1,8 +1,8 @@
 import React from 'react';
-import { ReactComponent as OdnIcon } from '../../icons/odn.svg';
-import { ReactComponent as VkIcon } from '../../icons/vk.svg';
-import { ReactComponent as FbIcon } from '../../icons/fb.svg';
-import { ReactComponent as InstIcon } from '../../icons/inst.svg';
+import { ReactComponent as OdnIcon } from 'icons/odn.svg';
+import { ReactComponent as VkIcon } from 'icons/vk.svg';
+import { ReactComponent as FbIcon } from 'icons/fb.svg';
+import { ReactComponent as InstIcon } from 'icons/inst.svg';
 
 const Socials = () => (
   <ul className="copyright-bottom__socials-list socials">

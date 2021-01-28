@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
+import FormIosCheckbox from 'common/form-ios-checkbox';
 import FormFieldset from './form-fieldset';
-import FormIosCheckbox from '../common/form-ios-checkbox';
 
 const FormThirdField = ({ action, isFirstFieldValid, fieldsInputs }) => (
   <FormFieldset>
     <h3 className="form__input-chekbox-title">Задайте свой вопрос</h3>
     <div className="form__input-checkbox-container">
-      <FormIosCheckbox action={action} id="agreement" name="agreement" />
+      <FormIosCheckbox
+        action={action}
+        id="agreement"
+        name="agreement"
+        label="Нажимая на кнопку отправить вы соглашаетесь с нашей политикой
+          конфиденциальности"
+      />
       <small className="form__agreement-hint">
         Нажимая на кнопку отправить вы соглашаетесь с нашей политикой
         конфиденциальности

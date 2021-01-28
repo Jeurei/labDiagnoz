@@ -1,11 +1,12 @@
-import React from 'react';
-import { useState } from 'react/cjs/react.development';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Picture from '../../../components/common/picture';
-import Form from '../../../components/common/form';
+import Picture from 'common/picture';
+import Form from 'common/form';
+import { Link, useRouteMatch } from 'react-router-dom';
 import SpecialistWorkTime from './specialist-work-time';
 
 const specialistInfo = (action, data) => {
+  const { url } = useRouteMatch();
   const agesMap = {
     1: 'Дети 0-18 лет',
     2: 'Взрослые',
@@ -13,7 +14,9 @@ const specialistInfo = (action, data) => {
   };
   return (
     <div className="specialist__info">
-      <h3 className="specialist__name">{data.name}</h3>
+      <h3 className="specialist__name">
+        <Link to={`${url}/${data.name}`}>{data.name}</Link>
+      </h3>
       <ul className="specialist__info-list">
         <li className="specialist__info-item">
           Должность: {data.job.reduce((acc, curr) => `${acc}, ${curr}`)}
@@ -58,7 +61,7 @@ const Specialist = ({ data }) => {
       <Picture
         imgClass="specialist__img"
         containerClass="specialist__img-container"
-        src="../img/doctor"
+        src="img/doctor"
         alt="Изображение специалиста"
       />
       {specialistInfo(setSpecialistPopup, data)}

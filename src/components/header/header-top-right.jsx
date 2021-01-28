@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import mapStateToPropsGenerator from '../../store/mapStateToProps';
-import mapDispatchToProps from '../../store/mapDispatchToProps';
-import components from '../../constants/components';
-import SearchButton from '../common/searchButton';
-import { ReactComponent as CartIcon } from '../../icons/cart-icon.svg';
+import components from 'constants/components';
+import mapStateToPropsGenerator from 'store/mapStateToProps';
+import mapDispatchToProps from 'store/mapDispatchToProps';
+import SearchButton from 'common/searchButton';
+import { ReactComponent as CartIcon } from 'icons/cart-icon.svg';
 import Cart from './cart';
 
 const HeaderTopRight = ({ cartData, removeItem, openSearch }) => {

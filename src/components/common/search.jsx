@@ -2,11 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import Typed from 'react-typed';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { ENTER_KEY_CODE } from '../../constants/keys';
-import { ReactComponent as SearchIcon } from '../../icons/search-icon.svg';
+import { ENTER_KEY_CODE } from 'constants/keys';
+import Components from 'constants/components';
+import { ReactComponent as SearchIcon } from 'icons/search-icon.svg';
+import mapStateToPropsGenerator from 'store/mapStateToProps';
 import Select from './select';
-import mapStateToPropsGenerator from '../../store/mapStateToProps';
-import Components from '../../constants/components';
 
 const Search = ({ selectData }) => {
   const searchRef = useRef();

@@ -3,7 +3,7 @@ import HeaderTop from './header-top';
 import HeaderBottom from './header-bottom';
 import SearchModal from './search-modal';
 // import HeaderTopFixed from './header-top-fixed';
-// import HeaderFixedContainer from '../../containers/header-fixed-container';
+// import HeaderFixedContainer from 'containers/header-fixed-container';
 
 const Header = () => {
   const HEADER_MIN_HEIGHT = 140;
