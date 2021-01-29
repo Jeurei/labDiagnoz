@@ -133,13 +133,10 @@ const SpecialistSheduleDays = ({
     return Number(currentMounth) - Number(selectedMounth) === -2;
   };
 
-  useEffect(() => {}, [swiperRef]);
-
   useEffect(() => {
     swiperRef.current?.swiper.slideTo(0);
     setSelectedDay(0);
   }, [selectedMounth]);
-
   return (
     <div className="specialist__shedule-table">
       {(!!activeIndex || !!selectedMounth) && (

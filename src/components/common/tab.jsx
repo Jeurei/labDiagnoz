@@ -1,5 +1,7 @@
 import React from 'react';
 
+// TODO: сделать более универсальным
+
 const Tab = () => (
   <div className="footer__nav-tab tab">
     <input

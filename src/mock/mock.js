@@ -320,6 +320,7 @@ const createFeaturesArray = () => {
 
 const createSpecialistsArray = () => {
   return new Array(getRandomInteger(1, 10)).fill().map(() => ({
+    id: 'StqjF_WMsBpf4VRrBYmKB',
     name: loremIpsum({
       count: 3,
       units: 'word',

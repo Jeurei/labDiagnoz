@@ -15,7 +15,7 @@ const specialistInfo = (action, data) => {
   return (
     <div className="specialist__info">
       <h3 className="specialist__name">
-        <Link to={`${url}/${data.name}`}>{data.name}</Link>
+        <Link to={`${url}/${data.id}`}>{data.name}</Link>
       </h3>
       <ul className="specialist__info-list">
         <li className="specialist__info-item">
