@@ -1,4 +1,4 @@
-import routesConstants from '../../constants/routes';
+import routesConstants from 'constants/routes';
 import Specialists from './index';
 
 export default {

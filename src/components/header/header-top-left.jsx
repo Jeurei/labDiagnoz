@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import components from 'constants/components';
+import mapStateToPropsGenerator from 'store/mapStateToProps';
+import mapDispatchToProps from 'store/mapDispatchToProps';
+import { ReactComponent as TelIcon } from 'icons/tel-icon.svg';
+import { ReactComponent as MarkMapIcon } from 'icons/map-mark-icon.svg';
 import CitiesModal from './cities-modal';
-import { ReactComponent as TelIcon } from '../../icons/tel-icon.svg';
-import { ReactComponent as MarkMapIcon } from '../../icons/map-mark-icon.svg';
-import mapStateToPropsGenerator from '../../store/mapStateToProps';
-import mapDispatchToProps from '../../store/mapDispatchToProps';
-import components from '../../constants/components';
 
 const HeaderTopLeft = ({ cities, setCity }) => {
   const [citiesModalState, setCitiesModalState] = useState(false);

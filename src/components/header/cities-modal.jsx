@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
+import CrossButton from 'common/crossButton';
 import { showing } from '../utils/animation';
 import { randomId } from '../utils/common';
 import CitiesModalItem from './cities-modal-item';
-import CrossButton from '../common/crossButton';
 
 const CitiesModal = ({ citiesData, closeHandler, setCurrentCity }) => (
   <div

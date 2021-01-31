@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import SectionInner from '../../../containers/section-inner';
-import Picture from '../../../components/common/picture';
-import mapStateToPropsGenerator from '../../../store/mapStateToProps';
-import components from '../../../constants/components';
+import SectionInner from 'containers/section-inner';
+import Picture from 'common/picture';
+import mapStateToPropsGenerator from 'store/mapStateToProps';
+import components from 'constants/components';
 import { randomId } from '../../utils/common';
 
 // TODO: Узнать шаблонизируется ли этот блок
@@ -31,7 +31,7 @@ const Features = ({ features }) => (
       <h2 className="section__title">
         Почему именно
         <Picture
-          src="./img/features-logo"
+          src="img/features-logo"
           imgClass="features__logo-img"
           alt="Лабдиагностика"
         />

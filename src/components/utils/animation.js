@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { keyframes } from '@emotion/react';
 
 export const showing = keyframes`

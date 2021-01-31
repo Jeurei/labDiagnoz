@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { errorMessagesMap } from 'constants/form';
 import FormIosCheckbox from './form-ios-checkbox';
 import FormFieldset from '../footer/form-fieldset';
 import FormInput from './form-input';
 import MaskedFormInput from './masked-input';
-import { errorMessagesMap } from '../../constants/form';
 import Select from './select';
 
 const FormThirdStep = ({ action }) => {
@@ -140,6 +140,8 @@ const FormThirdStep = ({ action }) => {
           action={agreementCheckHandler}
           id="clientAgreement"
           name="clientAgreement"
+          label="Нажимая на кнопку отправить вы соглашаетесь с нашей политикой
+          конфиденциальности"
         />
         <small className="form__agreement-hint">
           Нажимая на кнопку отправить вы соглашаетесь с нашей политикой

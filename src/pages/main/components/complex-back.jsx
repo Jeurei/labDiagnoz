@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { css, keyframes } from '@emotion/react';
-import { ENTER_KEY_CODE } from '../../../constants/keys';
+import { ENTER_KEY_CODE } from 'constants/keys';
+import { ReactComponent as ArrowLeft } from 'icons/arrow-left.svg';
 import ComplexList from './complex-list';
-import { ReactComponent as ArrowLeft } from '../../../icons/arrow-left.svg';
 
 const ComplexBack = ({ action, data, state, liRef }) => {
   const ANIMATION_DURATION = 0.5;

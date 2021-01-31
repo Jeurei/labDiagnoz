@@ -7,7 +7,7 @@ const FormSecondStep = () => {
     <div className="specialist-form__form-step form-step">
       <div className="specialist-form__specialist-info-container">
         <Picture
-          src="../img/spec-photo"
+          src="img/spec-photo"
           alt="Фотография выбранного врача"
           imgClass="specialist-form__specialist-info-img"
           containerClass="specialist-form__specialist-info-img-container"

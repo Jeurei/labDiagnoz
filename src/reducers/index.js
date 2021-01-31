@@ -1,5 +1,5 @@
+import * as Actions from 'constants/action-types';
 import getMock from '../mock/mock';
-import * as Actions from '../constants/action-types';
 
 const initialState = getMock();
 

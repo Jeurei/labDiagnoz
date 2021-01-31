@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as MarkIcon } from '../../icons/mark-icon.svg';
+import { ReactComponent as MarkIcon } from 'icons/mark-icon.svg';
 
 const FormCompleted = () => {
   return (

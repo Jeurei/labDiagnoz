@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
-import Picture from '../../../components/common/picture';
+import Picture from 'common/picture';
 
 const formatDate = (date) => {
   return format(date, 'd MMMM yyyy', { locale: ru });
@@ -26,7 +26,7 @@ const Article = ({ data }) => {
           <h3 className="article__title">{data.title}</h3>
         </div>
         <Picture
-          src="./img/article"
+          src="img/article"
           width="301"
           height="250"
           containerClass={`article__img-container${

@@ -1,5 +1,5 @@
 import { bindActionCreators } from 'redux';
-import components from '../constants/components';
+import components from 'constants/components';
 import * as Actions from '../actions/index';
 
 function mapDispatchToProps(component) {

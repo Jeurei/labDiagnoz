@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
-import Routes from '../../routes';
+import Routes from 'constants/routes';
 import BreadCrumb from './breadCrumb';
 import { randomId } from '../utils/common';
 
@@ -10,9 +10,30 @@ import { randomId } from '../utils/common';
 const BreadCrumbs = ({ className }) => {
   const currentPath = useLocation().pathname.split('/');
 
-  const routesArr = [...Routes].filter((el) => {
-    return currentPath.includes(el.path.replace('/', ''));
-  });
+  const getArrayOfCurrentBreadCrumbs = (arr) => {
+    const subRoutes = [];
+    const currArr = [...arr].filter((el) => {
+      if (
+        currentPath.includes(el.route.replace('/', '')) &&
+        Object.prototype.hasOwnProperty.call(el, 'subRoutes')
+      ) {
+        subRoutes.push(
+          getArrayOfCurrentBreadCrumbs(Object.values(el.subRoutes)),
+        );
+        return true;
+      }
+      if (currentPath.includes(el.route.replace('/', ''))) {
+        return true;
+      }
+      return false;
+    });
+
+    return [...currArr, ...subRoutes];
+  };
+
+  const routesArr = [].concat(
+    ...getArrayOfCurrentBreadCrumbs(Object.values(Routes)),
+  );
 
   return (
     <ul className={className && `${className}__breadcrumbs breadcrumbs`}>
@@ -21,7 +42,7 @@ const BreadCrumbs = ({ className }) => {
           <BreadCrumb
             data={el}
             isActive={
-              el.path.replace('/', '') === currentPath[currentPath.length - 1]
+              el.route.replace('/', '') === currentPath[currentPath.length - 1]
             }
             key={randomId()}
           />

@@ -107,9 +107,9 @@ const plugins = () => {
     base.push(new webpack.HotModuleReplacementPlugin());
   }
 
-  if (isProd) {
-    base.push(new WebpackBundleAnalyzer());
-  }
+  // if (isProd) {
+  //   base.push(new WebpackBundleAnalyzer());
+  // }
 
   return base;
 };
@@ -127,8 +127,15 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts', '.jsx', '.json'],
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      src: path.resolve(__dirname, 'src'),
       sass: path.resolve(__dirname, 'src/sass/'),
+      constants: path.resolve(__dirname, 'src/constants/'),
+      common: path.resolve(__dirname, 'src/components/common/'),
+      store: path.resolve(__dirname, 'src/store/'),
+      reducers: path.resolve(__dirname, 'src/reducers/'),
+      containers: path.resolve(__dirname, 'src/containers/'),
+      icons: path.resolve(__dirname, 'src/icons/'),
+      assets: path.resolve(__dirname, 'src/assets/'),
     },
   },
   optimization: optimization(),

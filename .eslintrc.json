@@ -5,6 +5,8 @@
   },
   "extends": [
     "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
     "airbnb",
     "plugin:prettier/recommended",
     "prettier/react"
@@ -34,5 +36,23 @@
     "no-unused-vars": "warn",
     "react/default-props-match-prop-types": 0,
     "import/no-named-as-default": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["src", "./src"],
+          ["sass", "./src/sass"],
+          ["constants", "./src/constants"],
+          ["common", "./src/components/common"],
+          ["reducers", "./src/reducers"],
+          ["store", "./src/store"],
+          ["containers", "./src/containers"],
+          ["icons", "./src/icons"],
+          ["assets", "./src/assets"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      }
+    }
   }
 }

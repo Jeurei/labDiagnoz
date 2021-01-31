@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as SearchIcon } from '../../../icons/search-icon.svg';
-import Select from '../../../components/common/select';
-import SearchList from '../../../components/common/searchList';
+import Select from 'common/select';
+import SearchList from 'common/searchList';
+import { ReactComponent as SearchIcon } from 'icons/search-icon.svg';
 
 const FilterTop = ({ categories, names, action }) => {
   const [inputValue, setInputValue] = useState('');

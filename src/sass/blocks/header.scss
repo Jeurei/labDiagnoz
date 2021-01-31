@@ -72,6 +72,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .header {
+    max-width: 100vw;
+  }
+
   .header__inner {
     padding-right: 22px;
     padding-left: 22px;

@@ -1,4 +1,4 @@
 /* eslint-disable import/no-cycle */
-import Specialists from './components/specialists';
+import SpecialistsPage from './components/specialistsPage';
 
-export default Specialists;
+export default SpecialistsPage;

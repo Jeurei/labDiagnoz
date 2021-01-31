@@ -1,4 +1,4 @@
-import * as Actions from '../constants/action-types';
+import * as Actions from 'constants/action-types';
 
 export const addItemToCart = (playload) => ({
   type: Actions.ADD_ITEM_TO_CART,

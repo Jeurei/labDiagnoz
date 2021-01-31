@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as SearchIcon } from '../../icons/search-icon.svg';
+import { ReactComponent as SearchIcon } from 'icons/search-icon.svg';
 
 const SearchButton = ({ buttonClass, label, action = false }) => (
   <button

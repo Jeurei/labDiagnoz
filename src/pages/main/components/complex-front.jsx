@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ENTER_KEY_CODE } from '../../../constants/keys';
-import Picture from '../../../components/common/picture';
-import { ReactComponent as ExpandIcon } from '../../../icons/expand-icon.svg';
-import { ReactComponent as ArrowRight } from '../../../icons/arrrow-right.svg';
+import { ENTER_KEY_CODE } from 'constants/keys';
+import Picture from 'common/picture';
+import { ReactComponent as ExpandIcon } from 'icons/expand-icon.svg';
+import { ReactComponent as ArrowRight } from 'icons/arrrow-right.svg';
 import ComplexList from './complex-list';
 
 const ComplexFront = ({ action, data }) => {
@@ -17,7 +17,7 @@ const ComplexFront = ({ action, data }) => {
         aria-label="Перейти на страницу с комплексом"
       >
         <Picture
-          src="./img/left-radius"
+          src="img/left-radius"
           height="193"
           alt="Изображение комплекса"
           imgClass="complex__img"

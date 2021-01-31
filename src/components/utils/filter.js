@@ -1,4 +1,4 @@
-import { filterTypesMap } from '../../constants/filter';
+import { filterTypesMap } from 'constants/filter';
 
 export const getFiltredArticles = {
   [filterTypesMap.ALL]: (articles) => articles,

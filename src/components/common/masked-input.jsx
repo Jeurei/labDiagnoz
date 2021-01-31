@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import InputMask from 'react-input-mask';
-import { useState } from 'react/cjs/react.development';
 import { css } from '@emotion/react';
 import FormInvalidInput from './form-invalid-input';
 

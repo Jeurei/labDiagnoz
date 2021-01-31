@@ -1,4 +1,4 @@
-import components from '../constants/components';
+import components from 'constants/components';
 
 const mapStateToPropsGenerator = (component) => {
   switch (component) {

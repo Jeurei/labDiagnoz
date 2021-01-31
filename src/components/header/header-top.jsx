@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeaderInner from '../../containers/header-inner';
+import HeaderInner from 'containers/header-inner';
 import HeaderTopLeft from './header-top-left';
 import HeaderTopRight from './header-top-right';
 

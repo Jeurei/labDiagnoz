@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { css, keyframes } from '@emotion/react';
 import PropTypes from 'prop-types';
+import SectionInner from 'containers/section-inner';
 import { searchShowing } from '../utils/animation';
-import SectionInner from '../../containers/section-inner';
 import SearchModalContainerTop from './search-modal-top';
 
 const SearchModal = ({ isDeleting, animationDuration }) => {
