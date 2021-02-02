@@ -10,10 +10,6 @@ import Specialists from './specialists';
 
 const SpecialistsPage = () => {
   const { path } = useRouteMatch();
-  console.log(
-    '🚀 ~ file: sepcialistsPage.jsx ~ line 12 ~ SpecialistsPage ~ path',
-    path,
-  );
 
   return (
     <MainContainer>

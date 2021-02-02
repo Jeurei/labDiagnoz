@@ -21,11 +21,11 @@ const routesConstants = {
       },
       COMPLEXES: {
         route: '/complexes',
-        name: 'Комплексные исследования',
+        name: 'Комплексные анализы',
       },
       LAB: {
         route: '/lab',
-        name: 'Лаборатория',
+        name: 'Услуги лаборатории',
       },
       ADDITION: {
         route: '/additions',
@@ -37,6 +37,42 @@ const routesConstants = {
     route: '/medCenters',
     name: 'Медицинские центры',
   },
+  REFERENCES: {
+    route: '/references',
+    name: 'Справки',
+  },
+  SPECIALITY: {
+    route: '/speciality',
+    name: 'Специальность',
+  },
+  ILLNES: {
+    route: '/illnes',
+    name: 'Заболевание',
+  },
+  ONLINE: {
+    route: '/online',
+    name: 'Онлайн консультация',
+  },
+  TOHOME: {
+    route: '/tohome',
+    name: 'Выезд на дом',
+  },
+  COMPLEXANALYZE: {
+    route: '/complexAnalyze',
+    name: 'Комплексный анализ',
+  },
+  PRICELIST: {
+    route: '/priceList',
+    name: 'Прайс по услугам',
+  },
 };
 
+const routesConstantsWODirectLinks = {
+  ANALYZE: {
+    route: '/analyze/:analyzename',
+    name: 'Анализ',
+  },
+};
+
+export { routesConstantsWODirectLinks };
 export default routesConstants;

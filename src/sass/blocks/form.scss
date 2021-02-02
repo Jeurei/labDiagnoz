@@ -168,7 +168,7 @@
   }
 
   .form__input {
-    margin-bottom: 25px;
+    margin-bottom: 0;
     font-size: $body-fs;
     line-height: $body-lh;
   }
@@ -180,11 +180,13 @@
 
   .form {
     flex-direction: row;
+    margin-bottom: 30px;
     margin-left: -6px;
   }
 
   .form__input-group {
     width: 370px;
+    justify-content: space-between;
     margin-right: 25px;
   }
 

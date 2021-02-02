@@ -1,6 +1,5 @@
 .specialist {
   display: flex;
-  max-height: 374px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -69,17 +68,27 @@
 }
 
 .specialist__work-time {
+  width: 100%;
   padding-top: 34px;
+}
+
+.specialist__shedule {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .specialist__adress {
   width: 100%;
   border: 1px solid $blue;
   margin-bottom: 5px;
-  border-radius: 3px;
+  border-radius: 5px;
 
   .select__menu {
     z-index: 100;
+  }
+
+  .select__control {
+    border: none;
   }
 }
 
@@ -340,6 +349,11 @@
 
   .specialist__work-time {
     width: 574px;
+  }
+
+  .specialist__shedule {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

@@ -37,7 +37,12 @@
   margin-bottom: 25px;
 }
 
+.form__input-container {
+  position: relative;
+}
+
 .form__input {
+  width: 100%;
   padding-top: 11px;
   padding-bottom: 13px;
   padding-left: 9px;
@@ -49,13 +54,13 @@
 }
 
 .form__input--textarea {
+  height: 100%;
   padding-bottom: 0;
   margin-bottom: 29px;
   resize: none;
 }
 
 .form__label--checkbox {
-  position: relative;
   margin-right: 12px;
 
   .form__input-checkbox-span {
@@ -74,7 +79,7 @@
       height: 21px;
       background-color: #fff;
       border-radius: 100%;
-      content: "";
+      content: '';
       @include default-transition();
     }
   }
@@ -156,7 +161,7 @@
       left: 6px;
       width: 96px;
       height: 12px;
-      content: "///////////";
+      content: '///////////';
       font-size: 15px;
       letter-spacing: 4.1px;
     }

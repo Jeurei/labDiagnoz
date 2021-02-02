@@ -31,7 +31,7 @@
 
 .actual-offers__list {
   display: flex;
-  max-width: 100%;
+  width: 100%;
   flex-direction: row;
   padding: 0;
   padding-bottom: 41px;
@@ -46,7 +46,7 @@
   min-height: 126px;
   flex-direction: row;
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .actual-offers__icon {
@@ -92,6 +92,10 @@
   }
 }
 
+.actual-offers__control {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .actual-offers__list {
     display: flex;
@@ -99,11 +103,15 @@
     flex-direction: row;
     flex-wrap: nowrap;
     box-shadow: none;
+
+    .slick-slider {
+      width: 100%;
+    }
   }
 
   .actual-offers__list-item {
     min-width: 100%;
-    height: 160px;
+    min-height: 160px;
     flex-direction: row;
     margin-right: 30px;
 
@@ -132,13 +140,15 @@
 
   .actual-offers__control {
     position: relative;
+    display: flex;
   }
 
   .actual-offers__control-button-icon {
     position: absolute;
-    top: 7px;
-    left: 7px;
+    top: 4px;
+    left: 5px;
     color: $white;
+    transform: scale(0.9);
   }
 
   .actual-offers__title {

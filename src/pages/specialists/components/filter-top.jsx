@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import Select from 'common/select';
 import SearchList from 'common/searchList';
 import { ReactComponent as SearchIcon } from 'icons/search-icon.svg';
+import { css, useTheme } from '@emotion/react';
 
 const FilterTop = ({ categories, names, action }) => {
   const [inputValue, setInputValue] = useState('');
   const [isSearchListShown, setSearchListShown] = useState(false);
-
+  const theme = useTheme();
   const onSearchInputFocusHandler = () => {
     setSearchListShown(true);
   };
@@ -36,7 +37,24 @@ const FilterTop = ({ categories, names, action }) => {
         placeholder="Выбрать специалиста"
         action={onSelectChangeHandler}
       />
-      <div className="filter__search-container">
+      <div
+        className="filter__search-container"
+        css={css`
+          position: relative;
+        `}
+      >
+        <SearchIcon
+          width="25px"
+          height="25px"
+          fill="none"
+          stroke="currentColor"
+          css={css`
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            color: #000;
+          `}
+        />
         <input
           type="text"
           className="search__input"
@@ -47,6 +65,20 @@ const FilterTop = ({ categories, names, action }) => {
           onBlur={() => onSearchInputBlurHandler()}
           onChange={(evt) => setInputValue(evt.currentTarget.value)}
           aria-describedby="search-filter-descr"
+          css={css`
+            padding-left: 44px;
+            border: 1px solid ${theme.colors.blue};
+            &:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: block;
+              width: 13px;
+              height: 13px;
+              background-image: url('img/search-icon.svg');
+              content: '';
+            }
+          `}
         />
         {isSearchListShown && (
           <SearchList

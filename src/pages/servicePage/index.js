@@ -1,3 +1,3 @@
-import Services from './components/services/services';
+import ServicesPage from './components/services/servicesPage';
 
-export default Services;
+export default ServicesPage;

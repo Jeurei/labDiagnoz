@@ -1,6 +1,18 @@
+.complexes {
+  .swiper-container {
+    padding-bottom: 40px;
+  }
+}
+
 .complexes__container {
+  display: flex;
+  flex-direction: column;
   padding-right: 12px;
   padding-left: 3px;
+}
+
+.complexes__control-icon {
+  color: $white;
 }
 
 .complexes__title {
@@ -23,7 +35,7 @@
   display: flex;
   max-width: 100%;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: flex-start;
   padding: 0;
   list-style: none;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Drawer from 'react-motion-drawer';
 import CrossButton from 'common/crossButton';
+import { routesConstantsWODirectLinks } from 'constants/routes';
 import NavItem from './nav-item';
 import { randomId } from '../utils/common';
 import Routes from '../../routes';

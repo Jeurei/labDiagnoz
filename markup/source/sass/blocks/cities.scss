@@ -30,7 +30,7 @@
 
 .cities__modal {
   position: absolute;
-  top: 13px;
+  top: 111px;
   left: -38px;
   display: flex;
   width: 372px;
@@ -40,6 +40,8 @@
   padding-right: 57px;
   padding-bottom: 40px;
   padding-left: 39px;
+  background-color: #fff;
+  box-shadow: $box-shadow;
 }
 
 .cities__list {
