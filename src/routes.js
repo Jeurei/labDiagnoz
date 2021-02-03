@@ -10,6 +10,10 @@ import OnlineRoute from './pages/online/route';
 import ToHomeRoute from './pages/toHome/route';
 import ComplexAnalyzeRoute from './pages/complexAnalyze/route';
 import PriceListRoute from './pages/pricelist/route';
+import VacansiesRoute from './pages/vacansies/route';
+import VacancyRoute from './pages/vacansy/route';
+import MaintainceRoute from './pages/maintaince/route';
+import NotFoundRoute from './pages/404/route';
 
 export default [
   MainRoute,
@@ -23,4 +27,8 @@ export default [
   ToHomeRoute,
   ComplexAnalyzeRoute,
   PriceListRoute,
+  VacansiesRoute,
+  VacancyRoute,
+  MaintainceRoute,
+  NotFoundRoute,
 ];

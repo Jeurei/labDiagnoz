@@ -65,6 +65,22 @@ const routesConstants = {
     route: '/priceList',
     name: 'Прайс по услугам',
   },
+  VACANSIES: {
+    route: '/vacansies',
+    name: 'Вакансии',
+  },
+  VACANSY: {
+    route: '/vacansy',
+    name: 'Вакансия',
+  },
+  MAINTAINCE: {
+    route: '/maintaince',
+    name: 'Обслуживание по полисам ДМС',
+  },
+  NOTFOUND: {
+    route: '/404',
+    name: '404',
+  },
 };
 
 const routesConstantsWODirectLinks = {
