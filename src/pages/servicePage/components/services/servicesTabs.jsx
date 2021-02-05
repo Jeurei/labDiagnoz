@@ -55,11 +55,11 @@ const ServicesTabs = () => {
     `;
 
     const TabLink = styled(Link)`
+      display: flex;
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       padding-top: 21px;
       padding-bottom: 22px;
       font-size: ${theme.fontSizes.altFs};
@@ -80,7 +80,7 @@ const ServicesTabs = () => {
   };
 
   const TabsContainer = styled.div`
-    paddint-top: 30px;
+    padding-top: 0;
   `;
 
   const TabList = styled.ul`

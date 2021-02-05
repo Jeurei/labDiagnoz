@@ -81,6 +81,18 @@ const routesConstants = {
     route: '/404',
     name: '404',
   },
+  CORPO: {
+    route: '/corpo',
+    name: 'Корпоративным клиентам',
+  },
+  ARTICLES: {
+    route: '/articles',
+    name: 'Пресс центр',
+  },
+  DISCOUTNS: {
+    route: '/discountes',
+    name: 'Дисконтная программа',
+  },
 };
 
 const routesConstantsWODirectLinks = {

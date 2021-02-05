@@ -13,7 +13,7 @@ const AnalyzePage = () => {
       <FixedCircle />
       <Section>
         <SectionInner>
-          <BreadCrumbs className="analyze" />
+          <BreadCrumbs className="vacansy" />
           <Vacansy />
           <Discounts />
         </SectionInner>

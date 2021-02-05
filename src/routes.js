@@ -14,6 +14,9 @@ import VacansiesRoute from './pages/vacansies/route';
 import VacancyRoute from './pages/vacansy/route';
 import MaintainceRoute from './pages/maintaince/route';
 import NotFoundRoute from './pages/404/route';
+import CorpoRoute from './pages/corpo/route';
+import ArticlesRoute from './pages/articles/route';
+import DiscountsRoute from './pages/discounts/route';
 
 export default [
   MainRoute,
@@ -31,4 +34,7 @@ export default [
   VacancyRoute,
   MaintainceRoute,
   NotFoundRoute,
+  CorpoRoute,
+  ArticlesRoute,
+  DiscountsRoute,
 ];
