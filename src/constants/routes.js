@@ -93,6 +93,10 @@ const routesConstants = {
     route: '/discountes',
     name: 'Дисконтная программа',
   },
+  SUPPLIERS: {
+    route: '/suppliers',
+    name: 'Поставщикам расходных материалов',
+  },
 };
 
 const routesConstantsWODirectLinks = {

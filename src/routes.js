@@ -17,6 +17,7 @@ import NotFoundRoute from './pages/404/route';
 import CorpoRoute from './pages/corpo/route';
 import ArticlesRoute from './pages/articles/route';
 import DiscountsRoute from './pages/discounts/route';
+import SuppliersRoute from './pages/suppliers/route';
 
 export default [
   MainRoute,
@@ -37,4 +38,5 @@ export default [
   CorpoRoute,
   ArticlesRoute,
   DiscountsRoute,
+  SuppliersRoute,
 ];
