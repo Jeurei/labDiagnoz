@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as MapMark } from 'icons/map-mark-icon.svg';
+import { ReactComponent as Star } from 'icons/star.svg';
 import { useParams, useRouteMatch } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { css, useTheme } from '@emotion/react';
@@ -94,6 +95,13 @@ const FullSpecialistInfo = ({ specialists }) => {
         css={css`
           display: flex;
           margin-bottom: 37px;
+          flex-direction: column;
+          align-items: center;
+
+          ${breakpointsMap.DESKTOP} {
+            flex-direction: row;
+            align-items: flex-start;
+          }
         `}
       >
         <p
@@ -111,6 +119,13 @@ const FullSpecialistInfo = ({ specialists }) => {
             display: flex;
             padding: 0;
             width: 100%;
+            flex-direction: column;
+            align-items: center;
+
+            ${breakpointsMap.TABLET} {
+              flex-direction: row;
+              align-items: flex-start;
+            }
           `}
         >
           {new Array(3).fill().map(() => (
@@ -121,10 +136,17 @@ const FullSpecialistInfo = ({ specialists }) => {
                 padding: 0 43px;
                 font-size: 16px;
                 position: relative;
+                margin-bottom: 5px;
 
-                &:nth-of-type(2n) {
-                  border-left: 1px solid ${theme.colors.colorText.hex};
-                  border-right: 1px solid ${theme.colors.colorText.hex};
+                &:last-of-type {
+                  margin-bottom: 0;
+                }
+
+                ${breakpointsMap.DESKTOP} {
+                  &:nth-of-type(2n) {
+                    border-left: 1px solid ${theme.colors.colorText.hex};
+                    border-right: 1px solid ${theme.colors.colorText.hex};
+                  }
                 }
               `}
             >
@@ -166,13 +188,23 @@ const FullSpecialistInfo = ({ specialists }) => {
         <div
           css={css`
             display: flex;
-            padding-right: 25px;
+            padding-right: 0;
+            flex-direction: column;
+
+            ${breakpointsMap.DESKTOP} {
+              padding-right: 25px;
+              flex-direction: row;
+            }
           `}
         >
           <div
             css={css`
               margin-right: auto;
-              padding-left: 44px;
+              padding-left: 0;
+
+              ${breakpointsMap.DESKTOP} {
+                padding-right: 44px;
+              }
             `}
           >
             <ul
@@ -180,6 +212,12 @@ const FullSpecialistInfo = ({ specialists }) => {
                 list-style: none;
                 padding: 0;
                 margin: 0;
+                padding-left: 10px;
+                padding-right: 10px;
+
+                ${breakpointsMap.DESKTOP} {
+                  padding: 0;
+                }
               `}
             >
               <li
@@ -191,7 +229,7 @@ const FullSpecialistInfo = ({ specialists }) => {
                     border-radius: 4px;
                     box-shadow: ${theme.colors.boxShadow};
                     padding-top: 0;
-                    width: 644px;
+                    width: 100%;
                     padding-left: 0;
 
                     &:last-of-type {
@@ -278,6 +316,10 @@ const FullSpecialistInfo = ({ specialists }) => {
                       margin-bottom: 11px;
                     }
                   }
+
+                  ${breakpointsMap.DESKTOP} {
+                    width: 644px;
+                  }
                 `}
               >
                 <input
@@ -287,12 +329,25 @@ const FullSpecialistInfo = ({ specialists }) => {
                   name="tab-group"
                   onChange={() => console.log('hi')}
                 />
-                <label htmlFor="tab-analyse" className="tab__title">
+                <label
+                  htmlFor="tab-analyse"
+                  className="tab__title"
+                  css={css`
+                    font-weight: 500;
+                    padding-right: 30px;
+                  `}
+                >
                   Прием врача акушера-гинеколога лечебно-диагностический
                   <span
                     css={css`
+                      display: none;
                       font-size: 26px;
                       margin-left: auto;
+                      font-weight: 500;
+
+                      @media (min-width: 589px) {
+                        display: flex;
+                      }
                     `}
                   >
                     1 100 ₽
@@ -387,7 +442,7 @@ const FullSpecialistInfo = ({ specialists }) => {
                       }
 
                       &:checked ~ .tab__content {
-                        max-height: 350px;
+                        max-height: none;
                         transition: max-height 500ms ease-in-out;
                       }
                     }
@@ -411,7 +466,13 @@ const FullSpecialistInfo = ({ specialists }) => {
                   name="tab-group"
                   onChange={() => console.log('hi')}
                 />
-                <label htmlFor="tab-2" className="tab__title">
+                <label
+                  htmlFor="tab-2"
+                  className="tab__title"
+                  css={css`
+                    font-weight: 500;
+                  `}
+                >
                   Отзывы
                 </label>
                 <div className="tab__content">
@@ -425,7 +486,7 @@ const FullSpecialistInfo = ({ specialists }) => {
                       css={css`
                         position: relative;
                         padding-top: 35px;
-                        padding-bottom: 15px;
+                        padding-bottom: 34px;
                         &:not(:last-of-type):before {
                           position: absolute;
                           content: '';
@@ -441,13 +502,38 @@ const FullSpecialistInfo = ({ specialists }) => {
                       <div
                         css={css`
                           padding-left: 33px;
+                          margin-bottom: 13px;
+                        `}
+                      >
+                        {new Array(5).fill().map(() => (
+                          <Star
+                            fill="currentColor"
+                            css={css`
+                              cursor: pointer;
+                              color: #ddd;
+
+                              &:hover {
+                                color: #ffab1a;
+                              }
+                            `}
+                          />
+                        ))}
+                      </div>
+                      <div
+                        css={css`
+                          padding-left: 53px;
                         `}
                       >
                         Вопрос
                       </div>
                       <div
                         css={css`
-                          padding-left: 55px;
+                          padding-left: 79px;
+                          padding-top: 30px;
+
+                          background-repeat: no-repeat;
+                          background-image: url('img/quotes.svg');
+                          background-position: 50px 16px;
                         `}
                       >
                         Ответ
@@ -457,7 +543,8 @@ const FullSpecialistInfo = ({ specialists }) => {
                       css={css`
                         position: relative;
                         padding-top: 35px;
-                        padding-bottom: 15px;
+                        padding-bottom: 34px;
+
                         &:not(:last-of-type):before {
                           position: absolute;
                           content: '';
@@ -473,19 +560,60 @@ const FullSpecialistInfo = ({ specialists }) => {
                       <div
                         css={css`
                           padding-left: 33px;
+                          margin-bottom: 13px;
+                        `}
+                      >
+                        {new Array(5).fill().map(() => (
+                          <Star
+                            fill="currentColor"
+                            css={css`
+                              cursor: pointer;
+                              color: #ddd;
+
+                              &:hover {
+                                color: #ffab1a;
+                              }
+                            `}
+                          />
+                        ))}
+                      </div>
+                      <div
+                        css={css`
+                          padding-left: 57px;
                         `}
                       >
                         Вопрос
                       </div>
                       <div
                         css={css`
-                          padding-left: 55px;
+                          padding-left: 79px;
+                          padding-top: 30px;
+
+                          background-repeat: no-repeat;
+                          background-image: url('img/quotes.svg');
+                          background-position: 50px 16px;
                         `}
                       >
                         Ответ
                       </div>
                     </li>
                   </ul>
+                  <button
+                    type="button"
+                    css={css`
+                      width: 100%;
+                      height: 100%;
+                      appearance: none;
+                      border: none;
+                      background-color: ${theme.colors.colorText.hex};
+                      color: ${theme.colors.white};
+                      padding-top: 10px;
+                      padding-bottom: 10px;
+                      font-size: 12px;
+                    `}
+                  >
+                    Загрузить ещё
+                  </button>
                 </div>
               </li>
             </ul>
@@ -495,7 +623,11 @@ const FullSpecialistInfo = ({ specialists }) => {
               display: flex;
               flex-direction: column;
               box-shadow: 1px 1px 22px 0 RGBA(74, 74, 74, 0.2);
-              width: 424px;
+              width: 100%;
+
+              ${breakpointsMap.DESKTOP} {
+                width: 424px;
+              }
             `}
           >
             <div

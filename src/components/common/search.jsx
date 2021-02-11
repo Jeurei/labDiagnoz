@@ -6,9 +6,10 @@ import { ENTER_KEY_CODE } from 'constants/keys';
 import Components from 'constants/components';
 import { ReactComponent as SearchIcon } from 'icons/search-icon.svg';
 import mapStateToPropsGenerator from 'store/mapStateToProps';
+import { css } from '@emotion/react';
 import Select from './select';
 
-const Search = ({ selectData }) => {
+const Search = ({ selectData, isModal = false }) => {
   const searchRef = useRef();
 
   const placeValueToSearch = (evt) => {
@@ -48,16 +49,23 @@ const Search = ({ selectData }) => {
         <p className="visually-hidden" id="search-descr">
           Введите ваш поисковый запрос…
         </p>
-        <Select
-          selectClass="search__categories"
-          data={selectData}
-          placeholder="Все разделы"
-        />
+        {isModal && (
+          <Select
+            selectClass="search__categories"
+            data={selectData}
+            placeholder="Все разделы"
+          />
+        )}
         <button
           className="search__button"
           type="button"
           name="search-button"
           aria-label="Кнопка поиска"
+          css={css`
+            g {
+              opacity: 1 !important;
+            }
+          `}
         >
           <SearchIcon
             width="25px"
@@ -65,6 +73,8 @@ const Search = ({ selectData }) => {
             transform="scale(1.2)"
             fill="none"
             stroke="currentColor"
+            stroke-width="2"
+            opacity="1"
           />
         </button>
       </div>
@@ -106,8 +116,13 @@ const Search = ({ selectData }) => {
   );
 };
 
+Search.defaultProps = {
+  isModal: false,
+};
+
 Search.propTypes = {
   selectData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  isModal: PropTypes.bool,
 };
 
 export default connect(

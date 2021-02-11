@@ -7,7 +7,7 @@ import SearchModal from './search-modal';
 
 const Header = () => {
   const HEADER_MIN_HEIGHT = 140;
-  const animationDuration = 2;
+  const animationDuration = 0.7;
   const headerAnimationDuration = 0.2;
   const [isSearchModalOpen, setSearhModalOpen] = useState(false);
   const [isBottomHeaderShown, setBottomHeaderHidden] = useState(false);
@@ -46,7 +46,7 @@ const Header = () => {
 
     setTimeout(() => {
       setBottomHeaderHidden(bool);
-    }, headerAnimationDuration * 1000);
+    }, 500);
   };
 
   const hideBottomHeader = () => {

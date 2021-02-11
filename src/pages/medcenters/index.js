@@ -1,3 +1,3 @@
-import MedCenters from './components/medСenters';
+import MedCenters from './components/medСentersPage';
 
 export default MedCenters;

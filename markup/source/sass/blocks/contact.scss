@@ -22,7 +22,7 @@
   margin-bottom: 28px;
 
   &::before {
-    @include pseudo("", 29px, 28px);
+    @include pseudo('', 29px, 28px);
     position: absolute;
     top: 8px;
     left: -40px;
@@ -41,8 +41,8 @@
   &--email {
     &:after {
       top: 20px;
-      @include pseudo("", 8.3px, 6.3px);
-      background-image: url("../img/mail.svg");
+      @include pseudo('', 8.3px, 6.3px);
+      background-image: url('../assets/img/mail.svg');
     }
 
     .contact__text {
@@ -51,8 +51,8 @@
   }
 
   &--tel::after {
-    @include pseudo("", 9.3px, 10px);
-    background-image: url("../img/tel-icon.svg");
+    @include pseudo('', 9.3px, 10px);
+    background-image: url('../assets/img/tel-icon.svg');
   }
 
   &--adress {
@@ -62,8 +62,8 @@
     &::after {
       top: 20px;
       left: -28px;
-      @include pseudo("", 6.2px, 8.8px);
-      background-image: url("../img/map-mark-icon.svg");
+      @include pseudo('', 6.2px, 8.8px);
+      background-image: url('../assets/img/map-mark-icon.svg');
     }
   }
 }
@@ -76,24 +76,24 @@
 
     &--email {
       &:after {
-        @include pseudo("", 8.3px, 6.3px);
+        @include pseudo('', 8.3px, 6.3px);
         top: 19px;
-        background-image: url("../img/mail.svg");
+        background-image: url('../assets/img/mail.svg');
       }
     }
 
     &--tel::after {
-      @include pseudo("", 9.3px, 10px);
+      @include pseudo('', 9.3px, 10px);
       top: 17px;
-      background-image: url("../img/tel-icon.svg");
+      background-image: url('../assets/img/tel-icon.svg');
     }
 
     &--adress {
       &::after {
         top: 20px;
         left: -29px;
-        @include pseudo("", 6.2px, 8.8px);
-        background-image: url("../img/map-mark-icon.svg");
+        @include pseudo('', 6.2px, 8.8px);
+        background-image: url('../assets/img/map-mark-icon.svg');
       }
     }
   }

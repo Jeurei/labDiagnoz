@@ -91,12 +91,12 @@ const createCartObject = () => {
   const MAX_PRICE_OF_OBJECTS = 10000;
   const lorem = new LoremIpsum({
     sentencesPerParagraph: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
     wordsPerSentence: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
   });
 
@@ -167,12 +167,12 @@ const createOffersArray = () => {
   const MAX_PRICE_OF_OBJECTS = 10000;
   const lorem = new LoremIpsum({
     sentencesPerParagraph: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
     wordsPerSentence: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
   });
 
@@ -191,15 +191,15 @@ const createOffersArray = () => {
 const createComplexArray = () => {
   const MAX_QUANTITY_OF_OFFERS = 10;
   const MAX_PRICE_OF_OBJECTS = 10000;
-  const MAX_QUANTITY_OF_OBJECTS_IN_LIST = 10;
+  const MAX_QUANTITY_OF_OBJECTS_IN_LIST = 5;
   const lorem = new LoremIpsum({
     sentencesPerParagraph: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
     wordsPerSentence: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
   });
 
@@ -223,12 +223,12 @@ const createLinksArray = () => {
   const MAX_QUANTITY_OF_OFFERS = 10;
   const lorem = new LoremIpsum({
     sentencesPerParagraph: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
     wordsPerSentence: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
   });
 
@@ -271,12 +271,12 @@ const createSharesArray = () => {
   const MAX_QUANTITY_OF_SHARES = 8;
   const lorem = new LoremIpsum({
     sentencesPerParagraph: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
     wordsPerSentence: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
   });
 
@@ -299,12 +299,12 @@ const createFeaturesArray = () => {
   const MAX_QUANTITY_OF_FEATURES = 10;
   const lorem = new LoremIpsum({
     sentencesPerParagraph: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
     wordsPerSentence: {
-      max: 8,
-      min: 4,
+      max: 4,
+      min: 2,
     },
   });
 
@@ -339,7 +339,7 @@ const createSpecialistsArray = () => {
       2021: {
         ...new Array(12).fill().map((mounth, id) => ({
           ...new Array(daysInMonth(id + 1, 2021)).fill().map(() => ({
-            ...new Array(getRandomInteger(0, 11))
+            ...new Array(getRandomInteger(1, 11))
               .fill()
               .map(() =>
                 format(randomDate(new Date(2012, 0, 1), new Date()), 'hh'),

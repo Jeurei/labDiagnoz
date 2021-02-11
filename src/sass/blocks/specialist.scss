@@ -1,6 +1,5 @@
 .specialist {
   display: flex;
-  min-height: 374px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -9,6 +8,10 @@
 
 .specialist__img-container {
   margin-right: 30px;
+}
+
+.specialist__img {
+  height: 100%;
 }
 
 .specialist__info {
@@ -42,7 +45,7 @@
   margin: 0;
   margin-bottom: -6px;
   font-size: $title-h4-fs;
-  font-weight: 400;
+  font-weight: 500;
   line-height: $title-h4-lh;
 }
 
@@ -67,17 +70,27 @@
 }
 
 .specialist__work-time {
+  width: 100%;
   padding-top: 34px;
+}
+
+.specialist__shedule {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .specialist__adress {
   width: 100%;
   border: 1px solid $blue;
   margin-bottom: 5px;
-  border-radius: 3px;
+  border-radius: 5px;
 
   .select__menu {
     z-index: 100;
+  }
+
+  .select__control {
+    border: none;
   }
 }
 
@@ -111,6 +124,7 @@
   border-bottom: 5px solid $color-text;
   cursor: pointer;
   font-size: 10px;
+  font-weight: 500;
   line-height: 14px;
 
   &--today {
@@ -195,6 +209,7 @@
   width: 100%;
   justify-content: center;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .specialist__shedule-table-button {
@@ -240,6 +255,7 @@
   align-items: center;
   justify-content: center;
   font-size: 10px;
+  font-weight: 500;
   word-spacing: 3px;
 }
 
@@ -338,6 +354,11 @@
 
   .specialist__work-time {
     width: 574px;
+  }
+
+  .specialist__shedule {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

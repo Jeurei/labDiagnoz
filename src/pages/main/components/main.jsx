@@ -3,7 +3,7 @@ import MainContainer from 'containers/main-container';
 import Search from './search';
 import ActualOffers from './actual-offers';
 import Complexes from './complexes';
-import Links from './links';
+// import Links from './links';
 import Articles from './articles';
 import Shares from './shares';
 import Features from './features';
@@ -16,7 +16,7 @@ const Main = () => (
     <Search />
     <ActualOffers />
     <Complexes />
-    <Links />
+    {/* <Links /> */}
     <Articles />
     <Shares />
     <Features />

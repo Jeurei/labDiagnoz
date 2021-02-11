@@ -169,7 +169,9 @@ const SpecialistSheduleDays = ({
       )}
       <ul className="specialist__shedule-table-time-list">
         {!chosenEmpty &&
-          Object.values(arr[selectedDay][1]).map((el) => createTimeElement(el))}
+          Object.values(arr[selectedDay][1])
+            .slice(0, 8)
+            .map((el) => createTimeElement(el))}
       </ul>
       {chosenEmpty && (
         <SpecialistDayInfo

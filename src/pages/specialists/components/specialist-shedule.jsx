@@ -20,7 +20,10 @@ const SpecialistShedule = ({ time }) => {
     const mounthName = getMounthName(id);
     return { [id]: mounthName.charAt(0).toUpperCase() + mounthName.slice(1) };
   });
-  const arrayOfMoutnhtesUntilNewYear = arrayOfMounthes.slice(currentMounth, 3);
+  const arrayOfMoutnhtesUntilNewYear = arrayOfMounthes.slice(
+    currentMounth,
+    currentMounth + 3,
+  );
   const arrayOfAvailableMounthes = Object.entries(time[currentYear]).slice(
     currentMounth,
     3,

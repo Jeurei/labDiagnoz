@@ -8,7 +8,7 @@ import Hints from './hints';
 
 const SearchModalContainerTop = ({ hints }) => (
   <div className="search__container-top">
-    <Search />
+    <Search isModal />
     <Hints hints={hints} />
   </div>
 );

@@ -76,9 +76,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
-  padding-right: 5px;
   padding-bottom: 13px;
-  padding-left: 4px;
 }
 
 .search__input {
@@ -98,6 +96,10 @@
   display: none;
   border: none;
   border-left: 1px solid $border-color;
+
+  .select__control {
+    border-radius: 0;
+  }
 }
 
 .search__button {
@@ -189,7 +191,7 @@
 
 .search__hint-icon {
   position: absolute;
-  top: 4px;
+  top: -4px;
   left: 5px;
 }
 
@@ -295,7 +297,7 @@
 
   .search__container {
     padding-right: 2px;
-    padding-left: 24px;
+    padding-left: 0; //мб проблемы
     margin-bottom: 50px;
   }
 
@@ -365,7 +367,7 @@
 
   .search__hint-icon {
     position: absolute;
-    top: 0;
+    top: -6px;
     left: 0;
     display: flex;
   }

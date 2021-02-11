@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   padding-top: 1px;
+  padding-right: 4px;
   padding-left: 4px;
   margin-bottom: 26px;
 }
@@ -31,19 +32,31 @@
   justify-content: flex-start;
   padding: 0;
   margin: 0;
+  margin-right: auto;
   list-style: none;
 }
 
 .articles__sort-item {
+  position: relative;
   padding-right: 2px;
-  border-right: 1px solid #707070;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    display: flex;
+    width: 1px;
+    height: 100%;
+    background-color: #707070;
+    content: '';
+  }
 
   &:first-child {
     padding-left: 3px;
   }
 
-  &:last-child {
-    border-right: none;
+  &:last-child::after {
+    display: none;
   }
 }
 
@@ -63,6 +76,10 @@
 
 .articles__sort-item--active {
   border-right: none;
+
+  &:after {
+    display: none;
+  }
 
   .articles__sort-button {
     padding: 5px 7px 6px 9px;
@@ -86,7 +103,7 @@
   padding-right: 10px;
   background-color: $green;
   background-image: url('../assets/img/grow-arrow.svg');
-  background-position: 95% 10px;
+  background-position: 95% 5px;
   background-repeat: no-repeat;
   background-size: 8.8px 8.8px;
   border-radius: 4px;
@@ -154,13 +171,17 @@
   }
 
   .articles__top {
-    padding-right: 19px;
+    padding-right: 0;
     padding-left: 0;
     margin-bottom: 26px;
   }
 
   .articles__sort-item {
     margin-right: 11px;
+
+    &::after {
+      right: -5px;
+    }
 
     &:nth-child(even) {
       margin-right: 14px;
@@ -173,5 +194,13 @@
 
   .articles__bottom {
     padding: 0;
+  }
+
+  .articles__link {
+    margin-right: auto;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 }

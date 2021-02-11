@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ReactComponent as ArrowRightIcon } from 'icons/arrrow-right.svg';
+import { numberWithSpaces } from '../../../utils/common';
 
 const ActualOffer = ({ data }) => {
   return (
@@ -27,8 +28,14 @@ const ActualOffer = ({ data }) => {
           <p className="actual-offer__text">{data.text}</p>
         </div>
         <div className="actual-offer__list-item-bottom">
-          <span className="actual-offer__price"> {data.price} ₽ </span>
-          <p className="actual-offer__price-text">Стоимость комплекса</p>
+          <span className="actual-offer__price">
+            {numberWithSpaces(data.price)} ₽
+          </span>
+          <p className="actual-offer__price-text">
+            Стоимость
+            <br />
+            комплекса
+          </p>
         </div>
       </a>
     </li>

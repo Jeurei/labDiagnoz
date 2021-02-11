@@ -1,4 +1,6 @@
 .complexes {
+  padding-top: 39px;
+  background-color: #f7f7f7;
   .swiper-container {
     padding-bottom: 40px;
   }
@@ -6,9 +8,8 @@
 
 .complexes__container {
   display: flex;
+  max-width: 100%;
   flex-direction: column;
-  padding-right: 12px;
-  padding-left: 3px;
 }
 
 .complexes__control-icon {
@@ -27,19 +28,34 @@
     @include titleAfter();
     top: 35px;
     left: 10px;
+    color: rgba($blue, 0.6);
     font-size: 21px;
   }
 }
 
 .complexes__list {
   display: flex;
+  min-width: 100%;
   max-width: 100%;
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
   padding: 0;
+  box-shadow: none;
   list-style: none;
   overflow-x: hidden;
+
+  .swiper-slide {
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 425px) {
+  .complexes__list {
+    .swiper-slide {
+      min-width: auto;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -54,10 +70,22 @@
     padding-bottom: 27px;
   }
 
-  .complex__list {
-    padding-top: 5px;
-    padding-left: 42px;
+  .complexes__list {
     margin-bottom: 14px;
+
+    .swiper-slide-active {
+      .complex__img {
+        background: red;
+        border-bottom-left-radius: 254px;
+      }
+    }
+
+    .swiper-slide:nth-child(4n) {
+      .complex__img {
+        background: red;
+        border-bottom-right-radius: 254px;
+      }
+    }
   }
 
   .complexes__title {

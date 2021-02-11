@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import React from 'react';
 import Contacts from './contacts';
 import Copyrights from './copyrights';
@@ -9,8 +10,15 @@ const Footer = () => (
   <footer className="footer">
     <Form />
     <Map />
-    <Contacts />
-    <FooterBottom />
+    <div
+      css={css`
+        background-color: #f7f7f7;
+      `}
+    >
+      <Contacts />
+      <FooterBottom />
+    </div>
+
     <Copyrights />
   </footer>
 );

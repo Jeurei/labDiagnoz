@@ -1,13 +1,24 @@
 .complex {
   position: relative;
+  display: flex;
+  overflow: hidden;
   width: 100%;
+  height: 100%;
+  flex-direction: row;
   flex-shrink: 0;
-  box-shadow: $box-shadow;
+  flex-wrap: nowrap;
+}
+
+.complex__front {
+  display: flex;
+  min-width: 100%;
+  height: 100%;
+  flex-direction: column;
 }
 
 .complex__text-container {
   padding-right: 12px;
-  margin-bottom: 33px;
+  margin-bottom: auto;
 }
 
 .complex__title {
@@ -45,7 +56,7 @@
     top: 4px;
     left: -13px;
     background-color: $blue;
-    @include pseudo("", 6px, 6px);
+    @include pseudo('', 6px, 6px);
   }
 }
 
@@ -74,6 +85,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+  margin-top: 10px;
   color: $white;
 }
 
@@ -131,8 +143,8 @@
 
 .complex__icon {
   position: absolute;
-  top: 7px;
-  right: 10px;
+  top: 12px;
+  right: 0;
 }
 
 .complex__mobile-slider {
@@ -166,26 +178,23 @@
 }
 
 .complex__full {
-  position: absolute;
-  top: 0;
-  display: none;
-  width: 100%;
+  display: flex;
+  min-width: 100%;
   height: 100%;
   flex-direction: column;
-  padding-top: 7px;
   background-color: $blue;
-  background-image: url("../img/complex-back.svg");
+  background-image: url('../assets/img/complex-back.svg');
   background-position: calc(100% - 22px) calc(100% - 53px);
   background-repeat: no-repeat;
   color: $white;
+  transform: translateX(100%);
 
   .complex__list {
     margin-bottom: auto;
   }
 
   .complex__expand-button {
-    padding-bottom: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
     color: $white;
     text-decoration: underline;
   }
@@ -201,10 +210,17 @@
   .complex__bottom-container-bottom {
     display: flex;
     flex-direction: row;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 10px;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
+  }
+
+  .complex__bottom-container-bottom-text {
+    color: $white;
   }
 }
 
@@ -226,19 +242,14 @@
   letter-spacing: 0.9px;
 }
 
-@media (min-width: $big-mobile-width) {
-  .complex {
-    width: 50%;
-    margin-right: 10px;
-  }
-}
-
 @media (min-width: $tablet-width) {
   .complex {
-    max-width: 270px;
-    margin-right: 50px;
-    margin-left: 50px;
+    width: 100%;
     box-shadow: $box-shadow;
+
+    .swiper-slide {
+      width: 100%;
+    }
   }
 
   .complex__mobile-slider {
@@ -270,10 +281,6 @@
     font-size: 12px;
   }
 
-  .complex__text-container {
-    margin-bottom: 22px;
-  }
-
   .complex__list-item {
     font-size: 11px;
     word-spacing: 8px;
@@ -286,6 +293,7 @@
 
   .complex__expand-button {
     padding-left: 24px;
+    margin-bottom: 20px;
     letter-spacing: -0.6px;
   }
 

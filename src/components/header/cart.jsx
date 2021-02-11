@@ -31,7 +31,7 @@ const Cart = ({ cartData, closeHandler, removeItem }) => {
     <div
       className="header-top__right-cart-container cart-container"
       css={css`
-        animation: ${showing} 1s ease-in-out;
+        animation: ${showing} 0.2s ease-in-out;
       `}
     >
       <div className="cart-container__inner">

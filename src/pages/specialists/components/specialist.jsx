@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Picture from 'common/picture';
 import Form from 'common/form';
 import { Link, useRouteMatch } from 'react-router-dom';
+import { css } from '@emotion/react';
+import { numberWithSpaces } from '../../../utils/common';
 import SpecialistWorkTime from './specialist-work-time';
 
 const specialistInfo = (action, data) => {
@@ -19,14 +21,35 @@ const specialistInfo = (action, data) => {
       </h3>
       <ul className="specialist__info-list">
         <li className="specialist__info-item">
-          Должность: {data.job.reduce((acc, curr) => `${acc}, ${curr}`)}
+          Должность:{' '}
+          <span
+            css={css`
+              font-weight: 500;
+            `}
+          >
+            {data.job.reduce((acc, curr) => `${acc}, ${curr}`)}
+          </span>
         </li>
         <li className="specialist__info-item">
-          Ведёт приём: {agesMap[data.ages]}
+          Ведёт приём:{' '}
+          <span
+            css={css`
+              font-weight: 500;
+            `}
+          >
+            {agesMap[data.ages]}
+          </span>
         </li>
         <li className="specialist__info-item">
           Первичный прием:{' '}
-          <span className="specialist__price">{data.price} ₽</span>
+          <span
+            className="specialist__price"
+            css={css`
+              font-weight: 500;
+            `}
+          >
+            {numberWithSpaces(data.price)} ₽
+          </span>
         </li>
         <li
           className="specialist__info-item specialist__info-item--link"
@@ -44,7 +67,16 @@ const specialistInfo = (action, data) => {
       >
         Запишитесь на прием
       </button>
-      <p className="specialist__tel">Телефон для записи: 8 800 3000 789</p>
+      <p className="specialist__tel">
+        Телефон для записи:{' '}
+        <span
+          css={css`
+            font-weight: 500;
+          `}
+        >
+          8 800 3000 789
+        </span>
+      </p>
     </div>
   );
 };

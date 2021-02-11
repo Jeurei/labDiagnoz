@@ -6,6 +6,7 @@ import { css, useTheme } from '@emotion/react';
 import Select from 'common/select';
 import Picture from 'common/picture';
 import { breakpointsMap } from 'src/constants/styles';
+import { Link } from 'react-router-dom';
 
 const Complexes = () => {
   const theme = useTheme();
@@ -19,8 +20,8 @@ const Complexes = () => {
         className="search__container-input-group"
         css={css`
           display: flex;
-          flex-direction: column;
           width: 100%;
+          flex-direction: column;
 
           ${breakpointsMap.DESKTOP} {
             flex-direction: row;
@@ -31,19 +32,19 @@ const Complexes = () => {
       >
         <div
           css={css`
-            display:flex;
-            flex-direction:column;
+            display: flex;
+            flex-direction: column;
             .select {
-              height: 100%;
               width: 100%;
+              height: 100%;
               margin-bottom: 10px;
             }
 
             .select__control {
               padding-top: 7px;
               padding-bottom: 7px;
-              border-radius: 4px !important;
               border-color: ${theme.colors.blue};
+              border-radius: 4px !important;
             }
 
             ${breakpointsMap.TABLET} {
@@ -62,14 +63,15 @@ const Complexes = () => {
                 }
               }
 
-              ${breakpointsMap.DESKTOP}{
+              ${breakpointsMap.DESKTOP} {
                 margin-right: 6px;
                 margin-bottom: 0;
                 .select {
-                  margin-right: 6px;
                   width: 229px;
+                  margin-right: 6px;
                 }
               }
+            }
           `}
         >
           <Select
@@ -87,11 +89,28 @@ const Complexes = () => {
         </div>
         <div
           css={css`
+            position: relative;
             display: flex;
-            width: 628px;
+            width: 100%;
             flex-grow: 1;
+
+            ${breakpointsMap.DESKTOP} {
+              width: 628px;
+            }
           `}
         >
+          <SearchIcon
+            width="25px"
+            height="25px"
+            fill="none"
+            stroke="currentColor"
+            css={css`
+              position: absolute;
+              top: 16px;
+              left: 16px;
+              color: #000;
+            `}
+          />
           <input
             type="text"
             className="search__input"
@@ -100,10 +119,21 @@ const Complexes = () => {
             aria-describedby="search-descr"
             css={css`
               padding-top: 17px;
+              padding-left: 44px;
               border: 1px solid ${theme.colors.blue};
-              border-top-left-radius: 4px;
               border-bottom-left-radius: 4px;
+              border-top-left-radius: 4px;
               font-size: 13px;
+              &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 13px;
+                height: 13px;
+                background-image: url('img/search-icon.svg');
+                content: '';
+              }
             `}
           />
           <p className="visually-hidden" id="search-descr">
@@ -138,12 +168,12 @@ const Complexes = () => {
       >
         <div
           css={css`
+            position: relative;
             display: flex;
             min-width: 100%;
             min-height: 245px;
             margin-right: auto;
             margin-bottom: 10px;
-            position: relative;
             box-shadow: ${theme.colors.boxShadow};
 
             &:nth-of-type(2n) {
@@ -165,26 +195,28 @@ const Complexes = () => {
           />
           <div
             css={css`
-              padding-left: 21px;
               display: flex;
               flex-direction: column;
-              padding-bottom: 20px;
               flex-grow: 1;
               padding-right: 80px;
+              padding-bottom: 20px;
+              padding-left: 21px;
             `}
           >
-            <h3
+            <Link
+              to="/analyze/Обследование печени, скрининг"
               css={css`
+                margin-top: 15px;
                 font-size: 16px;
-                font-weight: 400;
+                font-weight: 500;
               `}
             >
               Обследование печени, скрининг
-            </h3>
+            </Link>
             <div
               css={css`
-                letter-spacing: -0.5px;
                 margin-bottom: auto;
+                letter-spacing: -0.5px;
               `}
             >
               <p>Анализы комплекса:</p>
@@ -226,149 +258,19 @@ const Complexes = () => {
             >
               <span
                 css={css`
-                  font-size: 26px;
+                  font-weight: 500;
+                  text-decoration: line-through;
+                  font-size: 12px;
                   margin-bottom: 5px;
                 `}
               >
                 1 100 ₽
               </span>
-              <a
-                href="/"
-                css={css`
-                  font-size: 12px;
-                  color: ${theme.colors.blue};
-                `}
-              >
-                Включает 6 анализов
-                <ExpandIcon
-                  fill="none"
-                  stroke={theme.colors.blue}
-                  css={css`
-                    transform: rotate(-455deg);
-                  `}
-                />
-              </a>
-            </div>
-            <button
-              className="buy__button"
-              type="button"
-              css={css`
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                appearance: none;
-                border: none;
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                right: 14px;
-                bottom: 18px;
-                background-color: transparent;
-                background-image: linear-gradient(
-                  -135deg,
-                  rgba(255, 0, 235, 0.2) 0%,
-                  rgba(154, 102, 245, 0.2) 50%,
-                  rgba(43, 215, 255, 0.2) 100%
-                );
-              `}
-            >
-              <CartIcon fill="#9A66F5" />
-            </button>
-          </div>
-        </div>
-        <div
-          css={css`
-            display: flex;
-            min-width: 100%;
-            min-height: 245px;
-            margin-right: auto;
-            margin-bottom: 10px;
-            position: relative;
-            box-shadow: ${theme.colors.boxShadow};
-
-            &:nth-of-type(2n) {
-              margin-right: 0;
-            }
-
-            ${breakpointsMap.DESKTOP} {
-              min-width: 569px;
-            }
-          `}
-        >
-          <Picture
-            src="img/service-complex"
-            imgClass="complex__img"
-            containerClass="complex__img-container"
-            alt="Изображение описывающющее анализ"
-            width="126"
-            height="245"
-          />
-          <div
-            css={css`
-              padding-left: 21px;
-              display: flex;
-              flex-direction: column;
-              padding-bottom: 20px;
-              flex-grow: 1;
-              padding-right: 80px;
-            `}
-          >
-            <h3
-              css={css`
-                font-size: 16px;
-                font-weight: 400;
-              `}
-            >
-              Обследование печени, скрининг
-            </h3>
-            <div
-              css={css`
-                letter-spacing: -0.5px;
-                margin-bottom: auto;
-              `}
-            >
-              <p>Анализы комплекса:</p>
-              <ul
-                css={css`
-                  padding: 0;
-                `}
-              >
-                <li>
-                  30.31 / Коагулограмма (АПТВ,ПТВ,ТВ,МНО, РФМК, фибриноген)
-                </li>
-                <li> 45.2 / Взятие крови на показатель ImG</li>
-                <li>
-                  30.31 / Коагулограмма (АПТВ,ПТВ,ТВ,МНО, РФМК, фибриноген)
-                </li>
-                <li>
-                  30.31 / Коагулограмма (АПТВ,ПТВ,ТВ,МНО, РФМК, фибриноген)
-                </li>
-              </ul>
-              <a
-                href="some"
-                className="complex__expand-button"
-                aria-label="нажмите что развернуть все анализы"
-                role="button"
-                tabIndex="0"
-                css={css`
-                  padding-left: 0;
-                `}
-              >
-                Показать все анализы
-              </a>
-            </div>
-            <div
-              css={css`
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-              `}
-            >
               <span
                 css={css`
-                  font-size: 26px;
                   margin-bottom: 5px;
+                  font-size: 26px;
+                  font-weight: 500;
                 `}
               >
                 1 100 ₽
@@ -376,8 +278,8 @@ const Complexes = () => {
               <a
                 href="/"
                 css={css`
-                  font-size: 12px;
                   color: ${theme.colors.blue};
+                  font-size: 12px;
                 `}
               >
                 Включает 6 анализов
@@ -394,17 +296,16 @@ const Complexes = () => {
               className="buy__button"
               type="button"
               css={css`
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                appearance: none;
-                border: none;
                 position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 right: 14px;
                 bottom: 18px;
+                display: flex;
+                width: 60px;
+                height: 60px;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                appearance: none;
                 background-color: transparent;
                 background-image: linear-gradient(
                   -135deg,
@@ -412,6 +313,7 @@ const Complexes = () => {
                   rgba(154, 102, 245, 0.2) 50%,
                   rgba(43, 215, 255, 0.2) 100%
                 );
+                border-radius: 50%;
               `}
             >
               <CartIcon fill="#9A66F5" />

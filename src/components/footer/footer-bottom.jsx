@@ -10,6 +10,8 @@ const FooterBottom = () => (
       <h2 className="section__title visually-hidden">Навигация</h2>
       <SectionInner>
         <Tab />
+        <Tab />
+        <Tab />
       </SectionInner>
       <SectionInner>
         <Picture

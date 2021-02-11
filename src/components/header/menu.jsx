@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Drawer from 'react-motion-drawer';
 import CrossButton from 'common/crossButton';
+import { routesConstantsWODirectLinks } from 'constants/routes';
 import NavItem from './nav-item';
 import { randomId } from '../utils/common';
 import Routes from '../../routes';
@@ -15,6 +16,13 @@ const Menu = () => {
   const onChangeHandler = (bool) => {
     document.body.scroll = bool ? 'no' : 'yes';
     document.body.style.overflow = bool ? 'hidden' : 'scroll';
+
+    if (menuState) {
+      document.querySelector('.header__bottom-container').zIndex = 10;
+    } else {
+      document.querySelector('.header__bottom-container').zIndex = -1;
+    }
+
     setMenuState(bool);
   };
 

@@ -95,6 +95,7 @@ const positionsList = () => {
             padding-bottom: 16px;
             padding-left: 51.5px;
             display: block;
+            font-weight: 500;
           `}
         >
           Аллерголог
@@ -175,6 +176,7 @@ const positionsList = () => {
             padding-bottom: 16px;
             padding-left: 51.5px;
             display: block;
+            font-weight: 500;
           `}
         >
           Аллерголог
@@ -255,6 +257,7 @@ const positionsList = () => {
             padding-bottom: 16px;
             padding-left: 51.5px;
             display: block;
+            font-weight: 500;
           `}
         >
           Аллерголог
@@ -335,6 +338,7 @@ const positionsList = () => {
             padding-bottom: 16px;
             padding-left: 51.5px;
             display: block;
+            font-weight: 500;
           `}
         >
           Аллерголог

@@ -32,7 +32,6 @@ const MapLeft = ({ selectData }) => (
               width="8"
               height="8.4"
               fill="currentColor"
-              stroke="currentColor"
             />
             <form className="geo__form">
               <Select
@@ -55,14 +54,12 @@ const MapLeft = ({ selectData }) => (
                   className="result__link"
                   aria-label="Показать на карте"
                 >
-                  <svg
+                  <MapMark
                     className="geo__result-icon"
-                    width="6"
+                    width="8"
                     height="8.4"
                     fill="currentColor"
-                  >
-                    <use xlinkHref="./map-mark-icon" />
-                  </svg>
+                  />
                   <p className="result__text">г. Пермь, ул. Хабаровская, 56</p>
                   <p className="result__options">
                     Возможна оплата картой, есть вход с коляской

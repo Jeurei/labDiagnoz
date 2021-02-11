@@ -14,20 +14,38 @@
 
   &:hover {
     background-color: #65a929;
+    color: $white;
   }
 
   &:active {
     background-color: #6db131;
+    color: $white;
   }
 }
 
+.button-inactive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: $white;
+  font-size: $button-fs;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.55px;
+  line-height: $button-lh;
+  text-transform: uppercase;
+}
+
 .slider-button {
+  position: relative;
   width: 26px;
   height: 26px;
   border: none;
   appearance: none;
   background-color: $inactive-color;
   border-radius: 6px;
+  color: $white;
 
   &:hover {
     background-color: $blue;
@@ -36,6 +54,14 @@
   &:last-child {
     margin-left: 3px;
   }
+}
+
+.slider-icon {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  color: $white;
+  transform: scale(0.9);
 }
 
 .cross-button {
@@ -50,7 +76,7 @@
   color: transparent;
 
   &:after {
-    @include pseudo("", 2px, 19px);
+    @include pseudo('', 2px, 19px);
     position: absolute;
     top: 0;
     left: 9;
@@ -58,7 +84,7 @@
     transform: rotate(45deg);
   }
   &:before {
-    @include pseudo("", 2px, 19px);
+    @include pseudo('', 2px, 19px);
     position: absolute;
     top: 0;
     left: 9;

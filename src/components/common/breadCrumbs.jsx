@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import Routes from 'constants/routes';
+import { css } from '@emotion/react';
 import BreadCrumb from './breadCrumb';
 import { randomId } from '../utils/common';
 
@@ -36,7 +37,12 @@ const BreadCrumbs = ({ className }) => {
   );
 
   return (
-    <ul className={className && `${className}__breadcrumbs breadcrumbs`}>
+    <ul
+      className={className && `${className}__breadcrumbs breadcrumbs`}
+      css={css`
+        margin-bottom: 16px;
+      `}
+    >
       {routesArr.map((el) => {
         return (
           <BreadCrumb

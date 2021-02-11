@@ -19,35 +19,40 @@ const FixedCircle = () => {
     <div
       css={css`
         position: fixed;
-        bottom: 15px;
+        z-index: 200;
+        top: 70px;
         right: 20px;
         width: 57px;
         height: 57px;
+        animation: ${bouncingAnimation} 1s infinite alternate;
         background-image: ${theme.colors.linearGradient};
         border-radius: 50%;
-        animation: ${bouncingAnimation} 1s infinite alternate;
-        z-index: 200;
 
         &:hover {
           animation: none;
         }
 
+        ${breakpointsMap.TABLET} {
+          top: 125px;
+        }
+
         ${breakpointsMap.DESKTOP} {
-          left: 10px;
+          top: 225px;
+          left: 5px;
         }
       `}
     >
       <a
         href="/"
         css={css`
+          display: block;
+          display: flex;
           width: 100%;
           height: 100%;
-          display: block;
-          color: ${theme.colors.altColorText};
-          display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          color: ${theme.colors.altColorText};
           font-size: 10px;
           &:hover {
             color: ${theme.colors.altColorText};

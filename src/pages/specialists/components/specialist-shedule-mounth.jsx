@@ -11,7 +11,9 @@ const SpecialistSheduleMounth = ({
   const getMouthSlide = (obj, id) => {
     return (
       <SwiperSlide key={id}>
-        <span className="specialist__current-mounth">{obj[id]}</span>
+        <span className="specialist__current-mounth">
+          {Object.values(obj).map((el) => el)}
+        </span>
       </SwiperSlide>
     );
   };

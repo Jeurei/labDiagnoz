@@ -4,7 +4,7 @@ import { css, keyframes } from '@emotion/react';
 import CrossButton from 'common/crossButton';
 
 const CartModalListItem = ({ itemData, action }) => {
-  const animationDuration = 1;
+  const animationDuration = 0.2;
   const [isDeleting, setDeleting] = useState(false);
   const liRef = useRef();
 
@@ -36,7 +36,7 @@ const CartModalListItem = ({ itemData, action }) => {
       css={
         isDeleting &&
         css`
-          animation: ${deletingKeyFrames()} 1s ease-in-out;
+          animation: ${deletingKeyFrames()} ${animationDuration}s ease-in-out;
         `
       }
     >

@@ -66,6 +66,14 @@ input {
   &:focus-visible {
     outline: 1px solid $color-text;
   }
+
+  &[type='time']::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  &[type='date']::-webkit-calendar-picker-indicator {
+    display: none;
+  }
 }
 
 #root {

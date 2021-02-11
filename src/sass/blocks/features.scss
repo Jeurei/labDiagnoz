@@ -26,10 +26,12 @@
     position: relative;
     padding-left: 6px;
     margin-bottom: 50px;
+    font-weight: 500;
 
     &:after {
       top: 32px;
       left: 13px;
+      font-weight: 500;
     }
   }
 }
@@ -51,7 +53,7 @@
   padding-right: 28px;
   padding-bottom: 5px;
   padding-left: 47px;
-  background-position: 9px 0px;
+  background-position: 9px -4px;
   background-repeat: no-repeat;
   background-size: 24.6px 23.5px;
 
@@ -98,9 +100,10 @@
 }
 
 .features__list-item-title {
+  margin-top: 7px;
   margin-bottom: -2px;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @media (min-width: $tablet-width) {
@@ -117,7 +120,9 @@
     .section__title {
       width: 432px;
       @include titleh2($white);
+
       padding-left: 4px;
+      font-weight: 400;
       &::after {
         top: 33px;
       }
