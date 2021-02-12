@@ -22,6 +22,7 @@ import CommentsRoute from './pages/comments/route';
 import MedCenterRoute from './pages/medcenter/route';
 import Specialists from './pages/specialists/index';
 import CartRoute from './pages/cart/route';
+import SharesRoute from './pages/shares/route';
 
 const specialistRoute = {
   path: '/specialists/StqjF_WMsBpf4VRrBYmKB',
@@ -53,4 +54,5 @@ export default [
   MedCenterRoute,
   specialistRoute,
   CartRoute,
+  SharesRoute,
 ];

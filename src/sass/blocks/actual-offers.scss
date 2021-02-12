@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-left: 5px;
 }
 
 .actual-offers__title {
@@ -35,10 +34,13 @@
   width: 100%;
   flex-direction: row;
   padding: 0;
-  padding-bottom: 41px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   list-style: none;
+
   overflow-x: hidden;
+
+  .swiper-slide {
+    box-shadow: 1px 1px 22px 0 RGBA(74, 74, 74, 0.2);
+  }
 }
 
 .actual-offers__list-item {

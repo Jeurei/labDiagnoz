@@ -15,7 +15,9 @@ const Tab = () => (
       Анализы
     </label>
     <div className="tab__content">
-      <h3 className="tab__content-title">Услуги лаборатории</h3>
+      <a href="/" className="tab__content-title">
+        Услуги лаборатории
+      </a>
       <ul className="tab__list">
         <li className="tab__list-item">
           <a

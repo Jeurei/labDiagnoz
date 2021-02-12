@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import Picture from 'common/picture';
 import Form from 'common/form';
 import { Link, useRouteMatch } from 'react-router-dom';
-import { css } from '@emotion/react';
+import { css, useTheme } from '@emotion/react';
 import { numberWithSpaces } from '../../../utils/common';
 import SpecialistWorkTime from './specialist-work-time';
 
 const specialistInfo = (action, data) => {
   const { url } = useRouteMatch();
+  const theme = useTheme();
   const agesMap = {
     1: 'Дети 0-18 лет',
     2: 'Взрослые',
@@ -66,6 +67,22 @@ const specialistInfo = (action, data) => {
         onClick={() => action(true)}
       >
         Запишитесь на прием
+      </button>
+      <button
+        type="button"
+        className="specialist__button button"
+        aria-label="Записать на онлайн консультацию"
+        css={css`
+          text-transform: uppercase;
+          background-color: ${theme.colors.blue};
+
+          &:hover,
+          &:active {
+            background-color: ${theme.colors.blue};
+          }
+        `}
+      >
+        online консультация
       </button>
       <p className="specialist__tel">
         Телефон для записи:{' '}

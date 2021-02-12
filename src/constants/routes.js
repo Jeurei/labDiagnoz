@@ -109,6 +109,10 @@ const routesConstants = {
     route: '/cart',
     name: 'Корзина',
   },
+  SHARES: {
+    route: '/shares',
+    name: 'Акции',
+  },
 };
 
 const routesConstantsWODirectLinks = {
