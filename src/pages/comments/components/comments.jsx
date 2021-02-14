@@ -12,12 +12,12 @@ const Comments = () => {
 
   const createTab = () => {
     const Tab = styled.li`
+      position: relative;
       display: flex;
       width: 100%;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      position: relative;
 
       &:hover {
         background-image: ${theme.colors.linearGradient};
@@ -27,14 +27,14 @@ const Comments = () => {
         border-bottom: none;
 
         &:before {
-          content: '';
-          display: block;
-          width: 100%;
+          position: absolute;
           bottom: 0;
           left: 0;
+          display: block;
+          width: 100%;
           height: 4px;
           background-image: ${theme.colors.linearGradient};
-          position: absolute;
+          content: '';
         }
       }
 
@@ -98,9 +98,9 @@ const Comments = () => {
   `;
 
   const FieldSet = styled.fieldset`
-    border: none;
     padding: 0;
     padding-bottom: 5px;
+    border: none;
   `;
   return (
     <>
@@ -116,16 +116,16 @@ const Comments = () => {
           ${breakpointsMap.DESKTOP} {
             display: flex;
             flex-wrap: wrap;
-            margin-bottom: 26px;
             padding-top: 27px;
+            margin-bottom: 26px;
           }
         `}
       >
         <FieldSet
           css={css`
-            margin-right: 30px;
-            padding-left: 0;
             padding-right: 0;
+            padding-left: 0;
+            margin-right: 30px;
 
             ${breakpointsMap.TABLET} {
               margin-right: 0;
@@ -177,10 +177,10 @@ const Comments = () => {
 
             ${breakpointsMap.DESKTOP} {
               display: flex;
-              padding-left: 0;
               padding-right: 0;
-              margin-right: 30px;
               padding-bottom: 5px;
+              padding-left: 0;
+              margin-right: 30px;
             }
           `}
         >
@@ -205,8 +205,8 @@ const Comments = () => {
               width: 100%;
               padding-left: 28px;
               border: 1px solid ${theme.colors.blue};
-              border-radius: 4px;
               margin-bottom: 10px;
+              border-radius: 4px;
               font-size: 13px;
 
               ${breakpointsMap.DESKTOP} {
@@ -229,8 +229,8 @@ const Comments = () => {
               width: 100%;
               padding-left: 28px;
               border: 1px solid ${theme.colors.blue};
-              border-radius: 4px;
               margin-bottom: 10px;
+              border-radius: 4px;
               font-size: 13px;
 
               ${breakpointsMap.DESKTOP} {
@@ -245,17 +245,17 @@ const Comments = () => {
         </FieldSet>
         <FieldSet
           css={css`
-            margin-bottom: 10px;
-            padding-left: 0;
             padding-right: 0;
+            padding-left: 0;
+            margin-bottom: 10px;
 
             .select {
               width: 100%;
             }
 
             .select__control {
-              border-color: ${theme.colors.blue};
               height: 47px;
+              border-color: ${theme.colors.blue};
             }
 
             .select__indicator {
@@ -293,11 +293,11 @@ const Comments = () => {
           css={css`
             display: flex;
             flex-direction: row;
-            margin-bottom: 10px;
-            padding-left: 0;
-            padding-right: 0;
             padding-top: 20px;
+            padding-right: 0;
             padding-bottom: 20px;
+            padding-left: 0;
+            margin-bottom: 10px;
             ${breakpointsMap.DESKTOP} {
               width: 100%;
               padding-bottom: 24px;
@@ -347,8 +347,8 @@ const Comments = () => {
         </FieldSet>
         <FieldSet
           css={css`
-            padding-left: 0;
             padding-right: 0;
+            padding-left: 0;
 
             ${breakpointsMap.DESKTOP} {
               display: flex;
@@ -357,8 +357,8 @@ const Comments = () => {
         >
           <legend
             css={css`
-              text-align: left;
               margin-bottom: 29px;
+              text-align: left;
             `}
           >
             Оставьте подробный отзыв
@@ -375,8 +375,8 @@ const Comments = () => {
               className="form__input form__input--textarea"
               placeholder="Ваше сообщение"
               css={css`
-                height: 247px;
                 width: 100%;
+                height: 247px;
                 border-color: ${theme.colors.blue};
 
                 ${breakpointsMap.DESKTOP} {
@@ -408,8 +408,8 @@ const Comments = () => {
                 <Star
                   fill="currentColor"
                   css={css`
-                    cursor: pointer;
                     color: #ddd;
+                    cursor: pointer;
 
                     &:hover {
                       color: #ffab1a;
@@ -458,22 +458,22 @@ const Comments = () => {
       <div>
         <h3
           css={css`
-            font-size: 16px;
             margin: 0;
-            font-weight: 500;
             margin-bottom: 29px;
+            font-size: 16px;
+            font-weight: 500;
           `}
         >
           Отзывы
         </h3>
         <ul
           css={css`
-            list-style: none;
             padding: 0;
+            list-style: none;
 
             ${breakpointsMap.DESKTOP} {
-              flex-wrap: wrap;
               display: flex;
+              flex-wrap: wrap;
             }
           `}
         >
@@ -482,18 +482,18 @@ const Comments = () => {
               position: relative;
               padding-top: 35px;
               padding-bottom: 34px;
-              box-shadow: ${theme.colors.boxShadow};
               margin-bottom: 31px;
+              box-shadow: ${theme.colors.boxShadow};
 
               &:before {
                 position: absolute;
-                content: '';
+                bottom: 0;
+                left: 0;
                 display: block;
                 width: 100%;
                 height: 7px;
-                bottom: 0;
-                left: 0;
                 background-image: ${theme.colors.linearGradient};
+                content: '';
               }
 
               ${breakpointsMap.DESKTOP} {
@@ -512,8 +512,8 @@ const Comments = () => {
                 <Star
                   fill="currentColor"
                   css={css`
-                    cursor: pointer;
                     color: #ddd;
+                    cursor: pointer;
 
                     &:hover {
                       color: #ffab1a;
@@ -531,12 +531,12 @@ const Comments = () => {
             </div>
             <div
               css={css`
-                padding-left: 79px;
                 padding-top: 30px;
-
-                background-repeat: no-repeat;
+                padding-left: 79px;
                 background-image: url('img/quotes.svg');
                 background-position: 50px 16px;
+
+                background-repeat: no-repeat;
               `}
             >
               Ответ
@@ -547,18 +547,18 @@ const Comments = () => {
               position: relative;
               padding-top: 35px;
               padding-bottom: 34px;
-              box-shadow: ${theme.colors.boxShadow};
               margin-bottom: 31px;
+              box-shadow: ${theme.colors.boxShadow};
 
               &:before {
                 position: absolute;
-                content: '';
+                bottom: 0;
+                left: 0;
                 display: block;
                 width: 100%;
                 height: 7px;
-                bottom: 0;
-                left: 0;
                 background-image: ${theme.colors.linearGradient};
+                content: '';
               }
 
               ${breakpointsMap.DESKTOP} {
@@ -576,8 +576,8 @@ const Comments = () => {
                 <Star
                   fill="currentColor"
                   css={css`
-                    cursor: pointer;
                     color: #ddd;
+                    cursor: pointer;
 
                     &:hover {
                       color: #ffab1a;
@@ -595,12 +595,12 @@ const Comments = () => {
             </div>
             <div
               css={css`
-                padding-left: 79px;
                 padding-top: 30px;
-
-                background-repeat: no-repeat;
+                padding-left: 79px;
                 background-image: url('img/quotes.svg');
                 background-position: 50px 16px;
+
+                background-repeat: no-repeat;
               `}
             >
               Ответ

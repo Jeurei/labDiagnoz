@@ -10,10 +10,10 @@ const positionsList = () => {
     <ul
       css={css`
         display: flex;
-        padding: 0;
+        width: 100%;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 100%;
+        padding: 0;
 
         ${breakpointsMap.TABLET} {
           flex-direction: row;
@@ -22,17 +22,17 @@ const positionsList = () => {
     >
       <li
         css={css`
-          box-shadow: ${theme.colors.boxShadow};
-          list-style: none;
-          font-size: 16px;
-          margin-bottom: 15px;
           position: relative;
+          margin-bottom: 15px;
+          box-shadow: ${theme.colors.boxShadow};
+          font-size: 16px;
+          list-style: none;
 
           .icon {
             position: absolute;
-            color: ${theme.colors.blue};
-            left: 15px;
             top: 4px;
+            left: 15px;
+            color: ${theme.colors.blue};
           }
 
           &:hover {
@@ -50,9 +50,9 @@ const positionsList = () => {
 
           ${breakpointsMap.TABLET} {
             width: 245px;
-            margin-bottom: 30px;
-            margin-right: 10px;
             flex-grow: 1;
+            margin-right: 10px;
+            margin-bottom: 30px;
 
             &:nth-of-type(2n) {
               margin-right: 0;
@@ -66,8 +66,8 @@ const positionsList = () => {
           }
 
           ${breakpointsMap.DESKTOP} {
-            flex-grow: 0;
             width: 370.5px;
+            flex-grow: 0;
             margin-right: 30px;
 
             &:nth-of-type(2n) {
@@ -89,12 +89,12 @@ const positionsList = () => {
         <a
           href="/"
           css={css`
+            display: block;
             width: 100%;
             height: 100%;
             padding-top: 16px;
             padding-bottom: 16px;
             padding-left: 51.5px;
-            display: block;
             font-weight: 500;
           `}
         >
@@ -103,17 +103,17 @@ const positionsList = () => {
       </li>
       <li
         css={css`
-          box-shadow: ${theme.colors.boxShadow};
-          list-style: none;
-          font-size: 16px;
-          margin-bottom: 15px;
           position: relative;
+          margin-bottom: 15px;
+          box-shadow: ${theme.colors.boxShadow};
+          font-size: 16px;
+          list-style: none;
 
           .icon {
             position: absolute;
-            color: ${theme.colors.blue};
-            left: 15px;
             top: 4px;
+            left: 15px;
+            color: ${theme.colors.blue};
           }
 
           &:hover {
@@ -131,9 +131,9 @@ const positionsList = () => {
 
           ${breakpointsMap.TABLET} {
             width: 245px;
-            margin-bottom: 30px;
-            margin-right: 10px;
             flex-grow: 1;
+            margin-right: 10px;
+            margin-bottom: 30px;
 
             &:nth-of-type(2n) {
               margin-right: 0;
@@ -147,8 +147,8 @@ const positionsList = () => {
           }
 
           ${breakpointsMap.DESKTOP} {
-            flex-grow: 0;
             width: 370.5px;
+            flex-grow: 0;
             margin-right: 30px;
 
             &:nth-of-type(2n) {
@@ -170,12 +170,12 @@ const positionsList = () => {
         <a
           href="/"
           css={css`
+            display: block;
             width: 100%;
             height: 100%;
             padding-top: 16px;
             padding-bottom: 16px;
             padding-left: 51.5px;
-            display: block;
             font-weight: 500;
           `}
         >
@@ -184,17 +184,17 @@ const positionsList = () => {
       </li>
       <li
         css={css`
-          box-shadow: ${theme.colors.boxShadow};
-          list-style: none;
-          font-size: 16px;
-          margin-bottom: 15px;
           position: relative;
+          margin-bottom: 15px;
+          box-shadow: ${theme.colors.boxShadow};
+          font-size: 16px;
+          list-style: none;
 
           .icon {
             position: absolute;
-            color: ${theme.colors.blue};
-            left: 15px;
             top: 4px;
+            left: 15px;
+            color: ${theme.colors.blue};
           }
 
           &:hover {
@@ -212,9 +212,9 @@ const positionsList = () => {
 
           ${breakpointsMap.TABLET} {
             width: 245px;
-            margin-bottom: 30px;
-            margin-right: 10px;
             flex-grow: 1;
+            margin-right: 10px;
+            margin-bottom: 30px;
 
             &:nth-of-type(2n) {
               margin-right: 0;
@@ -228,8 +228,8 @@ const positionsList = () => {
           }
 
           ${breakpointsMap.DESKTOP} {
-            flex-grow: 0;
             width: 370.5px;
+            flex-grow: 0;
             margin-right: 30px;
 
             &:nth-of-type(2n) {
@@ -251,12 +251,12 @@ const positionsList = () => {
         <a
           href="/"
           css={css`
+            display: block;
             width: 100%;
             height: 100%;
             padding-top: 16px;
             padding-bottom: 16px;
             padding-left: 51.5px;
-            display: block;
             font-weight: 500;
           `}
         >
@@ -265,17 +265,17 @@ const positionsList = () => {
       </li>
       <li
         css={css`
-          box-shadow: ${theme.colors.boxShadow};
-          list-style: none;
-          font-size: 16px;
-          margin-bottom: 15px;
           position: relative;
+          margin-bottom: 15px;
+          box-shadow: ${theme.colors.boxShadow};
+          font-size: 16px;
+          list-style: none;
 
           .icon {
             position: absolute;
-            color: ${theme.colors.blue};
-            left: 15px;
             top: 4px;
+            left: 15px;
+            color: ${theme.colors.blue};
           }
 
           &:hover {
@@ -293,9 +293,9 @@ const positionsList = () => {
 
           ${breakpointsMap.TABLET} {
             width: 245px;
-            margin-bottom: 30px;
-            margin-right: 10px;
             flex-grow: 1;
+            margin-right: 10px;
+            margin-bottom: 30px;
 
             &:nth-of-type(2n) {
               margin-right: 0;
@@ -309,8 +309,8 @@ const positionsList = () => {
           }
 
           ${breakpointsMap.DESKTOP} {
-            flex-grow: 0;
             width: 370.5px;
+            flex-grow: 0;
             margin-right: 30px;
 
             &:nth-of-type(2n) {
@@ -332,12 +332,12 @@ const positionsList = () => {
         <a
           href="/"
           css={css`
+            display: block;
             width: 100%;
             height: 100%;
             padding-top: 16px;
             padding-bottom: 16px;
             padding-left: 51.5px;
-            display: block;
             font-weight: 500;
           `}
         >
@@ -352,8 +352,8 @@ const PositionsCatalog = () => {
   return (
     <div
       css={css`
-        padding-top: 23px;
         width: 100%;
+        padding-top: 23px;
       `}
     >
       {positionsList()}

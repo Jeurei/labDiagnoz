@@ -155,13 +155,13 @@ const References = () => {
           </fieldset>
           <div
             css={css`
-              width: 100%;
-              display: flex;
-              padding: 0.35em 0.75em 0.625em;
-              background-color: #f7f7f7;
               position: relative;
+              display: flex;
+              width: 100%;
+              padding: 0.35em 0.75em 0.625em;
               padding-top: 22px;
               padding-bottom: 20px;
+              background-color: #f7f7f7;
 
               &:before {
                 position: absolute;
@@ -175,8 +175,8 @@ const References = () => {
               }
 
               ${breakpointsMap.DESKTOP} {
-                padding-left: 43px;
                 padding-right: 43px;
+                padding-left: 43px;
               }
             `}
           >
@@ -185,9 +185,9 @@ const References = () => {
                 position: relative;
 
                 margin: 0;
+                margin-right: auto;
                 font-size: 16px;
                 font-weight: 500;
-                margin-right: auto;
               `}
             >
               Пациент
@@ -195,17 +195,17 @@ const References = () => {
             <a
               href="/"
               css={css`
-                appearance: none;
-                border: none;
-                font-weight: 500;
-                font-size: 16px;
-                background: transparent;
-                border-bottom: 2px solid ${theme.colors.colorText.hex};
-                padding: 0;
                 position: relative;
                 display: block;
+                padding: 0;
 
                 padding-left: 10px;
+                border: none;
+                border-bottom: 2px solid ${theme.colors.colorText.hex};
+                appearance: none;
+                background: transparent;
+                font-size: 16px;
+                font-weight: 500;
 
                 &:hover,
                 &:active {
@@ -214,14 +214,14 @@ const References = () => {
 
                 &:before,
                 &:after {
-                  content: '';
                   position: absolute;
+                  top: 3px;
+                  left: 0;
                   display: block;
                   width: 2px;
                   height: 10px;
-                  left: 0;
-                  top: 3px;
                   background-color: ${theme.colors.colorText.hex};
+                  content: '';
                 }
 
                 &:before {

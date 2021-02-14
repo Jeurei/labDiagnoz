@@ -98,8 +98,8 @@ const Analyze = () => {
 
   const SpanContainer = styled('span')`
     font-size: 13px;
-    text-transform: uppercase;
     font-weight: 500;
+    text-transform: uppercase;
   `;
 
   return (
@@ -214,7 +214,7 @@ const Analyze = () => {
               padding-right: 10px;
               padding-left: 10px;
 
-              ${breakpointsMap.DESKTOP} {
+              ${breakpointsMap.TABLET} {
                 padding: 0;
               }
 

@@ -69,17 +69,17 @@ const Corpo = ({ features }) => {
           action="post"
           className="form-section__form form"
           css={css`
-            margin-bottom: 43px;
             flex-wrap: wrap;
+            margin-bottom: 43px;
           `}
         >
           <legend
             css={css`
-              font-weight: 500;
-              font-size: 16px;
-              color: ${theme.colors.colorText.hex};
               width: 100%;
               margin-bottom: 42px;
+              color: ${theme.colors.colorText.hex};
+              font-size: 16px;
+              font-weight: 500;
             `}
           >
             Получить коммерческое предложение

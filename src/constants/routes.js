@@ -113,6 +113,14 @@ const routesConstants = {
     route: '/shares',
     name: 'Акции',
   },
+  ABOUTUS: {
+    route: '/aboutus',
+    name: 'О компании',
+  },
+  REFUND: {
+    route: '/refund',
+    name: 'Возврат',
+  },
 };
 
 const routesConstantsWODirectLinks = {

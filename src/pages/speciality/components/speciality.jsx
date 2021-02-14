@@ -316,11 +316,11 @@ const Speciality = ({ specialists }) => {
                         type="button"
                         className="button"
                         css={css`
+                          width: 176px;
                           padding-top: 18px;
                           padding-bottom: 18px;
                           border: none;
                           border-radius: 4px;
-                          width: 176px;
                         `}
                       >
                         Записаться
@@ -345,17 +345,17 @@ const Speciality = ({ specialists }) => {
       <div>
         <h3
           css={css`
-            font-weight: 500;
             margin-right: 30px;
+            font-weight: 500;
           `}
         >
           Врачи эндокринологи в Перми
         </h3>
         <div
           css={css`
-            box-shadow: ${theme.colors.boxShadow};
             width: 100%;
             margin-bottom: 46px;
+            box-shadow: ${theme.colors.boxShadow};
           `}
         >
           <Specialist data={specialists[0]} />

@@ -208,9 +208,9 @@ const Lab = () => {
       <TabsContainer>
         <div
           css={css`
-            padding-left: 20px;
             padding-top: 20px;
             padding-bottom: 27px;
+            padding-left: 20px;
           `}
         >
           <span
@@ -490,8 +490,8 @@ const Lab = () => {
                   display: flex;
                   width: 100%;
                   flex-direction: column;
-                  justify-content: center;
                   align-items: flex-start;
+                  justify-content: center;
                   margin-bottom: 15px;
                   font-size: 16px;
                   font-weight: 500;
@@ -547,8 +547,8 @@ const Lab = () => {
                 </span>
                 <span
                   css={css`
-                    font-size: 12px;
                     position: relative;
+                    font-size: 12px;
                     word-spacing: 5px;
                   `}
                 >

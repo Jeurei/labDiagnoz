@@ -30,16 +30,16 @@ const MedCenter = () => {
         </h2>
         <div
           css={css`
-            margin-bottom: 31px;
-            padding-left: 5px;
             padding-right: 5px;
+            padding-left: 5px;
+            margin-bottom: 31px;
           `}
         >
           <span
             css={css`
+              position: relative;
               padding-left: 13px;
               margin-right: 60px;
-              position: relative;
             `}
           >
             <TelIcon
@@ -56,8 +56,8 @@ const MedCenter = () => {
           </span>
           <span
             css={css`
-              padding-left: 16px;
               position: relative;
+              padding-left: 16px;
             `}
           >
             <MailIcon
@@ -75,16 +75,16 @@ const MedCenter = () => {
         </div>
         <div
           css={css`
-            padding-left: 10px;
             padding-right: 10px;
+            padding-left: 10px;
           `}
         >
           <h3
             css={css`
-              font-weight: 500;
-              font-size: 16px;
               margin-top: 0;
               margin-bottom: 35px;
+              font-size: 16px;
+              font-weight: 500;
             `}
           >
             Описание
@@ -92,9 +92,9 @@ const MedCenter = () => {
           <p
             css={css`
               margin: 0;
+              margin-bottom: 20.5px;
               font-size: 13px;
               line-height: 22px;
-              margin-bottom: 20.5px;
             `}
           >
             Приемы врачей и УЗИ ведутся по предварительной записи, тел.: (342) 2
@@ -114,13 +114,13 @@ const MedCenter = () => {
         >
           <div
             css={css`
-              padding-top: 3.5px;
               display: flex;
               flex-direction: column;
+              padding-top: 3.5px;
 
               ${breakpointsMap.DESKTOP} {
-                margin-right: auto;
                 width: 570px;
+                margin-right: auto;
               }
             `}
           >
@@ -137,19 +137,19 @@ const MedCenter = () => {
             >
               <h3
                 css={css`
-                  background-color: ${theme.colors.blue};
-                  color: ${theme.colors.white};
-                  font-weight: 400;
-                  width: 100%;
-                  border-radius: 4px;
-                  text-align: left;
-                  margin-right: 8px;
-                  padding: 10px;
                   display: flex;
+                  width: 100%;
                   align-items: center;
                   justify-content: center;
+                  padding: 10px;
                   margin: 0;
+                  margin-right: 8px;
                   margin-bottom: 8px;
+                  background-color: ${theme.colors.blue};
+                  border-radius: 4px;
+                  color: ${theme.colors.white};
+                  font-weight: 400;
+                  text-align: left;
                 `}
               >
                 График приёма пациентов
@@ -157,67 +157,67 @@ const MedCenter = () => {
               <div>
                 <h4
                   css={css`
-                    margin: 0;
-                    font-weight: 500;
-                    font-size: 16px;
-                    text-align: center;
-                    vertical-align: center;
-                    border-radius: 4px;
                     width: 100%;
                     padding: 10px;
+                    margin: 0;
                     background-color: #f7f7f7;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-align: center;
+                    vertical-align: center;
                   `}
                 >
                   Взятие крови
                 </h4>
                 <ul
                   css={css`
-                    list-style: none;
-                    padding: 0;
                     display: flex;
                     justify-content: space-between;
-                    padding-left: 5px;
+                    padding: 0;
                     padding-right: 5px;
+                    padding-left: 5px;
+                    list-style: none;
                   `}
                 >
                   <li
                     css={css`
-                      padding: 10px;
-                      border-radius: 4px;
-                      background-color: ${theme.colors.colorText.hex};
-                      color: ${theme.colors.white};
-                      width: 95px;
                       display: flex;
+                      width: 95px;
                       align-items: center;
                       justify-content: center;
+                      padding: 10px;
+                      background-color: ${theme.colors.colorText.hex};
+                      border-radius: 4px;
+                      color: ${theme.colors.white};
                     `}
                   >
                     ПН-ПТ
                   </li>
                   <li
                     css={css`
-                      padding: 10px;
-                      border-radius: 4px;
-                      background-color: ${theme.colors.colorText.hex};
-                      color: ${theme.colors.white};
-                      width: 95px;
                       display: flex;
+                      width: 95px;
                       align-items: center;
                       justify-content: center;
+                      padding: 10px;
+                      background-color: ${theme.colors.colorText.hex};
+                      border-radius: 4px;
+                      color: ${theme.colors.white};
                     `}
                   >
                     СБ
                   </li>
                   <li
                     css={css`
-                      padding: 10px;
-                      border-radius: 4px;
-                      background-color: ${theme.colors.colorText.hex};
-                      color: ${theme.colors.white};
-                      width: 95px;
                       display: flex;
+                      width: 95px;
                       align-items: center;
                       justify-content: center;
+                      padding: 10px;
+                      background-color: ${theme.colors.colorText.hex};
+                      border-radius: 4px;
+                      color: ${theme.colors.white};
                     `}
                   >
                     ВС
@@ -225,52 +225,52 @@ const MedCenter = () => {
                 </ul>
                 <ul
                   css={css`
-                    list-style: none;
-                    padding: 0;
                     display: flex;
                     justify-content: space-between;
-                    padding-left: 5px;
+                    padding: 0;
                     padding-right: 5px;
+                    padding-left: 5px;
+                    list-style: none;
                   `}
                 >
                   <li
                     css={css`
-                      padding: 10px 0;
-                      border-radius: 4px;
-                      background-color: #f7f7f7;
-                      color: ${theme.colors.colorText.hex};
-                      width: 95px;
                       display: flex;
+                      width: 95px;
                       align-items: center;
                       justify-content: center;
+                      padding: 10px 0;
+                      background-color: #f7f7f7;
+                      border-radius: 4px;
+                      color: ${theme.colors.colorText.hex};
                     `}
                   >
                     07:00 - 19:00
                   </li>
                   <li
                     css={css`
-                      padding: 10px 0;
-                      border-radius: 4px;
-                      background-color: #f7f7f7;
-                      color: ${theme.colors.colorText.hex};
-                      width: 95px;
                       display: flex;
+                      width: 95px;
                       align-items: center;
                       justify-content: center;
+                      padding: 10px 0;
+                      background-color: #f7f7f7;
+                      border-radius: 4px;
+                      color: ${theme.colors.colorText.hex};
                     `}
                   >
                     07:00 - 19:00
                   </li>
                   <li
                     css={css`
-                      padding: 10px 0;
-                      border-radius: 4px;
-                      background-color: #f7f7f7;
-                      color: ${theme.colors.colorText.hex};
-                      width: 95px;
                       display: flex;
+                      width: 95px;
                       align-items: center;
                       justify-content: center;
+                      padding: 10px 0;
+                      background-color: #f7f7f7;
+                      border-radius: 4px;
+                      color: ${theme.colors.colorText.hex};
                     `}
                   >
                     07:00 - 19:00
@@ -280,9 +280,9 @@ const MedCenter = () => {
             </div>
             <table
               css={css`
+                display: none;
                 width: 100%;
                 margin-bottom: 10px;
-                display: none;
 
                 ${breakpointsMap.TABLET} {
                   display: table;
@@ -293,9 +293,9 @@ const MedCenter = () => {
                 <tr
                   css={css`
                     display: flex;
-                    margin-bottom: 6px;
-                    padding-left: 5px;
                     padding-right: 5px;
+                    padding-left: 5px;
+                    margin-bottom: 6px;
 
                     ${breakpointsMap.DESKTOP} {
                       padding: 0;
@@ -304,19 +304,19 @@ const MedCenter = () => {
                 >
                   <th
                     css={css`
-                      background-color: ${theme.colors.blue};
-                      color: ${theme.colors.white};
-                      font-weight: 400;
+                      display: flex;
                       width: 160px;
-                      border-radius: 4px;
-                      text-align: left;
-                      margin-right: 8px;
+                      flex-grow: 1;
+                      align-items: center;
                       padding-top: 13px;
                       padding-bottom: 15px;
-                      display: flex;
-                      align-items: center;
-                      flex-grow: 1;
                       padding-left: 26px;
+                      margin-right: 8px;
+                      background-color: ${theme.colors.blue};
+                      border-radius: 4px;
+                      color: ${theme.colors.white};
+                      font-weight: 400;
+                      text-align: left;
 
                       ${breakpointsMap.DESKTOP} {
                         width: 263px;
@@ -327,19 +327,19 @@ const MedCenter = () => {
                   </th>
                   <th
                     css={css`
-                      background-color: ${theme.colors.colorText.hex};
-                      color: ${theme.colors.white};
-                      font-weight: 400;
-                      border-radius: 4px;
-                      width: 75px;
-                      margin-right: 8px;
-                      vertical-align: center;
                       display: flex;
+                      width: 75px;
+                      flex-grow: 0.5;
                       align-items: center;
+                      justify-content: center;
                       padding-top: 13px;
                       padding-bottom: 15px;
-                      justify-content: center;
-                      flex-grow: 0.5;
+                      margin-right: 8px;
+                      background-color: ${theme.colors.colorText.hex};
+                      border-radius: 4px;
+                      color: ${theme.colors.white};
+                      font-weight: 400;
+                      vertical-align: center;
                       ${breakpointsMap.DESKTOP} {
                         width: 90px;
                       }
@@ -349,18 +349,18 @@ const MedCenter = () => {
                   </th>
                   <th
                     css={css`
-                      background-color: ${theme.colors.colorText.hex};
-                      color: ${theme.colors.white};
-                      font-weight: 400;
-                      border-radius: 4px;
-                      width: 75px;
-                      margin-right: 8px;
                       display: flex;
-                      padding-top: 13px;
-                      padding-bottom: 15px;
+                      width: 75px;
+                      flex-grow: 0.5;
                       align-items: center;
                       justify-content: center;
-                      flex-grow: 0.5;
+                      padding-top: 13px;
+                      padding-bottom: 15px;
+                      margin-right: 8px;
+                      background-color: ${theme.colors.colorText.hex};
+                      border-radius: 4px;
+                      color: ${theme.colors.white};
+                      font-weight: 400;
 
                       ${breakpointsMap.DESKTOP} {
                         width: 90px;
@@ -371,17 +371,17 @@ const MedCenter = () => {
                   </th>
                   <th
                     css={css`
-                      background-color: ${theme.colors.colorText.hex};
-                      color: ${theme.colors.white};
-                      font-weight: 400;
-                      border-radius: 4px;
-                      width: 75px;
                       display: flex;
-                      padding-top: 13px;
-                      padding-bottom: 15px;
+                      width: 75px;
+                      flex-grow: 0.5;
                       align-items: center;
                       justify-content: center;
-                      flex-grow: 0.5;
+                      padding-top: 13px;
+                      padding-bottom: 15px;
+                      background-color: ${theme.colors.colorText.hex};
+                      border-radius: 4px;
+                      color: ${theme.colors.white};
+                      font-weight: 400;
 
                       ${breakpointsMap.DESKTOP} {
                         width: 90px;
@@ -396,9 +396,9 @@ const MedCenter = () => {
                 <tr
                   css={css`
                     display: flex;
-                    margin-bottom: 6px;
-                    padding-left: 5px;
                     padding-right: 5px;
+                    padding-left: 5px;
+                    margin-bottom: 6px;
 
                     ${breakpointsMap.DESKTOP} {
                       padding: 0;
@@ -407,19 +407,19 @@ const MedCenter = () => {
                 >
                   <td
                     css={css`
-                      background-color: #f7f7f7;
-                      color: ${theme.colors.colorText.hex};
-                      font-weight: 500;
+                      display: flex;
                       width: 160px;
-                      border-radius: 4px;
-                      text-align: left;
-                      margin-right: 8px;
+                      flex-grow: 1;
+                      align-items: center;
                       padding-top: 13px;
                       padding-bottom: 15px;
-                      display: flex;
-                      align-items: center;
-                      flex-grow: 1;
                       padding-left: 26px;
+                      margin-right: 8px;
+                      background-color: #f7f7f7;
+                      border-radius: 4px;
+                      color: ${theme.colors.colorText.hex};
+                      font-weight: 500;
+                      text-align: left;
 
                       ${breakpointsMap.DESKTOP} {
                         width: 263px;
@@ -430,19 +430,19 @@ const MedCenter = () => {
                   </td>
                   <td
                     css={css`
-                      background-color: #f7f7f7;
-                      color: ${theme.colors.colorText.hex};
-                      font-weight: 400;
-                      border-radius: 4px;
-                      width: 75px;
-                      margin-right: 8px;
-                      padding-top: 13px;
-                      padding-bottom: 15px;
-                      vertical-align: center;
                       display: flex;
+                      width: 75px;
+                      flex-grow: 0.5;
                       align-items: center;
                       justify-content: center;
-                      flex-grow: 0.5;
+                      padding-top: 13px;
+                      padding-bottom: 15px;
+                      margin-right: 8px;
+                      background-color: #f7f7f7;
+                      border-radius: 4px;
+                      color: ${theme.colors.colorText.hex};
+                      font-weight: 400;
+                      vertical-align: center;
                       ${breakpointsMap.DESKTOP} {
                         width: 90px;
                       }
@@ -452,18 +452,18 @@ const MedCenter = () => {
                   </td>
                   <td
                     css={css`
-                      background-color: #f7f7f7;
-                      color: ${theme.colors.colorText.hex};
-                      font-weight: 400;
-                      border-radius: 4px;
-                      width: 75px;
-                      margin-right: 8px;
-                      padding-top: 13px;
-                      padding-bottom: 15px;
                       display: flex;
+                      width: 75px;
+                      flex-grow: 0.5;
                       align-items: center;
                       justify-content: center;
-                      flex-grow: 0.5;
+                      padding-top: 13px;
+                      padding-bottom: 15px;
+                      margin-right: 8px;
+                      background-color: #f7f7f7;
+                      border-radius: 4px;
+                      color: ${theme.colors.colorText.hex};
+                      font-weight: 400;
 
                       ${breakpointsMap.DESKTOP} {
                         width: 90px;
@@ -474,17 +474,17 @@ const MedCenter = () => {
                   </td>
                   <td
                     css={css`
-                      background-color: #f7f7f7;
-                      color: ${theme.colors.colorText.hex};
-                      font-weight: 400;
-                      border-radius: 4px;
-                      width: 75px;
-                      padding-top: 13px;
-                      padding-bottom: 15px;
                       display: flex;
+                      width: 75px;
+                      flex-grow: 0.5;
                       align-items: center;
                       justify-content: center;
-                      flex-grow: 0.5;
+                      padding-top: 13px;
+                      padding-bottom: 15px;
+                      background-color: #f7f7f7;
+                      border-radius: 4px;
+                      color: ${theme.colors.colorText.hex};
+                      font-weight: 400;
 
                       ${breakpointsMap.DESKTOP} {
                         width: 90px;
@@ -504,10 +504,9 @@ const MedCenter = () => {
                 display: flex;
                 flex-direction: column;
                 padding-top: 28px;
-                padding-left: 35px;
-                padding-bottom: 42px;
                 padding-right: 35px;
-                color: ${theme.colors.white};
+                padding-bottom: 42px;
+                padding-left: 35px;
                 background-image: url('img/analyze-q-bg.png'),
                   linear-gradient(
                     to left,
@@ -518,6 +517,7 @@ const MedCenter = () => {
                 background-position: 0 0;
                 background-repeat: no-repeat;
                 background-size: cover;
+                color: ${theme.colors.white};
                 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
                   background-image: url('img/analyze-q-bg@2x.png'),
                     linear-gradient(
@@ -530,16 +530,16 @@ const MedCenter = () => {
 
                 ${breakpointsMap.DESKTOP} {
                   width: 600px;
-                  padding-left: 24px;
                   padding-right: 24px;
+                  padding-left: 24px;
                 }
               `}
             >
               <legend
                 css={css`
+                  margin-bottom: 25px;
                   font-size: 22px;
                   text-align: center;
-                  margin-bottom: 25px;
                 `}
               >
                 Обратный звонок
@@ -558,14 +558,14 @@ const MedCenter = () => {
                   type="text"
                   placeholder="Ваше имя *"
                   css={css`
+                    height: 37px;
                     flex-grow: 1;
                     padding-top: 9px;
                     padding-bottom: 11px;
                     padding-left: 14px;
-                    appearance: none;
                     border: none;
-                    height: 37px;
                     margin-bottom: 15px;
+                    appearance: none;
                     color: ${theme.colors.colorText.hex};
 
                     ${breakpointsMap.TABLET} {
@@ -577,14 +577,14 @@ const MedCenter = () => {
                   type="text"
                   placeholder="Желаемое время"
                   css={css`
+                    height: 37px;
                     flex-grow: 1;
                     padding-top: 9px;
                     padding-bottom: 11px;
                     padding-left: 14px;
-                    appearance: none;
                     border: none;
-                    height: 37px;
                     margin-bottom: 15px;
+                    appearance: none;
                     color: ${theme.colors.colorText.hex};
                   `}
                 />
@@ -592,8 +592,8 @@ const MedCenter = () => {
               <div
                 css={css`
                   display: flex;
-                  margin-bottom: 15px;
                   flex-direction: column;
+                  margin-bottom: 15px;
 
                   ${breakpointsMap.TABLET} {
                     flex-direction: row;
@@ -604,21 +604,21 @@ const MedCenter = () => {
                   type="text"
                   placeholder="Телефон *"
                   css={css`
+                    min-width: 221px;
+                    height: 37px;
                     flex-grow: 1;
                     padding-top: 9px;
                     padding-bottom: 11px;
                     padding-left: 14px;
-                    appearance: none;
                     border: none;
-                    min-width: 221px;
-                    height: 37px;
                     margin-bottom: 15px;
+                    appearance: none;
                     color: ${theme.colors.colorText.hex};
 
                     ${breakpointsMap.TABLET} {
-                      margin-right: 26px;
                       width: 312px;
                       flex-grow: 0;
+                      margin-right: 26px;
                     }
 
                     ${breakpointsMap.DESKTOP} {
@@ -689,16 +689,16 @@ const MedCenter = () => {
         <div
           css={css`
             padding-top: 37px;
-            padding-left: 5px;
             padding-right: 5px;
+            padding-left: 5px;
           `}
         >
           <h3
             css={css`
-              font-weight: 400;
-              font-size: 16px;
               margin: 0;
               margin-bottom: 38px;
+              font-size: 16px;
+              font-weight: 400;
             `}
           >
             Выбор специалсита
@@ -707,11 +707,11 @@ const MedCenter = () => {
         </div>
         <div
           css={css`
-            padding-top: 37px;
-            padding-left: 5px;
-            padding-right: 5px;
             display: flex;
             flex-direction: column;
+            padding-top: 37px;
+            padding-right: 5px;
+            padding-left: 5px;
 
             ${breakpointsMap.TABLET} {
               flex-direction: row;
@@ -721,11 +721,11 @@ const MedCenter = () => {
         >
           <h3
             css={css`
-              font-weight: 500;
-              font-size: 16px;
+              width: 100%;
               margin: 0;
               margin-bottom: 38px;
-              width: 100%;
+              font-size: 16px;
+              font-weight: 500;
             `}
           >
             Эндокринологи
@@ -736,10 +736,10 @@ const MedCenter = () => {
               width: 339px;
               flex-direction: column;
               align-items: center;
-              padding-bottom: 39px;
-              box-shadow: ${theme.colors.boxShadow};
               align-self: center;
+              padding-bottom: 39px;
               margin-bottom: 29px;
+              box-shadow: ${theme.colors.boxShadow};
 
               ${breakpointsMap.TABLET} {
                 margin-right: auto;
@@ -792,10 +792,10 @@ const MedCenter = () => {
               width: 339px;
               flex-direction: column;
               align-items: center;
-              padding-bottom: 39px;
-              box-shadow: ${theme.colors.boxShadow};
               align-self: center;
+              padding-bottom: 39px;
               margin-bottom: 29px;
+              box-shadow: ${theme.colors.boxShadow};
 
               ${breakpointsMap.DESKTOP} {
                 margin-right: 31px;
@@ -836,10 +836,10 @@ const MedCenter = () => {
               width: 339px;
               flex-direction: column;
               align-items: center;
-              padding-bottom: 39px;
-              box-shadow: ${theme.colors.boxShadow};
               align-self: center;
+              padding-bottom: 39px;
               margin-bottom: 29px;
+              box-shadow: ${theme.colors.boxShadow};
 
               ${breakpointsMap.TABLET} {
                 margin-right: auto;
@@ -884,10 +884,10 @@ const MedCenter = () => {
               width: 339px;
               flex-direction: column;
               align-items: center;
-              padding-bottom: 39px;
-              box-shadow: ${theme.colors.boxShadow};
               align-self: center;
+              padding-bottom: 39px;
               margin-bottom: 29px;
+              box-shadow: ${theme.colors.boxShadow};
             `}
           >
             <Picture src="img/beatiful-young-fem" />
@@ -922,25 +922,25 @@ const MedCenter = () => {
       </SectionInner>
       <div
         css={css`
-          background-image: ${theme.colors.linearGradient};
           padding-top: 20.5px;
           padding-bottom: 23px;
           margin-bottom: 38px;
+          background-image: ${theme.colors.linearGradient};
         `}
       >
         <SectionInner>
           <ul
             css={css`
-              padding: 0;
-              list-style: none;
               display: flex;
-              color: ${theme.colors.white};
-              padding-left: 10px;
-              padding-right: 10px;
               flex-direction: row;
               flex-wrap: wrap;
-              justify-content: center;
               align-items: space-between;
+              justify-content: center;
+              padding: 0;
+              padding-right: 10px;
+              padding-left: 10px;
+              color: ${theme.colors.white};
+              list-style: none;
 
               ${breakpointsMap.TABLET} {
                 flex-wrap: nowrap;
@@ -948,24 +948,24 @@ const MedCenter = () => {
 
               ${breakpointsMap.DESKTOP} {
                 justify-content: space-between;
-                margin: 0;
-                padding-left: 20px;
                 padding-right: 20px;
+                padding-left: 20px;
+                margin: 0;
               }
             `}
           >
             <li
               css={css`
-                padding-left: 30px;
-                background-repeat: no-repeat;
-                background-image: url('img/doctor-white.svg');
-                background-position: left center;
-                background-size: 23px 31px;
                 display: flex;
-                align-items: center;
                 min-height: 31px;
+                align-items: center;
+                padding-left: 30px;
                 margin-right: 10px;
                 margin-bottom: 10px;
+                background-image: url('img/doctor-white.svg');
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: 23px 31px;
 
                 ${breakpointsMap.DESKTOP} {
                   margin: 0;
@@ -976,16 +976,16 @@ const MedCenter = () => {
             </li>
             <li
               css={css`
-                padding-left: 30px;
-                background-repeat: no-repeat;
-                background-image: url('img/doctor-white.svg');
-                background-position: left center;
-                background-size: 23px 31px;
                 display: flex;
-                align-items: center;
                 min-height: 31px;
+                align-items: center;
+                padding-left: 30px;
                 margin-right: 10px;
                 margin-bottom: 10px;
+                background-image: url('img/doctor-white.svg');
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: 23px 31px;
 
                 ${breakpointsMap.DESKTOP} {
                   margin: 0;
@@ -996,16 +996,16 @@ const MedCenter = () => {
             </li>
             <li
               css={css`
-                padding-left: 30px;
-                background-repeat: no-repeat;
-                background-image: url('img/doctor-white.svg');
-                background-position: left center;
-                background-size: 23px 31px;
                 display: flex;
-                align-items: center;
                 min-height: 31px;
+                align-items: center;
+                padding-left: 30px;
                 margin-right: 10px;
                 margin-bottom: 10px;
+                background-image: url('img/doctor-white.svg');
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: 23px 31px;
 
                 ${breakpointsMap.DESKTOP} {
                   margin: 0;
@@ -1016,17 +1016,16 @@ const MedCenter = () => {
             </li>
             <li
               css={css`
-                padding-left: 30px;
-                background-repeat: no-repeat;
-                background-image: url('img/doctor-white.svg');
-                background-position: left center;
-                background-size: 23px 31px;
-                min-height: 31px;
                 display: flex;
-                align-items: center;
                 min-height: 31px;
+                align-items: center;
+                padding-left: 30px;
                 margin-right: 10px;
                 margin-bottom: 10px;
+                background-image: url('img/doctor-white.svg');
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: 23px 31px;
 
                 ${breakpointsMap.TABLET} {
                   margin-right: 0;
@@ -1047,8 +1046,8 @@ const MedCenter = () => {
           css={css`
             display: flex;
             flex-direction: column;
-            padding-left: 5px;
             padding-right: 5px;
+            padding-left: 5px;
 
             ${breakpointsMap.DESKTOP} {
               flex-direction: row;
@@ -1067,16 +1066,16 @@ const MedCenter = () => {
           >
             <h3
               css={css`
-                font-weight: 400;
-                font-size: 16px;
                 margin: 0;
                 margin-right: auto;
                 margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 400;
 
                 ${breakpointsMap.DESKTOP} {
-                  margin-bottom: 0;
                   display: flex;
                   align-items: center;
+                  margin-bottom: 0;
                 }
               `}
             >
@@ -1086,8 +1085,8 @@ const MedCenter = () => {
             <div
               css={css`
                 display: flex;
-                justify-content: center;
                 width: 100%;
+                justify-content: center;
                 .reference__picture:nth-of-type(n + 2) {
                   display: none;
                 }
@@ -1120,16 +1119,16 @@ const MedCenter = () => {
           >
             <h3
               css={css`
-                font-weight: 400;
-                font-size: 16px;
                 margin: 0;
                 margin-right: auto;
                 margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 400;
 
                 ${breakpointsMap.DESKTOP} {
-                  margin-bottom: 0;
                   display: flex;
                   align-items: center;
+                  margin-bottom: 0;
                 }
               `}
             >
@@ -1139,8 +1138,8 @@ const MedCenter = () => {
             <div
               css={css`
                 display: flex;
-                justify-content: center;
                 width: 100%;
+                justify-content: center;
                 .reference__picture:nth-of-type(n + 2) {
                   display: none;
                 }
@@ -1167,17 +1166,17 @@ const MedCenter = () => {
         </div>
         <div
           css={css`
-            padding-left: 5px;
             padding-right: 5px;
+            padding-left: 5px;
           `}
         >
           <h3
             css={css`
-              font-weight: 400;
-              font-size: 16px;
               margin: 0;
               margin-right: auto;
               margin-bottom: 10px;
+              font-size: 16px;
+              font-weight: 400;
             `}
           >
             Отзывы
@@ -1194,18 +1193,18 @@ const MedCenter = () => {
                 position: relative;
                 padding-top: 35px;
                 padding-bottom: 34px;
-                box-shadow: ${theme.colors.boxShadow};
                 margin-bottom: 31px;
+                box-shadow: ${theme.colors.boxShadow};
 
                 &:before {
                   position: absolute;
-                  content: '';
+                  bottom: 0;
+                  left: 0;
                   display: block;
                   width: 100%;
                   height: 7px;
-                  bottom: 0;
-                  left: 0;
                   background-image: ${theme.colors.linearGradient};
+                  content: '';
                 }
 
                 ${breakpointsMap.DESKTOP} {
@@ -1224,8 +1223,8 @@ const MedCenter = () => {
                   <Star
                     fill="currentColor"
                     css={css`
-                      cursor: pointer;
                       color: #ddd;
+                      cursor: pointer;
 
                       &:hover {
                         color: #ffab1a;
@@ -1243,12 +1242,12 @@ const MedCenter = () => {
               </div>
               <div
                 css={css`
-                  padding-left: 79px;
                   padding-top: 30px;
-
-                  background-repeat: no-repeat;
+                  padding-left: 79px;
                   background-image: url('img/quotes.svg');
                   background-position: 50px 16px;
+
+                  background-repeat: no-repeat;
                 `}
               >
                 Ответ
@@ -1259,18 +1258,18 @@ const MedCenter = () => {
                 position: relative;
                 padding-top: 35px;
                 padding-bottom: 34px;
-                box-shadow: ${theme.colors.boxShadow};
                 margin-bottom: 31px;
+                box-shadow: ${theme.colors.boxShadow};
 
                 &:before {
                   position: absolute;
-                  content: '';
+                  bottom: 0;
+                  left: 0;
                   display: block;
                   width: 100%;
                   height: 7px;
-                  bottom: 0;
-                  left: 0;
                   background-image: ${theme.colors.linearGradient};
+                  content: '';
                 }
 
                 ${breakpointsMap.DESKTOP} {
@@ -1289,8 +1288,8 @@ const MedCenter = () => {
                   <Star
                     fill="currentColor"
                     css={css`
-                      cursor: pointer;
                       color: #ddd;
+                      cursor: pointer;
 
                       &:hover {
                         color: #ffab1a;
@@ -1308,12 +1307,12 @@ const MedCenter = () => {
               </div>
               <div
                 css={css`
-                  padding-left: 79px;
                   padding-top: 30px;
-
-                  background-repeat: no-repeat;
+                  padding-left: 79px;
                   background-image: url('img/quotes.svg');
                   background-position: 50px 16px;
+
+                  background-repeat: no-repeat;
                 `}
               >
                 Ответ

@@ -23,6 +23,8 @@ import MedCenterRoute from './pages/medcenter/route';
 import Specialists from './pages/specialists/index';
 import CartRoute from './pages/cart/route';
 import SharesRoute from './pages/shares/route';
+import AboutUsRoute from './pages/aboutus/route';
+import RefundRoute from './pages/refund/route';
 
 const specialistRoute = {
   path: '/specialists/StqjF_WMsBpf4VRrBYmKB',
@@ -55,4 +57,6 @@ export default [
   specialistRoute,
   CartRoute,
   SharesRoute,
+  AboutUsRoute,
+  RefundRoute,
 ];

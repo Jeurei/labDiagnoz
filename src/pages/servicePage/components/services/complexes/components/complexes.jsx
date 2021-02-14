@@ -176,6 +176,11 @@ const Complexes = () => {
             margin-bottom: 10px;
             box-shadow: ${theme.colors.boxShadow};
 
+            .complex__img {
+              min-width: 126px;
+              height: 100%;
+            }
+
             &:nth-of-type(2n) {
               margin-right: 0;
             }
@@ -258,10 +263,10 @@ const Complexes = () => {
             >
               <span
                 css={css`
+                  margin-bottom: 5px;
+                  font-size: 12px;
                   font-weight: 500;
                   text-decoration: line-through;
-                  font-size: 12px;
-                  margin-bottom: 5px;
                 `}
               >
                 1 100 ₽

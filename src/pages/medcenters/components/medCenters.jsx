@@ -9,14 +9,14 @@ const MedCenters = () => {
       <h2 className="main__title">Медецинские центры</h2>
       <ul
         css={css`
-          list-style: none;
-          padding: 0;
           display: flex;
           flex-wrap: wrap;
+          padding: 0;
+          list-style: none;
 
           .filter__checkbox-group {
-            margin: 0;
             width: 100%;
+            margin: 0;
             margin-bottom: 20px;
           }
 
@@ -116,11 +116,12 @@ const MedCenters = () => {
       >
         <div
           css={css`
-            padding-left: 10px;
             padding-top: 17px;
+            padding-left: 10px;
 
             ${breakpointsMap.DESKTOP} {
               width: 390px;
+              flex-grow: 1;
               padding-left: 32px;
             }
           `}
@@ -155,12 +156,12 @@ const MedCenters = () => {
                 width: 31px;
                 height: 31px;
                 background-color: ${theme.colors.blue};
-                content: '';
-                border-radius: 50%;
                 background-image: url('img/doctor-white.svg');
-                background-repeat: no-repeat;
                 background-position: center;
+                background-repeat: no-repeat;
                 background-size: contain;
+                border-radius: 50%;
+                content: '';
               `}
             />
           </ul>
@@ -168,15 +169,14 @@ const MedCenters = () => {
         <div
           className="baloon"
           css={css`
+            min-width: auto;
             background-color: ${theme.colors.white};
             box-shadow: ${theme.colors.boxShadow};
-            min-width: auto;
 
-          }
-
-          ${breakpointsMap.DESKTOP} {
-            width: 390px;
-          }
+            ${breakpointsMap.DESKTOP} {
+              width: 390px;
+              flex-grow: 1;
+            }
           `}
         >
           <div
@@ -193,10 +193,15 @@ const MedCenters = () => {
                 ${breakpointsMap.TABLET} {
                   display: flex;
                   justify-content: center;
-
+                }
               `}
             >
-              <div className="baloon__shedule">
+              <div
+                className="baloon__shedule"
+                css={css`
+                  width: 100%;
+                `}
+              >
                 <p
                   className="baloon__shedule-working-time"
                   css={css`
@@ -249,13 +254,8 @@ const MedCenters = () => {
                   css={css`
                     display: flex;
                     justify-content: space-between;
-                    padding-left: 10px;
                     padding-right: 10px;
-
-                    ${breakpointsMap.DESKTOP} {
-                      padding-left: 34px;
-                      padding-right: 34px;
-                    }
+                    padding-left: 10px;
                   `}
                 >
                   <li
@@ -446,24 +446,24 @@ const MedCenters = () => {
               position: absolute;
               top: 40px;
               right: 10px;
-              content: '';
               display: block;
               width: 17px;
               height: 1px;
-              transform: rotate(45deg);
               background-color: ${theme.colors.blue};
+              content: '';
+              transform: rotate(45deg);
             }
 
             &:before {
               position: absolute;
               top: 52px;
               right: 10px;
-              content: '';
               display: block;
               width: 17px;
               height: 1px;
-              transform: rotate(-45deg);
               background-color: ${theme.colors.blue};
+              content: '';
+              transform: rotate(-45deg);
             }
 
             &:hover {
@@ -477,6 +477,7 @@ const MedCenters = () => {
 
             ${breakpointsMap.DESKTOP} {
               width: 390px;
+              flex-grow: 1;
 
               &:after {
                 top: 50px;
@@ -491,31 +492,31 @@ const MedCenters = () => {
           <a
             href="/"
             css={css`
+              position: relative;
+              display: flex;
               width: 100%;
               height: 100%;
-              padding-top: 29px;
-              padding-bottom: 62px;
-              display: flex;
               align-items: center;
               justify-content: flex-start;
+              padding-top: 29px;
+              padding-bottom: 62px;
               padding-left: 38px;
               font-size: 16px;
-              position: relative;
 
               &:after {
                 position: absolute;
+                top: 68px;
+                left: 38px;
                 display: block;
                 width: 130px;
                 height: 14px;
+                color: #9a66f5;
                 content: '///////////';
                 font-size: 22px;
-                letter-spacing: 4.5px;
-                transform: skew(-16deg, 0deg);
-                top: 68px;
-                left: 38px;
-                color: #9a66f5;
                 font-weight: 500;
+                letter-spacing: 4.5px;
                 opacity: 0.6;
+                transform: skew(-16deg, 0deg);
               }
 
               &:hover {
