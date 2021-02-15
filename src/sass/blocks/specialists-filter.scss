@@ -5,6 +5,8 @@
   margin-bottom: 30px;
 
   .search__input {
+    padding-top: 19px;
+    padding-bottom: 18px;
     border: 1px solid $blue;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
@@ -24,12 +26,7 @@
   margin-top: 5px;
 
   .select__control {
-    background-image: linear-gradient(
-      -135deg,
-      #ff00eb 0,
-      #9a66f5 50%,
-      #2bd7ff 100%
-    );
+    background-image: linear-gradient(251deg, #56acfc, #cb34f0);
 
     &--is-focused {
       box-shadow: none;
@@ -42,12 +39,7 @@
 
     &--is-focused {
       background-color: transparent;
-      background-image: linear-gradient(
-        -135deg,
-        #ff00eb 0,
-        #9a66f5 50%,
-        #2bd7ff 100%
-      );
+      background-image: linear-gradient(251deg, #56acfc, #cb34f0);
       color: $white;
     }
   }
@@ -87,7 +79,6 @@
   justify-content: flex-start;
 
   .select {
-    min-height: 60px;
     margin: 0;
     margin-right: 30px;
   }
@@ -197,7 +188,7 @@
 
   .filter__bottom-group {
     display: flex;
-    width: 45%;
+    width: 350px;
     flex-direction: column;
 
     &--adress {
@@ -265,6 +256,10 @@
 
   .filter__bottom {
     align-items: stretch;
+
+    .select {
+      min-height: 60px;
+    }
   }
 
   .filter__bottom-group {

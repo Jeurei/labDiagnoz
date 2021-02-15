@@ -30,10 +30,10 @@ const SearchModal = ({ isDeleting, animationDuration }) => {
         isDeleting
           ? css`
               animation: ${deletingKeyFrames()} ${animationDuration - 0.5}s
-                ease-in-out;
+                forwards ease-in-out;
             `
           : css`
-              animation: ${searchShowing} ${animationDuration - 0.5}s
+              animation: ${searchShowing} ${animationDuration - 0.5}s forwards
                 ease-in-out;
             `
       }

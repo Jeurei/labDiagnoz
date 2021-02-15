@@ -27,11 +27,11 @@ const ServicesTabs = () => {
       }
       ${
         getLastPath(location.pathname) === rout.path &&
-        `background-image: ${theme.colors.linearGradient};`
+        `background-image: linear-gradient(254deg, #57AAFB, #C837F0);`
       }
 
       &:hover {
-        background-image: ${theme.colors.linearGradient};
+        background-image: linear-gradient(254deg, #57AAFB, #C837F0);
       }
 
       &:last-child {

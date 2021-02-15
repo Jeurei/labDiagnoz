@@ -188,9 +188,9 @@ const Cart = () => {
         >
           <div
             css={css`
+              flex-grow: 1;
               padding-right: 10px;
               padding-left: 25px;
-              flex-grow: 1;
 
               ${breakpointsMap.DESKTOP} {
                 padding-right: 26px;
@@ -200,9 +200,9 @@ const Cart = () => {
           >
             <h3
               css={css`
-                font-weight: 400;
-                font-size: 16px;
                 margin-bottom: 20px;
+                font-size: 16px;
+                font-weight: 400;
 
                 ${breakpointsMap.DESKTOP} {
                   margin-bottom: 40px;
@@ -341,8 +341,8 @@ const Cart = () => {
                       display: flex;
                       width: 100%;
                       flex-direction: column;
-                      justify-content: center;
                       align-items: flex-start;
+                      justify-content: center;
                       margin-bottom: 15px;
                       font-size: 16px;
                       font-weight: 500;
@@ -358,20 +358,20 @@ const Cart = () => {
                     <a
                       href="/"
                       css={css`
+                        position: relative;
+                        padding-left: 15px;
                         color: #946df6;
                         font-size: 12px;
-                        padding-left: 12px;
-                        position: relative;
 
                         &:before {
-                          content: '';
+                          position: absolute;
+                          top: 3px;
+                          left: 0;
                           width: 11px;
                           height: 9px;
-                          background-repeat: no-repeat;
-                          position: absolute;
-                          left: 0;
-                          top: 3px;
                           background-image: url('img/pink-home.svg');
+                          background-repeat: no-repeat;
+                          content: '';
                         }
                       `}
                     >
@@ -419,8 +419,8 @@ const Cart = () => {
                     </span>
                     <span
                       css={css`
-                        font-size: 12px;
                         position: relative;
+                        font-size: 12px;
                         word-spacing: 5px;
                       `}
                     >
@@ -452,9 +452,9 @@ const Cart = () => {
             <div>
               <h3
                 css={css`
-                  font-weight: 400;
-                  font-size: 16px;
                   margin-bottom: 20px;
+                  font-size: 16px;
+                  font-weight: 400;
 
                   ${breakpointsMap.DESKTOP} {
                     margin-bottom: 40px;
@@ -477,8 +477,8 @@ const Cart = () => {
                       counter-reset: row;
 
                       .table__row:nth-of-type(n + 2):after {
-                        counter-increment: row;
                         content: counter(row);
+                        counter-increment: row;
                       }
                     `}
                   >
@@ -489,34 +489,34 @@ const Cart = () => {
                         display: flex;
                         flex-wrap: wrap;
                         padding: 0 17px;
-                        padding-left: 89px;
                         padding-top: 27px;
                         padding-bottom: 27px;
+                        padding-left: 89px;
+                        margin-bottom: 36px;
                         background-color: ${theme.colors.white};
                         box-shadow: ${theme.colors.boxShadow};
-                        margin-bottom: 36px;
 
                         &:before {
-                          content: '';
                           position: absolute;
-                          background-color: ${theme.colors.blue};
-                          height: 100%;
-                          width: 36px;
-                          left: 0;
                           top: 0;
+                          left: 0;
+                          width: 36px;
+                          height: 100%;
+                          background-color: ${theme.colors.blue};
                           color: ${theme.colors.white};
+                          content: '';
                         }
 
                         &:after {
-                          content: 'Комплекс';
                           position: absolute;
-                          left: -20px;
                           top: 45%;
+                          left: -20px;
+                          color: ${theme.colors.white};
+                          content: 'Комплекс';
                           font-size: 14px;
+                          font-weight: 500;
                           text-transform: uppercase;
                           transform: rotate(-90deg);
-                          color: ${theme.colors.white};
-                          font-weight: 500;
                         }
                       `}
                     >
@@ -547,8 +547,8 @@ const Cart = () => {
                           display: flex;
                           width: 100%;
                           flex-direction: column;
-                          justify-content: center;
                           align-items: flex-start;
+                          justify-content: center;
                           margin-bottom: 15px;
                           font-size: 16px;
 
@@ -565,20 +565,20 @@ const Cart = () => {
                         <a
                           href="/"
                           css={css`
+                            position: relative;
+                            padding-left: 15px;
                             color: #946df6;
                             font-size: 12px;
-                            padding-left: 12px;
-                            position: relative;
 
                             &:before {
-                              content: '';
+                              position: absolute;
+                              top: 3px;
+                              left: 0;
                               width: 11px;
                               height: 9px;
-                              background-repeat: no-repeat;
-                              position: absolute;
-                              left: 0;
-                              top: 3px;
                               background-image: url('img/pink-home.svg');
+                              background-repeat: no-repeat;
+                              content: '';
                             }
                           `}
                         >
@@ -609,27 +609,27 @@ const Cart = () => {
                           css={css`
                             position: relative;
                             display: flex;
-                            align-items: center;
                             height: 100%;
+                            align-items: center;
 
                             &:after,
                             &:before {
-                              content: '';
+                              position: absolute;
+                              top: 8px;
+                              right: -18px;
                               display: block;
                               width: 10px;
                               height: 1px;
-                              top: 8px;
-                              position: absolute;
-                              right: -18px;
                               background-color: ${theme.colors.colorText.hex};
+                              content: '';
                             }
 
                             &:after {
                               transform: rotate(45deg);
                             }
                             &:before {
-                              transform: rotate(-45deg);
                               right: -25px;
+                              transform: rotate(-45deg);
                             }
 
                             ${breakpointsMap.TABLET} {
@@ -639,12 +639,12 @@ const Cart = () => {
                               }
 
                               &:after {
-                                transform: rotate(45deg);
                                 right: -14px;
+                                transform: rotate(45deg);
                               }
                               &:before {
-                                transform: rotate(-45deg);
                                 right: -21px;
+                                transform: rotate(-45deg);
                               }
                             }
 
@@ -670,9 +670,9 @@ const Cart = () => {
                       >
                         <small
                           css={css`
+                            margin-bottom: 5px;
                             font-size: 12px;
                             text-decoration: line-through;
-                            margin-bottom: 5px;
                           `}
                         >
                           1 100 ₽
@@ -688,8 +688,8 @@ const Cart = () => {
                         </span>
                         <span
                           css={css`
-                            font-size: 12px;
                             position: relative;
+                            font-size: 12px;
                             word-spacing: 5px;
                           `}
                         >
@@ -725,33 +725,33 @@ const Cart = () => {
                         padding: 0 17px;
                         padding-top: 27px;
                         padding-bottom: 27px;
+                        padding-left: 86px;
+                        margin-right: 40px;
+                        margin-bottom: 36px;
+                        margin-left: 40px;
                         background-color: ${theme.colors.white};
                         box-shadow: ${theme.colors.boxShadow};
-                        margin-left: 40px;
-                        margin-right: 40px;
-                        padding-left: 86px;
-                        margin-bottom: 36px;
 
                         &:before {
-                          content: '';
                           position: absolute;
-                          background-color: ${theme.colors.blue};
-                          height: 100%;
-                          width: 36px;
-                          left: 0;
                           top: 0;
+                          left: 0;
+                          width: 36px;
+                          height: 100%;
+                          background-color: ${theme.colors.blue};
                           color: ${theme.colors.white};
+                          content: '';
                         }
 
                         &:after {
-                          counter-increment: row;
                           position: absolute;
-                          left: 15px;
                           top: 45%;
-                          font-size: 14px;
-                          text-transform: uppercase;
+                          left: 15px;
                           color: ${theme.colors.white};
+                          counter-increment: row;
+                          font-size: 14px;
                           font-weight: 500;
+                          text-transform: uppercase;
                         }
                       `}
                     >
@@ -782,8 +782,8 @@ const Cart = () => {
                           display: flex;
                           width: 100%;
                           flex-direction: column;
-                          justify-content: center;
                           align-items: flex-start;
+                          justify-content: center;
                           margin-bottom: 15px;
                           font-size: 16px;
 
@@ -800,20 +800,20 @@ const Cart = () => {
                         <a
                           href="/"
                           css={css`
+                            position: relative;
+                            padding-left: 15px;
                             color: #946df6;
                             font-size: 12px;
-                            padding-left: 12px;
-                            position: relative;
 
                             &:before {
-                              content: '';
+                              position: absolute;
+                              top: 3px;
+                              left: 0;
                               width: 11px;
                               height: 9px;
-                              background-repeat: no-repeat;
-                              position: absolute;
-                              left: 0;
-                              top: 3px;
                               background-image: url('img/pink-home.svg');
+                              background-repeat: no-repeat;
+                              content: '';
                             }
                           `}
                         >
@@ -844,27 +844,27 @@ const Cart = () => {
                           css={css`
                             position: relative;
                             display: flex;
-                            align-items: center;
                             height: 100%;
+                            align-items: center;
 
                             &:after,
                             &:before {
-                              content: '';
+                              position: absolute;
+                              top: 8px;
+                              right: -18px;
                               display: block;
                               width: 10px;
                               height: 1px;
-                              top: 8px;
-                              position: absolute;
-                              right: -18px;
                               background-color: ${theme.colors.colorText.hex};
+                              content: '';
                             }
 
                             &:after {
                               transform: rotate(45deg);
                             }
                             &:before {
-                              transform: rotate(-45deg);
                               right: -25px;
+                              transform: rotate(-45deg);
                             }
 
                             ${breakpointsMap.TABLET} {
@@ -874,12 +874,12 @@ const Cart = () => {
                               }
 
                               &:after {
-                                transform: rotate(45deg);
                                 right: -14px;
+                                transform: rotate(45deg);
                               }
                               &:before {
-                                transform: rotate(-45deg);
                                 right: -21px;
+                                transform: rotate(-45deg);
                               }
                             }
 
@@ -905,9 +905,9 @@ const Cart = () => {
                       >
                         <small
                           css={css`
+                            margin-bottom: 5px;
                             font-size: 12px;
                             text-decoration: line-through;
-                            margin-bottom: 5px;
                           `}
                         >
                           1 100 ₽
@@ -923,8 +923,8 @@ const Cart = () => {
                         </span>
                         <span
                           css={css`
-                            font-size: 12px;
                             position: relative;
+                            font-size: 12px;
                             word-spacing: 5px;
                           `}
                         >
@@ -960,33 +960,33 @@ const Cart = () => {
                         padding: 0 17px;
                         padding-top: 27px;
                         padding-bottom: 27px;
+                        padding-left: 86px;
+                        margin-right: 40px;
+                        margin-bottom: 36px;
+                        margin-left: 40px;
                         background-color: ${theme.colors.white};
                         box-shadow: ${theme.colors.boxShadow};
-                        margin-left: 40px;
-                        margin-right: 40px;
-                        padding-left: 86px;
-                        margin-bottom: 36px;
 
                         &:before {
-                          content: '';
                           position: absolute;
-                          background-color: ${theme.colors.blue};
-                          height: 100%;
-                          width: 36px;
-                          left: 0;
                           top: 0;
+                          left: 0;
+                          width: 36px;
+                          height: 100%;
+                          background-color: ${theme.colors.blue};
                           color: ${theme.colors.white};
+                          content: '';
                         }
 
                         &:after {
-                          counter-increment: row;
                           position: absolute;
-                          left: 15px;
                           top: 45%;
-                          font-size: 14px;
-                          text-transform: uppercase;
+                          left: 15px;
                           color: ${theme.colors.white};
+                          counter-increment: row;
+                          font-size: 14px;
                           font-weight: 500;
+                          text-transform: uppercase;
                         }
                       `}
                     >
@@ -1017,8 +1017,8 @@ const Cart = () => {
                           display: flex;
                           width: 100%;
                           flex-direction: column;
-                          justify-content: center;
                           align-items: flex-start;
+                          justify-content: center;
                           margin-bottom: 15px;
                           font-size: 16px;
 
@@ -1035,20 +1035,20 @@ const Cart = () => {
                         <a
                           href="/"
                           css={css`
+                            position: relative;
+                            padding-left: 15px;
                             color: #946df6;
                             font-size: 12px;
-                            padding-left: 12px;
-                            position: relative;
 
                             &:before {
-                              content: '';
+                              position: absolute;
+                              top: 3px;
+                              left: 0;
                               width: 11px;
                               height: 9px;
-                              background-repeat: no-repeat;
-                              position: absolute;
-                              left: 0;
-                              top: 3px;
                               background-image: url('img/pink-home.svg');
+                              background-repeat: no-repeat;
+                              content: '';
                             }
                           `}
                         >
@@ -1079,27 +1079,27 @@ const Cart = () => {
                           css={css`
                             position: relative;
                             display: flex;
-                            align-items: center;
                             height: 100%;
+                            align-items: center;
 
                             &:after,
                             &:before {
-                              content: '';
+                              position: absolute;
+                              top: 8px;
+                              right: -18px;
                               display: block;
                               width: 10px;
                               height: 1px;
-                              top: 8px;
-                              position: absolute;
-                              right: -18px;
                               background-color: ${theme.colors.colorText.hex};
+                              content: '';
                             }
 
                             &:after {
                               transform: rotate(45deg);
                             }
                             &:before {
-                              transform: rotate(-45deg);
                               right: -25px;
+                              transform: rotate(-45deg);
                             }
 
                             ${breakpointsMap.TABLET} {
@@ -1109,12 +1109,12 @@ const Cart = () => {
                               }
 
                               &:after {
-                                transform: rotate(45deg);
                                 right: -14px;
+                                transform: rotate(45deg);
                               }
                               &:before {
-                                transform: rotate(-45deg);
                                 right: -21px;
+                                transform: rotate(-45deg);
                               }
                             }
 
@@ -1140,9 +1140,9 @@ const Cart = () => {
                       >
                         <small
                           css={css`
+                            margin-bottom: 5px;
                             font-size: 12px;
                             text-decoration: line-through;
-                            margin-bottom: 5px;
                           `}
                         >
                           1 100 ₽
@@ -1158,8 +1158,8 @@ const Cart = () => {
                         </span>
                         <span
                           css={css`
-                            font-size: 12px;
                             position: relative;
+                            font-size: 12px;
                             word-spacing: 5px;
                           `}
                         >
@@ -1193,28 +1193,28 @@ const Cart = () => {
             <div>
               <h3
                 css={css`
-                  font-weight: 500;
-                  font-size: 16px;
                   margin-bottom: 30px;
+                  font-size: 16px;
+                  font-weight: 500;
                 `}
               >
                 Взятие биоматериала
               </h3>
               <ul
                 css={css`
-                  list-style: none;
                   padding: 0;
+                  list-style: none;
                 `}
               >
                 <li
                   css={css`
                     padding-top: 10px;
                     padding-bottom: 10px;
-                    font-size: 13px;
                     border-top: 1px dashed
                       rgba(${theme.colors.colorText.rgb}, 0.4);
                     border-bottom: 1px dashed
                       rgba(${theme.colors.colorText.rgb}, 0.4);
+                    font-size: 13px;
                   `}
                 >
                   <a
@@ -1416,8 +1416,8 @@ const Cart = () => {
               padding-top: 26px;
 
               ${breakpointsMap.DESKTOP} {
-                align-self: flex-start;
                 width: 270px;
+                align-self: flex-start;
                 order: 0;
                 box-shadow: ${theme.colors.boxShadow};
               }
@@ -1502,24 +1502,24 @@ const Cart = () => {
                   action="post"
                   css={css`
                     display: flex;
-                    flex-direction: column;
                     width: 100%;
+                    flex-direction: column;
                   `}
                 >
                   <input
                     type="email"
                     css={css`
-                      apearance: none;
+                      flex-grow: 1;
+                      padding-top: 20px;
+                      padding-bottom: 23px;
+                      padding-left: 14px;
                       border: none;
                       border: 1px solid ${theme.colors.blue};
-                      background: transparent;
-                      font-size: 13px;
-                      padding-top: 20px;
-                      flex-grow: 1;
-                      padding-bottom: 23px;
-                      border-radius: 4px;
-                      padding-left: 14px;
                       margin-bottom: 25px;
+                      appearance: none;
+                      background: transparent;
+                      border-radius: 4px;
+                      font-size: 13px;
                     `}
                     placeholder="Ваш e-mail *"
                   />
@@ -1527,17 +1527,17 @@ const Cart = () => {
                     type="tel"
                     placeholder="Ваш телефон *"
                     css={css`
-                      appearance: none;
+                      flex-grow: 1;
+                      padding-top: 20px;
+                      padding-bottom: 23px;
+                      padding-left: 14px;
                       border: none;
                       border: 1px solid ${theme.colors.blue};
-                      background: transparent;
-                      font-size: 13px;
-                      padding-top: 20px;
-                      flex-grow: 1;
-                      padding-bottom: 23px;
-                      border-radius: 4px;
-                      padding-left: 14px;
                       margin-bottom: 25px;
+                      appearance: none;
+                      background: transparent;
+                      border-radius: 4px;
+                      font-size: 13px;
                     `}
                   />
                   <textarea
@@ -1547,19 +1547,19 @@ const Cart = () => {
                     rows="10"
                     placeholder="Комментарий *"
                     css={css`
-                      appearance: none;
+                      height: 113px;
+                      flex-grow: 1;
+                      padding-top: 20px;
+                      padding-bottom: 23px;
+                      padding-left: 14px;
                       border: none;
                       border: 1px solid ${theme.colors.blue};
-                      background: transparent;
-                      font-size: 13px;
-                      padding-top: 20px;
-                      flex-grow: 1;
-                      padding-bottom: 23px;
-                      resize: none;
-                      border-radius: 4px;
-                      padding-left: 14px;
                       margin-bottom: 19px;
-                      height: 113px;
+                      appearance: none;
+                      background: transparent;
+                      border-radius: 4px;
+                      font-size: 13px;
+                      resize: none;
                     `}
                   />
                   <div
@@ -1578,8 +1578,8 @@ const Cart = () => {
                       className="form__agreement-hint"
                       css={css`
                         font-size: 10px;
-                        line-height: 14px;
                         letter-spacing: -0.2px;
+                        line-height: 14px;
                       `}
                     >
                       Нажимая на кнопку отправить вы соглашаетесь с нашей
@@ -1646,8 +1646,8 @@ const Cart = () => {
                   css={css`
                     position: relative;
                     padding-bottom: 9px;
-                    font-size: 12px;
                     margin-right: auto;
+                    font-size: 12px;
 
                     &:before {
                       position: absolute;
@@ -1666,10 +1666,10 @@ const Cart = () => {
                 </a>
                 <ul
                   css={css`
-                    padding: 0;
-                    list-style: none;
                     display: flex;
+                    padding: 0;
                     margin: 0;
+                    list-style: none;
                   `}
                 >
                   <li>
@@ -1691,14 +1691,14 @@ const Cart = () => {
                     <a
                       href="/"
                       css={css`
+                        position: relative;
                         width: 22px;
                         height: 22px;
-                        position: relative;
 
                         &:hover:after {
                           position: absolute;
                           z-index: 10;
-                          top: calc(-100% - 42px);
+                          top: calc(-100% - 39px);
                           left: -106px;
                           display: flex;
                           width: 136px;

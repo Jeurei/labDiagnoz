@@ -23,20 +23,36 @@ const Search = ({ selectData, isModal = false }) => {
 
   return (
     <>
-      <h2 className="search__title">
-        Простой и удобный поиск <br className="search__title-br" />
-        <Typed
-          strings={['Анализов^5000', 'Услуг^5000', 'Врачей^5000']}
-          typeSpeed={50}
-          backSpeed={50}
-          loop
+      <div
+        css={css`
+          display: flex;
+          align-items: center;
+          margin-bottom: 30px;
+        `}
+      >
+        <h2
+          className="search__title"
+          css={css`
+            margin-right: auto;
+          `}
         >
-          <span />
-        </Typed>
-      </h2>
-      <small className="search__container-top-text">
-        По какому разделу искать?
-      </small>
+          Простой и удобный поиск <br className="search__title-br" />
+          <Typed
+            strings={['Анализов^5000', 'Услуг^5000', 'Врачей^5000']}
+            typeSpeed={50}
+            backSpeed={50}
+            loop
+          >
+            <span />
+          </Typed>
+        </h2>
+        {isModal && (
+          <small className="search__container-top-text">
+            По какому разделу искать?
+          </small>
+        )}
+      </div>
+
       <div className="search__container-input-group">
         <input
           type="text"

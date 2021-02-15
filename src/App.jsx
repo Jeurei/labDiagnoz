@@ -29,8 +29,7 @@ const App = () => {
       blue: '#4faaed',
       hoverColor: '#f7f7f7',
       inactiveColor: '#dedede',
-      linearGradient:
-        'linear-gradient(-135deg, #ff00eb 0, #9a66f5 50%, #2bd7ff 100%);',
+      linearGradient: 'linear-gradient(257deg, #5BA6FB, #DF20EE);',
     },
 
     fontSizes: {

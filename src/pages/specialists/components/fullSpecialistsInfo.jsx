@@ -21,13 +21,13 @@ const FullSpecialistInfo = ({ specialists }) => {
 
   const Tab = styled.li`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     width: 100%;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 
     &:hover {
-      background-image: ${theme.colors.linearGradient};
+      background-image: linear-gradient(254deg, #57aafb, #c837f0);
     }
 
     &:last-child {
@@ -35,27 +35,27 @@ const FullSpecialistInfo = ({ specialists }) => {
     }
 
     ${breakpointsMap.TABLET} {
-      flex-grow: 1;
       width: 245px;
+      flex-grow: 1;
       border-bottom: none;
 
       ${breakpointsMap.DESKTOP} {
         width: 245px;
 
         &:nth-of-type(2n) {
-          border-left: 1px solid rgba(${theme.colors.colorText.rgb}, 0.2);
           border-right: 1px solid rgba(${theme.colors.colorText.rgb}, 0.2);
+          border-left: 1px solid rgba(${theme.colors.colorText.rgb}, 0.2);
         }
       }
     }
   `;
 
   const TabLink = styled('a')`
+    display: flex;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding-top: 21px;
     padding-bottom: 22px;
     font-size: ${theme.fontSizes.altFs};
@@ -72,11 +72,11 @@ const FullSpecialistInfo = ({ specialists }) => {
 
   const TabList = styled.ul`
     display: flex;
-    list-style: none;
     flex-direction: column;
     padding: 0;
     margin-top: 0;
     box-shadow: ${theme.colors.boxShadow};
+    list-style: none;
 
     ${breakpointsMap.TABLET} {
       flex-direction: row;
@@ -94,7 +94,6 @@ const FullSpecialistInfo = ({ specialists }) => {
       <div
         css={css`
           display: flex;
-          margin-bottom: 37px;
           flex-direction: column;
           align-items: center;
 
@@ -107,20 +106,20 @@ const FullSpecialistInfo = ({ specialists }) => {
         <p
           css={css`
             margin-right: 64px;
-            white-space: nowrap;
             font-size: 16px;
+            white-space: nowrap;
           `}
         >
           Врач принимает в{' '}
         </p>
         <ul
           css={css`
-            list-style: none;
             display: flex;
-            padding: 0;
             width: 100%;
             flex-direction: column;
             align-items: center;
+            padding: 0;
+            list-style: none;
 
             ${breakpointsMap.TABLET} {
               flex-direction: row;
@@ -131,12 +130,12 @@ const FullSpecialistInfo = ({ specialists }) => {
           {new Array(3).fill().map(() => (
             <li
               css={css`
+                position: relative;
                 display: flex;
                 align-items: center;
                 padding: 0 43px;
-                font-size: 16px;
-                position: relative;
                 margin-bottom: 5px;
+                font-size: 16px;
 
                 &:last-of-type {
                   margin-bottom: 0;
@@ -144,16 +143,18 @@ const FullSpecialistInfo = ({ specialists }) => {
 
                 ${breakpointsMap.DESKTOP} {
                   &:nth-of-type(2n) {
-                    border-left: 1px solid ${theme.colors.colorText.hex};
                     border-right: 1px solid ${theme.colors.colorText.hex};
+                    border-left: 1px solid ${theme.colors.colorText.hex};
                   }
                 }
               `}
             >
               <MapMark
+                width="10"
+                height="10"
                 css={css`
                   position: absolute;
-                  top: 6px;
+                  top: 4px;
                   left: 20px;
                 `}
               />
@@ -188,32 +189,33 @@ const FullSpecialistInfo = ({ specialists }) => {
         <div
           css={css`
             display: flex;
-            padding-right: 0;
             flex-direction: column;
+            padding-right: 0;
 
             ${breakpointsMap.DESKTOP} {
-              padding-right: 25px;
               flex-direction: row;
+              padding-right: 25px;
             }
           `}
         >
           <div
             css={css`
-              margin-right: auto;
               padding-left: 0;
+              margin-right: auto;
 
               ${breakpointsMap.DESKTOP} {
                 padding-right: 44px;
+                padding-left: 44px;
               }
             `}
           >
             <ul
               css={css`
-                list-style: none;
                 padding: 0;
-                margin: 0;
-                padding-left: 10px;
                 padding-right: 10px;
+                padding-left: 10px;
+                margin: 0;
+                list-style: none;
 
                 ${breakpointsMap.DESKTOP} {
                   padding: 0;
@@ -224,13 +226,13 @@ const FullSpecialistInfo = ({ specialists }) => {
                 className="tab"
                 css={css`
                   ${breakpointsMap.DESKTOP} {
+                    width: 100%;
+                    padding-top: 0;
+                    padding-left: 0;
                     margin-bottom: 12px;
                     background-color: ${theme.colors.white};
                     border-radius: 4px;
                     box-shadow: ${theme.colors.boxShadow};
-                    padding-top: 0;
-                    width: 100%;
-                    padding-left: 0;
 
                     &:last-of-type {
                       padding-left: 0;
@@ -241,14 +243,14 @@ const FullSpecialistInfo = ({ specialists }) => {
                       display: flex;
                       width: 100%;
                       height: 100%;
-                      padding: 35px 24px;
                       min-height: 36px;
                       align-items: center;
+                      justify-content: flex-end;
+                      padding: 35px 24px;
                       padding-left: 11px;
                       border-radius: 4px;
                       font-size: 16px;
                       font-weight: 400;
-                      justify-content: flex-end;
 
                       &::after {
                         position: absolute;
@@ -287,9 +289,9 @@ const FullSpecialistInfo = ({ specialists }) => {
 
                       &:checked + .tab__title {
                         background-image: linear-gradient(
-                          to right,
-                          #ff00eb,
-                          #2bd7ff
+                          264deg,
+                          #57aafb,
+                          #c837f0
                         );
                         color: ${theme.colors.white};
 
@@ -333,16 +335,16 @@ const FullSpecialistInfo = ({ specialists }) => {
                   htmlFor="tab-analyse"
                   className="tab__title"
                   css={css`
-                    font-weight: 500;
                     padding-right: 30px;
+                    font-weight: 500;
                   `}
                 >
                   Прием врача акушера-гинеколога лечебно-диагностический
                   <span
                     css={css`
                       display: none;
-                      font-size: 26px;
                       margin-left: auto;
+                      font-size: 26px;
                       font-weight: 500;
 
                       @media (min-width: 589px) {
@@ -367,12 +369,12 @@ const FullSpecialistInfo = ({ specialists }) => {
                 className="tab"
                 css={css`
                   ${breakpointsMap.DESKTOP} {
+                    width: 644px;
+                    padding-top: 0;
                     margin-bottom: 12px;
                     background-color: ${theme.colors.white};
                     border-radius: 4px;
                     box-shadow: ${theme.colors.boxShadow};
-                    padding-top: 0;
-                    width: 644px;
 
                     &:last-of-type {
                       padding-left: 0;
@@ -383,9 +385,9 @@ const FullSpecialistInfo = ({ specialists }) => {
                       display: flex;
                       width: 100%;
                       height: 100%;
-                      padding: 35px 24px;
                       min-height: 36px;
                       align-items: center;
+                      padding: 35px 24px;
                       padding-left: 11px;
                       border-radius: 4px;
                       font-size: 16px;
@@ -428,9 +430,9 @@ const FullSpecialistInfo = ({ specialists }) => {
 
                       &:checked + .tab__title {
                         background-image: linear-gradient(
-                          to right,
-                          #ff00eb,
-                          #2bd7ff
+                          264deg,
+                          #57aafb,
+                          #c837f0
                         );
                         color: ${theme.colors.white};
 
@@ -478,8 +480,8 @@ const FullSpecialistInfo = ({ specialists }) => {
                 <div className="tab__content">
                   <ul
                     css={css`
-                      list-style: none;
                       padding: 0;
+                      list-style: none;
                     `}
                   >
                     <li
@@ -489,13 +491,13 @@ const FullSpecialistInfo = ({ specialists }) => {
                         padding-bottom: 34px;
                         &:not(:last-of-type):before {
                           position: absolute;
-                          content: '';
+                          bottom: 0;
+                          left: 0;
                           display: block;
                           width: 100%;
                           height: 7px;
-                          bottom: 0;
-                          left: 0;
                           background-image: ${theme.colors.linearGradient};
+                          content: '';
                         }
                       `}
                     >
@@ -509,8 +511,8 @@ const FullSpecialistInfo = ({ specialists }) => {
                           <Star
                             fill="currentColor"
                             css={css`
-                              cursor: pointer;
                               color: #ddd;
+                              cursor: pointer;
 
                               &:hover {
                                 color: #ffab1a;
@@ -528,12 +530,12 @@ const FullSpecialistInfo = ({ specialists }) => {
                       </div>
                       <div
                         css={css`
-                          padding-left: 79px;
                           padding-top: 30px;
-
-                          background-repeat: no-repeat;
+                          padding-left: 79px;
                           background-image: url('img/quotes.svg');
                           background-position: 50px 16px;
+
+                          background-repeat: no-repeat;
                         `}
                       >
                         Ответ
@@ -547,13 +549,13 @@ const FullSpecialistInfo = ({ specialists }) => {
 
                         &:not(:last-of-type):before {
                           position: absolute;
-                          content: '';
+                          bottom: 0;
+                          left: 0;
                           display: block;
                           width: 100%;
                           height: 7px;
-                          bottom: 0;
-                          left: 0;
                           background-image: ${theme.colors.linearGradient};
+                          content: '';
                         }
                       `}
                     >
@@ -567,8 +569,8 @@ const FullSpecialistInfo = ({ specialists }) => {
                           <Star
                             fill="currentColor"
                             css={css`
-                              cursor: pointer;
                               color: #ddd;
+                              cursor: pointer;
 
                               &:hover {
                                 color: #ffab1a;
@@ -586,12 +588,12 @@ const FullSpecialistInfo = ({ specialists }) => {
                       </div>
                       <div
                         css={css`
-                          padding-left: 79px;
                           padding-top: 30px;
-
-                          background-repeat: no-repeat;
+                          padding-left: 79px;
                           background-image: url('img/quotes.svg');
                           background-position: 50px 16px;
+
+                          background-repeat: no-repeat;
                         `}
                       >
                         Ответ
@@ -603,12 +605,12 @@ const FullSpecialistInfo = ({ specialists }) => {
                     css={css`
                       width: 100%;
                       height: 100%;
-                      appearance: none;
-                      border: none;
-                      background-color: ${theme.colors.colorText.hex};
-                      color: ${theme.colors.white};
                       padding-top: 10px;
                       padding-bottom: 10px;
+                      border: none;
+                      appearance: none;
+                      background-color: ${theme.colors.colorText.hex};
+                      color: ${theme.colors.white};
                       font-size: 12px;
                     `}
                   >
@@ -621,9 +623,9 @@ const FullSpecialistInfo = ({ specialists }) => {
           <div
             css={css`
               display: flex;
+              width: 100%;
               flex-direction: column;
               box-shadow: 1px 1px 22px 0 RGBA(74, 74, 74, 0.2);
-              width: 100%;
 
               ${breakpointsMap.DESKTOP} {
                 width: 424px;
@@ -632,9 +634,9 @@ const FullSpecialistInfo = ({ specialists }) => {
           >
             <div
               css={css`
-                margin-bottom: 38px;
                 width: 100%;
                 height: 384px;
+                margin-bottom: 38px;
               `}
             >
               <Ymap />
@@ -651,11 +653,11 @@ const FullSpecialistInfo = ({ specialists }) => {
                 type="button"
                 className="button"
                 css={css`
-                  width: 185px;
-                  padding: 12px 0 14px 0;
                   display: flex;
+                  width: 185px;
                   justify-content: center;
-                  margin-right: auto;
+                  padding: 12px 0 14px 0;
+                  margin-right: 15px;
                   font-weight: 400;
                   text-transform: none;
                 `}
@@ -666,10 +668,10 @@ const FullSpecialistInfo = ({ specialists }) => {
                 type="button"
                 className="button"
                 css={css`
-                  width: 185px;
-                  padding: 12px 0 14px 0;
                   display: flex;
+                  width: 185px;
                   justify-content: center;
+                  padding: 12px 0 14px 0;
                   margin-right: auto;
                   font-weight: 400;
                   text-transform: none;
@@ -681,36 +683,36 @@ const FullSpecialistInfo = ({ specialists }) => {
             <div
               css={css`
                 display: flex;
-                padding-left: 20px;
                 padding-right: 20px;
+                padding-left: 20px;
                 margin-bottom: 14px;
               `}
             >
               <div
                 css={css`
-                  width: 50%;
                   position: relative;
+                  width: 50%;
                   padding-left: 31px;
                   &:before {
                     position: absolute;
-                    content: '';
+                    top: -7px;
+                    left: 0;
                     display: block;
                     width: 28px;
                     height: 28px;
-                    border-radius: 50%;
                     background-image: ${theme.colors.linearGradient};
-                    top: -7px;
-                    left: 0;
+                    border-radius: 50%;
+                    content: '';
                   }
 
                   &:after {
                     position: absolute;
-                    content: url('img/walker.svg');
+                    top: 0px;
+                    left: 9px;
                     display: block;
                     width: 9px;
                     height: 15.5px;
-                    top: 0px;
-                    left: 9px;
+                    content: url('img/walker.svg');
                   }
                 `}
               >
@@ -724,30 +726,30 @@ const FullSpecialistInfo = ({ specialists }) => {
               </div>
               <div
                 css={css`
-                  width: 50%;
                   position: relative;
+                  width: 50%;
                   padding-left: 31px;
 
                   &:before {
                     position: absolute;
-                    content: '';
+                    top: -7px;
+                    left: 0;
                     display: block;
                     width: 28px;
                     height: 28px;
                     background-image: ${theme.colors.linearGradient};
                     border-radius: 50%;
-                    top: -7px;
-                    left: 0;
+                    content: '';
                   }
 
                   &:after {
                     position: absolute;
-                    content: url('img/car.svg');
+                    top: -2px;
+                    left: 5px;
                     display: block;
                     width: 9px;
                     height: 15.5px;
-                    top: -2px;
-                    left: 5px;
+                    content: url('img/car.svg');
                   }
                 `}
               >
@@ -762,22 +764,22 @@ const FullSpecialistInfo = ({ specialists }) => {
             </div>
             <p
               css={css`
-                padding-left: 50px;
                 position: relative;
+                padding-left: 50px;
                 margin-bottom: 35px;
 
                 &:after {
                   position: absolute;
                   top: 0;
                   left: 20px;
+                  width: 10px;
+                  height: 15px;
                   border: 1px solid ${theme.colors.colorText.hex};
                   border-width: 0 3px 3px 0;
                   border-radius: 2px;
                   content: '';
-                  transform: rotate(45deg);
                   content: '';
-                  width: 10px;
-                  height: 15px;
+                  transform: rotate(45deg);
                 }
               `}
             >

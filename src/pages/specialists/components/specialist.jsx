@@ -52,12 +52,13 @@ const specialistInfo = (action, data) => {
             {numberWithSpaces(data.price)} ₽
           </span>
         </li>
-        <li
-          className="specialist__info-item specialist__info-item--link"
-          href="/"
-          aria-label="Ссылка на услуги которые предоставляет данный специалист"
-        >
-          Все услуги
+        <li aria-label="Ссылка на услуги которые предоставляет данный специалист">
+          <a
+            className="specialist__info-item specialist__info-item--link"
+            href="/"
+          >
+            Все услуги
+          </a>
         </li>
       </ul>
       <button
@@ -73,8 +74,8 @@ const specialistInfo = (action, data) => {
         className="specialist__button button"
         aria-label="Записать на онлайн консультацию"
         css={css`
-          text-transform: uppercase;
           background-color: ${theme.colors.blue};
+          text-transform: uppercase;
 
           &:hover,
           &:active {
@@ -86,13 +87,14 @@ const specialistInfo = (action, data) => {
       </button>
       <p className="specialist__tel">
         Телефон для записи:{' '}
-        <span
+        <a
+          href="tel:88003000789"
           css={css`
             font-weight: 500;
           `}
         >
           8 800 3000 789
-        </span>
+        </a>
       </p>
     </div>
   );

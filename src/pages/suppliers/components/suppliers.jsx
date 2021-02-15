@@ -13,10 +13,10 @@ const Suppliers = () => {
       <h2 className="main__title">Поставщикам расходных материалов</h2>
       <p
         css={css`
+          padding-right: 10px;
+          padding-left: 10px;
           margin-bottom: 18px;
           font-size: 13px;
-          padding-left: 10px;
-          padding-right: 10px;
 
           ${breakpointsMap.TABLET} {
             padding: 0;
@@ -28,12 +28,11 @@ const Suppliers = () => {
       </p>
       <h3
         css={css`
-          font-weight: 500;
-          font-size: 16px;
-          color: ${theme.colors.colorText.hex};
           width: 100%;
           margin-bottom: 32px;
-          width: 100%;
+          color: ${theme.colors.colorText.hex};
+          font-size: 16px;
+          font-weight: 500;
         `}
       >
         Получить коммерческое предложение
@@ -110,9 +109,9 @@ const Suppliers = () => {
         css={css`
           display: flex;
           min-height: 262px;
-          margin-bottom: 31px;
           align-items: center;
           padding-left: 167px;
+          margin-bottom: 31px;
           background-image: url('img/utk.svg'), url('img/utkbg.png');
           background-position: 60px center, center;
           background-repeat: no-repeat;
@@ -144,11 +143,11 @@ const Suppliers = () => {
       >
         <caption
           css={css`
-            font-size: 16px;
-            text-align: left;
-            margin-bottom: 15px;
             padding-left: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
             font-weight: 500;
+            text-align: left;
 
             ${breakpointsMap.DESKTOP} {
               margin-bottom: 25px;
@@ -159,10 +158,11 @@ const Suppliers = () => {
         </caption>
         <thead
           css={css`
+            display: none;
+            padding-top: 26.5px;
             padding-left: 17.5px;
             border-top: 1px dashed rgba(${theme.colors.colorText.rgb}, 0.5);
-            padding-top: 26.5px;
-            display: none;
+            margin-bottom: 27px;
 
             ${breakpointsMap.DESKTOP} {
               display: block;
@@ -172,9 +172,9 @@ const Suppliers = () => {
           <tr>
             <th
               css={css`
+                width: 377px;
                 font-size: 12px;
                 font-weight: 400;
-                width: 377px;
                 text-align: left;
               `}
             >
@@ -182,9 +182,9 @@ const Suppliers = () => {
             </th>
             <th
               css={css`
+                width: 175px;
                 font-size: 12px;
                 font-weight: 400;
-                width: 175px;
                 text-align: left;
               `}
             >
@@ -192,9 +192,9 @@ const Suppliers = () => {
             </th>
             <th
               css={css`
+                width: 150px;
                 font-size: 12px;
                 font-weight: 400;
-                width: 150px;
                 text-align: left;
               `}
             >
@@ -202,9 +202,9 @@ const Suppliers = () => {
             </th>
             <th
               css={css`
+                width: 219px;
                 font-size: 12px;
                 font-weight: 400;
-                width: 219px;
                 text-align: left;
               `}
             >
@@ -212,9 +212,9 @@ const Suppliers = () => {
             </th>
             <th
               css={css`
+                width: 217px;
                 font-size: 12px;
                 font-weight: 400;
-                width: 217px;
                 text-align: left;
               `}
             >
@@ -225,8 +225,8 @@ const Suppliers = () => {
         <tbody
           css={css`
             display: flex;
-            padding-left: 5px;
             padding-right: 5px;
+            padding-left: 5px;
 
             ${breakpointsMap.TABLET} {
               padding: 0;
@@ -235,25 +235,25 @@ const Suppliers = () => {
         >
           <tr
             css={css`
-              box-shadow: ${theme.colors.boxShadow};
-              width: 100%;
-              padding: 20px 22px 23px 21px;
               display: flex;
+              width: 100%;
               flex-wrap: wrap;
+              padding: 20px 22px 23px 21px;
               margin-bottom: 30px;
+              box-shadow: ${theme.colors.boxShadow};
 
               ${breakpointsMap.DESKTOP} {
-                padding: 40px 22px 43px 21px;
                 flex-wrap: nowrap;
                 align-items: center;
+                padding: 40px 22px 43px 21px;
               }
             `}
           >
             <td
               css={css`
-                font-size: 16px;
                 width: 100%;
                 padding-bottom: 15px;
+                font-size: 16px;
                 font-weight: 500;
 
                 ${breakpointsMap.DESKTOP} {
@@ -266,9 +266,9 @@ const Suppliers = () => {
             </td>
             <td
               css={css`
-                font-size: 12px;
                 display: flex;
                 align-items: flex-end;
+                font-size: 12px;
 
                 ${breakpointsMap.DESKTOP} {
                   width: 177px;
@@ -279,10 +279,10 @@ const Suppliers = () => {
             </td>
             <td
               css={css`
-                font-size: 12px;
-                margin-right: auto;
                 display: flex;
                 align-items: flex-end;
+                margin-right: auto;
+                font-size: 12px;
 
                 ${breakpointsMap.DESKTOP} {
                   width: 154px;
@@ -294,9 +294,9 @@ const Suppliers = () => {
             </td>
             <td
               css={css`
-                font-size: 26px;
                 display: flex;
                 flex-direction: column;
+                font-size: 26px;
                 font-weight: 500;
 
                 ${breakpointsMap.DESKTOP} {
@@ -306,10 +306,10 @@ const Suppliers = () => {
             >
               <span
                 css={css`
-                  font-size: 10px;
                   display: flex;
                   justify-content: flex-end;
                   margin-bottom: 5px;
+                  font-size: 10px;
 
                   ${breakpointsMap.DESKTOP} {
                     display: none;
@@ -323,12 +323,12 @@ const Suppliers = () => {
             </td>
             <td
               css={css`
-                font-size: 26px;
-                padding-top: 15px;
                 display: flex;
-                flex-direction: column;
                 width: 100%;
+                flex-direction: column;
                 align-items: flex-start;
+                padding-top: 15px;
+                font-size: 26px;
                 font-weight: 500;
 
                 ${breakpointsMap.DESKTOP} {
@@ -339,10 +339,10 @@ const Suppliers = () => {
             >
               <span
                 css={css`
-                  font-size: 10px;
                   display: flex;
                   justify-content: flex-end;
                   margin-bottom: 5px;
+                  font-size: 10px;
 
                   ${breakpointsMap.DESKTOP} {
                     display: none;

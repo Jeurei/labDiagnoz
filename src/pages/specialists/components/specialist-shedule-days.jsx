@@ -47,7 +47,7 @@ const SpecialistSheduleDays = ({
         selectedMounth,
         Number(obj[0]) + 2,
       ),
-      'iiii',
+      'iiiiii',
     );
 
     return (
@@ -89,6 +89,20 @@ const SpecialistSheduleDays = ({
           aria-label={`Записать на ${data}`}
         >
           {data}
+        </a>
+      </li>
+    );
+  };
+
+  const createEmptyElement = () => {
+    return (
+      <li className="specialist__shedule-table-time-list-item">
+        <a
+          href="/"
+          className="specialist__shedule-table-time"
+          aria-label="Открыть список всех"
+        >
+          ...
         </a>
       </li>
     );
@@ -137,6 +151,7 @@ const SpecialistSheduleDays = ({
     swiperRef.current?.swiper.slideTo(0);
     setSelectedDay(0);
   }, [selectedMounth]);
+
   return (
     <div className="specialist__shedule-table">
       {(!!activeIndex || !!selectedMounth) && (
@@ -170,8 +185,9 @@ const SpecialistSheduleDays = ({
       <ul className="specialist__shedule-table-time-list">
         {!chosenEmpty &&
           Object.values(arr[selectedDay][1])
-            .slice(0, 8)
+            .slice(0, 9)
             .map((el) => createTimeElement(el))}
+        {Object.values(arr[selectedDay][1]).length > 10 && createEmptyElement()}
       </ul>
       {chosenEmpty && (
         <SpecialistDayInfo

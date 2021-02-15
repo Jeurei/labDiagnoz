@@ -31,7 +31,7 @@ const DiscountProgram = () => {
             cursor: pointer;
 
             &:hover {
-              background-image: ${theme.colors.linearGradient};
+              background-image: linear-gradient(247deg, #689afa, #f426ee);
               color: ${theme.colors.white};
 
               .discount__value-container {

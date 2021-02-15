@@ -34,6 +34,7 @@
   position: relative;
   padding-top: 15px;
   padding-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .header__fixed-container {
@@ -51,7 +52,7 @@
   position: absolute;
   z-index: 500;
   bottom: -25px;
-  left: 50%;
+  left: 45%;
   display: flex;
   width: 40px;
   height: 25px;
@@ -78,6 +79,10 @@
   .header__inner {
     padding-right: 22px;
     padding-left: 22px;
+  }
+
+  .header__expand-button {
+    left: 50%;
   }
 
   .header__top-container {

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import SectionInner from 'containers/section-inner';
 import mapStateToPropsGenerator from 'store/mapStateToProps';
 import components from 'constants/components';
-import { ReactComponent as ArrowRight } from 'icons/arrrow-right.svg';
+import { ReactComponent as ArrowRight } from 'icons/arrow-right.svg';
 import { randomId } from '../../utils/common';
 
 const linkItem = (data) => {

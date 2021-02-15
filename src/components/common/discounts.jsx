@@ -106,8 +106,8 @@ const Discounts = ({ discounts, isColumn = false }) => {
       <div
         css={css`
           display: flex;
-          flex-direction: column;
           width: 100%;
+          flex-direction: column;
 
           ${breakpointsMap.TABLET} {
             flex-direction: row;

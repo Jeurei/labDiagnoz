@@ -25,7 +25,7 @@ const FixedCircle = () => {
         width: 57px;
         height: 57px;
         animation: ${bouncingAnimation} 1s infinite alternate;
-        background-image: ${theme.colors.linearGradient};
+        background-image: linear-gradient(237deg, #4eb2fb, #ac53f3);
         border-radius: 50%;
 
         &:hover {

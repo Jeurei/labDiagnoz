@@ -4,6 +4,7 @@ import Select from 'common/select';
 import SearchList from 'common/searchList';
 import { ReactComponent as SearchIcon } from 'icons/search-icon.svg';
 import { css, useTheme } from '@emotion/react';
+import { breakpointsMap } from 'src/constants/styles';
 
 const FilterTop = ({ categories, names, action }) => {
   const [inputValue, setInputValue] = useState('');
@@ -50,9 +51,13 @@ const FilterTop = ({ categories, names, action }) => {
           stroke="currentColor"
           css={css`
             position: absolute;
-            top: 16px;
+            top: 11px;
             left: 16px;
             color: #000;
+
+            ${breakpointsMap.DESKTOP} {
+              top: 16px;
+            }
           `}
         />
         <input

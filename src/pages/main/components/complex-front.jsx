@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ENTER_KEY_CODE } from 'constants/keys';
 import Picture from 'common/picture';
 import { ReactComponent as ExpandIcon } from 'icons/expand-icon.svg';
-import { ReactComponent as ArrowRight } from 'icons/arrrow-right.svg';
+import { ReactComponent as ArrowRight } from 'icons/arrow-right.svg';
 import ComplexList from './complex-list';
 
 const ComplexFront = ({ action, data }) => {
@@ -17,7 +17,7 @@ const ComplexFront = ({ action, data }) => {
         aria-label="Перейти на страницу с комплексом"
       >
         <Picture
-          src="img/left-radius"
+          src="img/complex"
           height="193"
           alt="Изображение комплекса"
           imgClass="complex__img"
@@ -73,6 +73,7 @@ const ComplexFront = ({ action, data }) => {
             width="26.5"
             height="26.5"
             fill="currentColor"
+            stroke="currentColor"
           />
         </div>
       </div>

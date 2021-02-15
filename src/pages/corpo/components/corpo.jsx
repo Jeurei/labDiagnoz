@@ -144,14 +144,13 @@ const Corpo = ({ features }) => {
           <div
             css={css`
               display: flex;
-              flex-direction: column;
+              flex-direction: colum;
             `}
           >
             <SliderControls />
             <ul
               css={css`
                 padding: 0;
-                margin-top: 37px;
                 filter: grayscale(100%);
                 list-style: none;
               `}

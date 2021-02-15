@@ -118,7 +118,7 @@ const Vacansies = () => {
             box-shadow: ${theme.colors.boxShadow};
 
             &:hover {
-              background-image: ${theme.colors.linearGradient};
+              background-image: linear-gradient(264deg, #768bf8, #c23df1);
               color: ${theme.colors.white};
             }
           `}
@@ -126,7 +126,11 @@ const Vacansies = () => {
           Медицинская деятельность
         </button>
       </div>
-      <div>
+      <div
+        css={css`
+          margin-bottom: 30px;
+        `}
+      >
         <article
           css={css`
             width: 100%;
@@ -135,7 +139,7 @@ const Vacansies = () => {
             box-shadow: ${theme.colors.boxShadow};
 
             &:hover {
-              background-image: ${theme.colors.linearGradient};
+              background-image: linear-gradient(214deg, #54adfb, #ba45f1);
               * {
                 color: ${theme.colors.white};
                 opacity: 1;
@@ -272,7 +276,7 @@ const Vacansies = () => {
                 display: block;
                 width: 102px;
                 height: 4px;
-                background-image: ${theme.colors.linearGradient};
+                background-image: linear-gradient(214deg, #54adfb, #ba45f1);
                 content: '';
               }
             `}
