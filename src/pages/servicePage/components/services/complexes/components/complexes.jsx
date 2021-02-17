@@ -100,14 +100,14 @@ const Complexes = () => {
           `}
         >
           <SearchIcon
-            width="25px"
-            height="25px"
+            width="13px"
+            height="13px"
             fill="none"
             stroke="currentColor"
             css={css`
               position: absolute;
-              top: 16px;
-              left: 16px;
+              top: 19px;
+              left: 22px;
               color: #000;
             `}
           />
@@ -148,7 +148,6 @@ const Complexes = () => {
             <SearchIcon
               width="25px"
               height="25px"
-              transform="scale(1.2)"
               fill="none"
               stroke="currentColor"
             />
@@ -321,7 +320,7 @@ const Complexes = () => {
                 border-radius: 50%;
               `}
             >
-              <CartIcon fill="#9A66F5" />
+              <CartIcon fill="#9A66F5" width="23.74px" height="21px" />{' '}
             </button>
           </div>
         </div>

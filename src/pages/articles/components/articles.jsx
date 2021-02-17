@@ -140,9 +140,11 @@ const Articles = () => {
           <SearchIcon
             width="25px"
             height="25px"
-            transform="scale(1.2)"
+            transform="scale(1)"
             fill="none"
             stroke="currentColor"
+            stroke-width="2"
+            opacity="1"
           />
         </button>
       </div>

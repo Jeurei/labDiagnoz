@@ -70,6 +70,7 @@ const Corpo = ({ features }) => {
           className="form-section__form form"
           css={css`
             flex-wrap: wrap;
+            padding: 0;
             margin-bottom: 43px;
           `}
         >

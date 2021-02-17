@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as SearchIcon } from 'icons/search-icon.svg';
+import { ReactComponent as SearchIcon } from 'icons/header-search-icon.svg';
 
 const SearchButton = ({ buttonClass, label, action = false }) => (
   <button
@@ -13,8 +13,8 @@ const SearchButton = ({ buttonClass, label, action = false }) => (
       className="header-top__list-icon header-top__list-icon--search"
       width="19"
       height="19"
-      stroke="currentColor"
-      fill="none"
+      fill="currentColor"
+      strokeWidth="1px"
       onClick={
         action
           ? (evt) => {

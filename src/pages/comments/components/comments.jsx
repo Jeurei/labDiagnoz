@@ -125,7 +125,6 @@ const Comments = () => {
           css={css`
             padding-right: 0;
             padding-left: 0;
-            margin-right: 30px;
 
             ${breakpointsMap.TABLET} {
               margin-right: 0;

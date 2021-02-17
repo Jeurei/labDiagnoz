@@ -20,16 +20,7 @@ const Illnes = () => {
       >
         <div>
           <h2 className="main__title">Тиреодерит</h2>
-          <div
-            css={css`
-              padding-right: 10px;
-              padding-left: 10px;
-
-              ${breakpointsMap.TABLET} {
-                padding: 0;
-              }
-            `}
-          >
+          <div>
             <h3
               css={css`
                 margin-bottom: 35px;
@@ -103,10 +94,8 @@ const Illnes = () => {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                padding-right: 10px;
-                padding-left: 10px;
-                margin-bottom: 36px;
                 margin-top: 42px;
+                margin-bottom: 36px;
                 background-image: url('img/analyze-q-bg.png'),
                   linear-gradient(
                     to left,

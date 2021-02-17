@@ -56,7 +56,8 @@
   display: none;
 
   &:checked + .tab__title {
-    background: transparent linear-gradient(263deg, #5ba7fb, #be41f1 100%) 0% 0%;
+    background: transparent linear-gradient(-263deg, #5ba7fb, #be41f1 100%) 0%
+      0%;
 
     color: $white;
 

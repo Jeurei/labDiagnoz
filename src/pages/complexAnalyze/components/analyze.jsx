@@ -98,8 +98,8 @@ const Analyze = () => {
 
   const SpanContainer = styled('span')`
     font-size: 13px;
-    text-transform: uppercase;
     font-weight: 500;
+    text-transform: uppercase;
   `;
 
   return (
@@ -113,15 +113,19 @@ const Analyze = () => {
           `}
         >
           <SearchIcon
-            width="25px"
-            height="25px"
+            width="13px"
+            height="13px"
             fill="none"
             stroke="currentColor"
             css={css`
               position: absolute;
               top: 16px;
-              left: 16px;
+              left: 22px;
               color: #000;
+
+              ${breakpointsMap.DESKTOP} {
+                top: 20px;
+              }
             `}
           />
           <input
@@ -225,9 +229,9 @@ const Analyze = () => {
                     flex-wrap: wrap;
                     align-items: center;
                     padding: 13px 17px;
-                    box-shadow: ${theme.colors.boxShadow};
                     padding-top: 35px;
                     padding-bottom: 35px;
+                    box-shadow: ${theme.colors.boxShadow};
                   `}
                 >
                   <td
@@ -257,10 +261,10 @@ const Analyze = () => {
                       display: flex;
                       width: 100%;
                       align-items: center;
+                      margin-right: auto;
                       margin-bottom: 15px;
                       font-size: 16px;
                       font-weight: 500;
-                      margin-right: auto;
 
                       ${breakpointsMap.TABLET} {
                         width: 245px;
@@ -276,12 +280,12 @@ const Analyze = () => {
                   <td
                     className="table__cell"
                     css={css`
+                      position: relative;
                       display: flex;
                       width: 100%;
                       align-items: center;
                       margin-bottom: 10px;
                       font-size: 12px;
-                      position: relative;
 
                       ${breakpointsMap.TABLET} {
                         width: 92px;
@@ -298,27 +302,27 @@ const Analyze = () => {
                     <a
                       href="/"
                       css={css`
-                        display: block;
                         position: relative;
+                        display: block;
 
                         &:after,
                         &:before {
-                          content: '';
+                          position: absolute;
+                          top: 7px;
+                          right: -13px;
                           display: block;
                           width: 10px;
                           height: 1px;
-                          position: absolute;
-                          right: -13px;
-                          top: 7px;
                           background-color: ${theme.colors.colorText.hex};
+                          content: '';
                         }
 
                         &:after {
                           transform: rotate(45deg);
                         }
                         &:before {
-                          transform: rotate(-45deg);
                           right: -20px;
+                          transform: rotate(-45deg);
                         }
                       `}
                     >
@@ -336,8 +340,6 @@ const Analyze = () => {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                padding-right: 10px;
-                padding-left: 10px;
                 margin-bottom: 36px;
                 background-image: url('img/analyze-q-bg.png'),
                   linear-gradient(
@@ -418,9 +420,9 @@ const Analyze = () => {
           >
             <div
               css={css`
-                padding-right: 18px;
+                padding-right: 8px;
                 padding-bottom: 17px;
-                padding-left: 18px;
+                padding-left: 8px;
               `}
             >
               <DashedContainer
@@ -557,8 +559,8 @@ const Analyze = () => {
 
                       &:after {
                         position: absolute;
-                        top: 6px;
-                        left: 5px;
+                        top: 7px;
+                        left: 6px;
                         display: block;
                         width: 16px;
                         height: 14px;
@@ -631,8 +633,8 @@ const Analyze = () => {
                       display: block;
                       width: 15px;
                       height: 12px;
-                      background-repeat: no-repeat;
                       background-image: url('img/home.svg');
+                      background-repeat: no-repeat;
                       content: '';
                     }
                   `}

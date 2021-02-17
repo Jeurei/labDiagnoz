@@ -155,8 +155,8 @@ const Lab = () => {
         `}
       >
         <SearchIcon
-          width="25px"
-          height="25px"
+          width="13px"
+          height="13px"
           fill="none"
           stroke="currentColor"
           css={css`
@@ -164,6 +164,10 @@ const Lab = () => {
             top: 16px;
             left: 16px;
             color: #000;
+
+            ${breakpointsMap.DESKTOP} {
+              top: 20px;
+            }
           `}
         />
         <input
@@ -173,7 +177,7 @@ const Lab = () => {
           aria-label="Введите что хотите найти"
           aria-describedby="search-descr"
           css={css`
-            padding-left: 44px;
+            padding-left: 40px;
             border: 1px solid ${theme.colors.blue};
             &:before {
               position: absolute;
@@ -590,7 +594,7 @@ const Lab = () => {
                     }
                   `}
                 >
-                  <CartIcon fill="#9A66F5" />
+                  <CartIcon fill="#9A66F5" width="23.74px" height="21px" />
                 </button>
               </td>
             </tr>

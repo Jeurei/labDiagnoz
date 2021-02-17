@@ -1,6 +1,7 @@
 import React from 'react';
 import Picture from 'common/picture';
 import { css, useTheme } from '@emotion/react';
+import { breakpointsMap } from 'src/constants/styles';
 
 const Online = () => {
   const theme = useTheme();
@@ -9,7 +10,12 @@ const Online = () => {
       <h2 className="main__title">Онлайн консультация эндокринолога</h2>
       <p
         css={css`
+          margin: 0;
           font-weight: 500;
+
+          ${breakpointsMap.TABLET} {
+            padding: 0;
+          }
         `}
       >
         Сео текстовое поле под контент, онлайн консультация эндокринолога в
@@ -20,48 +26,215 @@ const Online = () => {
         <div
           css={css`
             display: flex;
-            width: 369px;
             flex-direction: column;
-            align-items: center;
-            padding-bottom: 39px;
-            box-shadow: ${theme.colors.boxShadow};
+            padding-top: 37px;
+            margin: 0;
+
+            ${breakpointsMap.TABLET} {
+              flex-direction: row;
+              flex-wrap: wrap;
+            }
           `}
         >
-          <Picture src="img/beatiful-young-fem" />
-          <p
+          <h3
             css={css`
+              width: 100%;
+              margin: 0;
+              margin-bottom: 38px;
               font-size: 16px;
               font-weight: 500;
             `}
           >
-            Мельникова Наталья Игоревна
-          </p>
-          <p
+            Эндокринологи
+          </h3>
+          <div
             css={css`
-              font-size: 13px;
+              display: flex;
+              width: 339px;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              padding-bottom: 39px;
+              margin-bottom: 29px;
+              box-shadow: ${theme.colors.boxShadow};
+
+              ${breakpointsMap.TABLET} {
+                margin-right: auto;
+              }
+
+              ${breakpointsMap.DESKTOP} {
+                margin-right: 31px;
+              }
             `}
           >
-            Должность:{' '}
-            <span
+            <Picture src="img/beatiful-young-fem" />
+            <p
               css={css`
+                font-size: 16px;
                 font-weight: 500;
               `}
             >
-              Дерматовенеролог
-            </span>
-          </p>
-          <button
-            type="button"
-            className="button"
+              Мельникова Наталья Игоревна
+            </p>
+            <p
+              css={css`
+                font-size: 13px;
+              `}
+            >
+              Должность:
+              <span
+                css={css`
+                  font-weight: 500;
+                `}
+              >
+                Дерматовенеролог
+              </span>
+            </p>
+            <button
+              type="button"
+              className="button"
+              css={css`
+                width: 297px;
+                padding-top: 15px;
+                padding-bottom: 17px;
+                border: none;
+              `}
+            >
+              Онлайн запись на прием
+            </button>
+          </div>
+          <div
             css={css`
-              width: 297px;
-              padding-top: 15px;
-              padding-bottom: 17px;
-              border: none;
+              display: flex;
+              width: 339px;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              padding-bottom: 39px;
+              margin-bottom: 29px;
+              box-shadow: ${theme.colors.boxShadow};
+
+              ${breakpointsMap.DESKTOP} {
+                margin-right: 31px;
+              }
             `}
           >
-            Онлайн запись на прием
-          </button>
+            <Picture src="img/beatiful-young-fem" />
+            <p
+              css={css`
+                font-size: 16px;
+              `}
+            >
+              Мельникова Наталья Игоревна
+            </p>
+            <p
+              css={css`
+                font-size: 13px;
+              `}
+            >
+              Должность: Дерматовенеролог
+            </p>
+            <button
+              type="button"
+              className="button"
+              css={css`
+                width: 297px;
+                padding-top: 15px;
+                padding-bottom: 17px;
+                border: none;
+              `}
+            >
+              Онлайн запись на прием
+            </button>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              width: 339px;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              padding-bottom: 39px;
+              margin-bottom: 29px;
+              box-shadow: ${theme.colors.boxShadow};
+
+              ${breakpointsMap.TABLET} {
+                margin-right: auto;
+              }
+
+              ${breakpointsMap.DESKTOP} {
+                margin-right: 31px;
+              }
+            `}
+          >
+            <Picture src="img/beatiful-young-fem" />
+            <p
+              css={css`
+                font-size: 16px;
+              `}
+            >
+              Мельникова Наталья Игоревна
+            </p>
+            <p
+              css={css`
+                font-size: 13px;
+              `}
+            >
+              Должность: Дерматовенеролог
+            </p>
+            <button
+              type="button"
+              className="button"
+              css={css`
+                width: 297px;
+                padding-top: 15px;
+                padding-bottom: 17px;
+                border: none;
+              `}
+            >
+              Онлайн запись на прием
+            </button>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              width: 339px;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              padding-bottom: 39px;
+              margin-bottom: 29px;
+              box-shadow: ${theme.colors.boxShadow};
+            `}
+          >
+            <Picture src="img/beatiful-young-fem" />
+            <p
+              css={css`
+                font-size: 16px;
+              `}
+            >
+              Мельникова Наталья Игоревна
+            </p>
+            <p
+              css={css`
+                font-size: 13px;
+              `}
+            >
+              Должность: Дерматовенеролог
+            </p>
+            <button
+              type="button"
+              className="button"
+              css={css`
+                width: 297px;
+                padding-top: 15px;
+                padding-bottom: 17px;
+                border: none;
+              `}
+            >
+              Онлайн запись на прием
+            </button>
+          </div>
         </div>
         <div
           css={css`
@@ -75,6 +248,7 @@ const Online = () => {
             css={css`
               font-size: 33px;
               font-weight: 500;
+              line-height: 27px;
             `}
           >
             Как получить онлайн-консультацию?
@@ -82,6 +256,10 @@ const Online = () => {
           <p
             css={css`
               font-weight: 500;
+
+              ${breakpointsMap.TABLET} {
+                padding: 0;
+              }
             `}
           >
             Принцип проведения онлайн-консультаций поход на очный прием и
@@ -120,11 +298,20 @@ const Online = () => {
                   position: absolute;
                   top: -67px;
                   right: 7px;
-                  display: flex;
+                  display: none;
                   width: 213px;
                   height: 1px;
                   border-top: 1px dashed ${theme.colors.colorText.hex};
                   content: '';
+                }
+
+                ${breakpointsMap.TABLET} {
+                  &:after {
+                    top: -67px;
+                    right: -9px;
+                    display: flex;
+                    width: 123px;
+                  }
                 }
               `}
             >
@@ -153,7 +340,7 @@ const Online = () => {
                   background-color: ${theme.colors.blue};
                   border-radius: 50%;
                   color: ${theme.colors.white};
-                  content: '2';
+                  content: '1';
                   font-size: 22px;
                 }
 
@@ -161,11 +348,28 @@ const Online = () => {
                   position: absolute;
                   top: -67px;
                   right: 7px;
-                  display: flex;
+                  display: none;
                   width: 213px;
                   height: 1px;
                   border-top: 1px dashed ${theme.colors.colorText.hex};
                   content: '';
+                }
+
+                ${breakpointsMap.TABLET} {
+                  &:after {
+                    top: -67px;
+                    right: -9px;
+                    display: flex;
+                    width: 123px;
+                  }
+                }
+
+                ${breakpointsMap.DESKTOP} {
+                  &:after {
+                    top: -67px;
+                    right: 7px;
+                    width: 213px;
+                  }
                 }
               `}
             >
@@ -194,7 +398,7 @@ const Online = () => {
                   background-color: ${theme.colors.blue};
                   border-radius: 50%;
                   color: ${theme.colors.white};
-                  content: '3';
+                  content: '1';
                   font-size: 22px;
                 }
 
@@ -202,11 +406,28 @@ const Online = () => {
                   position: absolute;
                   top: -67px;
                   right: 7px;
-                  display: flex;
+                  display: none;
                   width: 213px;
                   height: 1px;
                   border-top: 1px dashed ${theme.colors.colorText.hex};
                   content: '';
+                }
+
+                ${breakpointsMap.TABLET} {
+                  &:after {
+                    top: -67px;
+                    right: -9px;
+                    display: flex;
+                    width: 123px;
+                  }
+                }
+
+                ${breakpointsMap.DESKTOP} {
+                  &:after {
+                    top: -67px;
+                    right: 7px;
+                    width: 213px;
+                  }
                 }
               `}
             >
@@ -235,8 +456,36 @@ const Online = () => {
                   background-color: ${theme.colors.blue};
                   border-radius: 50%;
                   color: ${theme.colors.white};
-                  content: '4';
+                  content: '1';
                   font-size: 22px;
+                }
+
+                &:after {
+                  position: absolute;
+                  top: -67px;
+                  right: 7px;
+                  display: none;
+                  width: 213px;
+                  height: 1px;
+                  border-top: 1px dashed ${theme.colors.colorText.hex};
+                  content: '';
+                }
+
+                ${breakpointsMap.TABLET} {
+                  &:after {
+                    top: -67px;
+                    right: -9px;
+                    display: none;
+                    width: 123px;
+                  }
+                }
+
+                ${breakpointsMap.DESKTOP} {
+                  &:after {
+                    top: -67px;
+                    right: 7px;
+                    width: 213px;
+                  }
                 }
               `}
             >

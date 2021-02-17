@@ -1,5 +1,6 @@
 .search {
-  padding-top: 29px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-image: url('../assets/img/mobile-bg.png'),
     linear-gradient(
       to left,
@@ -104,7 +105,6 @@
 .search__button {
   min-width: 78px;
   min-height: 100%;
-  padding-top: 7px;
   border: none;
   appearance: none;
   background-color: $blue;

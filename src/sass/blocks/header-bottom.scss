@@ -15,7 +15,7 @@
 .header-bottom__mobile {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-right: auto;
 }
@@ -90,6 +90,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .header-bottom {
+    min-height: 100%;
+    align-items: stretch;
+  }
+
   .header-bottom__mobile-top-img {
     margin-right: 20px;
   }
@@ -100,7 +105,7 @@
 
   .header-bottom__left {
     display: flex;
-    padding-top: 9px;
-    padding-left: 43px;
+    align-items: center;
+    padding-left: 35px;
   }
 }

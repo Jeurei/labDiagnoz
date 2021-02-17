@@ -86,10 +86,10 @@ const Search = ({ selectData, isModal = false }) => {
           <SearchIcon
             width="25px"
             height="25px"
-            transform="scale(1.2)"
+            transform="scale(1)"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
+            strokeWidth="2"
             opacity="1"
           />
         </button>

@@ -12,7 +12,12 @@ const SliderControls = ({ prevSlide, nextSlide, className }) => (
       name="slider-button-left"
       onClick={prevSlide}
     >
-      <ArrowLeftIcon className="slider-icon" fill="currentColor" />
+      <ArrowLeftIcon
+        className="slider-icon"
+        fill="currentColor"
+        width="15px"
+        height="15px"
+      />
     </button>
     <button
       className={`${className} ${className}--right slider-button`}
@@ -21,7 +26,13 @@ const SliderControls = ({ prevSlide, nextSlide, className }) => (
       name="slider-button-right"
       onClick={nextSlide}
     >
-      <ArrowRightIcon className="slider-icon" fill="currentColor" />
+      <ArrowRightIcon
+        className="slider-icon"
+        fill="currentColor"
+        width="15px"
+        height="15px"
+        strokeWidth="2px"
+      />
     </button>
   </div>
 );

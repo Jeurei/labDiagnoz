@@ -85,8 +85,6 @@ const AboutUs = ({ features }) => {
               display: flex;
               height: 100%;
               align-items: center;
-              padding-right: 10px;
-              padding-left: 10px;
 
               .aboutUs__logo {
                 margin-bottom: 29px;
@@ -163,7 +161,6 @@ const AboutUs = ({ features }) => {
             css={css`
               padding-top: 35px;
               padding-bottom: 35px;
-              padding-left: 10px;
               background-image: url(img/aboutusSvgBg.svg);
               background-position: right 33px;
               background-repeat: no-repeat;
@@ -200,7 +197,6 @@ const AboutUs = ({ features }) => {
           padding-top: 10px;
           padding-right: 10px;
           padding-bottom: 51px;
-          padding-left: 10px;
           background-color: #f7f7f7;
 
           ${breakpointsMap.TABLET} {

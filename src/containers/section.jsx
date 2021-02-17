@@ -5,7 +5,7 @@ import { breakpointsMap } from 'constants/styles';
 
 const Section = ({ children }) => {
   const SectionContainer = styled.section`
-    padding-top: 40px;
+    padding-top: 120px;
 
     ${breakpointsMap.TABLET} {
       padding-top: 55px;

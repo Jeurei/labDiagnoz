@@ -1169,7 +1169,7 @@ const Shares = ({ specialists }) => {
                   }
                 `}
               >
-                <CartIcon fill="#9A66F5" />
+                <CartIcon fill="#9A66F5" width="23.74px" height="21px" />{' '}
               </button>
             </td>
           </tr>
@@ -1378,7 +1378,7 @@ const Shares = ({ specialists }) => {
                 }
               `}
             >
-              <CartIcon fill="#9A66F5" />
+              <CartIcon fill="#9A66F5" width="23.74px" height="21px" />
             </button>
           </div>
         </div>

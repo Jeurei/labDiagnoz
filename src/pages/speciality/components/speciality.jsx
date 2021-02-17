@@ -24,16 +24,7 @@ const Speciality = ({ specialists }) => {
       >
         <div>
           <h2 className="main__title">Эндокринолог</h2>
-          <div
-            css={css`
-              padding-right: 10px;
-              padding-left: 10px;
-
-              ${breakpointsMap.TABLET} {
-                padding: 0;
-              }
-            `}
-          >
+          <div>
             <h3
               css={css`
                 margin-bottom: 35px;

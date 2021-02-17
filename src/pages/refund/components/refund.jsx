@@ -249,6 +249,8 @@ const Refund = () => {
             <SheduleIcon
               fill="currentColor"
               stroke="currentColor"
+              width="20px"
+              height="20px"
               css={css`
                 position: absolute;
                 top: 13px;

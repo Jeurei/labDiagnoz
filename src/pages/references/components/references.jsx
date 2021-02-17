@@ -11,7 +11,6 @@ const References = () => {
       <div>
         <p
           css={css`
-            padding-left: 10px;
             margin-bottom: 46px;
           `}
         >
@@ -21,7 +20,6 @@ const References = () => {
         </p>
         <p
           css={css`
-            padding-left: 10px;
             margin-bottom: 46px;
           `}
         >
@@ -30,7 +28,6 @@ const References = () => {
         </p>
         <p
           css={css`
-            padding-left: 10px;
             margin-bottom: 31px;
           `}
         >
@@ -43,9 +40,7 @@ const References = () => {
           display: flex;
           justify-content: center;
           padding-top: 21px;
-          padding-right: 10px;
           padding-bottom: 25px;
-          padding-left: 10px;
           background-image: ${theme.colors.linearGradient};
           color: ${theme.colors.white};
           text-align: center;
@@ -97,7 +92,6 @@ const References = () => {
           <legend
             css={css`
               padding-top: 43px;
-              padding-left: 10px;
               margin-bottom: 35px;
               font-size: 13px;
               font-weight: 500;
@@ -198,8 +192,8 @@ const References = () => {
                 position: relative;
                 display: block;
                 padding: 0;
-
                 padding-left: 10px;
+
                 border: none;
                 border-bottom: 2px solid ${theme.colors.colorText.hex};
                 appearance: none;
@@ -306,6 +300,8 @@ const References = () => {
               <SheduleIcon
                 fill="currentColor"
                 stroke="currentColor"
+                width="20px"
+                height="20px"
                 css={css`
                   position: absolute;
                   top: 13px;
@@ -355,6 +351,8 @@ const References = () => {
                 <SheduleIcon
                   fill="currentColor"
                   stroke="currentColor"
+                  width="20px"
+                  height="20px"
                   css={css`
                     position: absolute;
                     top: 13px;
@@ -421,6 +419,7 @@ const References = () => {
                     htmlFor="not-sure"
                     css={css`
                       display: block;
+                      padding-top: 8px;
 
                       &:before {
                         top: 0 !important;
@@ -431,6 +430,8 @@ const References = () => {
                       }
 
                       ${breakpointsMap.TABLET} {
+                        padding-top: 0;
+
                         &:before {
                           top: -6px !important;
                         }

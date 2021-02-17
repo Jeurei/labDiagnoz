@@ -13,8 +13,6 @@ const Suppliers = () => {
       <h2 className="main__title">Поставщикам расходных материалов</h2>
       <p
         css={css`
-          padding-right: 10px;
-          padding-left: 10px;
           margin-bottom: 18px;
           font-size: 13px;
 
@@ -41,6 +39,7 @@ const Suppliers = () => {
         action="post"
         className="form-section__form form"
         css={css`
+          padding: 0;
           margin-bottom: 43px;
 
           ${breakpointsMap.DESKTOP} {

@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import CrossButton from 'common/crossButton';
+import mapDispatchToProps from 'store/mapDispatchToProps';
+import components from 'constants/components';
+import { connect } from 'react-redux';
 import { showing } from '../utils/animation';
 import { randomId } from '../utils/common';
 import CartModalGroup from './cart-modal-group';
@@ -100,4 +103,4 @@ Cart.propTypes = {
   removeItem: PropTypes.func.isRequired,
 };
 
-export default Cart;
+export default connect(null, mapDispatchToProps(components.CART))(Cart);

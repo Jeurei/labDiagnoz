@@ -16,8 +16,6 @@ const Maintaince = () => {
       </h2>
       <p
         css={css`
-          padding-right: 10px;
-          padding-left: 10px;
           font-size: 13px;
 
           ${breakpointsMap.TABLET} {
@@ -50,8 +48,6 @@ const Maintaince = () => {
       </div>
       <p
         css={css`
-          padding-right: 10px;
-          padding-left: 10px;
           font-size: 13px;
 
           ${breakpointsMap.TABLET} {

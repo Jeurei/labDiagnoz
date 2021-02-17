@@ -113,15 +113,19 @@ const Analyze = () => {
           `}
         >
           <SearchIcon
-            width="25px"
-            height="25px"
+            width="13px"
+            height="13px"
             fill="none"
             stroke="currentColor"
             css={css`
               position: absolute;
               top: 16px;
-              left: 16px;
+              left: 22px;
               color: #000;
+
+              ${breakpointsMap.DESKTOP} {
+                top: 20px;
+              }
             `}
           />
           <input
@@ -157,9 +161,11 @@ const Analyze = () => {
             <SearchIcon
               width="25px"
               height="25px"
-              transform="scale(1.2)"
+              transform="scale(1)"
               fill="none"
               stroke="currentColor"
+              stroke-width="2"
+              opacity="1"
             />
           </button>
         </div>
@@ -504,7 +510,7 @@ const Analyze = () => {
                         }
                       `}
                     >
-                      <CartIcon fill="#9A66F5" />
+                      <CartIcon fill="#9A66F5" width="23.74px" height="21px" />{' '}
                     </button>
                   </td>
                 </tr>
@@ -526,9 +532,9 @@ const Analyze = () => {
           >
             <div
               css={css`
-                padding-right: 18px;
+                padding-right: 8px;
                 padding-bottom: 17px;
-                padding-left: 18px;
+                padding-left: 8px;
               `}
             >
               <DashedContainer
@@ -803,9 +809,7 @@ const Analyze = () => {
                 flex-direction: column;
                 align-items: center;
                 padding-top: 25px;
-                padding-right: 18px;
                 padding-bottom: 22px;
-                padding-left: 18px;
                 background-image: url('img/analyze-left-bg.png');
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -813,6 +817,11 @@ const Analyze = () => {
 
                 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
                   background-image: url(img/analyze-left-bg@2x.png);
+                }
+
+                ${breakpointsMap.DESKTOP} {
+                  padding-right: 18px;
+                  padding-left: 18px;
                 }
               `}
             >

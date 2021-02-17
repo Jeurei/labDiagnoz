@@ -288,12 +288,7 @@ const Vacansy = () => {
         </button>
       </div>
       <div>
-        <div
-          css={css`
-            padding-right: 10px;
-            padding-left: 10px;
-          `}
-        >
+        <div>
           <h3
             css={css`
               font-size: 16px;

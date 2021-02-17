@@ -10,17 +10,12 @@ const ToHome = () => {
   return (
     <>
       <h2 className="main__title">Выезд на дом</h2>
-      <div
-        css={css`
-          padding-right: 10px;
-          padding-left: 10px;
-        `}
-      >
+      <div>
         <h3
           css={css`
+            margin-bottom: 20px;
             font-size: 16px;
             font-weight: 500;
-            margin-bottom: 20px;
           `}
         >
           Заботьтесь о своем здоровье, не выходя из дома!
@@ -29,8 +24,8 @@ const ToHome = () => {
           css={css`
             padding: 0;
             padding-left: 14px;
-            font-weight: 500;
             margin-bottom: 20px;
+            font-weight: 500;
           `}
         >
           <li>
@@ -52,7 +47,7 @@ const ToHome = () => {
             position: relative;
             padding-top: 22px;
             padding-bottom: 20px;
-            padding-left: 39px;
+            padding-left: 29px;
             margin: 0;
             font-size: 16px;
             font-weight: 500;
@@ -82,7 +77,6 @@ const ToHome = () => {
           <legend
             css={css`
               padding-top: 43px;
-              padding-left: 10px;
               margin-bottom: 35px;
               font-size: 13px;
               font-weight: 500;
@@ -154,9 +148,11 @@ const ToHome = () => {
                   <SheduleIcon
                     fill="currentColor"
                     stroke="currentColor"
+                    width="20px"
+                    height="20px"
                     css={css`
                       position: absolute;
-                      top: 10px;
+                      top: 20px;
                       right: 13px;
                       color: ${theme.colors.blue};
                       font-weight: 400;
@@ -324,7 +320,6 @@ const ToHome = () => {
             padding-top: 31px;
             padding-right: 10px;
             padding-bottom: 24px;
-            padding-left: 10px;
             background-image: ${theme.colors.linearGradient};
             color: ${theme.colors.white};
           `}
@@ -379,8 +374,8 @@ const ToHome = () => {
             css={css`
               padding: 0;
               padding-left: 18px;
-              list-style: none;
               font-weight: 500;
+              list-style: none;
             `}
           >
             <li

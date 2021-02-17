@@ -11,8 +11,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-right: 17px;
-  padding-left: 14px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .header-top__mobile-list-link-cart-value {
@@ -65,10 +65,14 @@
 
 .header__expand-button-icon {
   position: absolute;
-  top: 18px;
-  left: 22px;
+  top: -2px;
+  left: 7px;
   color: $color-text;
-  transform: scale(2);
+}
+
+.header__top-container {
+  padding-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 @media (min-width: $tablet-width) {
@@ -85,10 +89,6 @@
     left: 50%;
   }
 
-  .header__top-container {
-    border-bottom: 1px solid $border-color;
-  }
-
   .header__nav {
     display: flex;
     flex-direction: row;
@@ -103,7 +103,7 @@
   }
 
   .header__top-container {
-    padding-bottom: 6.2px;
+    padding-bottom: 10px;
 
     .header__inner {
       padding-right: 6px;
@@ -115,7 +115,14 @@
   }
 
   .header__bottom-container {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    display: flex;
+    min-height: 92px;
+    padding: 0;
+
+    .header__inner {
+      display: flex;
+      width: 100%;
+      min-height: 100%;
+    }
   }
 }

@@ -45,18 +45,18 @@ const FilterTop = ({ categories, names, action }) => {
         `}
       >
         <SearchIcon
-          width="25px"
-          height="25px"
+          width="13px"
+          height="13px"
           fill="none"
           stroke="currentColor"
           css={css`
             position: absolute;
-            top: 11px;
-            left: 16px;
+            top: 18px;
+            left: 21px;
             color: #000;
 
             ${breakpointsMap.DESKTOP} {
-              top: 16px;
+              top: 21px;
             }
           `}
         />

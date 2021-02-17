@@ -20,7 +20,7 @@ const FixedCircle = () => {
       css={css`
         position: fixed;
         z-index: 200;
-        top: 70px;
+        top: 120px;
         right: 20px;
         width: 57px;
         height: 57px;
@@ -59,7 +59,7 @@ const FixedCircle = () => {
           }
         `}
       >
-        <FixedCircleIcon fill="#fff" />
+        <FixedCircleIcon fill="#fff" width="24.7px" height="24.7px" />
         Запись
       </a>
     </div>
