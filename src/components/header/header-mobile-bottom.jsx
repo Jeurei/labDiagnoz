@@ -41,7 +41,7 @@ const HeaderMobileBottom = ({
 
   70%{
     padding-top: 22px;
-    max-height: 80px;
+    max-height: 64px;
     padding-bottom: 22px;
   }
 
@@ -51,7 +51,7 @@ const HeaderMobileBottom = ({
 
   const hidingAnimation = keyframes`
   0% {
-    max-height: 80px;
+    max-height: 64px;
   }
 
   100% {
@@ -109,7 +109,15 @@ const HeaderMobileBottom = ({
               `
         }
       >
-        <div className="header__bottom header-bottom">
+        <div
+          className="header__bottom header-bottom"
+          css={css`
+            .header-bottom__burger-button-container {
+              align-self: center;
+              padding-bottom: 6px;
+            }
+          `}
+        >
           <div className="header-bottom__mobile">
             <Link
               to="/"
@@ -446,6 +454,9 @@ const HeaderMobileBottom = ({
                 width="21"
                 height="19"
                 fill="currentColor"
+                css={css`
+                  display: flex;
+                `}
                 onClick={(evt) => {
                   evt.preventDefault();
                   onClickHandler();

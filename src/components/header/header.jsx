@@ -26,7 +26,6 @@ const Header = ({ cities, setCity, cart }) => {
   const [cartModal, setCartModal] = useState(false);
   const [citiesModalState, setCitiesModalState] = useState(false);
   const [isMobile, setMobile] = useState(false);
-  const [buttonClicked, setButtonClicked] = useState(false);
   let delta = 0;
 
   const deleteElement = () => {
@@ -60,20 +59,18 @@ const Header = ({ cities, setCity, cart }) => {
 
     setTimeout(() => {
       setBottomHeaderHidden(bool);
-    }, 500);
+    }, animationDuration * 1000 - 500);
   };
 
   const hideBottomHeader = () => {
     if (window.scrollY < HEADER_MIN_HEIGHT && isBottomHeaderShown) {
       switchHeaderBottom(false);
-      setButtonClicked(false);
     }
   };
 
   const showBottomHeader = () => {
     if (window.scrollY > HEADER_MIN_HEIGHT && !isBottomHeaderShown) {
       switchHeaderBottom(true);
-      setButtonClicked(false);
     }
   };
 
@@ -125,11 +122,6 @@ const Header = ({ cities, setCity, cart }) => {
     },
   };
 
-  const onButtonClickHandler = () => {
-    setButtonClicked(true);
-    showBottomHeader();
-  };
-
   return (
     <header className="header">
       {isSearchModalOpen && (
@@ -143,8 +135,6 @@ const Header = ({ cities, setCity, cart }) => {
         {isBottomHeaderShown ? (
           <HeaderMobileBottom
             isHidden={isHidden}
-            buttonClicked={buttonClicked}
-            clickHandler={onButtonClickHandler}
             headerBottomState={isBottomHeaderShown}
             animationDuration={headerAnimationDuration}
             openSearch={
@@ -154,7 +144,6 @@ const Header = ({ cities, setCity, cart }) => {
         ) : (
           <HeaderMobileTop
             isHidden={isHidden}
-            buttonClicked={buttonClicked}
             animationDuration={headerAnimationDuration}
             openSearch={
               isSearchModalOpen ? deleteElement : searchButtonClickHandler

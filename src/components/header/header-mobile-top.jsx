@@ -17,7 +17,7 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
 
   70%{
     padding-top: 22px;
-    max-height: 80px;
+    max-height: 126px;
     padding-bottom: 22px;
   }
 
@@ -27,7 +27,7 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
 
   const hidingAnimation = keyframes`
   0% {
-    max-height: 80px;
+    max-height: 126px;
   }
 
   100% {
@@ -76,12 +76,10 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
         css={
           isHidden
             ? css`
-                animation: ${opacityAnimationHidden} ${animationDuration}s
-                  forwards ease-in-out;
+                animation: ${opacityAnimationHidden} 0.1s forwards ease-in-out;
               `
             : css`
-                animation: ${opacityAnimation} ${animationDuration}s forwards
-                  ease-in-out;
+                animation: ${opacityAnimation} 0.1s forwards ease-in-out;
               `
         }
       >
