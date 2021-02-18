@@ -784,6 +784,7 @@ const Cart = () => {
                           flex-direction: column;
                           align-items: flex-start;
                           justify-content: center;
+                          margin-right: auto;
                           margin-bottom: 15px;
                           font-size: 16px;
 
@@ -834,7 +835,6 @@ const Cart = () => {
                           }
 
                           ${breakpointsMap.DESKTOP} {
-                            width: 174px;
                             margin-bottom: 0;
                           }
                         `}
@@ -886,69 +886,13 @@ const Cart = () => {
                             ${breakpointsMap.DESKTOP} {
                               &:after,
                               &:before {
-                                top: 31px;
+                                top: 24px;
                               }
                             }
                           `}
                         >
                           Развернуть
                         </a>
-                      </td>
-                      <td
-                        className="table__cell"
-                        css={css`
-                          display: flex;
-                          width: 110px;
-                          flex-direction: column;
-                          justify-content: center;
-                        `}
-                      >
-                        <small
-                          css={css`
-                            margin-bottom: 5px;
-                            font-size: 12px;
-                            text-decoration: line-through;
-                          `}
-                        >
-                          1 100 ₽
-                        </small>
-                        <span
-                          css={css`
-                            margin-bottom: 10px;
-                            font-size: 26px;
-                            word-spacing: 10px;
-                          `}
-                        >
-                          1 100 ₽
-                        </span>
-                        <span
-                          css={css`
-                            position: relative;
-                            font-size: 12px;
-                            word-spacing: 5px;
-                          `}
-                        >
-                          Срок 1 день
-                          {spanHint()}
-                        </span>
-                      </td>
-                      <td
-                        css={css`
-                          .cartPage__delete-button {
-                            top: 25px;
-                          }
-
-                          ${breakpointsMap.DESKTOP} {
-                            .cartPage__delete-button {
-                              top: 45px;
-                            }
-                          }
-                        `}
-                      >
-                        <CrossButton
-                          buttonClass="cartPage__delete-button"
-                          label="Удалить анализ из корзины"
-                        />
                       </td>
                     </tr>
                     <tr
@@ -1019,6 +963,7 @@ const Cart = () => {
                           flex-direction: column;
                           align-items: flex-start;
                           justify-content: center;
+                          margin-right: auto;
                           margin-bottom: 15px;
                           font-size: 16px;
 
@@ -1069,7 +1014,6 @@ const Cart = () => {
                           }
 
                           ${breakpointsMap.DESKTOP} {
-                            width: 174px;
                             margin-bottom: 0;
                           }
                         `}
@@ -1121,69 +1065,13 @@ const Cart = () => {
                             ${breakpointsMap.DESKTOP} {
                               &:after,
                               &:before {
-                                top: 31px;
+                                top: 24px;
                               }
                             }
                           `}
                         >
                           Развернуть
                         </a>
-                      </td>
-                      <td
-                        className="table__cell"
-                        css={css`
-                          display: flex;
-                          width: 110px;
-                          flex-direction: column;
-                          justify-content: center;
-                        `}
-                      >
-                        <small
-                          css={css`
-                            margin-bottom: 5px;
-                            font-size: 12px;
-                            text-decoration: line-through;
-                          `}
-                        >
-                          1 100 ₽
-                        </small>
-                        <span
-                          css={css`
-                            margin-bottom: 10px;
-                            font-size: 26px;
-                            word-spacing: 10px;
-                          `}
-                        >
-                          1 100 ₽
-                        </span>
-                        <span
-                          css={css`
-                            position: relative;
-                            font-size: 12px;
-                            word-spacing: 5px;
-                          `}
-                        >
-                          Срок 1 день
-                          {spanHint()}
-                        </span>
-                      </td>
-                      <td
-                        css={css`
-                          .cartPage__delete-button {
-                            top: 25px;
-                          }
-
-                          ${breakpointsMap.DESKTOP} {
-                            .cartPage__delete-button {
-                              top: 45px;
-                            }
-                          }
-                        `}
-                      >
-                        <CrossButton
-                          buttonClass="cartPage__delete-button"
-                          label="Удалить анализ из корзины"
-                        />
                       </td>
                     </tr>
                   </tr>

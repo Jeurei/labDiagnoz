@@ -2,6 +2,7 @@ import React from 'react';
 import SectionInner from 'containers/section-inner';
 import Picture from 'common/picture';
 import Tab from 'common/tab';
+import { ReactComponent as Logo } from 'icons/logo.svg';
 
 const FooterBottom = () => (
   <section className="footer__bottom">
@@ -14,9 +15,8 @@ const FooterBottom = () => (
         <Tab />
       </SectionInner>
       <SectionInner>
-        <Picture
-          containerClass="footer-nav__logo"
-          src="img/logo"
+        <Logo
+          className="footer-nav__logo"
           width="230"
           height="36"
           alt="Логотип компании Лабдиагностика"

@@ -10,7 +10,7 @@
   &::after {
     position: absolute;
     top: 5px;
-    right: -9px;
+    right: -49px;
     width: 5px;
     height: 5px;
     border: 1px solid $color-text;
@@ -69,6 +69,12 @@
   background-color: transparent;
   font-size: 12px;
   line-height: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .cities::after {
+    right: -9px;
+  }
 }
 
 @media (min-width: $desktop-width) {

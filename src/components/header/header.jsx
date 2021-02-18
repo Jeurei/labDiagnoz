@@ -136,6 +136,7 @@ const Header = ({ cities, setCity, cart }) => {
         <SearchModal
           isDeleting={isDeleting}
           animationDuration={animationDuration}
+          deleteElement={deleteElement}
         />
       )}
       <headerContext.Provider value={headerHandlers}>

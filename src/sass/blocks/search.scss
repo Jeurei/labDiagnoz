@@ -253,7 +253,6 @@
   }
 
   .search__container-top-text {
-    display: flex;
     justify-content: flex-end;
     font-size: 11px;
     line-height: 16px;
@@ -312,6 +311,7 @@
   }
 
   .search__container-top-text {
+    display: flex;
     align-items: center;
     padding-top: 5px;
     font-size: $body-fs;

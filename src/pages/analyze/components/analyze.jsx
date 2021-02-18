@@ -173,6 +173,7 @@ const Analyze = () => {
           css={css`
             display: flex;
             flex-direction: column;
+            padding-bottom: 39px;
 
             ${breakpointsMap.DESKTOP} {
               flex-direction: row;

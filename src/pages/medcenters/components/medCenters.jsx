@@ -6,7 +6,7 @@ const MedCenters = () => {
   const theme = useTheme();
   return (
     <>
-      <h2 className="main__title">Медецинские центры</h2>
+      <h2 className="main__title">Медицинские центры</h2>
       <ul
         css={css`
           display: flex;

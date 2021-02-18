@@ -13,19 +13,6 @@ const Menu = () => {
     setMenuState(false);
   };
 
-  const onChangeHandler = (bool) => {
-    document.body.scroll = bool ? 'no' : 'yes';
-    document.body.style.overflow = bool ? 'hidden' : 'scroll';
-
-    if (menuState) {
-      document.querySelector('.header__bottom-container').zIndex = 10;
-    } else {
-      document.querySelector('.header__bottom-container').zIndex = -1;
-    }
-
-    setMenuState(bool);
-  };
-
   return (
     <>
       <button
@@ -43,7 +30,6 @@ const Menu = () => {
         right
         className="nav__menu-container"
         overlayClassName="nav__overlay"
-        onChange={onChangeHandler}
       >
         <CrossButton
           buttonClass="nav__close-buttom"

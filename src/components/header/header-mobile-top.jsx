@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import Menu from './menu';
 import HeaderTopLeft from './header-top-left';
 import HeaderTopRight from './header-top-right';
-import Picture from '../common/picture';
 
 const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
   const showingAnimation = keyframes`
@@ -92,23 +91,30 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
             flex-wrap: wrap;
           `}
         >
-          <HeaderTopLeft />
-          <HeaderTopRight openSearch={openSearch} />
+          <div
+            css={css`
+              display: flex;
+              width: 100%;
+              padding-top: 15px;
+              padding-bottom: 15px;
+            `}
+          >
+            <HeaderTopLeft />
+            <HeaderTopRight openSearch={openSearch} />
+          </div>
           <div
             className="header-bottom__left"
             css={css`
               display: none;
               width: 100%;
               padding: 0;
-              padding-top: 20px;
+              padding-top: 15px;
 
               ${breakpointsMap.TABLET} {
                 display: flex;
-              }
-
-              ${breakpointsMap.DESKTOP} {
                 padding-right: 10px;
                 padding-left: 10px;
+                border-top: 1px solid rgba(112, 112, 112, 0.2);
               }
             `}
           >
@@ -118,9 +124,8 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
                 margin-right: auto;
               `}
             >
-              <Picture
-                containerClass="header-bottom__mobile-top-img"
-                src="img/logo"
+              <Logo
+                className="header-bottom__mobile-top-img"
                 width="230"
                 height="34"
                 alt="Логотип компании Лабдиагностика"

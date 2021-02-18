@@ -537,6 +537,7 @@ const MedCenter = () => {
             >
               <legend
                 css={css`
+                  width: 100%;
                   margin-bottom: 25px;
                   font-size: 22px;
                   text-align: center;
@@ -623,7 +624,7 @@ const MedCenter = () => {
 
                     ${breakpointsMap.DESKTOP} {
                       width: 263px;
-                      margin-right: 15px;
+                      margin-right: 25px;
                     }
                   `}
                 />
@@ -636,6 +637,11 @@ const MedCenter = () => {
                   <label
                     htmlFor="agree"
                     className="form__label form__label--checkbox"
+                    css={css`
+                      ${breakpointsMap.DESKTOP} {
+                        margin-right: 0;
+                      }
+                    `}
                   >
                     <input
                       type="checkbox"
@@ -669,20 +675,36 @@ const MedCenter = () => {
                   </small>
                 </div>
               </div>
-              <button
-                className="button"
-                type="submit"
-                aria-label="Отправить форму"
+              <div
                 css={css`
-                  width: 210px;
-                  align-self: center;
-                  padding-top: 15px;
-                  padding-bottom: 17px;
-                  border-radius: 6px;
+                  display: flex;
+                  width: 100%;
+                  flex-direction: column;
+                  align-items: center;
                 `}
               >
-                Отправить
-              </button>
+                <small
+                  css={css`
+                    font-size: 9px;
+                  `}
+                >
+                  Звонки обрабатываются по будням с 08.00 до 20.00
+                </small>
+                <button
+                  className="button"
+                  type="submit"
+                  aria-label="Отправить форму"
+                  css={css`
+                    width: 210px;
+                    align-self: center;
+                    padding-top: 15px;
+                    padding-bottom: 17px;
+                    border-radius: 6px;
+                  `}
+                >
+                  Отправить
+                </button>
+              </div>
             </form>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { css, keyframes } from '@emotion/react';
 import CrossButton from 'common/crossButton';
+import { numberWithSpaces } from '../../utils/common';
 
 const CartModalListItem = ({ itemData, action }) => {
   const animationDuration = 0.2;
@@ -41,7 +42,9 @@ const CartModalListItem = ({ itemData, action }) => {
       }
     >
       <p className="cart-modal__text">{itemData.descr}</p>
-      <span className="cart-modal__price">{itemData.price} ₽</span>
+      <span className="cart-modal__price">
+        {numberWithSpaces(itemData.price)} ₽
+      </span>
       <CrossButton
         buttonClass="cities__modal-close"
         label="Удалить предмет из корзины"

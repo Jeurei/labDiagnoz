@@ -33,7 +33,7 @@ const FixedCircle = () => {
         }
 
         ${breakpointsMap.TABLET} {
-          top: 125px;
+          top: 155px;
         }
 
         ${breakpointsMap.DESKTOP} {

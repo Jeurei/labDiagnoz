@@ -5,8 +5,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import components from 'constants/components';
 import mapDispatchToProps from 'store/mapDispatchToProps';
-import Picture from 'common/picture';
-import { ReactComponent as DropDown } from 'icons/dropdown.svg';
+import { ReactComponent as Logo } from 'icons/logo.svg';
 import { ReactComponent as SmallLogo } from 'icons/small-logo.svg';
 import { ReactComponent as MarkMapIcon } from 'icons/map-mark-icon.svg';
 import { ReactComponent as MailIcon } from 'icons/mail.svg';
@@ -232,16 +231,21 @@ const HeaderMobileBottom = ({
                   onClickHandler();
                 }}
               />
-              <span className="header-top__mobile-list-link-cart-value">
+              <span
+                className="header-top__mobile-list-link-cart-value"
+                css={css`
+                  top: -5px;
+                  left: 17px;
+                `}
+              >
                 {Object.keys(cart).length}
               </span>
             </a>
           </div>
           <div className="header-bottom__left">
             <Link to="/">
-              <Picture
-                containerClass="header-bottom__mobile-top-img"
-                src="img/logo"
+              <Logo
+                className="header-bottom__mobile-top-img"
                 width="230"
                 height="34"
                 alt="Логотип компании Лабдиагностика"

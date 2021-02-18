@@ -1,11 +1,13 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useRef } from 'react';
 import { css, keyframes } from '@emotion/react';
 import PropTypes from 'prop-types';
 import SectionInner from 'containers/section-inner';
+import { ENTER_KEY_CODE } from 'src/constants/keys';
 import { searchShowing } from '../utils/animation';
 import SearchModalContainerTop from './search-modal-top';
 
-const SearchModal = ({ isDeleting, animationDuration }) => {
+const SearchModal = ({ isDeleting, animationDuration, deleteElement }) => {
   const modalRef = useRef();
   const deletingKeyFrames = () => keyframes`
       0% {
@@ -44,6 +46,25 @@ const SearchModal = ({ isDeleting, animationDuration }) => {
           <SearchModalContainerTop />
         </div>
       </SectionInner>
+      <span
+        css={css`
+          position: absolute;
+          z-index: -2;
+          top: 100%;
+          right: 0px;
+          width: 100%;
+          height: 100%;
+          margin: 0px;
+          background: rgba(0, 0, 0, 0.4) none repeat scroll 0% 0%;
+          opacity: 1;
+          touch-action: pan-y;
+          user-select: none;
+        `}
+        onClick={() => deleteElement()}
+        onKeyDown={(evt) => {
+          if (evt.key === ENTER_KEY_CODE) deleteElement();
+        }}
+      />
     </section>
   );
 };
@@ -51,6 +72,7 @@ const SearchModal = ({ isDeleting, animationDuration }) => {
 SearchModal.propTypes = {
   isDeleting: PropTypes.bool.isRequired,
   animationDuration: PropTypes.number.isRequired,
+  deleteElement: PropTypes.func.isRequired,
 };
 
 export default SearchModal;

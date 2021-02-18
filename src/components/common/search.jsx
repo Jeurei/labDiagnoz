@@ -7,6 +7,7 @@ import Components from 'constants/components';
 import { ReactComponent as SearchIcon } from 'icons/search-icon.svg';
 import mapStateToPropsGenerator from 'store/mapStateToProps';
 import { css } from '@emotion/react';
+import { breakpointsMap } from 'src/constants/styles';
 import Select from './select';
 
 const Search = ({ selectData, isModal = false }) => {
@@ -27,7 +28,11 @@ const Search = ({ selectData, isModal = false }) => {
         css={css`
           display: flex;
           align-items: center;
-          margin-bottom: 30px;
+          margin-bottom: 0;
+
+          ${breakpointsMap.DESKTOP} {
+            padding-right: 150px;
+          }
         `}
       >
         <h2

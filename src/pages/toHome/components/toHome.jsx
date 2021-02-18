@@ -8,7 +8,11 @@ const ToHome = () => {
   const theme = useTheme();
 
   return (
-    <>
+    <div
+      css={css`
+        padding-bottom: 39px;
+      `}
+    >
       <h2 className="main__title">Выезд на дом</h2>
       <div>
         <h3
@@ -400,7 +404,7 @@ const ToHome = () => {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

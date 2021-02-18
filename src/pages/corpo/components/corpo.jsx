@@ -26,6 +26,8 @@ const featuresItem = (data) => {
       <FiringIcon
         fill="currentColor"
         stroke="currentColor"
+        width="30px"
+        height="27px"
         css={css`
           position: absolute;
           top: 13px;

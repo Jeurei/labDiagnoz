@@ -2,22 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Components from 'constants/components';
-import Picture from 'common/picture';
 import { ReactComponent as MapMark } from 'icons/map-mark-icon.svg';
 import SectionInner from 'containers/section-inner';
 import Select from 'common/select';
 import mapStateToPropsGenerator from 'store/mapStateToProps';
+import { ReactComponent as Logo } from 'icons/logo.svg';
 
 const MapLeft = ({ selectData }) => (
   <div className="map__left">
     <SectionInner>
-      <Picture
-        containerClass="map__logo"
-        src="img/logo"
+      <Logo
+        className="map__logo"
         width="248"
         height="36"
         alt="Логотип компании Лабдиагностика"
-        imgClass="map__logo-img"
       />
     </SectionInner>
     <div className="map__left-container">

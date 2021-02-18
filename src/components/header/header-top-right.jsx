@@ -33,8 +33,11 @@ const HeaderTopRight = ({ cartData, openSearch }) => {
           href="/"
           css={css`
             display: flex;
+            width: 39px;
+            height: 39px;
             align-items: center;
             justify-content: center;
+            background-color: #f7f7f7;
             color: ${theme.colors.colorText.hex};
 
             &:hover {
@@ -53,8 +56,12 @@ const HeaderTopRight = ({ cartData, openSearch }) => {
           href="/"
           css={css`
             display: flex;
+            width: 39px;
+            height: 39px;
             align-items: center;
-            margin-left: 20px;
+            justify-content: center;
+            margin-left: 5px;
+            background-color: #f7f7f7;
 
             &:hover {
               color: #946df6;
@@ -71,7 +78,13 @@ const HeaderTopRight = ({ cartData, openSearch }) => {
         <div
           className="header-top__right-search-container"
           css={css`
-            margin-left: 10px;
+            display: flex;
+            width: 39px;
+            height: 39px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5px;
+            background-color: #f7f7f7;
           `}
         >
           <SearchButton
@@ -87,6 +100,15 @@ const HeaderTopRight = ({ cartData, openSearch }) => {
           onClick={(evt) => {
             evt.preventDefault();
           }}
+          css={css`
+            display: flex;
+            width: 39px;
+            height: 39px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5px;
+            background-color: #f7f7f7;
+          `}
         >
           <CartIcon
             className="header-top__list-icon header-top__list-icon--cart"

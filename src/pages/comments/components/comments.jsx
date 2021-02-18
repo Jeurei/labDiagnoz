@@ -325,24 +325,6 @@ const Comments = () => {
               Анонимно
             </label>
           </div>
-          <div
-            className="filter__checkbox-group"
-            css={css`
-              margin-right: 0;
-            `}
-          >
-            <input
-              type="checkbox"
-              name="non_anon"
-              id="non_anon"
-              value="0"
-              aria-label="Вам не важна анонимность?"
-              className="filter__input filter__input--checkbox"
-            />
-            <label className="filter__label" htmlFor="non_anon">
-              Неважно
-            </label>
-          </div>
         </FieldSet>
         <FieldSet
           css={css`

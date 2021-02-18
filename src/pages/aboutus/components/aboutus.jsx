@@ -11,6 +11,7 @@ import { randomId } from 'src/components/utils/common';
 import PropTypes from 'prop-types';
 import SliderControls from 'src/components/common/slider-controls';
 import { ReactComponent as Star } from 'icons/star.svg';
+import { ReactComponent as Logo } from 'icons/sharesLogo.svg';
 
 const featuresItem = (data) => {
   return (
@@ -24,6 +25,8 @@ const featuresItem = (data) => {
       <FiringIcon
         fill="currentColor"
         stroke="currentColor"
+        width="30"
+        height="27"
         css={css`
           position: absolute;
           top: 13px;
@@ -86,13 +89,24 @@ const AboutUs = ({ features }) => {
               height: 100%;
               align-items: center;
 
+              .aboutus__img {
+                height: 190px;
+                border-radius: 50%;
+              }
+
               .aboutUs__logo {
                 margin-bottom: 29px;
+              }
+
+              ${breakpointsMap.DESKTOP} {
+                .aboutus__img {
+                  height: 296px;
+                }
               }
             `}
           >
             <div>
-              <Picture src="img/sharesLogo" imgClass="aboutUs__logo" />
+              <Logo className="aboutUs__logo" width="216px" height="32px" />
               <h3
                 css={css`
                   margin-top: 0;
@@ -121,6 +135,9 @@ const AboutUs = ({ features }) => {
               src="img/aboutusImg"
               imgClass="aboutus__img"
               containerClass="aboutus__img-container"
+              ext="jpg"
+              width="296px"
+              height="296px"
             />
           </div>
         </SectionInner>
