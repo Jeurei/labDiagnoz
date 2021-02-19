@@ -48,6 +48,10 @@ const Ymap = () => {
         <Placemark
           geometry={mapData.center}
           modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: 'img/bluePlaceMarkIcon.svg',
+          }}
           properties={{
             balloonContentBody: [
               `

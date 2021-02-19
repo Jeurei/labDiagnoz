@@ -34,7 +34,6 @@
   align-items: center;
   justify-content: center;
   border: none;
-  margin-left: 10px;
   appearance: none;
   background-color: transparent;
 }
@@ -55,6 +54,10 @@
   background-color: #333;
   border-radius: 30%;
   transition: 0.4s;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .header-bottom__mobile-burger-button-container--active {

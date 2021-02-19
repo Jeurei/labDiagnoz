@@ -32,9 +32,9 @@ const Copyrights = () => (
                 Разработка и продвижение сайтов
               </p>
 
-              <Picture
+              <img
                 containerClass="creators-team__logo"
-                src="img/praweb"
+                src="img/prawebLogo.svg"
                 width="53"
                 height="24"
                 alt="Логотип компании,которая разрабоатала этот сайт"

@@ -15,6 +15,7 @@ const Refund = () => {
         action="post"
         css={css`
           padding-bottom: 53px;
+          margin-bottom: 29px;
           background-color: ${theme.colors.white};
           box-shadow: ${theme.colors.boxShadow};
         `}

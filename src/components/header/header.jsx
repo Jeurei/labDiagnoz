@@ -15,7 +15,7 @@ import HeaderMobileBottom from './header-mobile-bottom';
 const headerContext = React.createContext();
 
 const Header = ({ cities, setCity, cart }) => {
-  const HEADER_MIN_HEIGHT = 140;
+  const HEADER_MIN_HEIGHT = 126;
   const animationDuration = 0.7;
   const headerAnimationDuration = 0.2;
   const MAX_MOBILE_WIDTH = 720;
@@ -26,7 +26,7 @@ const Header = ({ cities, setCity, cart }) => {
   const [cartModal, setCartModal] = useState(false);
   const [citiesModalState, setCitiesModalState] = useState(false);
   const [isMobile, setMobile] = useState(false);
-  let delta = 0;
+  const delta = 0;
 
   const deleteElement = () => {
     setDeleting(true);
@@ -38,14 +38,8 @@ const Header = ({ cities, setCity, cart }) => {
   };
 
   const onWheelEventHandler = (evt) => {
-    const MAX_DELTA = 15;
-    delta += evt.deltaY;
-
-    if (delta >= MAX_DELTA) {
-      delta = 0;
-      window.removeEventListener('wheel', onWheelEventHandler);
-      deleteElement();
-    }
+    window.removeEventListener('wheel', onWheelEventHandler);
+    deleteElement();
   };
 
   const searchButtonClickHandler = () => {

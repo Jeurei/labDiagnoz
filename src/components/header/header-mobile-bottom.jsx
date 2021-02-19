@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { css, useTheme, keyframes } from '@emotion/react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -26,6 +26,8 @@ const HeaderMobileBottom = ({
   openSearch,
   animationDuration,
 }) => {
+  const MOBILE_MAX_WIDTH = 720;
+  const [isMobile, setMobile] = useState(false);
   const {
     cities: { onCitiesClickHandler },
     cart: { onClickHandler },
@@ -33,31 +35,47 @@ const HeaderMobileBottom = ({
 
   const theme = useTheme();
 
+  const resizeHandler = () => {
+    if (window.innerWidth < MOBILE_MAX_WIDTH) {
+      setMobile(true);
+    } else if (isMobile) {
+      setMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    resizeHandler();
+    window.addEventListener('resize', resizeHandler);
+    return window.removeEventListener('resize', resizeHandler);
+  }, []);
+
   const showingAnimation = keyframes`
   0% {
-    opacity: 0;
-    max-height: 0;
-  }
-
-  70%{
-    padding-top: 22px;
-    max-height: 64px;
-    padding-bottom: 22px;
+    min-height:0;
+    height:0;
+    opacity:0;
   }
 
   100% {
-    opacity: 1;
+    min-height: ${isMobile ? '54px' : '64px'};
+    height:${isMobile ? '54px' : '64px'};
+    opacity:1;
+  }
   `;
 
   const hidingAnimation = keyframes`
   0% {
-    max-height: 64px;
+    min-height:${isMobile ? '54px' : '64px'};
+    height:${isMobile ? '54px' : '64px'};
+    opacity:1;
+    display:none;
   }
 
   100% {
-    padding-top:0;
-    max-height: 0;
-    padding-bottom: 0;
+    display:none;
+    min-height:0px;
+    height:0px;
+    opacity:0;
   `;
 
   const opacityAnimation = keyframes`
@@ -68,6 +86,7 @@ const HeaderMobileBottom = ({
 
   100% {
     opacity: 1;
+  }
   `;
 
   const opacityAnimationHidden = keyframes`
@@ -78,6 +97,7 @@ const HeaderMobileBottom = ({
 
   100% {
     opacity: 0;
+  }
   `;
 
   return (
@@ -90,31 +110,23 @@ const HeaderMobileBottom = ({
                 ease-in-out;
             `
           : css`
-              animation: ${showingAnimation} ${animationDuration}s forwards
-                ease-in-out;
+              animation: ${showingAnimation} ${animationDuration + 0.05}s
+                forwards ease-in-out;
             `
       }
     >
-      <div
-        className="header__inner"
-        css={
-          !isHidden
-            ? css`
-                animation: ${opacityAnimationHidden} ${animationDuration}s
-                  forwards ease-in-out;
-              `
-            : css`
-                animation: ${opacityAnimation} ${animationDuration}s forwards
-                  ease-in-out;
-              `
-        }
-      >
+      <div className="header__inner">
         <div
           className="header__bottom header-bottom"
           css={css`
             .header-bottom__burger-button-container {
               align-self: center;
+              padding-top: 7px;
               padding-bottom: 6px;
+
+              ${breakpointsMap.TABLET} {
+                margin-left: 20px;
+              }
             }
           `}
         >
@@ -251,7 +263,13 @@ const HeaderMobileBottom = ({
             </a>
           </div>
           <div className="header-bottom__left">
-            <Link to="/">
+            <Link
+              to="/"
+              css={css`
+                display: flex;
+                align-items: center;
+              `}
+            >
               <Logo
                 className="header-bottom__mobile-top-img"
                 width="230"
@@ -415,6 +433,9 @@ const HeaderMobileBottom = ({
               href="some"
               className="nav__button button"
               aria-label="Ссылка на страницу для записи к врачу, или попап если скрипт работает"
+              css={css`
+                margin-left: 30px;
+              `}
             >
               Записаться к врачу
             </a>
@@ -432,7 +453,7 @@ const HeaderMobileBottom = ({
             <div
               className="header-top__right-search-container"
               css={css`
-                margin-left: 10px;
+                margin-left: 20px;
               `}
             >
               <SearchButton
@@ -445,6 +466,9 @@ const HeaderMobileBottom = ({
               href="some"
               className="header-top__link header-top__link--cart"
               aria-label="Перейти на страницу корзины"
+              css={css`
+                margin-left: 20px;
+              `}
               onClick={(evt) => {
                 evt.preventDefault();
               }}

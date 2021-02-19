@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Drawer from 'react-motion-drawer';
 import CrossButton from 'common/crossButton';
 import { routesConstantsWODirectLinks } from 'constants/routes';
+import { useHistory } from 'react-router-dom';
 import NavItem from './nav-item';
 import { randomId } from '../utils/common';
 import Routes from '../../routes';
@@ -12,6 +13,11 @@ const Menu = () => {
   const closeHandler = () => {
     setMenuState(false);
   };
+
+  const history = useHistory();
+  history.listen(() => {
+    setMenuState(false);
+  });
 
   return (
     <>

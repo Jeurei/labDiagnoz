@@ -145,6 +145,11 @@ const HeaderTopRight = ({ cartData, openSearch }) => {
           href="some"
           className="header-top__link header-top__link--cart"
           aria-label="Перейти на страницу корзины"
+          css={css`
+            ${breakpointsMap.DESKTOP} {
+              padding-top: 3px;
+            }
+          `}
           onClick={(evt) => {
             evt.preventDefault();
           }}

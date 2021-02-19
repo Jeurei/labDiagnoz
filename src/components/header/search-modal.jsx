@@ -9,10 +9,9 @@ import SearchModalContainerTop from './search-modal-top';
 
 const SearchModal = ({ isDeleting, animationDuration, deleteElement }) => {
   const modalRef = useRef();
-  const deletingKeyFrames = () => keyframes`
+  const deletingKeyFrames = keyframes`
       0% {
-        min-height: 594px;
-        max-height: ${modalRef.current.offsetHeight}px;
+       min-height: 400px;
       }
 
       50%{
@@ -22,7 +21,6 @@ const SearchModal = ({ isDeleting, animationDuration, deleteElement }) => {
       100% {
         opacity: 0;
         min-height: 0;
-        max-height: 0;
       `;
 
   return (
@@ -31,7 +29,7 @@ const SearchModal = ({ isDeleting, animationDuration, deleteElement }) => {
       css={
         isDeleting
           ? css`
-              animation: ${deletingKeyFrames()} ${animationDuration - 0.5}s
+              animation: ${deletingKeyFrames} ${animationDuration - 0.5}s
                 forwards ease-in-out;
             `
           : css`
@@ -53,7 +51,7 @@ const SearchModal = ({ isDeleting, animationDuration, deleteElement }) => {
           top: 100%;
           right: 0px;
           width: 100%;
-          height: 100%;
+          height: 100vh;
           margin: 0px;
           background: rgba(0, 0, 0, 0.4) none repeat scroll 0% 0%;
           opacity: 1;

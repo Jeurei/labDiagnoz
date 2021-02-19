@@ -58,7 +58,6 @@ const AboutUs = ({ features }) => {
         css={css`
           display: flex;
           min-height: 366px;
-          margin-bottom: 61px;
           background-image: url(img/aboutusbg.png);
           background-repeat: no-repeat;
           background-size: cover;
@@ -76,6 +75,8 @@ const AboutUs = ({ features }) => {
           }
 
           ${breakpointsMap.TABLET} {
+            margin-bottom: 61px;
+
             .aboutus__img-container {
               display: flex;
             }
@@ -340,10 +341,14 @@ const AboutUs = ({ features }) => {
               padding: 30px 64px;
               margin-bottom: 30px;
               background-image: url('img/file.svg');
-              background-position: 25px 24px;
+              background-position: 25px 32px;
               background-repeat: no-repeat;
               background-size: 21px 26px;
               box-shadow: ${theme.colors.boxShadow};
+
+              ${breakpointsMap.TABLET} {
+                background-position: 25px 24px;
+              }
             `}
           >
             ФЗ No323 «Об основах охраны здоровья граждан в Российской

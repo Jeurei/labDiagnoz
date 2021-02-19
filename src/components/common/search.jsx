@@ -39,6 +39,7 @@ const Search = ({ selectData, isModal = false }) => {
           className="search__title"
           css={css`
             margin-right: auto;
+            margin-bottom: 25px;
           `}
         >
           Простой и удобный поиск <br className="search__title-br" />

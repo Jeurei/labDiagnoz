@@ -32,7 +32,7 @@
 
 .header__bottom-container {
   position: relative;
-  padding-top: 15px;
+  padding-top: 4px;
   padding-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -71,7 +71,6 @@
 }
 
 .header__top-container {
-  padding-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -82,6 +81,10 @@
 
   .header__expand-button {
     left: 50%;
+  }
+
+  .header__bottom-container {
+    padding-top: 9px;
   }
 
   .header__inner {
@@ -98,7 +101,7 @@
 
 @media (min-width: $desktop-width) {
   .header__top-container {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
 
   .header__bottom {

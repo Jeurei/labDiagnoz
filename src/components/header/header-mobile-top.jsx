@@ -12,28 +12,34 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
   const showingAnimation = keyframes`
   0% {
     opacity: 0;
-    max-height: 0;
+    min-height: 0;
+    height: 0;
   }
 
   70%{
-    padding-top: 22px;
-    max-height: 126px;
-    padding-bottom: 22px;
+    min-height: 126px;
+    height: 126px;
   }
 
   100% {
     opacity: 1;
+  }
   `;
 
   const hidingAnimation = keyframes`
   0% {
-    max-height: 126px;
+    min-height:126px;
+    height:126px;
+    opacity:1;
   }
 
   100% {
     padding-top:0;
-    max-height: 0;
+    min-height:0;
+    height:0;
     padding-bottom: 0;
+    opacity:0;
+  }
   `;
 
   const opacityAnimation = keyframes`
@@ -44,6 +50,7 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
 
   100% {
     opacity: 1;
+  }
   `;
 
   const opacityAnimationHidden = keyframes`
@@ -54,6 +61,7 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
 
   100% {
     opacity: 0;
+  }
   `;
 
   return (
@@ -87,14 +95,15 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
           className="header__top header-top"
           css={css`
             flex-wrap: wrap;
+            padding-bottom: 0;
           `}
         >
           <div
             css={css`
               display: flex;
               width: 100%;
-              padding-top: 15px;
-              padding-bottom: 15px;
+              padding-top: 8px;
+              padding-bottom: 12.5px;
             `}
           >
             <HeaderTopLeft />
@@ -106,7 +115,8 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
               display: none;
               width: 100%;
               padding: 0;
-              padding-top: 15px;
+              padding-top: 10px;
+              padding-bottom: 6px;
 
               ${breakpointsMap.TABLET} {
                 display: flex;
@@ -119,6 +129,8 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
             <Link
               to="/"
               css={css`
+                display: flex;
+                align-items: center;
                 margin-right: auto;
               `}
             >
@@ -145,20 +157,23 @@ const HeaderMobileTop = ({ openSearch, isHidden, animationDuration }) => {
             css={css`
               display: flex;
               width: 100%;
-              padding-top: 12px;
+              padding-top: 0;
 
               ${breakpointsMap.TABLET} {
                 display: none;
               }
             `}
           >
-            <Logo
-              width="222px"
-              height="33px"
+            <Link
+              to="/"
               css={css`
+                display: flex;
+                align-items: center;
                 margin-right: auto;
               `}
-            />
+            >
+              <Logo width="222px" height="33px" />
+            </Link>
             <Menu />
           </div>
         </div>

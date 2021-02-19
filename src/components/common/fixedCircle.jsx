@@ -20,7 +20,7 @@ const FixedCircle = () => {
       css={css`
         position: fixed;
         z-index: 200;
-        top: 120px;
+        top: 160px;
         right: 20px;
         width: 57px;
         height: 57px;

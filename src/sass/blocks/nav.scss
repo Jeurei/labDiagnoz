@@ -83,7 +83,9 @@
 }
 
 .nav__button {
-  padding: 15px 28px 17px 28px;
+  align-self: flex-start;
+  padding: 13px 28px 13px 28px;
+  margin-bottom: 3px;
   letter-spacing: 1px;
 }
 
@@ -109,5 +111,19 @@
         background-color: #fc5a8d;
       }
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav__button {
+    padding: 15px 28px 17px 28px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav__button {
+    align-self: center;
+    padding: 15px 28px 17px 28px;
+    margin-bottom: 0;
   }
 }

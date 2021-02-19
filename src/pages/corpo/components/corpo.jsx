@@ -147,7 +147,7 @@ const Corpo = ({ features }) => {
           <div
             css={css`
               display: flex;
-              flex-direction: colum;
+              flex-direction: column;
             `}
           >
             <SliderControls />

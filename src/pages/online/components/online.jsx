@@ -312,6 +312,14 @@ const Online = () => {
                     display: flex;
                     width: 123px;
                   }
+
+                  ${breakpointsMap.DESKTOP} {
+                    &:after {
+                      top: -67px;
+                      right: 12px;
+                      width: 213px;
+                    }
+                  }
                 }
               `}
             >
@@ -367,7 +375,7 @@ const Online = () => {
                 ${breakpointsMap.DESKTOP} {
                   &:after {
                     top: -67px;
-                    right: 7px;
+                    right: 12px;
                     width: 213px;
                   }
                 }
@@ -425,7 +433,7 @@ const Online = () => {
                 ${breakpointsMap.DESKTOP} {
                   &:after {
                     top: -67px;
-                    right: 7px;
+                    right: 12px;
                     width: 213px;
                   }
                 }
@@ -483,7 +491,7 @@ const Online = () => {
                 ${breakpointsMap.DESKTOP} {
                   &:after {
                     top: -67px;
-                    right: 7px;
+                    right: 12px;
                     width: 213px;
                   }
                 }

@@ -11,7 +11,7 @@ import { randomId } from '../utils/common';
 const discount = (data, isColumn) => {
   const Container = styled.div`
     display: flex;
-    min-width: 350px;
+    min-width: 320px;
     min-height: 163px;
     max-height: 163px;
     flex-grow: 1;

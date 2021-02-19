@@ -82,11 +82,6 @@
   padding-left: 20px;
 }
 
-.specialist__shedule {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
 .specialist__adress {
   width: 100%;
   border: 1px solid $blue;
@@ -104,6 +99,8 @@
 
 .specialist__shedule-table {
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   .swiper-container {
     padding-bottom: 0;
@@ -283,8 +280,9 @@
 
 .specialist__shedule-table-time-list {
   display: flex;
+  width: 260px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-self: center;
   padding: 0;
   margin-bottom: 0;
   list-style: none;
@@ -321,6 +319,10 @@
     .specialist__shedule-table-time {
       color: $white;
     }
+  }
+
+  &:nth-of-type(3n) {
+    margin-right: 0;
   }
 }
 
@@ -365,6 +367,22 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+  .specialist__shedule-table-time-list {
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  .specialist__shedule-table-time-list-item {
+    margin-right: 21px;
+    &:nth-of-type(3n) {
+      margin-right: 25px;
+    }
+
+    &:nth-of-type(8n) {
+      margin-right: 0;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -388,5 +406,16 @@
 
   .specialist__price {
     font-size: 26px;
+  }
+
+  .specialist__shedule-table-time-list-item {
+    margin-right: 14px;
+    &:nth-of-type(3n) {
+      margin-right: 13px;
+    }
+
+    &:nth-of-type(8n) {
+      margin-right: 13px;
+    }
   }
 }

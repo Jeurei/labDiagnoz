@@ -126,8 +126,8 @@ const Cart = () => {
           `}
         >
           <SearchIcon
-            width="25px"
-            height="25px"
+            width="13px"
+            height="13px"
             fill="none"
             stroke="currentColor"
             css={css`
@@ -135,6 +135,10 @@ const Cart = () => {
               top: 16px;
               left: 16px;
               color: #000;
+
+              ${breakpointsMap.DESKTOP} {
+                top: 21px;
+              }
             `}
           />
           <input
@@ -170,7 +174,6 @@ const Cart = () => {
             <SearchIcon
               width="25px"
               height="25px"
-              transform="scale(1.2)"
               fill="none"
               stroke="currentColor"
             />
@@ -189,8 +192,6 @@ const Cart = () => {
           <div
             css={css`
               flex-grow: 1;
-              padding-right: 10px;
-              padding-left: 25px;
 
               ${breakpointsMap.DESKTOP} {
                 padding-right: 26px;
@@ -354,7 +355,13 @@ const Cart = () => {
                       }
                     `}
                   >
-                    <span>Общий анализ крови (5-diff), капиллярная кровь</span>
+                    <span
+                      css={css`
+                        margin-bottom: 12px;
+                      `}
+                    >
+                      Общий анализ крови (5-diff), капиллярная кровь
+                    </span>
                     <a
                       href="/"
                       css={css`
@@ -362,6 +369,8 @@ const Cart = () => {
                         padding-left: 15px;
                         color: #946df6;
                         font-size: 12px;
+                        font-weight: 400;
+                        text-decoration: underline;
 
                         &:before {
                           position: absolute;
@@ -381,19 +390,57 @@ const Cart = () => {
                   <td
                     className="table__cell"
                     css={css`
+                      position: relative;
                       display: flex;
                       width: 100%;
                       align-items: center;
                       margin-bottom: 10px;
                       font-size: 12px;
 
+                      &:after,
+                      &:before {
+                        position: absolute;
+                        top: 8px;
+                        right: 7px;
+                        display: block;
+                        width: 10px;
+                        height: 1px;
+                        background-color: ${theme.colors.colorText.hex};
+                        content: '';
+                      }
+
+                      &:after {
+                        transform: rotate(45deg);
+                      }
+                      &:before {
+                        right: 0;
+                        transform: rotate(-45deg);
+                      }
+
                       ${breakpointsMap.TABLET} {
                         width: 92px;
+                        &:after,
+                        &:before {
+                          top: 19px;
+                        }
+
+                        &:after {
+                          right: 33px;
+                          transform: rotate(45deg);
+                        }
+                        &:before {
+                          right: 26px;
+                          transform: rotate(-45deg);
+                        }
                       }
 
                       ${breakpointsMap.DESKTOP} {
                         width: 174px;
                         margin-bottom: 0;
+                        &:after,
+                        &:before {
+                          top: 29px;
+                        }
                       }
                     `}
                   >
@@ -491,7 +538,7 @@ const Cart = () => {
                         padding: 0 17px;
                         padding-top: 27px;
                         padding-bottom: 27px;
-                        padding-left: 89px;
+                        padding-left: 43px;
                         margin-bottom: 36px;
                         background-color: ${theme.colors.white};
                         box-shadow: ${theme.colors.boxShadow};
@@ -517,6 +564,10 @@ const Cart = () => {
                           font-weight: 500;
                           text-transform: uppercase;
                           transform: rotate(-90deg);
+                        }
+
+                        ${breakpointsMap.TABLET} {
+                          padding-left: 89px;
                         }
                       `}
                     >
@@ -559,7 +610,11 @@ const Cart = () => {
                           }
                         `}
                       >
-                        <span>
+                        <span
+                          css={css`
+                            margin-bottom: 12px;
+                          `}
+                        >
                           Общий анализ крови (5-diff), капиллярная кровь
                         </span>
                         <a
@@ -569,6 +624,7 @@ const Cart = () => {
                             padding-left: 15px;
                             color: #946df6;
                             font-size: 12px;
+                            text-decoration: underline;
 
                             &:before {
                               position: absolute;
@@ -635,7 +691,7 @@ const Cart = () => {
                             ${breakpointsMap.TABLET} {
                               &:after,
                               &:before {
-                                top: 25px;
+                                top: 26px;
                               }
 
                               &:after {
@@ -651,7 +707,7 @@ const Cart = () => {
                             ${breakpointsMap.DESKTOP} {
                               &:after,
                               &:before {
-                                top: 31px;
+                                top: 39px;
                               }
                             }
                           `}
@@ -668,15 +724,6 @@ const Cart = () => {
                           justify-content: center;
                         `}
                       >
-                        <small
-                          css={css`
-                            margin-bottom: 5px;
-                            font-size: 12px;
-                            text-decoration: line-through;
-                          `}
-                        >
-                          1 100 ₽
-                        </small>
                         <span
                           css={css`
                             margin-bottom: 10px;
@@ -685,6 +732,13 @@ const Cart = () => {
                           `}
                         >
                           1 100 ₽
+                        </span>
+                        <span
+                          css={css`
+                            font-size: 12px;
+                          `}
+                        >
+                          Выгода: 20 ₽
                         </span>
                         <span
                           css={css`
@@ -724,11 +778,12 @@ const Cart = () => {
                         flex-wrap: wrap;
                         padding: 0 17px;
                         padding-top: 27px;
+                        padding-right: 46px;
                         padding-bottom: 27px;
-                        padding-left: 86px;
-                        margin-right: 40px;
+                        padding-left: 43px;
+                        margin-right: 10px;
                         margin-bottom: 36px;
-                        margin-left: 40px;
+                        margin-left: 10px;
                         background-color: ${theme.colors.white};
                         box-shadow: ${theme.colors.boxShadow};
 
@@ -752,6 +807,12 @@ const Cart = () => {
                           font-size: 14px;
                           font-weight: 500;
                           text-transform: uppercase;
+                        }
+
+                        ${breakpointsMap.DESKTOP} {
+                          padding-left: 86px;
+                          margin-right: 40px;
+                          margin-left: 40px;
                         }
                       `}
                     >
@@ -795,7 +856,11 @@ const Cart = () => {
                           }
                         `}
                       >
-                        <span>
+                        <span
+                          css={css`
+                            margin-bottom: 12px;
+                          `}
+                        >
                           Общий анализ крови (5-diff), капиллярная кровь
                         </span>
                         <a
@@ -805,6 +870,7 @@ const Cart = () => {
                             padding-left: 15px;
                             color: #946df6;
                             font-size: 12px;
+                            text-decoration: underline;
 
                             &:before {
                               position: absolute;
@@ -831,7 +897,7 @@ const Cart = () => {
                           font-size: 12px;
 
                           ${breakpointsMap.TABLET} {
-                            width: 92px;
+                            width: 110px;
                           }
 
                           ${breakpointsMap.DESKTOP} {
@@ -870,15 +936,15 @@ const Cart = () => {
                             ${breakpointsMap.TABLET} {
                               &:after,
                               &:before {
-                                top: 19px;
+                                top: 24px;
                               }
 
                               &:after {
-                                right: -14px;
+                                right: -18px;
                                 transform: rotate(45deg);
                               }
                               &:before {
-                                right: -21px;
+                                right: -25px;
                                 transform: rotate(-45deg);
                               }
                             }
@@ -886,12 +952,12 @@ const Cart = () => {
                             ${breakpointsMap.DESKTOP} {
                               &:after,
                               &:before {
-                                top: 24px;
+                                top: 29px;
                               }
                             }
                           `}
                         >
-                          Развернуть
+                          Кровь (сыворотка)
                         </a>
                       </td>
                     </tr>
@@ -903,11 +969,12 @@ const Cart = () => {
                         flex-wrap: wrap;
                         padding: 0 17px;
                         padding-top: 27px;
+                        padding-right: 46px;
                         padding-bottom: 27px;
-                        padding-left: 86px;
-                        margin-right: 40px;
+                        padding-left: 46px;
+                        margin-right: 10px;
                         margin-bottom: 36px;
-                        margin-left: 40px;
+                        margin-left: 10px;
                         background-color: ${theme.colors.white};
                         box-shadow: ${theme.colors.boxShadow};
 
@@ -931,6 +998,12 @@ const Cart = () => {
                           font-size: 14px;
                           font-weight: 500;
                           text-transform: uppercase;
+                        }
+
+                        ${breakpointsMap.DESKTOP} {
+                          padding-left: 86px;
+                          margin-right: 40px;
+                          margin-left: 40px;
                         }
                       `}
                     >
@@ -974,7 +1047,11 @@ const Cart = () => {
                           }
                         `}
                       >
-                        <span>
+                        <span
+                          css={css`
+                            margin-bottom: 12px;
+                          `}
+                        >
                           Общий анализ крови (5-diff), капиллярная кровь
                         </span>
                         <a
@@ -984,6 +1061,7 @@ const Cart = () => {
                             padding-left: 15px;
                             color: #946df6;
                             font-size: 12px;
+                            text-decoration: underline;
 
                             &:before {
                               position: absolute;
@@ -1010,7 +1088,7 @@ const Cart = () => {
                           font-size: 12px;
 
                           ${breakpointsMap.TABLET} {
-                            width: 92px;
+                            width: 110px;
                           }
 
                           ${breakpointsMap.DESKTOP} {
@@ -1049,15 +1127,15 @@ const Cart = () => {
                             ${breakpointsMap.TABLET} {
                               &:after,
                               &:before {
-                                top: 19px;
+                                top: 24px;
                               }
 
                               &:after {
-                                right: -14px;
+                                right: -18px;
                                 transform: rotate(45deg);
                               }
                               &:before {
-                                right: -21px;
+                                right: -25px;
                                 transform: rotate(-45deg);
                               }
                             }
@@ -1065,12 +1143,12 @@ const Cart = () => {
                             ${breakpointsMap.DESKTOP} {
                               &:after,
                               &:before {
-                                top: 24px;
+                                top: 29px;
                               }
                             }
                           `}
                         >
-                          Развернуть
+                          Кровь (сыворотка)
                         </a>
                       </td>
                     </tr>
@@ -1096,8 +1174,9 @@ const Cart = () => {
               >
                 <li
                   css={css`
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    display: flex;
+                    padding-top: 22px;
+                    padding-bottom: 22px;
                     border-top: 1px dashed
                       rgba(${theme.colors.colorText.rgb}, 0.4);
                     border-bottom: 1px dashed
@@ -1111,10 +1190,20 @@ const Cart = () => {
                       display: block;
                       width: 100%;
                       height: 100%;
+                      margin-right: auto;
                     `}
                   >
                     Сыворотка
                   </a>
+                  <span
+                    css={css`
+                      font-size: 26px;
+                      font-weight: 500;
+                      white-space: nowrap;
+                    `}
+                  >
+                    1 100 ₽
+                  </span>
                 </li>
               </ul>
             </div>
@@ -1197,6 +1286,7 @@ const Cart = () => {
 
                       ${breakpointsMap.DESKTOP} {
                         width: 268px;
+                        margin-right: auto;
                         margin-bottom: 0;
                       }
                     `}
@@ -1219,7 +1309,7 @@ const Cart = () => {
 
                       ${breakpointsMap.DESKTOP} {
                         width: 128px;
-                        margin-right: 0;
+                        margin-right: auto;
                         margin-bottom: 0;
                       }
                     `}
@@ -1233,10 +1323,6 @@ const Cart = () => {
                       width: 110px;
                       flex-direction: column;
                       justify-content: center;
-
-                      ${breakpointsMap.DESKTOP} {
-                        margin-right: auto;
-                      }
                     `}
                   >
                     <span
@@ -1568,7 +1654,7 @@ const Cart = () => {
                         height: 26px;
                       `}
                     >
-                      <FileIcon />
+                      <FileIcon width="21px" height="27px" />
                     </a>
                   </li>
                   <li
@@ -1620,7 +1706,7 @@ const Cart = () => {
                         }
                       `}
                     >
-                      <LinkIcon />
+                      <LinkIcon width="22px" height="22px" />
                     </a>
                   </li>
                 </ul>

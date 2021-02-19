@@ -29,7 +29,7 @@ const Shares = ({ specialists }) => {
           padding-left: 58px;
           background-image: url('img/sharesBg.png');
           background-repeat: no-repeat;
-          background-size: 100%;
+          background-size: cover;
           color: ${theme.colors.white};
 
           @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
@@ -1462,6 +1462,10 @@ const Shares = ({ specialists }) => {
             align-items: center;
             justify-content: center;
 
+            .socials {
+              margin-top: 0;
+            }
+
             .social__link {
               color: ${theme.colors.colorText.hex};
             }
@@ -1494,7 +1498,7 @@ const Shares = ({ specialists }) => {
             Поделиться
           </a>
           <Socials />
-          <ShareIcon />
+          <ShareIcon width="30px" height="30px" />
         </div>
       </div>
       <div
@@ -1519,14 +1523,15 @@ const Shares = ({ specialists }) => {
             align-items: flex-end;
             justify-content: center;
             padding-top: 20px;
-            padding-right: 47px;
+            padding-right: 10px;
             padding-bottom: 20px;
             background-color: #f7f7f7;
+            text-align: right;
 
             &:before {
               position: absolute;
-              top: 57px;
-              left: 10px;
+              top: 62px;
+              left: 4px;
               display: block;
               width: 15px;
               height: 1px;
@@ -1537,8 +1542,8 @@ const Shares = ({ specialists }) => {
 
             &:after {
               position: absolute;
-              top: 46px;
-              left: 10px;
+              top: 51px;
+              left: 4px;
               display: block;
               width: 15px;
               height: 1px;
@@ -1555,6 +1560,17 @@ const Shares = ({ specialists }) => {
               &:before,
               &:after {
                 background-color: ${theme.colors.white};
+              }
+            }
+
+            ${breakpointsMap.TABLET} {
+              padding-right: 47px;
+
+              &:after {
+                top: 46px;
+              }
+              &:before {
+                top: 57px;
               }
             }
 
@@ -1624,13 +1640,13 @@ const Shares = ({ specialists }) => {
             justify-content: center;
             padding-top: 20px;
             padding-bottom: 20px;
-            padding-left: 47px;
+            padding-left: 10px;
             background-color: #f7f7f7;
 
             &:before {
               position: absolute;
-              top: 57px;
-              right: 10px;
+              top: 62px;
+              right: 4px;
               display: block;
               width: 15px;
               height: 1px;
@@ -1641,8 +1657,8 @@ const Shares = ({ specialists }) => {
 
             &:after {
               position: absolute;
-              top: 46px;
-              right: 10px;
+              top: 51px;
+              right: 4px;
               display: block;
               width: 15px;
               height: 1px;
@@ -1659,6 +1675,17 @@ const Shares = ({ specialists }) => {
               &:before,
               &:after {
                 background-color: ${theme.colors.white};
+              }
+            }
+
+            ${breakpointsMap.TABLET} {
+              padding-left: 47px;
+
+              &:after {
+                top: 46px;
+              }
+              &:before {
+                top: 57px;
               }
             }
 

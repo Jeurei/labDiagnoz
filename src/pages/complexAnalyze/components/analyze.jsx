@@ -215,7 +215,7 @@ const Analyze = () => {
                   justify-content: flex-start;
                   margin-bottom: 20px;
                   font-size: 16px;
-                  font-weight: 500;А
+                  font-weight: 500;
                 `}
               >
                 Состав комплексного исследования
@@ -309,7 +309,7 @@ const Analyze = () => {
                         &:before {
                           position: absolute;
                           top: 7px;
-                          right: -13px;
+                          right: -23px;
                           display: block;
                           width: 10px;
                           height: 1px;
@@ -321,7 +321,7 @@ const Analyze = () => {
                           transform: rotate(45deg);
                         }
                         &:before {
-                          right: -20px;
+                          right: -30px;
                           transform: rotate(-45deg);
                         }
                       `}
@@ -525,14 +525,29 @@ const Analyze = () => {
                     Выгода 120 ₽
                   </small>
                 </div>
-
-                <span
+                <div
                   css={css`
-                    font-size: 26px;
+                    display: flex;
+                    flex-direction: column;
                   `}
                 >
-                  1 100 ₽
-                </span>
+                  <small
+                    css={css`
+                      margin-bottom: 5px;
+                      font-size: 12px;
+                      text-decoration: line-through;
+                    `}
+                  >
+                    1 100 ₽
+                  </small>
+                  <span
+                    css={css`
+                      font-size: 26px;
+                    `}
+                  >
+                    1 100 ₽
+                  </span>
+                </div>
               </DashedContainer>
               <DashedContainer>
                 <div

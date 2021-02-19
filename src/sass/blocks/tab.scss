@@ -37,6 +37,8 @@
   position: relative;
   max-height: 1px;
   padding: 0;
+  padding-top: 10px;
+  padding-left: 10px;
   padding-left: 2px;
   background-color: #f7f7f7;
 
@@ -70,8 +72,6 @@
 
   &:checked ~ .tab__content {
     max-height: 350px;
-    padding-top: 10px;
-    padding-left: 10px;
     transition: max-height 500ms ease-in-out;
   }
 }
