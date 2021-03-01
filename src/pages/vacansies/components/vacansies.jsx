@@ -11,8 +11,9 @@ const Vacansies = () => {
         css={css`
           display: flex;
           padding-top: 10px;
+          padding-right: 12px;
           padding-bottom: 8px;
-          padding-left: 23px;
+          padding-left: 12px;
           margin-bottom: 25px;
           background-image: ${theme.colors.linearGradient};
           color: ${theme.colors.white};
@@ -28,6 +29,7 @@ const Vacansies = () => {
             width: 50%;
             flex-direction: column;
             padding-top: 18px;
+            padding-right: 5px;
             padding-bottom: 18px;
             border-right: 1px dashed ${theme.colors.white};
 

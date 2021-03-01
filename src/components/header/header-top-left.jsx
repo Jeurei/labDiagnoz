@@ -20,9 +20,34 @@ const HeaderTopLeft = ({ cities }) => {
   }, [cities.currentCity]);
 
   return (
-    <div className="header-top__left">
-      <div className="header-top__left-cities-container">
-        <div className="header-top__left-cities cities" data-state="default">
+    <div
+      className="header-top__left"
+      css={css`
+        position: relative;
+        ${breakpointsMap.TABLET} {
+          position: static;
+        }
+      `}
+    >
+      <div
+        className="header-top__left-cities-container"
+        css={css`
+          position: static;
+          ${breakpointsMap.TABLET} {
+            position: relative;
+          }
+        `}
+      >
+        <div
+          className="header-top__left-cities cities"
+          data-state="default"
+          css={css`
+            position: static;
+            ${breakpointsMap.TABLET} {
+              position: relative;
+            }
+          `}
+        >
           <a
             href="some"
             className="cities__link"

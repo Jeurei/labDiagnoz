@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { css, useTheme, keyframes } from '@emotion/react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import routesConstants from 'constants/routes';
 import components from 'constants/components';
 import mapDispatchToProps from 'store/mapDispatchToProps';
 import { ReactComponent as Logo } from 'icons/logo.svg';
@@ -28,6 +29,7 @@ const HeaderMobileBottom = ({
 }) => {
   const MOBILE_MAX_WIDTH = 720;
   const [isMobile, setMobile] = useState(false);
+  const history = useHistory();
   const {
     cities: { onCitiesClickHandler },
     cart: { onClickHandler },
@@ -142,12 +144,22 @@ const HeaderMobileBottom = ({
             <div
               css={css`
                 position: relative;
+
+                .header-top__left-icon--cities {
+                  top: 3px;
+                  left: -10px;
+                }
               `}
             >
               <div
                 className="cities"
                 css={css`
                   margin-right: auto;
+
+                  &:after {
+                    top: 5px;
+                    right: -10px;
+                  }
                 `}
               >
                 <a
@@ -248,7 +260,11 @@ const HeaderMobileBottom = ({
                 fill="currentColor"
                 onClick={(evt) => {
                   evt.preventDefault();
-                  onClickHandler();
+                  if (window.innerWidth < MOBILE_MAX_WIDTH) {
+                    history.push(routesConstants.CART.route);
+                  } else {
+                    onClickHandler();
+                  }
                 }}
               />
               <span

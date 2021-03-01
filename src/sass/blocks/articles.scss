@@ -1,9 +1,6 @@
 .articles__top {
   display: flex;
   flex-direction: row;
-  padding-top: 1px;
-  padding-right: 4px;
-  padding-left: 4px;
   margin-bottom: 26px;
 }
 
@@ -38,21 +35,17 @@
 
 .articles__sort-item {
   position: relative;
-  padding-right: 2px;
+  margin-right: 5px;
 
   &:after {
     position: absolute;
     top: 0;
-    right: 1px;
+    right: 0;
     display: flex;
     width: 1px;
-    height: 100%;
+    height: 20px;
     background-color: #707070;
     content: '';
-  }
-
-  &:first-child {
-    padding-left: 3px;
   }
 
   &:last-child::after {
@@ -61,6 +54,7 @@
 }
 
 .articles__sort-button {
+  padding: 5px 7px;
   border: none;
   appearance: none;
   background-color: transparent;
@@ -82,7 +76,6 @@
   }
 
   .articles__sort-button {
-    padding: 5px 7px 6px 9px;
     background-color: $green;
     color: $white;
     cursor: default;
