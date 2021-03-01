@@ -50,7 +50,9 @@ const Ymap = () => {
           modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: 'img/bluePlaceMarkIcon.svg',
+            iconImageHref: 'img/greenPlaceMarkIcon.svg',
+            iconImageSize: [40, 40],
+            imageClipRect: [20, 20],
           }}
           properties={{
             balloonContentBody: [

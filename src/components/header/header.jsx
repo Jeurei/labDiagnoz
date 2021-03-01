@@ -37,15 +37,15 @@ const Header = ({ cities, setCity, cart }) => {
     }, animationDuration * 1000 - 550);
   };
 
-  const onWheelEventHandler = (evt) => {
-    window.removeEventListener('wheel', onWheelEventHandler);
+  const onWheelEventHandler = () => {
+    window.removeEventListener('scroll', onWheelEventHandler);
     deleteElement();
   };
 
   const searchButtonClickHandler = () => {
     setSearhModalOpen(true);
 
-    window.addEventListener('wheel', onWheelEventHandler);
+    window.addEventListener('scroll', onWheelEventHandler);
   };
 
   const switchHeaderBottom = (bool) => {

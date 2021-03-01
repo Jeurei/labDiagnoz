@@ -61,7 +61,8 @@
   order: -1;
 
   &--cities {
-    left: -10px;
+    top: 15px;
+    left: 7px;
   }
 }
 
@@ -121,6 +122,11 @@
     width: auto;
     padding-left: 20px;
     background-color: transparent;
+  }
+
+  .header-top__left-icon--cities {
+    top: 2px;
+    left: -10px;
   }
 
   .header-top__right {

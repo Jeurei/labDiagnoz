@@ -370,6 +370,7 @@ const ToHome = () => {
               margin: 0;
               font-size: 22px;
               font-weight: 500;
+              line-height: 22px;
             `}
           >
             Ограничения по взятию биоматериала на дому

@@ -241,7 +241,9 @@ const Online = () => {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 63px;
+            ${breakpointsMap.TABLET} {
+              padding-top: 63px;
+            }
           `}
         >
           <h3
@@ -348,7 +350,7 @@ const Online = () => {
                   background-color: ${theme.colors.blue};
                   border-radius: 50%;
                   color: ${theme.colors.white};
-                  content: '1';
+                  content: '2';
                   font-size: 22px;
                 }
 
@@ -406,7 +408,7 @@ const Online = () => {
                   background-color: ${theme.colors.blue};
                   border-radius: 50%;
                   color: ${theme.colors.white};
-                  content: '1';
+                  content: '3';
                   font-size: 22px;
                 }
 
@@ -464,7 +466,7 @@ const Online = () => {
                   background-color: ${theme.colors.blue};
                   border-radius: 50%;
                   color: ${theme.colors.white};
-                  content: '1';
+                  content: '4';
                   font-size: 22px;
                 }
 

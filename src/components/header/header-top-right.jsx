@@ -9,10 +9,14 @@ import { ReactComponent as MailIcon } from 'icons/mail.svg';
 import { ReactComponent as TelIcon } from 'icons/tel-icon.svg';
 import { css, useTheme } from '@emotion/react';
 import { breakpointsMap } from 'src/constants/styles';
+import routesConstants from 'src/constants/routes';
+import { useHistory } from 'react-router-dom';
 import { headerContext } from './header';
 
 const HeaderTopRight = ({ cartData, openSearch }) => {
   const theme = useTheme();
+  const MOBILE_MAX_WIDTH = 720;
+  const history = useHistory();
   const {
     cart: { state, onClickHandler, onCloseClickHandler },
   } = useContext(headerContext);
@@ -117,10 +121,20 @@ const HeaderTopRight = ({ cartData, openSearch }) => {
             fill="currentColor"
             onClick={(evt) => {
               evt.preventDefault();
-              onClickHandler();
+              if (window.innerWidth < MOBILE_MAX_WIDTH) {
+                history.push(routesConstants.CART.route);
+              } else {
+                onClickHandler();
+              }
             }}
           />
-          <span className="header-top__mobile-list-link-cart-value">
+          <span
+            className="header-top__mobile-list-link-cart-value"
+            css={css`
+              top: 5px;
+              left: 25px;
+            `}
+          >
             {Object.keys(cartData).length}
           </span>
         </a>
@@ -161,10 +175,21 @@ const HeaderTopRight = ({ cartData, openSearch }) => {
             fill="currentColor"
             onClick={(evt) => {
               evt.preventDefault();
-              onClickHandler();
+              if (window.innerWidth < MOBILE_MAX_WIDTH) {
+                history.push(routesConstants.CART.route);
+              } else {
+                onClickHandler();
+              }
             }}
           />
-          <span className="header-top__mobile-list-link-cart-value">
+          <span
+            className="header-top__mobile-list-link-cart-value"
+            css={css`
+              ${breakpointsMap.TABLET} {
+                top: -2px;
+              }
+            `}
+          >
             {Object.keys(cartData).length}
           </span>
         </a>

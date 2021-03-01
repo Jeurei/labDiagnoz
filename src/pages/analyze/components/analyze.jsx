@@ -810,7 +810,9 @@ const Analyze = () => {
                 flex-direction: column;
                 align-items: center;
                 padding-top: 25px;
+                padding-right: 10px;
                 padding-bottom: 22px;
+                padding-left: 10px;
                 background-image: url('img/analyze-left-bg.png');
                 background-repeat: no-repeat;
                 background-size: cover;

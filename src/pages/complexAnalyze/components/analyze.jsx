@@ -105,7 +105,11 @@ const Analyze = () => {
   return (
     <>
       <h2 className="main__title">Комплексный анализ</h2>
-      <section>
+      <section
+        css={css`
+          margin-bottom: 20px;
+        `}
+      >
         <div
           className="search__container-input-group"
           css={css`
@@ -340,6 +344,8 @@ const Analyze = () => {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                padding-right: 10px;
+                padding-left: 10px;
                 margin-bottom: 36px;
                 background-image: url('img/analyze-q-bg.png'),
                   linear-gradient(
@@ -366,6 +372,7 @@ const Analyze = () => {
                 css={css`
                   color: ${theme.colors.white};
                   font-size: 22px;
+                  text-align: center;
                 `}
               >
                 Понятно ли вам описание анализа?

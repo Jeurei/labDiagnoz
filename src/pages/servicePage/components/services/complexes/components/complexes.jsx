@@ -171,6 +171,8 @@ const Complexes = () => {
             display: flex;
             min-width: 100%;
             min-height: 245px;
+            flex-direction: column;
+            align-items: center;
             margin-right: auto;
             margin-bottom: 10px;
             box-shadow: ${theme.colors.boxShadow};
@@ -182,6 +184,11 @@ const Complexes = () => {
 
             &:nth-of-type(2n) {
               margin-right: 0;
+            }
+
+            @media (min-width: 465px) {
+              flex-direction: row;
+              align-items: stretch;
             }
 
             ${breakpointsMap.DESKTOP} {

@@ -34,7 +34,7 @@ const Copyrights = () => (
 
               <img
                 containerClass="creators-team__logo"
-                src="img/prawebLogo.svg"
+                src="img/whitelogopraweb.svg"
                 width="53"
                 height="24"
                 alt="Логотип компании,которая разрабоатала этот сайт"
