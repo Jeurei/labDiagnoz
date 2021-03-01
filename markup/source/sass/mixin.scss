@@ -45,7 +45,7 @@
   display: block;
   width: 130px;
   height: 14px;
-  content: "///////////";
+  content: '///////////';
   font-size: 22px;
   letter-spacing: 4.5px;
   opacity: 0.3;
@@ -64,9 +64,9 @@
     $i: index($values, $value);
 
     @if ($i == 1) {
-      $string: $value + " " + $speed + " " + $transition;
+      $string: $value + ' ' + $speed + ' ' + $transition;
     } @else {
-      $string: $string + ", " + $value + " " + $speed + " " + $transition;
+      $string: $string + ', ' + $value + ' ' + $speed + ' ' + $transition;
     }
   }
   transition: $string;

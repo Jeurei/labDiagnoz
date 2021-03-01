@@ -6,6 +6,7 @@ import components from 'constants/components';
 import SliderControls from 'common/slider-controls';
 import Complex from './complex';
 import Slider from './slider';
+import Links from './links';
 
 const Complexes = ({ complexes }) => {
   const swiperRef = useRef(null);
@@ -59,6 +60,7 @@ const Complexes = ({ complexes }) => {
           </ul>
         </div>
       </div>
+      <Links />
     </section>
   );
 };

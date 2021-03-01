@@ -20,10 +20,13 @@ const SpecialistShedule = ({ time }) => {
     const mounthName = getMounthName(id);
     return { [id]: mounthName.charAt(0).toUpperCase() + mounthName.slice(1) };
   });
-  const arrayOfMoutnhtesUntilNewYear = arrayOfMounthes.slice(currentMounth, 3);
+  const arrayOfMoutnhtesUntilNewYear = arrayOfMounthes.slice(
+    currentMounth,
+    currentMounth + 3,
+  );
   const arrayOfAvailableMounthes = Object.entries(time[currentYear]).slice(
     currentMounth,
-    3,
+    currentMounth + 3,
   );
   if (
     Object.values(time[currentYear][currentMounth][currentDay]).length === 0
@@ -49,7 +52,7 @@ const SpecialistShedule = ({ time }) => {
   };
 
   useEffect(() => {
-    if (Number(selectedMounth) === 0) {
+    if (selectedMounth === getMonth(currentDate)) {
       setCurrentDay(getTodayDay(currentDate));
     } else {
       setCurrentDay(0);

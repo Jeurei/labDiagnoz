@@ -175,7 +175,29 @@ module.exports = {
         issuer: {
           test: /\.jsx?$/,
         },
-        use: ['babel-loader', '@svgr/webpack', 'url-loader'],
+        use: [
+          'babel-loader',
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                pretty: true,
+                multipass: true,
+                plugins: [
+                  { sortAttrs: true },
+                  { removeDimensions: true },
+                  { removeStyleElement: true },
+                  { removeAttrs: { attrs: '(xmlns.*)' } },
+                ],
+              },
+              semi: false,
+              singleQuote: true,
+              icon: true,
+            },
+          },
+
+          'url-loader',
+        ],
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,

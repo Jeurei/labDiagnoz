@@ -8,20 +8,22 @@ import mapStateToPropsGenerator from 'store/mapStateToProps';
 import { breakpointsMap } from 'src/constants/styles';
 import { randomId } from '../utils/common';
 
-const discount = (data) => {
+const discount = (data, isColumn) => {
   const Container = styled.div`
-    min-width: 350px;
-    flex-grow: 1;
     display: flex;
-    margin-bottom: 15px;
+    min-width: 320px;
     min-height: 163px;
+    max-height: 163px;
+    flex-grow: 1;
     align-items: center;
-    justify-content: center;
-    color: #f7f7f7;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    padding-left: 130px;
+    margin-bottom: 15px;
     background-image: url(./img/${data.img});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f7f7f7;
+    ${isColumn && 'margin-right:0 !important;'}
 
     ${data.img2x &&
     `@media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
@@ -29,12 +31,13 @@ const discount = (data) => {
     }`}
 
     &:last-of-type {
-      margin-right: 0;
       flex-grow: 0;
+      margin-right: 0;
     }
 
     ${breakpointsMap.TABLET} {
-      margin-right: 15px;
+      margin-right: 10px;
+      ${isColumn && 'margin-right:10px !important;'}
 
       &:nth-of-type(2n) {
         margin-right: 0;
@@ -42,9 +45,10 @@ const discount = (data) => {
     }
 
     ${breakpointsMap.DESKTOP} {
-      flex-grow: 1;
       min-width: 370px;
+      flex-grow: 1;
       margin-right: 37px;
+      ${isColumn && 'margin-right:0 !important;'}
 
       &:nth-of-type(2n) {
         margin-right: 37px;
@@ -57,12 +61,30 @@ const discount = (data) => {
   `;
 
   return (
-    <Container key={randomId()}>
+    <Container
+      key={randomId()}
+      css={css`
+        position: relative;
+
+        &:before {
+          position: absolute;
+          top: 30px;
+          left: 20px;
+          display: block;
+          width: 100px;
+          height: 100px;
+          background-image: url('img/discounts-1.svg');
+          content: '';
+        }
+      `}
+    >
       <h3
         css={css`
-          font-size: 22px;
+          display: flex;
+          justify-content: center;
           margin: 0;
-          font-weight: 400;
+          font-size: 22px;
+          font-weight: 500;
         `}
       >
         {data.title}
@@ -71,7 +93,7 @@ const discount = (data) => {
   );
 };
 
-const Discounts = ({ discounts }) => {
+const Discounts = ({ discounts, isColumn = false }) => {
   return (
     <section
       className="main__section section--discount discounts"
@@ -84,6 +106,7 @@ const Discounts = ({ discounts }) => {
       <div
         css={css`
           display: flex;
+          width: 100%;
           flex-direction: column;
 
           ${breakpointsMap.TABLET} {
@@ -91,16 +114,25 @@ const Discounts = ({ discounts }) => {
             flex-wrap: wrap;
             justify-content: center;
           }
+
+          ${breakpointsMap.DESKTOP} {
+            flex-direction: ${isColumn ? 'column' : 'row'};
+          }
         `}
       >
-        {discounts.map((el) => discount(el))}
+        {discounts.map((el) => discount(el, isColumn))}
       </div>
     </section>
   );
 };
 
+Discounts.defaultProps = {
+  isColumn: false,
+};
+
 Discounts.propTypes = {
   discounts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  isColumn: PropTypes.bool,
 };
 
 export default connect(

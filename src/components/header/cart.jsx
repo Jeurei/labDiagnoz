@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import CrossButton from 'common/crossButton';
+import mapDispatchToProps from 'store/mapDispatchToProps';
+import components from 'constants/components';
+import { connect } from 'react-redux';
 import { showing } from '../utils/animation';
 import { randomId } from '../utils/common';
 import CartModalGroup from './cart-modal-group';
+import { numberWithSpaces } from '../../utils/common';
 
 const Cart = ({ cartData, closeHandler, removeItem }) => {
   const typesMap = [
@@ -31,7 +35,7 @@ const Cart = ({ cartData, closeHandler, removeItem }) => {
     <div
       className="header-top__right-cart-container cart-container"
       css={css`
-        animation: ${showing} 1s ease-in-out;
+        animation: ${showing} 0.2s ease-in-out;
       `}
     >
       <div className="cart-container__inner">
@@ -77,7 +81,9 @@ const Cart = ({ cartData, closeHandler, removeItem }) => {
             <div className="cart-modal__inner cart-modal__inner--offer">
               <div className="cart-modal__offer-price-container">
                 <span className="cart-modal__offer-price-text">Итого:</span>
-                <span className="cart-modal__offer-price">{total} ₽</span>
+                <span className="cart-modal__offer-price">
+                  {numberWithSpaces(total)} ₽
+                </span>
               </div>
               <button
                 className="cart-modal__offer-button button"
@@ -100,4 +106,4 @@ Cart.propTypes = {
   removeItem: PropTypes.func.isRequired,
 };
 
-export default Cart;
+export default connect(null, mapDispatchToProps(components.CART))(Cart);

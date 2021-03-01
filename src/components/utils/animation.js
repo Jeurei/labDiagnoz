@@ -15,8 +15,9 @@ export const searchShowing = keyframes`
 0% {
   min-height:0;
 }
+
 100% {
-  min-height: 594px;
+  min-height:400px;
 }
 `;
 

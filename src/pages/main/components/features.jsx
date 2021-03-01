@@ -6,6 +6,7 @@ import SectionInner from 'containers/section-inner';
 import Picture from 'common/picture';
 import mapStateToPropsGenerator from 'store/mapStateToProps';
 import components from 'constants/components';
+import { ReactComponent as Logo } from 'icons/features__logo-img.svg';
 import { randomId } from '../../utils/common';
 
 // TODO: Узнать шаблонизируется ли этот блок
@@ -30,11 +31,7 @@ const Features = ({ features }) => (
     <SectionInner>
       <h2 className="section__title">
         Почему именно
-        <Picture
-          src="img/features-logo"
-          imgClass="features__logo-img"
-          alt="Лабдиагностика"
-        />
+        <Logo className="features__logo-img" alt="Лабдиагностика" />
       </h2>
       <ul className="features__list">
         {features.map((el) => featuresItem(el))}

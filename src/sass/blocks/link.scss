@@ -1,7 +1,7 @@
 .link {
   position: relative;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   padding-left: 62.5px;
   margin-bottom: 9px;
   background-color: $blue;
@@ -25,6 +25,7 @@
 }
 
 .link__title {
+  margin: 0;
   margin-bottom: 4px;
   font-weight: 500;
   letter-spacing: 0.18px;

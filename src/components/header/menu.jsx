@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Drawer from 'react-motion-drawer';
 import CrossButton from 'common/crossButton';
+import { routesConstantsWODirectLinks } from 'constants/routes';
+import { useHistory } from 'react-router-dom';
 import NavItem from './nav-item';
 import { randomId } from '../utils/common';
 import Routes from '../../routes';
@@ -12,11 +14,10 @@ const Menu = () => {
     setMenuState(false);
   };
 
-  const onChangeHandler = (bool) => {
-    document.body.scroll = bool ? 'no' : 'yes';
-    document.body.style.overflow = bool ? 'hidden' : 'scroll';
-    setMenuState(bool);
-  };
+  const history = useHistory();
+  history.listen(() => {
+    setMenuState(false);
+  });
 
   return (
     <>
@@ -35,7 +36,6 @@ const Menu = () => {
         right
         className="nav__menu-container"
         overlayClassName="nav__overlay"
-        onChange={onChangeHandler}
       >
         <CrossButton
           buttonClass="nav__close-buttom"

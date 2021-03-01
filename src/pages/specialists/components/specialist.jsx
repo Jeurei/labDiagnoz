@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import Picture from 'common/picture';
 import Form from 'common/form';
 import { Link, useRouteMatch } from 'react-router-dom';
+import { css, useTheme } from '@emotion/react';
+import { numberWithSpaces } from '../../../utils/common';
 import SpecialistWorkTime from './specialist-work-time';
 
 const specialistInfo = (action, data) => {
   const { url } = useRouteMatch();
+  const theme = useTheme();
   const agesMap = {
     1: 'Дети 0-18 лет',
     2: 'Взрослые',
@@ -15,25 +18,47 @@ const specialistInfo = (action, data) => {
   return (
     <div className="specialist__info">
       <h3 className="specialist__name">
-        <Link to={`${url}/${data.name}`}>{data.name}</Link>
+        <Link to={`${url}/${data.id}`}>{data.name}</Link>
       </h3>
       <ul className="specialist__info-list">
         <li className="specialist__info-item">
-          Должность: {data.job.reduce((acc, curr) => `${acc}, ${curr}`)}
+          Должность:{' '}
+          <span
+            css={css`
+              font-weight: 500;
+            `}
+          >
+            {data.job.reduce((acc, curr) => `${acc}, ${curr}`)}
+          </span>
         </li>
         <li className="specialist__info-item">
-          Ведёт приём: {agesMap[data.ages]}
+          Ведёт приём:{' '}
+          <span
+            css={css`
+              font-weight: 500;
+            `}
+          >
+            {agesMap[data.ages]}
+          </span>
         </li>
         <li className="specialist__info-item">
           Первичный прием:{' '}
-          <span className="specialist__price">{data.price} ₽</span>
+          <span
+            className="specialist__price"
+            css={css`
+              font-weight: 500;
+            `}
+          >
+            {numberWithSpaces(data.price)} ₽
+          </span>
         </li>
-        <li
-          className="specialist__info-item specialist__info-item--link"
-          href="/"
-          aria-label="Ссылка на услуги которые предоставляет данный специалист"
-        >
-          Все услуги
+        <li aria-label="Ссылка на услуги которые предоставляет данный специалист">
+          <a
+            className="specialist__info-item specialist__info-item--link"
+            href="/"
+          >
+            Все услуги
+          </a>
         </li>
       </ul>
       <button
@@ -44,7 +69,33 @@ const specialistInfo = (action, data) => {
       >
         Запишитесь на прием
       </button>
-      <p className="specialist__tel">Телефон для записи: 8 800 3000 789</p>
+      <button
+        type="button"
+        className="specialist__button button"
+        aria-label="Записать на онлайн консультацию"
+        css={css`
+          background-color: ${theme.colors.blue};
+          text-transform: uppercase;
+
+          &:hover,
+          &:active {
+            background-color: ${theme.colors.blue};
+          }
+        `}
+      >
+        online консультация
+      </button>
+      <p className="specialist__tel">
+        Телефон для записи:{' '}
+        <a
+          href="tel:88003000789"
+          css={css`
+            font-weight: 500;
+          `}
+        >
+          8 800 3000 789
+        </a>
+      </p>
     </div>
   );
 };

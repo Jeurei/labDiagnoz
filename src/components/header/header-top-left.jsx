@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import components from 'constants/components';
@@ -6,21 +6,17 @@ import mapStateToPropsGenerator from 'store/mapStateToProps';
 import mapDispatchToProps from 'store/mapDispatchToProps';
 import { ReactComponent as TelIcon } from 'icons/tel-icon.svg';
 import { ReactComponent as MarkMapIcon } from 'icons/map-mark-icon.svg';
-import CitiesModal from './cities-modal';
+import { breakpointsMap } from 'src/constants/styles';
+import { css } from '@emotion/react';
+import { headerContext } from './header';
 
-const HeaderTopLeft = ({ cities, setCity }) => {
-  const [citiesModalState, setCitiesModalState] = useState(false);
-
-  const onCitiesClickHandler = () => {
-    setCitiesModalState(!citiesModalState);
-  };
-
-  const onClickClosePopupHandler = () => {
-    setCitiesModalState(false);
-  };
+const HeaderTopLeft = ({ cities }) => {
+  const {
+    cities: { onCitiesClickHandler, onClickClosePopupHandler },
+  } = useContext(headerContext);
 
   useEffect(() => {
-    setCitiesModalState(false);
+    onClickClosePopupHandler();
   }, [cities.currentCity]);
 
   return (
@@ -38,14 +34,6 @@ const HeaderTopLeft = ({ cities, setCity }) => {
           >
             <span className="cities__city">{cities.currentCity}</span>
           </a>
-          {citiesModalState && (
-            <CitiesModal
-              citiesData={cities.list}
-              closeHandler={onClickClosePopupHandler}
-              setCurrentCity={setCity}
-              modalState={citiesModalState}
-            />
-          )}
         </div>
         <MarkMapIcon
           className="header-top__left-icon header-top__left-icon--cities"
@@ -55,7 +43,15 @@ const HeaderTopLeft = ({ cities, setCity }) => {
           fill="currentColor"
         />
       </div>
-      <p className="header-top__left-tel">
+      <p
+        className="header-top__left-tel"
+        css={css`
+          display: none;
+          ${breakpointsMap.TABLET} {
+            display: block;
+          }
+        `}
+      >
         <TelIcon width="9" height="9.5" stroke="currentColor" />
         +7 (999) 999-99-99
       </p>
@@ -68,7 +64,6 @@ HeaderTopLeft.propTypes = {
     currentCity: PropTypes.string.isRequired,
     list: PropTypes.objectOf(PropTypes.object).isRequired,
   }).isRequired,
-  setCity: PropTypes.func.isRequired,
 };
 
 export default connect(

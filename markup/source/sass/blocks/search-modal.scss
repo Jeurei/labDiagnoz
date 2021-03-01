@@ -1,6 +1,7 @@
 .search-modal {
+  max-height: 1px;
   padding-top: 29px;
-  background-image: url("../../img/search-modal.png"),
+  background-image: url('../assets/img/search-modal.png'),
     linear-gradient(
       to left,
       RGBA(250, 0, 235, 1),
@@ -12,13 +13,14 @@
   background-size: 50%, cover;
   color: $white;
   font-weight: 500;
+  transition: max-height 350ms ease-in-out;
 
   .section__inner {
     padding-left: 0;
   }
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    background-image: url("../../img/search-modal@2x.png"),
+    background-image: url('../assets/img/search-modal@2x.png'),
       linear-gradient(
         to left,
         RGBA(250, 0, 235, 1),
@@ -57,7 +59,7 @@
 .search-modal__container-top {
   display: flex;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   padding-top: 2px;
   padding-right: 0;
   padding-bottom: 6px;
@@ -102,8 +104,11 @@
 }
 
 .search-modal__button {
+  display: flex;
   min-width: 78px;
   min-height: 100%;
+  align-items: center;
+  justify-content: center;
   border: none;
   appearance: none;
   background-color: $blue;
@@ -148,6 +153,7 @@
   padding-left: 3px;
   border-bottom: 0.5px dashed $white;
   color: $white;
+  cursor: pointer;
 
   &:hover {
     color: $white;
@@ -172,7 +178,7 @@
   color: $white;
 
   &:hover {
-    color: $white;
+    color: #707070;
   }
 }
 
@@ -217,9 +223,9 @@
 
 @media (min-width: $desktop-width) {
   .search-modal {
+    display: flex;
     min-height: 594px;
-    padding-top: 140px;
-    padding-bottom: 69px;
+    align-items: center;
   }
 
   .search-modal__container {
@@ -298,7 +304,7 @@
 
   .search-modal__hint-icon {
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
     display: flex;
   }

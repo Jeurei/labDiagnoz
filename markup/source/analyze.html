@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Анализ</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preload" href="./fonts/GraphikLCG-Regular.woff2" as="font" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top-container">
+        <div class="header__inner">
+          <div class="header__top header-top">
+            <div class="header-top__left">
+              <div class="header-top__left-cities-container">
+                <div
+                  class="header-top__left-cities cities"
+                  data-state="default"
+                >
+                  <a
+                    href="some"
+                    class="cities__link"
+                    arial-label="Открыть попап для выбора города"
+                    ><span class="cities__city">Пермь</span></a
+                  >
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6.6"
+                  height="9.3"
+                  class="header-top__left-icon header-top__left-icon--cities"
+                  stroke="currentColor"
+                  fill="currentColor"
+                >
+                  <g
+                    data-name="\u0421\u0433\u0440\u0443\u043F\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C 1"
+                  >
+                    <path
+                      data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1"
+                      d="M3.31 4.827a1.506 1.506 0 111.5-1.506 1.5 1.5 0 01-1.5 1.506M3.31 0A3.321 3.321 0 000 3.334c0 1.739 1.5 3.983 2.5 5.075.374.408.809.957.809.957s.468-.552.869-.972c1-1.047 2.441-3.148 2.441-5.059A3.322 3.322 0 003.309.001"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <p class="header-top__left-tel">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9"
+                  height="9.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1475"
+                    d="M6.205 9.578a3.569 3.569 0 01-1.58-.384 8.656 8.656 0 01-2.73-2.211A8.26 8.26 0 01.276 4.402a3.677 3.677 0 01.086-2.991 3.627 3.627 0 011.253-1.3.558.558 0 01.716.033 3.691 3.691 0 011.2 1.933.8.8 0 01-.307.83c-.184.15-.369.3-.554.446a.8.8 0 00-.313.979 2.054 2.054 0 00.224.5 6.81 6.81 0 001.746 1.94 2.539 2.539 0 00.243.164.844.844 0 001.155-.144c.121-.119.234-.247.357-.366a.983.983 0 011.237-.19 5.147 5.147 0 011.408 1.2.654.654 0 01-.091 1 4.047 4.047 0 01-1.2.908 3.455 3.455 0 01-1.231.234z"
+                  ></path></svg
+                >+7 (999) 999-99-99
+              </p>
+            </div>
+            <div class="header-top__right">
+              <div class="header-top__right-search-container">
+                <button
+                  class="header-top__right-search-button"
+                  type="button"
+                  aria-label="Открыть строку поиска"
+                  name="search-button"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="19"
+                    height="19"
+                    class="header-top__list-icon header-top__list-icon--search"
+                    stroke="currentColor"
+                    fill="none"
+                  >
+                    <g data-name="3" opacity="0.5" transform="translate(1 1)">
+                      <circle cx="6.875" cy="6.875" r="6.875"></circle>
+                      <path
+                        d="M11.785 11.785l5.893 5.893"
+                        fill-rule="evenodd"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <a
+                href="some"
+                class="header-top__link header-top__link--cart"
+                aria-label="Перейти на страницу корзины"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="19"
+                  class="header-top__list-icon header-top__list-icon--cart"
+                  fill="currentColor"
+                >
+                  <g
+                    data-name="\u0421\u0433\u0440\u0443\u043F\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C 3"
+                  >
+                    <path
+                      data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1303"
+                      d="M13.177 12.183H7.688c-.284 0-.287 0-.22.28.119.491.252.98.36 1.474a.26.26 0 00.306.247q4.081-.009 8.161 0h1.858a.692.692 0 110 1.379H7.482a.722.722 0 01-.838-.666Q5.66 10.91 4.68 6.921q-.652-2.649-1.3-5.3a.265.265 0 00-.311-.243c-.8.011-1.6.008-2.4 0a.672.672 0 01-.667-.6.68.68 0 01.5-.752A.987.987 0 01.73.005h3.047a.681.681 0 01.762.6c.153.606.311 1.211.446 1.821.048.218.13.291.359.29q7.639-.01 15.278-.007a.767.767 0 01.53.147.7.7 0 01.224.762l-.919 3.721-1.053 4.252a.693.693 0 01-.761.6zm-6.464-8.1c-.362 0-.724.007-1.086 0-.171 0-.22.039-.174.217.194.754.38 1.512.562 2.269a.21.21 0 00.244.191c.612-.007 1.225-.01 1.837 0 .2 0 .236-.082.213-.254-.1-.745-.2-1.49-.282-2.236-.017-.146-.07-.191-.208-.188-.369.003-.738-.001-1.106-.001zm11.822 0h-1.106c-.14 0-.2.043-.207.19s-.037.292-.055.439c-.075.6-.148 1.2-.227 1.8-.023.175.017.255.215.252a59.271 59.271 0 011.838 0 .21.21 0 00.241-.194c.184-.764.371-1.528.567-2.29.043-.167-.015-.195-.159-.192-.369-.003-.738-.006-1.107-.007zm-6.593 1.344c0-.372-.007-.745 0-1.117.005-.172-.047-.233-.223-.231-.7.009-1.391.011-2.085 0-.2 0-.235.082-.212.254.1.751.2 1.5.283 2.255.017.144.082.169.2.168.612 0 1.224-.006 1.835 0 .161 0 .2-.064.2-.213-.003-.373.002-.745.002-1.118zm1.365-.017v1.159c0 .115.022.187.159.186h1.918c.089 0 .141-.029.153-.129q.142-1.169.292-2.338c.021-.161-.045-.207-.2-.206-.7.006-1.4.008-2.106 0-.181 0-.223.069-.219.235.01.361.003.726.003 1.091zM7.472 8.134c-.286 0-.571.007-.856 0-.168-.006-.2.048-.161.209q.288 1.133.56 2.27a.219.219 0 00.26.2c.432-.008.863 0 1.295 0 .246 0 .268-.023.238-.264-.093-.745-.193-1.49-.28-2.236-.016-.139-.073-.176-.2-.174-.285-.003-.571-.007-.856-.007zm10.308 0c-.271 0-.543.007-.813 0-.158-.006-.25.026-.25.212a3.38 3.38 0 01-.051.417c-.075.6-.149 1.2-.227 1.8-.023.174.017.259.216.253.445-.013.89-.008 1.335 0a.2.2 0 00.233-.179q.282-1.166.579-2.329c.039-.152-.026-.167-.144-.166-.293-.008-.585-.01-.878-.01zm-5.838 1.357c0-.372-.008-.745 0-1.117.006-.179-.042-.249-.232-.244a32.62 32.62 0 01-1.564 0c-.212-.006-.249.082-.225.263.1.744.193 1.489.282 2.234.016.131.058.183.192.181q.678-.009 1.355 0c.149 0 .192-.058.19-.2-.002-.374.002-.747.002-1.119zm1.366-.031v1.159c0 .115.021.188.157.187h1.418c.089 0 .141-.028.153-.128q.141-1.17.291-2.338c.02-.16-.043-.21-.2-.208q-.813.01-1.627 0c-.161 0-.2.063-.2.213.012.369.007.741.008 1.113z"
+                    ></path>
+                    <path
+                      data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1304"
+                      d="M8.521 18.935a1.365 1.365 0 111.363-1.37 1.338 1.338 0 01-1.363 1.37z"
+                    ></path>
+                    <path
+                      data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1305"
+                      d="M16.731 16.202a1.365 1.365 0 11-1.365 1.364 1.345 1.345 0 011.365-1.364z"
+                    ></path>
+                  </g></svg
+                ><span class="header-top__mobile-list-link-cart-value"
+                  >1</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="header__bottom-container css-b7umys-HeaderBottom-HeaderBottom"
+      >
+        <div class="header__inner css-ns71cq-HeaderBottom-HeaderBottom">
+          <div class="header__bottom header-bottom">
+            <div class="header-bottom__mobile">
+              <a href="#/"
+                ><picture class="header-bottom__mobile-top-img"
+                  ><source
+                    type="image/webp"
+                    srcset="
+                      img/mobile-logo.webp    1x,
+                      img/mobile-logo@2x.webp 2x
+                    " />
+                  <img
+                    src="img/mobile-logo.png"
+                    srcset="img/mobile-logo@2x.png"
+                    class=""
+                    alt="Логотип компании Лабдиагностика"
+                    width="222"
+                    height="33" /></picture
+              ></a>
+            </div>
+            <div class="header-bottom__left">
+              <a href="#/"
+                ><picture class="header-bottom__mobile-top-img"
+                  ><source
+                    type="image/webp"
+                    srcset="img/logo.webp 1x, img/logo@2x.webp 2x" />
+                  <img
+                    src="img/logo.png"
+                    srcset="img/logo@2x.png"
+                    class=""
+                    alt="Логотип компании Лабдиагностика"
+                    width="230"
+                    height="34" /></picture
+              ></a>
+            </div>
+            <div class="header-bottom__right">
+              <a
+                href="some"
+                class="nav__button button"
+                aria-label="Ссылка на страницу для записи к врачу, или попап если скрипт работае"
+                >Записаться к врачу</a
+              >
+            </div>
+            <button
+              class="header-bottom__burger-button-container"
+              aria-label="Равернуть меню"
+              type="button"
+            >
+              <div
+                class="header-bottom__mobile-burger-bar header-bottom__mobile-burger-bar--1"
+              ></div>
+              <div
+                class="header-bottom__mobile-burger-bar header-bottom__mobile-burger-bar--2"
+              ></div>
+              <div
+                class="header-bottom__mobile-burger-bar header-bottom__mobile-burger-bar--3"
+              ></div>
+            </button>
+            <div
+              style="
+                position: fixed;
+                z-index: 10000;
+                top: 0px;
+                right: 0px;
+                display: block;
+                width: 300px;
+                max-width: 300px;
+                height: 100%;
+                box-sizing: content-box;
+                padding-left: 20px;
+                margin: 0px;
+                opacity: 1;
+                touch-action: pan-y;
+                transform: translate3d(300px, 0px, 0px);
+                user-select: none;
+              "
+            >
+              <div
+                class="nav__menu-container"
+                style="
+                  display: none;
+                  overflow: auto;
+                  width: 300px;
+                  height: 100%;
+                "
+              >
+                <button
+                  class="nav__close-buttom cross-button"
+                  type="button"
+                  name="close-button"
+                  aria-label="Закрыть меню"
+                ></button>
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a
+                      class="nav__link"
+                      aria-label="Ссылка на страницу услуг"
+                      href="#/"
+                      >Главная</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a
+                      class="nav__link"
+                      aria-label="Ссылка на страницу услуг"
+                      href="#/specialists"
+                      >Специалисты</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a
+                      class="nav__link"
+                      aria-label="Ссылка на страницу услуг"
+                      href="#/services"
+                      >Сервисы</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a
+                      class="nav__link"
+                      aria-label="Ссылка на страницу услуг"
+                      href="#/medCenters"
+                      >Медицинские центры</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="header__expand-button visually-hidden"
+          type="button"
+          aria-label="Развернуть нижний хедер"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25px"
+            height="25px"
+            class="header__expand-button-icon"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1308"
+              d="M9.333.354l-4.49 4.49L.353.354"
+              stroke="currentColor"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <footer class="footer">
+      <section
+        class="footer__section footer__section--form section form-section"
+      >
+        <div class="section__inner">
+          <h2 class="section__title">Задайте свой вопрос</h2>
+          <form action="post" class="form-section__form form">
+            <fieldset class="form__input-group">
+              <div class="form__input-container">
+                <label for="name" class="form__label visually-hidden"
+                  >Введите имя</label
+                ><input
+                  type="text"
+                  class="form__input css-rp388x-FormInput"
+                  id="name"
+                  name="name"
+                  placeholder="Ваше имя*"
+                  aria-describedby="name_descr"
+                  value=""
+                />
+                <p class="visually-hidden" id="name_descr">Введите ваше имя</p>
+              </div>
+              <div class="form__input-container">
+                <label for="tel" class="form__label visually-hidden"
+                  >Введите номер телефона</label
+                ><input
+                  type="tel"
+                  class="form__input css-1kbg9bb-MaskedFormInput"
+                  id="tel"
+                  name="tel"
+                  placeholder="Ваш телефон*"
+                  aria-describedby="tel_descr"
+                  value=""
+                />
+                <p class="visually-hidden" id="tel_descr">
+                  Введите ваш телефон
+                </p>
+              </div>
+              <div class="form__input-container">
+                <label for="email" class="form__label visually-hidden"
+                  >Введите email</label
+                ><input
+                  type="email"
+                  class="form__input css-rp388x-FormInput"
+                  id="email"
+                  name="email"
+                  placeholder="Ваш email*"
+                  aria-describedby="email_descr"
+                  value=""
+                />
+                <p class="visually-hidden" id="email_descr">
+                  Введите ваш email
+                </p>
+              </div>
+            </fieldset>
+            <fieldset class="form__input-group">
+              <textarea
+                id="text"
+                cols="30"
+                rows="10"
+                class="form__input form__input--textarea"
+                placeholder="Введите своё сообщение"
+                aria-label="Поле дляя ввода вашего вопроса"
+              ></textarea>
+            </fieldset>
+            <fieldset class="form__input-group">
+              <h3 class="form__input-chekbox-title">Задайте свой вопрос</h3>
+              <div class="form__input-checkbox-container">
+                <label for="agreement" class="form__label form__label--checkbox"
+                  ><input
+                    type="checkbox"
+                    class="form__input form__input--checkbox"
+                    id="agreement"
+                    name="agreement"
+                    aria-label="Нажимая на кнопку отправить вы соглашаетесь с нашей политикой конфиденциальности" /><span
+                    class="form__input-checkbox-span"
+                  ></span></label
+                ><small class="form__agreement-hint"
+                  >Нажимая на кнопку отправить вы соглашаетесь с нашей политикой
+                  конфиденциальности</small
+                >
+              </div>
+              <button
+                class="form__button button-inactive css-3s8xhu-FormThirdField"
+                type="submit"
+              >
+                Отправить
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+      <section class="footer__section footer__section--map section map">
+        <div class="map__left">
+          <div class="section__inner">
+            <picture class="map__logo"
+              ><source
+                type="image/webp"
+                srcset="img/logo.webp 1x, img/logo@2x.webp 2x" />
+              <img
+                src="img/logo.png"
+                srcset="img/logo@2x.png"
+                class="map__logo-img"
+                alt="Логотип компании Лабдиагностика"
+                width="248"
+                height="36"
+            /></picture>
+          </div>
+          <div class="map__left-container">
+            <div class="section__inner">
+              <h2 class="section__title">Рядом с вами</h2>
+            </div>
+            <div class="map__geo geo">
+              <div class="geo__selection">
+                <div class="section__inner">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8"
+                    height="8.4"
+                    class="geo__icon"
+                    fill="currentColor"
+                    stroke="currentColor"
+                  >
+                    <g
+                      data-name="\u0421\u0433\u0440\u0443\u043F\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C 1"
+                    >
+                      <path
+                        data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1"
+                        d="M3.31 4.827a1.506 1.506 0 111.5-1.506 1.5 1.5 0 01-1.5 1.506M3.31 0A3.321 3.321 0 000 3.334c0 1.739 1.5 3.983 2.5 5.075.374.408.809.957.809.957s.468-.552.869-.972c1-1.047 2.441-3.148 2.441-5.059A3.322 3.322 0 003.309.001"
+                      ></path>
+                    </g>
+                  </svg>
+                  <form class="geo__form">
+                    <div class="geo__select select css-2b097c-container">
+                      <div class="select__control css-yk16xz-control">
+                        <div
+                          class="select__value-container css-g1d714-ValueContainer"
+                        >
+                          <div
+                            class="select__placeholder css-1wa3eu0-placeholder"
+                          >
+                            Выберите город
+                          </div>
+                          <div class="css-b8ldur-Input">
+                            <div
+                              class="select__input"
+                              style="display: inline-block"
+                            >
+                              <input
+                                autocapitalize="none"
+                                autocomplete="off"
+                                autocorrect="off"
+                                id="react-select-4-input"
+                                spellcheck="false"
+                                tabindex="0"
+                                type="text"
+                                aria-autocomplete="list"
+                                style="
+                                  width: 2px;
+                                  box-sizing: content-box;
+                                  padding: 0px;
+                                  border: 0px none;
+                                  background: rgba(0, 0, 0, 0) none repeat
+                                    scroll 0px center;
+                                  color: inherit;
+                                  font-size: inherit;
+                                  opacity: 1;
+                                  outline: currentcolor none 0px;
+                                "
+                                value=""
+                              />
+                              <div
+                                style="
+                                  position: absolute;
+                                  top: 0px;
+                                  left: 0px;
+                                  overflow: scroll;
+                                  height: 0px;
+                                  font-family: ' font-size: 10px; font-style: normal;Graphik LCG',
+                                    'Arial', sans-serif;
+                                  font-weight: 400;
+                                  letter-spacing: normal;
+                                  text-transform: none;
+                                  visibility: hidden;
+                                  white-space: pre;
+                                "
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="select__indicators css-1hb7zxy-IndicatorsContainer"
+                        >
+                          <span
+                            class="select__indicator-separator css-1okebmr-indicatorSeparator"
+                          ></span>
+                          <div
+                            aria-hidden="true"
+                            class="select__indicator select__dropdown-indicator css-tlfecz-indicatorContainer"
+                          >
+                            <svg
+                              height="20"
+                              width="20"
+                              viewBox="0 0 20 20"
+                              aria-hidden="true"
+                              focusable="false"
+                              class="css-6q0nyr-Svg"
+                            >
+                              <path
+                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="geo__results">
+                <div class="section__inner">
+                  <h3 class="geo__results-title">
+                    Найдено <span class="geo__results-value">1</span> отделение
+                  </h3>
+                  <ul class="geo__results-list">
+                    <li class="geo__result result">
+                      <a
+                        href="./"
+                        class="result__link"
+                        aria-label="Показать на карте"
+                        ><svg
+                          class="geo__result-icon"
+                          width="6"
+                          height="8.4"
+                          fill="currentColor"
+                        >
+                          <use xlink:href="./map-mark-icon"></use>
+                        </svg>
+                        <p class="result__text">
+                          г. Пермь, ул. Хабаровская, 56
+                        </p>
+                        <p class="result__options">
+                          Возможна оплата картой, есть вход с коляской
+                        </p></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="map__right"></div>
+        </div>
+      </section>
+      <section
+        class="footer__section footer__section-contacts section contacts"
+      >
+        <h2 class="section__title visually-hidden">Как с нами связаться?</h2>
+        <div class="section__inner">
+          <ul class="contacts__list">
+            <li class="contacts__contact contact contact--tel">
+              <p class="contact__text-small">Ежедневно и круглосуточно</p>
+              <p class="contact__text">8 800 3000 789</p>
+            </li>
+            <li class="contacts__contact contact contact--email">
+              <p class="contact__text-small">E-mail</p>
+              <p class="contact__text">info@labdiag.perm.ru</p>
+            </li>
+            <li class="contacts__contact contact contact--adress">
+              <p class="contact__text-small">Адрес</p>
+              <p class="contact__text">Пермь, 9 мая, 18а</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer__bottom">
+        <h2 class="footer__title visually-hidden">Полезные ссылки</h2>
+        <section
+          class="footer__section footer__section--footer-nav section footer-nav"
+        >
+          <h2 class="section__title visually-hidden">Навигация</h2>
+          <div class="section__inner">
+            <div class="footer__nav-tab tab">
+              <input
+                class="tab__checkbox"
+                type="checkbox"
+                id="tab-analyse"
+                name="tab-group"
+              /><label for="tab-analyse" class="tab__title">Анализы</label>
+              <div class="tab__content">
+                <h3 class="tab__content-title">Услуги лаборатории</h3>
+                <ul class="tab__list">
+                  <li class="tab__list-item">
+                    <a
+                      href="./"
+                      class="li tab__link"
+                      aria-label="Перейти на страницу с комплексные исследованиями"
+                      >Комплексные исследования</a
+                    >
+                  </li>
+                  <li class="tab__list-item">
+                    <a
+                      href="./"
+                      class="li tab__link"
+                      aria-label="Перейти на страницу с комплексные исследованиями"
+                      >Комплексные исследования</a
+                    >
+                  </li>
+                  <li class="tab__list-item">
+                    <a
+                      href="./"
+                      class="li tab__link"
+                      aria-label="Перейти на страницу с комплексные исследованиями"
+                      >Комплексные исследования</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section__inner">
+            <picture class="footer-nav__logo"
+              ><source
+                type="image/webp"
+                srcset="img/logo.webp 1x, img/logo@2x.webp 2x" />
+              <img
+                src="img/logo.png"
+                srcset="img/logo@2x.png"
+                class=""
+                alt="Логотип компании Лабдиагностика"
+                width="230"
+                height="36"
+            /></picture>
+            <div class="footer-nav__top copyright-top">
+              <p class="copyright-top__text">
+                Сеть многопрофильных медицинских центров<br
+                  class="copyright-top__text-br"
+                />и заборных пунктов в Перми и городах Пермского края.
+              </p>
+              <picture class="copyright-top__logo"
+                ><source
+                  type="image/webp"
+                  srcset="img/site-logos.webp 1x, img/site-logos@2x.webp 2x" />
+                <img
+                  src="img/site-logos.png"
+                  srcset="img/site-logos@2x.png"
+                  class=""
+                  alt="Логотипы компаний с которыми мы сотрудничаем"
+                  width="191"
+                  height="36" /></picture
+              ><small class="copyright-top__small"
+                >© Лабдиагност и К. Все права защищены.</small
+              >
+            </div>
+          </div>
+        </section>
+      </section>
+      <section
+        class="footer__section footer__section--copyright section copyrights"
+      >
+        <h2 class="section__title visually-hidden">Копирайты</h2>
+        <div class="copyrights__copyright copyright">
+          <div class="copyright__bottom copyright-bottom">
+            <div class="section__inner">
+              <p class="copyright-bottom__text">
+                ООО «Лабдиагност и К». Лицензия No ЛО-59-01-005417 от 17 июля
+                2020 г.
+              </p>
+              <ul class="copyright-bottom__socials-list socials">
+                <li class="socials__item social social--odn">
+                  <a href="./" class="social__link"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="9"
+                      height="15"
+                      class="social__icon"
+                      stroke="currentColor"
+                      fill="currentColor"
+                    >
+                      <g
+                        data-name="\u0421\u0433\u0440\u0443\u043F\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C 101"
+                      >
+                        <path
+                          data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1473"
+                          d="M0 8.471v-.4c.031-.084.057-.17.094-.252a.877.877 0 01.716-.534 1.043 1.043 0 01.695.2c.144.09.276.2.422.285a4.767 4.767 0 003.177.6 4.228 4.228 0 002-.8 1.377 1.377 0 01.478-.241.877.877 0 011.006.412 2.042 2.042 0 01.138.34v.369a1.028 1.028 0 01-.334.482 5.03 5.03 0 01-2.509 1.2c-.243.043-.487.081-.749.125.033.038.05.06.069.079l1.5 1.487q.557.554 1.112 1.112a.827.827 0 01.243.868.936.936 0 01-1.589.434c-.648-.667-1.313-1.318-1.965-1.981-.1-.1-.157-.106-.259 0-.641.654-1.29 1.3-1.935 1.951a1.05 1.05 0 01-.429.29 1 1 0 01-1.206-.748.874.874 0 01.275-.821q1.269-1.265 2.534-2.534c.038-.038.093-.066.1-.135a.447.447 0 00-.054-.018l-.336-.049A5.3 5.3 0 01.53 9.101a1.586 1.586 0 01-.53-.63z"
+                        ></path>
+                        <path
+                          data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1474"
+                          d="M3.91 0h.906a.419.419 0 00.055.015 3.692 3.692 0 11-4.161 3.1A3.631 3.631 0 013.234.146 4.276 4.276 0 013.91 0zM2.583 3.671a1.783 1.783 0 103.565.006 1.814 1.814 0 00-1.782-1.8 1.793 1.793 0 00-1.782 1.794z"
+                        ></path>
+                      </g></svg
+                  ></a>
+                </li>
+                <li class="socials__item social social--vk">
+                  <a href="./" class="social__link"
+                    ><svg
+                      data-name="\u0421\u0433\u0440\u0443\u043F\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C 87"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="11"
+                      class="social__icon"
+                      stroke="currentColor"
+                      fill="currentColor"
+                    >
+                      <path
+                        data-name="\u041A\u043E\u043D\u0442\u0443\u0440 45"
+                        d="M1.701.582c.323 0 .646.009.968 0a.793.793 0 01.721.385q.349.513.68 1.038c.486.773.936 1.568 1.448 2.325a4.05 4.05 0 00.632.777c.27.241.458.2.6-.134a4.01 4.01 0 00.238-1.25c.051-.619.044-1.24.039-1.861 0-.461-.2-.652-.657-.662-.122 0-.244.005-.365 0-.046 0-.107.021-.133-.032s.027-.1.063-.138A3.369 3.369 0 017.753.048 8.991 8.991 0 019.138.009c.219-.006.438 0 .657 0a.655.655 0 01.694.5 3.441 3.441 0 01.12 1.138c0 .858-.1 1.714-.013 2.572a2.257 2.257 0 00.169.744.423.423 0 00.779.086 1.983 1.983 0 00.26-.481A21.652 21.652 0 0113.997.657a.7.7 0 01.607-.274 6.9 6.9 0 012.584.381 1.271 1.271 0 01.151.066c.222.11.266.2.2.439a4.45 4.45 0 01-.549 1.148c-.533.89-1.181 1.7-1.782 2.541a5.852 5.852 0 00-.344.538c-.24.429-.212.594.18.882a8.679 8.679 0 011.231 1.112 9.793 9.793 0 011.1 1.335 1.068 1.068 0 01-.1 1.347 1.23 1.23 0 01-.883.381c-.676.009-1.352 0-2.027 0a.691.691 0 01-.486-.176q-.283-.259-.555-.529a13.591 13.591 0 00-1.308-1.193c-.1-.074-.2-.141-.3-.208a.948.948 0 00-1.078-.094 1.222 1.222 0 00-.672 1.058 2.53 2.53 0 01-.075.686.559.559 0 01-.612.457 6.375 6.375 0 01-2.093-.236 6.265 6.265 0 01-2.287-1.4 16.84 16.84 0 01-4.234-6.1l-.6-1.451C-.116.919.023.667.505.623.898.591 1.295.616 1.69.616z"
+                      ></path></svg
+                  ></a>
+                </li>
+                <li class="socials__item social social--fb">
+                  <a href="./" class="social__link"
+                    ><svg
+                      data-name="\u0421\u0433\u0440\u0443\u043F\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C 88"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="5.5"
+                      height="11.5"
+                      class="social__icon"
+                      stroke="currentColor"
+                      fill="currentColor"
+                    >
+                      <path
+                        data-name="\u041A\u043E\u043D\u0442\u0443\u0440 46"
+                        d="M4.655 0c.193.006.386.014.579.016.078 0 .116.017.115.106v1.786c0 .026-.005.052-.009.093H4.094a.482.482 0 00-.544.5c-.017.42 0 .841 0 1.279h1.835l-.209 2.043H3.549v5.83h-2.39c0-.041-.013-.083-.013-.124V5.828H.005V3.781h1.137v-.147c.005-.493-.018-.988.023-1.478A2.118 2.118 0 012.442.225a4.885 4.885 0 01.8-.2c.047-.011.1-.018.143-.026z"
+                      ></path></svg
+                  ></a>
+                </li>
+                <li class="socials__item social social--inst">
+                  <a href="./" class="social__link"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12.25"
+                      height="12.25"
+                      class="social__icon"
+                      stroke="currentColor"
+                      fill="currentColor"
+                    >
+                      <path
+                        data-name="\u041A\u043E\u043D\u0442\u0443\u0440 1466"
+                        d="M6.114 12.245H2.423a2.356 2.356 0 01-2.348-1.778 2.478 2.478 0 01-.072-.607q-.007-3.732 0-7.464A2.355 2.355 0 012.036.025a2.563 2.563 0 01.4-.022h7.382a2.356 2.356 0 012.369 1.839 2.506 2.506 0 01.064.568q.006 3.711 0 7.423a2.369 2.369 0 01-2.046 2.392 2.755 2.755 0 01-.436.022q-1.83 0-3.655-.002zM1.192 4.878v4.936a1.167 1.167 0 001.232 1.236h7.382a1.177 1.177 0 001.239-1.247V4.884H9.276c.062.373.14.737.179 1.105a2.808 2.808 0 01-.138 1.118 3.33 3.33 0 01-.5.994 3.4 3.4 0 01-.811.786 3.337 3.337 0 01-3.764.008 3.352 3.352 0 01-1.235-4.016zm7.075 1.245a2.152 2.152 0 10-2.181 2.15 2.151 2.151 0 002.185-2.15zm2.547-4.7H8.756V3.48h2.058"
+                      ></path></svg
+                  ></a>
+                </li>
+              </ul>
+              <div class="copyright__creators-team creators-team">
+                <p class="creators-team__text">
+                  Разработка и продвижение сайтов
+                </p>
+                <a
+                  href="https://praweb.ru/"
+                  class="creators-team__link"
+                  rel="noreferrer"
+                  target="_blank"
+                  ><picture class="creators-team__logo"
+                    ><source
+                      type="image/webp"
+                      srcset="img/praweb.webp 1x, img/praweb@2x.webp 2x" />
+                    <img
+                      src="img/praweb.png"
+                      srcset="img/praweb@2x.png"
+                      class=""
+                      alt="Логотип компании,которая разрабоатала этот сайт"
+                      width="53"
+                      height="24" /></picture
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

@@ -31,6 +31,7 @@
   justify-content: flex-start;
   padding: 0;
   margin: 0;
+  margin-right: auto;
   list-style: none;
 }
 
@@ -85,7 +86,7 @@
   justify-content: center;
   padding-right: 10px;
   background-color: $green;
-  background-image: url("../img/grow-arrow.svg");
+  background-image: url('../assets/img/grow-arrow.svg');
   background-position: 95% 10px;
   background-repeat: no-repeat;
   background-size: 8.8px 8.8px;
@@ -168,7 +169,7 @@
   }
 
   .articles__sort-item--active .articles__sort-button {
-    padding: 5px 15px 10px 9px;
+    padding: 5px 13px 6px 13px;
   }
 
   .articles__bottom {

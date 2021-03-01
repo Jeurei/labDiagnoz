@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   box-shadow: $box-shadow;
 }
 
@@ -85,16 +85,8 @@
 @media (min-width: $desktop-width) {
   .article {
     max-width: 270px;
-    margin-right: 20px;
+    margin-right: 0;
     margin-bottom: 25px;
-
-    &:nth-child(even) {
-      margin-right: 30px;
-    }
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
   }
 
   .article__time {

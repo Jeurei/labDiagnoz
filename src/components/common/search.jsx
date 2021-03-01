@@ -6,9 +6,11 @@ import { ENTER_KEY_CODE } from 'constants/keys';
 import Components from 'constants/components';
 import { ReactComponent as SearchIcon } from 'icons/search-icon.svg';
 import mapStateToPropsGenerator from 'store/mapStateToProps';
+import { css } from '@emotion/react';
+import { breakpointsMap } from 'src/constants/styles';
 import Select from './select';
 
-const Search = ({ selectData }) => {
+const Search = ({ selectData, isModal = false }) => {
   const searchRef = useRef();
 
   const placeValueToSearch = (evt) => {
@@ -22,20 +24,41 @@ const Search = ({ selectData }) => {
 
   return (
     <>
-      <h2 className="search__title">
-        Простой и удобный поиск <br className="search__title-br" />
-        <Typed
-          strings={['Анализов^5000', 'Услуг^5000', 'Врачей^5000']}
-          typeSpeed={50}
-          backSpeed={50}
-          loop
+      <div
+        css={css`
+          display: flex;
+          align-items: center;
+          margin-bottom: 0;
+
+          ${breakpointsMap.DESKTOP} {
+            padding-right: 150px;
+          }
+        `}
+      >
+        <h2
+          className="search__title"
+          css={css`
+            margin-right: auto;
+            margin-bottom: 25px;
+          `}
         >
-          <span />
-        </Typed>
-      </h2>
-      <small className="search__container-top-text">
-        По какому разделу искать?
-      </small>
+          Простой и удобный поиск <br className="search__title-br" />
+          <Typed
+            strings={['Анализов^5000', 'Услуг^5000', 'Врачей^5000']}
+            typeSpeed={50}
+            backSpeed={50}
+            loop
+          >
+            <span />
+          </Typed>
+        </h2>
+        {isModal && (
+          <small className="search__container-top-text">
+            По какому разделу искать?
+          </small>
+        )}
+      </div>
+
       <div className="search__container-input-group">
         <input
           type="text"
@@ -48,23 +71,32 @@ const Search = ({ selectData }) => {
         <p className="visually-hidden" id="search-descr">
           Введите ваш поисковый запрос…
         </p>
-        <Select
-          selectClass="search__categories"
-          data={selectData}
-          placeholder="Все разделы"
-        />
+        {isModal && (
+          <Select
+            selectClass="search__categories"
+            data={selectData}
+            placeholder="Все разделы"
+          />
+        )}
         <button
           className="search__button"
           type="button"
           name="search-button"
           aria-label="Кнопка поиска"
+          css={css`
+            g {
+              opacity: 1 !important;
+            }
+          `}
         >
           <SearchIcon
             width="25px"
             height="25px"
-            transform="scale(1.2)"
+            transform="scale(1)"
             fill="none"
             stroke="currentColor"
+            strokeWidth="2"
+            opacity="1"
           />
         </button>
       </div>
@@ -106,8 +138,13 @@ const Search = ({ selectData }) => {
   );
 };
 
+Search.defaultProps = {
+  isModal: false,
+};
+
 Search.propTypes = {
   selectData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  isModal: PropTypes.bool,
 };
 
 export default connect(

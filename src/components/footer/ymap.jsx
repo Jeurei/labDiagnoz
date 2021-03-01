@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import React, { useEffect, useRef } from 'react';
 import { Map, Placemark } from 'react-yandex-maps';
 
@@ -29,15 +30,28 @@ const Ymap = () => {
   }, []);
 
   return (
-    <div ref={mapRef}>
+    <div
+      ref={mapRef}
+      css={css`
+        width: 100%;
+        height: 100%;
+      `}
+    >
       <Map
-        className="map__right"
+        css={css`
+          width: 100%;
+          height: 100%;
+        `}
         defaultState={mapData}
         options={{ suppressMapOpenBlock: true }}
       >
         <Placemark
           geometry={mapData.center}
           modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: 'img/bluePlaceMarkIcon.svg',
+          }}
           properties={{
             balloonContentBody: [
               `

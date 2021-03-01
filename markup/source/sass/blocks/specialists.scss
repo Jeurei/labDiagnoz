@@ -1,0 +1,25 @@
+.specialists {
+  padding-top: 80px;
+}
+
+.specialists__filter {
+  margin-bottom: 32px;
+}
+
+.specialists__catalog {
+  margin-top: 37px;
+}
+
+@media (min-width: $tablet-width) {
+  .specialists {
+    padding-top: 80px;
+  }
+
+  .specialists__filter {
+    margin-bottom: 32px;
+  }
+
+  .specialists__catalog {
+    margin-top: 37px;
+  }
+}

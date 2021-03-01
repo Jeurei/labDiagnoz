@@ -50,7 +50,7 @@ const Form = () => {
               cols={30}
               rows={10}
               inputClass="form__input form__input--textarea"
-              placeholder="Введите своё сообщение"
+              placeholder="Укажите интересующую вас услугу *"
               label="Поле дляя ввода вашего вопроса"
               action={messageTypeHandler}
               value={formFields.message}

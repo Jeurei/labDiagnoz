@@ -4,9 +4,10 @@ import Article from './article';
 import { randomId } from '../../utils/common';
 
 const ArticlesBottom = ({ data }) => {
+  const MAX_QUANTITY = 8;
   return (
     <div className="articles__bottom">
-      {data.map((el) => (
+      {data.slice(0, MAX_QUANTITY).map((el) => (
         <Article data={el} key={randomId()} />
       ))}
     </div>

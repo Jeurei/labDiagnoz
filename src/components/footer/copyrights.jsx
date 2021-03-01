@@ -1,6 +1,7 @@
 import React from 'react';
 import Picture from 'common/picture';
 import SectionInner from 'containers/section-inner';
+import { css } from '@emotion/react';
 import Socials from './socials';
 
 const Copyrights = () => (
@@ -15,18 +16,25 @@ const Copyrights = () => (
           </p>
           <Socials />
           <div className="copyright__creators-team creators-team">
-            <p className="creators-team__text">
-              Разработка и продвижение сайтов
-            </p>
             <a
               href="https://praweb.ru/"
               className="creators-team__link"
               rel="noreferrer"
               target="_blank"
+              css={css`
+                color: #fff;
+                &:hover {
+                  color: #fff;
+                }
+              `}
             >
-              <Picture
+              <p className="creators-team__text">
+                Разработка и продвижение сайтов
+              </p>
+
+              <img
                 containerClass="creators-team__logo"
-                src="img/praweb"
+                src="img/prawebLogo.svg"
                 width="53"
                 height="24"
                 alt="Логотип компании,которая разрабоатала этот сайт"

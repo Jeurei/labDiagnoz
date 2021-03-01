@@ -47,7 +47,7 @@ const SpecialistSheduleDays = ({
         selectedMounth,
         Number(obj[0]) + 2,
       ),
-      'iiii',
+      'iiiiii',
     );
 
     return (
@@ -94,6 +94,20 @@ const SpecialistSheduleDays = ({
     );
   };
 
+  const createEmptyElement = () => {
+    return (
+      <li className="specialist__shedule-table-time-list-item">
+        <a
+          href="/"
+          className="specialist__shedule-table-time"
+          aria-label="Открыть список всех"
+        >
+          ...
+        </a>
+      </li>
+    );
+  };
+
   const isLastSlide = (array) => {
     return (
       swiperRef.current?.swiper.activeIndex + QUANTITY_OF_SLIDES ===
@@ -133,8 +147,6 @@ const SpecialistSheduleDays = ({
     return Number(currentMounth) - Number(selectedMounth) === -2;
   };
 
-  useEffect(() => {}, [swiperRef]);
-
   useEffect(() => {
     swiperRef.current?.swiper.slideTo(0);
     setSelectedDay(0);
@@ -172,7 +184,10 @@ const SpecialistSheduleDays = ({
       )}
       <ul className="specialist__shedule-table-time-list">
         {!chosenEmpty &&
-          Object.values(arr[selectedDay][1]).map((el) => createTimeElement(el))}
+          Object.values(arr[selectedDay][1])
+            .slice(0, 9)
+            .map((el) => createTimeElement(el))}
+        {Object.values(arr[selectedDay][1]).length > 10 && createEmptyElement()}
       </ul>
       {chosenEmpty && (
         <SpecialistDayInfo

@@ -8,12 +8,13 @@ const Picture = ({
   alt,
   containerClass = '',
   imgClass = '',
+  ext = 'png',
 }) => (
   <picture className={containerClass}>
     <source type="image/webp" srcSet={`${src}.webp 1x, ${src}@2x.webp 2x`} />
     <img
-      src={`${src}.png`}
-      srcSet={`${src}@2x.png`}
+      src={`${src}.${ext}`}
+      srcSet={`${src}@2x.${ext}`}
       className={imgClass}
       width={width}
       height={height}
@@ -27,6 +28,7 @@ Picture.defaultProps = {
   imgClass: '',
   width: '',
   height: '',
+  ext: 'png',
 };
 
 Picture.propTypes = {
@@ -36,6 +38,7 @@ Picture.propTypes = {
   alt: PropTypes.string.isRequired,
   containerClass: PropTypes.string,
   imgClass: PropTypes.string,
+  ext: PropTypes.string,
 };
 
 export default Picture;

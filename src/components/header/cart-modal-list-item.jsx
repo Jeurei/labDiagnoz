@@ -2,9 +2,10 @@ import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { css, keyframes } from '@emotion/react';
 import CrossButton from 'common/crossButton';
+import { numberWithSpaces } from '../../utils/common';
 
 const CartModalListItem = ({ itemData, action }) => {
-  const animationDuration = 1;
+  const animationDuration = 0.2;
   const [isDeleting, setDeleting] = useState(false);
   const liRef = useRef();
 
@@ -36,12 +37,14 @@ const CartModalListItem = ({ itemData, action }) => {
       css={
         isDeleting &&
         css`
-          animation: ${deletingKeyFrames()} 1s ease-in-out;
+          animation: ${deletingKeyFrames()} ${animationDuration}s ease-in-out;
         `
       }
     >
       <p className="cart-modal__text">{itemData.descr}</p>
-      <span className="cart-modal__price">{itemData.price} ₽</span>
+      <span className="cart-modal__price">
+        {numberWithSpaces(itemData.price)} ₽
+      </span>
       <CrossButton
         buttonClass="cities__modal-close"
         label="Удалить предмет из корзины"

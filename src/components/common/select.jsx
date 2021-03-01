@@ -12,6 +12,7 @@ const SelectComponent = ({ selectClass, data, placeholder, action }) => {
       className={`${selectClass} select`}
       classNamePrefix="select"
       onChange={(value) => action(value)}
+      noOptionsMessage={() => 'Не найдено'}
     />
   );
 };

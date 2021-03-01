@@ -1,10 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { css, keyframes } from '@emotion/react';
+import React, { useContext } from 'react';
+import { css, keyframes, useTheme } from '@emotion/react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import components from 'constants/components';
+import mapDispatchToProps from 'store/mapDispatchToProps';
 import Picture from 'common/picture';
 import { ReactComponent as DropDown } from 'icons/dropdown.svg';
+import { ReactComponent as SmallLogo } from 'icons/small-logo.svg';
+import { ReactComponent as MarkMapIcon } from 'icons/map-mark-icon.svg';
+import { ReactComponent as MailIcon } from 'icons/mail.svg';
+import { ReactComponent as TelIcon } from 'icons/tel-icon.svg';
+import { ReactComponent as CartIcon } from 'icons/cart-icon.svg';
+
+import SearchButton from 'common/searchButton';
+import { breakpointsMap } from 'src/constants/styles';
 import Menu from './menu';
+import { headerContext } from './header';
 
 // import Burger from 'common/burger';
 
@@ -30,7 +42,15 @@ const HeaderBottom = ({
   animationDuration,
   clickHandler,
   headerBottomState,
+  cities,
+  cart,
+  openSearch,
 }) => {
+  const {
+    cities: { onCitiesClickHandler },
+    cart: { onClickHandler },
+  } = useContext(headerContext);
+
   const showingAnimation = keyframes`
   0% {
     opacity: 0;
@@ -82,6 +102,8 @@ const HeaderBottom = ({
     clickHandler(!headerBottomState);
   };
 
+  const theme = useTheme();
+
   return (
     <div
       className="header__bottom-container"
@@ -113,15 +135,130 @@ const HeaderBottom = ({
       >
         <div className="header__bottom header-bottom">
           <div className="header-bottom__mobile">
-            <Link to="/">
-              <Picture
-                containerClass="header-bottom__mobile-top-img"
-                src="img/mobile-logo"
-                width="222"
-                height="33"
-                alt="Логотип компании Лабдиагностика"
-              />
+            <Link
+              to="/"
+              css={css`
+                margin-right: 20px;
+              `}
+            >
+              <SmallLogo width="28px" height="34px" />
             </Link>
+            <div
+              css={css`
+                position: relative;
+              `}
+            >
+              <div
+                className="cities"
+                css={css`
+                  margin-right: auto;
+                `}
+              >
+                <a
+                  href="some"
+                  className="cities__link"
+                  onClick={(evt) => {
+                    evt.preventDefault();
+                    onCitiesClickHandler();
+                  }}
+                  arial-label="Открыть попап для выбора города"
+                >
+                  <span className="cities__city">{cities.currentCity}</span>
+                </a>
+              </div>
+              <MarkMapIcon
+                className="header-top__left-icon header-top__left-icon--cities"
+                width="6.6"
+                height="9.3"
+                stroke="currentColor"
+                fill="currentColor"
+              />
+            </div>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              ${breakpointsMap.TABLET} {
+                display: none;
+              }
+            `}
+          >
+            <a
+              href="/"
+              css={css`
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: ${theme.colors.colorText.hex};
+
+                &:hover {
+                  color: #687894;
+                }
+              `}
+            >
+              <TelIcon
+                width="12"
+                height="13"
+                transform="scale(1.3)"
+                fill="currentColor"
+              />
+            </a>
+            <a
+              href="/"
+              css={css`
+                display: flex;
+                align-items: center;
+                margin-left: 20px;
+
+                &:hover {
+                  color: #946df6;
+                }
+              `}
+            >
+              <MailIcon
+                width="13.5"
+                height="7.5"
+                transform="scale(1.7)"
+                fill="currentColor"
+              />
+            </a>
+            <div
+              className="header-top__right-search-container"
+              css={css`
+                margin-left: 10px;
+              `}
+            >
+              <SearchButton
+                buttonClass="header-top__right-search-button"
+                label="Открыть строку поиска"
+                action={openSearch}
+              />
+            </div>
+            <a
+              href="some"
+              className="header-top__link header-top__link--cart"
+              aria-label="Перейти на страницу корзины"
+              onClick={(evt) => {
+                evt.preventDefault();
+              }}
+            >
+              <CartIcon
+                className="header-top__list-icon header-top__list-icon--cart"
+                width="21"
+                height="19"
+                fill="currentColor"
+                onClick={(evt) => {
+                  evt.preventDefault();
+                  onClickHandler();
+                }}
+              />
+              <span className="header-top__mobile-list-link-cart-value">
+                {Object.keys(cart).length}
+              </span>
+            </a>
           </div>
           <div className="header-bottom__left">
             <Link to="/">
@@ -138,11 +275,18 @@ const HeaderBottom = ({
             <a
               href="some"
               className="nav__button button"
-              aria-label="Ссылка на страницу для записи к врачу, или попап если скрипт работае"
+              aria-label="Ссылка на страницу для записи к врачу, или попап если скрипт работает"
             >
               Записаться к врачу
             </a>
           </div>
+          <ul
+            css={css`
+              display: none;
+              padding: 0;
+              list-style: none;
+            `}
+          />
           <Menu />
         </div>
       </div>
@@ -156,6 +300,20 @@ HeaderBottom.propTypes = {
   animationDuration: PropTypes.number.isRequired,
   clickHandler: PropTypes.func.isRequired,
   headerBottomState: PropTypes.bool.isRequired,
+  cities: PropTypes.shape({
+    currentCity: PropTypes.string.isRequired,
+  }).isRequired,
+  openSearch: PropTypes.func.isRequired,
+  cart: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
-export default HeaderBottom;
+const mapStateToProps = (state) => {
+  const { cities, cart } = state;
+
+  return { cities, cart };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps(components.CITIES),
+)(HeaderBottom);

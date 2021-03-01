@@ -1,5 +1,6 @@
 .search {
-  padding-top: 29px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-image: url('../assets/img/mobile-bg.png'),
     linear-gradient(
       to left,
@@ -31,7 +32,6 @@
   position: relative;
   padding-left: 3px;
   margin: 0;
-  margin-bottom: 64px;
   color: $white;
   font-size: 22px;
   font-weight: 500;
@@ -57,15 +57,15 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding-top: 2px;
-  padding-right: 0;
+  padding-top: 15px;
+  padding-right: 7px;
   padding-bottom: 6px;
+  padding-left: 7px;
 }
 
 .search__container-top-text {
   display: none;
   align-items: flex-end;
-  justify-content: flex-start;
   font-size: 9px;
   line-height: 7.7px;
 }
@@ -76,9 +76,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
-  padding-right: 5px;
   padding-bottom: 13px;
-  padding-left: 4px;
 }
 
 .search__input {
@@ -98,12 +96,15 @@
   display: none;
   border: none;
   border-left: 1px solid $border-color;
+
+  .select__control {
+    border-radius: 0;
+  }
 }
 
 .search__button {
   min-width: 78px;
   min-height: 100%;
-  padding-top: 7px;
   border: none;
   appearance: none;
   background-color: $blue;
@@ -189,7 +190,7 @@
 
 .search__hint-icon {
   position: absolute;
-  top: 4px;
+  top: -4px;
   left: 5px;
 }
 
@@ -246,8 +247,13 @@
     display: none;
   }
 
+  .search__container-top {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .search__container-top-text {
-    display: flex;
+    justify-content: flex-end;
     font-size: 11px;
     line-height: 16px;
   }
@@ -295,7 +301,7 @@
 
   .search__container {
     padding-right: 2px;
-    padding-left: 24px;
+    padding-left: 0; //мб проблемы
     margin-bottom: 50px;
   }
 
@@ -305,9 +311,9 @@
   }
 
   .search__container-top-text {
+    display: flex;
     align-items: center;
     padding-top: 5px;
-    padding-right: 15px;
     font-size: $body-fs;
     letter-spacing: -0.3px;
   }
@@ -365,7 +371,7 @@
 
   .search__hint-icon {
     position: absolute;
-    top: 0;
+    top: -6px;
     left: 0;
     display: flex;
   }
